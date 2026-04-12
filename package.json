@@ -1,0 +1,21 @@
+{
+  "name": "capacite-transport-pro",
+  "version": "1.0.0",
+  "description": "Plateforme d'entraînement à l'examen Capacité Professionnelle de Transport Routier de Marchandises",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "mammoth": "^1.8.0",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^1.1.1",
+    "uuid": "^11.1.0"
+  }
+}

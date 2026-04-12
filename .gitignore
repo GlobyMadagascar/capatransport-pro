@@ -1,0 +1,9 @@
+node_modules/
+uploads/*.pdf
+uploads/*.doc
+uploads/*.docx
+uploads/*.txt
+.env
+*.log
+.DS_Store
+__MACOSX/

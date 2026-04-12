@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CapaTransport Pro - Préparez et réussissez votre examen de Capacité Transport avec l'aide de l'IA. Entraînement sur les annales officielles CMA/CCI.">
+  <meta name="keywords" content="capacité transport, examen transport, formation transport routier, annales capacité transport, CMA, CCI">
+  <meta name="author" content="CapaTransport Pro">
+  <meta name="theme-color" content="#1a237e">
+  <title>CapaTransport Pro - Réussissez votre Capacité Transport</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚛</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navigation principale">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo" aria-label="CapaTransport Pro - Accueil">
+        <i class="fas fa-truck navbar__logo-icon" aria-hidden="true"></i>
+        <span class="navbar__logo-text">CapaTransport Pro</span>
+      </a>
+
+      <ul class="navbar__links" id="navbar-links" role="menubar">
+        <li role="none"><a href="#hero" class="navbar__link" role="menuitem">Accueil</a></li>
+        <li role="none"><a href="#how-it-works" class="navbar__link" role="menuitem">Comment ça marche</a></li>
+        <li role="none"><a href="#blocs" class="navbar__link" role="menuitem">Les Blocs</a></li>
+        <li role="none"><a href="#pricing" class="navbar__link" role="menuitem">Tarifs</a></li>
+      </ul>
+
+      <a href="app.html" class="navbar__cta btn btn--primary">Commencer</a>
+
+      <button class="navbar__hamburger" id="hamburger-btn" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="navbar-links">
+        <span class="navbar__hamburger-line"></span>
+        <span class="navbar__hamburger-line"></span>
+        <span class="navbar__hamburger-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <header class="hero" id="hero">
+    <div class="hero__container">
+      <div class="hero__badge">
+        <i class="fas fa-certificate" aria-hidden="true"></i>
+        Basé sur les annales officielles CMA/CCI
+      </div>
+
+      <h1 class="hero__title">Réussissez votre Capacité Transport du Premier Coup</h1>
+
+      <p class="hero__subtitle">
+        Entraînez-vous avec l'IA sur les vraies annales officielles. Prochaine session&nbsp;: <strong>Octobre 2026</strong>
+      </p>
+
+      <div class="hero__actions">
+        <a href="app.html" class="btn btn--primary btn--lg">
+          <i class="fas fa-play" aria-hidden="true"></i>
+          Commencer l'entraînement gratuit
+        </a>
+        <a href="#how-it-works" class="btn btn--outline btn--lg">
+          <i class="fas fa-arrow-down" aria-hidden="true"></i>
+          Voir comment ça marche
+        </a>
+      </div>
+
+      <div class="hero__stats" aria-label="Statistiques clés">
+        <div class="hero__stat">
+          <span class="hero__stat-number">500+</span>
+          <span class="hero__stat-label">questions</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number">4</span>
+          <span class="hero__stat-label">blocs couverts</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number">92%</span>
+          <span class="hero__stat-label">de satisfaction</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== COMMENT ÇA MARCHE ==================== -->
+  <section class="section section--how" id="how-it-works" aria-labelledby="how-it-works-title">
+    <div class="section__container">
+      <h2 class="section__title" id="how-it-works-title">Comment ça marche</h2>
+      <p class="section__subtitle">De vos documents à la réussite en 4 étapes simples</p>
+
+      <div class="steps">
+        <div class="steps__item">
+          <div class="steps__icon">
+            <i class="fas fa-file-upload" aria-hidden="true"></i>
+          </div>
+          <div class="steps__number" aria-hidden="true">1</div>
+          <h3 class="steps__title">Uploadez vos documents</h3>
+          <p class="steps__description">Annales, cours, réglementations — MAX analyse tout</p>
+        </div>
+
+        <div class="steps__item">
+          <div class="steps__icon">
+            <i class="fas fa-robot" aria-hidden="true"></i>
+          </div>
+          <div class="steps__number" aria-hidden="true">2</div>
+          <h3 class="steps__title">L'IA crée vos exercices</h3>
+          <p class="steps__description">Questions personnalisées basées sur le vrai format d'examen</p>
+        </div>
+
+        <div class="steps__item">
+          <div class="steps__icon">
+            <i class="fas fa-clipboard-check" aria-hidden="true"></i>
+          </div>
+          <div class="steps__number" aria-hidden="true">3</div>
+          <h3 class="steps__title">Entraînez-vous</h3>
+          <p class="steps__description">Examens blancs, sessions par bloc, quiz rapides</p>
+        </div>
+
+        <div class="steps__item">
+          <div class="steps__icon">
+            <i class="fas fa-chart-line" aria-hidden="true"></i>
+          </div>
+          <div class="steps__number" aria-hidden="true">4</div>
+          <h3 class="steps__title">Suivez votre progression</h3>
+          <p class="steps__description">Tableau de bord détaillé, points faibles identifiés</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LES 4 BLOCS ==================== -->
+  <section class="section section--blocs" id="blocs" aria-labelledby="blocs-title">
+    <div class="section__container">
+      <h2 class="section__title" id="blocs-title">Les 4 Blocs de l'examen</h2>
+      <p class="section__subtitle">Maîtrisez chaque domaine pour maximiser vos chances de réussite</p>
+
+      <div class="blocs-grid">
+        <article class="bloc-card bloc-card--droit">
+          <div class="bloc-card__accent"></div>
+          <div class="bloc-card__icon">
+            <i class="fas fa-gavel" aria-hidden="true"></i>
+          </div>
+          <span class="bloc-card__number">Bloc 1</span>
+          <h3 class="bloc-card__title">Droit</h3>
+          <p class="bloc-card__description">Droit civil, commercial et social du transport</p>
+        </article>
+
+        <article class="bloc-card bloc-card--retm">
+          <div class="bloc-card__accent"></div>
+          <div class="bloc-card__icon">
+            <i class="fas fa-truck-moving" aria-hidden="true"></i>
+          </div>
+          <span class="bloc-card__number">Bloc 2</span>
+          <h3 class="bloc-card__title">RETM</h3>
+          <p class="bloc-card__description">Réglementation, exploitation, tachygraphe, normes véhicules</p>
+        </article>
+
+        <article class="bloc-card bloc-card--gestion">
+          <div class="bloc-card__accent"></div>
+          <div class="bloc-card__icon">
+            <i class="fas fa-calculator" aria-hidden="true"></i>
+          </div>
+          <span class="bloc-card__number">Bloc 3</span>
+          <h3 class="bloc-card__title">Gestion Financière</h3>
+          <p class="bloc-card__description">Bilan, compte de résultat, prix de revient, TVA</p>
+        </article>
+
+        <article class="bloc-card bloc-card--international">
+          <div class="bloc-card__accent"></div>
+          <div class="bloc-card__icon">
+            <i class="fas fa-globe-europe" aria-hidden="true"></i>
+          </div>
+          <span class="bloc-card__number">Bloc 4</span>
+          <h3 class="bloc-card__title">International</h3>
+          <p class="bloc-card__description">Incoterms, vente internationale, douane, assurances</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RENCONTREZ MAX ==================== -->
+  <section class="section section--max" id="max" aria-labelledby="max-title">
+    <div class="section__container">
+      <div class="max-intro">
+        <div class="max-intro__avatar" aria-hidden="true">
+          <i class="fas fa-user-tie"></i>
+        </div>
+
+        <div class="max-intro__content">
+          <h2 class="section__title" id="max-title">Rencontrez MAX</h2>
+          <p class="max-intro__role">MAX — Votre Moniteur d'Apprentissage eXpert</p>
+          <p class="max-intro__description">
+            Ancien routier devenu formateur, MAX connaît l'examen sur le bout des doigts.
+            Il vous accompagne à chaque étape, adapte ses explications à votre niveau et
+            vous prépare avec la rigueur d'un vrai professionnel du transport.
+          </p>
+
+          <div class="max-intro__features">
+            <div class="max-intro__feature">
+              <i class="fas fa-lightbulb" aria-hidden="true"></i>
+              <span>Explications claires</span>
+            </div>
+            <div class="max-intro__feature">
+              <i class="fas fa-road" aria-hidden="true"></i>
+              <span>Exemples du terrain</span>
+            </div>
+            <div class="max-intro__feature">
+              <i class="fas fa-clock" aria-hidden="true"></i>
+              <span>Disponible 24/7</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STATS ==================== -->
+  <section class="section section--stats" id="stats" aria-labelledby="stats-title">
+    <div class="section__container">
+      <h2 class="sr-only" id="stats-title">Nos chiffres clés</h2>
+      <div class="stats-grid">
+        <div class="stats-grid__item">
+          <span class="stats-grid__number" data-target="20" data-suffix="+">0</span>
+          <span class="stats-grid__label">années d'annales analysées</span>
+        </div>
+        <div class="stats-grid__item">
+          <span class="stats-grid__number" data-target="4" data-suffix="">0</span>
+          <span class="stats-grid__label">blocs de compétences couverts</span>
+        </div>
+        <div class="stats-grid__item">
+          <span class="stats-grid__number" data-target="0" data-suffix="∞">∞</span>
+          <span class="stats-grid__label">Questions illimitées générées par l'IA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TARIFS ==================== -->
+  <section class="section section--pricing" id="pricing" aria-labelledby="pricing-title">
+    <div class="section__container">
+      <h2 class="section__title" id="pricing-title">Tarifs</h2>
+      <p class="section__subtitle">Un accès simple et transparent</p>
+
+      <div class="pricing-grid">
+        <article class="pricing-card pricing-card--free">
+          <div class="pricing-card__header">
+            <span class="pricing-card__badge">Recommandé</span>
+            <h3 class="pricing-card__title">Gratuit</h3>
+            <p class="pricing-card__price">
+              <span class="pricing-card__amount">0&nbsp;€</span>
+              <span class="pricing-card__period">pour toujours</span>
+            </p>
+            <p class="pricing-card__note">Apportez votre clé API Claude et accédez à tout</p>
+          </div>
+
+          <ul class="pricing-card__features" aria-label="Fonctionnalités incluses">
+            <li class="pricing-card__feature">
+              <i class="fas fa-check" aria-hidden="true"></i>
+              Upload illimité
+            </li>
+            <li class="pricing-card__feature">
+              <i class="fas fa-check" aria-hidden="true"></i>
+              Toutes les matières
+            </li>
+            <li class="pricing-card__feature">
+              <i class="fas fa-check" aria-hidden="true"></i>
+              Chat avec MAX
+            </li>
+            <li class="pricing-card__feature">
+              <i class="fas fa-check" aria-hidden="true"></i>
+              Statistiques détaillées
+            </li>
+          </ul>
+
+          <a href="app.html" class="btn btn--primary btn--lg pricing-card__cta">
+            Commencer maintenant
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo" aria-label="CapaTransport Pro - Accueil">
+            <i class="fas fa-truck" aria-hidden="true"></i>
+            <span>CapaTransport Pro</span>
+          </a>
+          <p class="footer__tagline">Votre meilleur allié pour réussir l'examen de Capacité Transport.</p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Liens du pied de page">
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">À propos</a></li>
+            <li><a href="#" class="footer__link">Contact</a></li>
+            <li><a href="#" class="footer__link">Mentions légales</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__sessions">
+        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+        Prochaines sessions d'examen&nbsp;: <strong>Mars 2027</strong>, <strong>Octobre 2027</strong>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 CapaTransport Pro. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      // ---- Smooth scroll for anchor links ----
+      document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+          var targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          var target = document.querySelector(targetId);
+          if (target) {
+            e.preventDefault();
+            var navbarHeight = document.getElementById('navbar').offsetHeight;
+            var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+
+            // Close mobile menu if open
+            navbarLinks.classList.remove('navbar__links--active');
+            hamburgerBtn.classList.remove('navbar__hamburger--active');
+            hamburgerBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+
+      // ---- Hamburger menu toggle ----
+      var hamburgerBtn = document.getElementById('hamburger-btn');
+      var navbarLinks = document.getElementById('navbar-links');
+
+      hamburgerBtn.addEventListener('click', function () {
+        var isActive = navbarLinks.classList.toggle('navbar__links--active');
+        hamburgerBtn.classList.toggle('navbar__hamburger--active');
+        hamburgerBtn.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+        hamburgerBtn.setAttribute('aria-label', isActive ? 'Fermer le menu de navigation' : 'Ouvrir le menu de navigation');
+      });
+
+      // ---- Navbar background change on scroll ----
+      var navbar = document.getElementById('navbar');
+      var scrollThreshold = 50;
+
+      function handleNavbarScroll() {
+        if (window.scrollY > scrollThreshold) {
+          navbar.classList.add('navbar--scrolled');
+        } else {
+          navbar.classList.remove('navbar--scrolled');
+        }
+      }
+
+      window.addEventListener('scroll', handleNavbarScroll, { passive: true });
+      handleNavbarScroll();
+
+      // ---- Animated counters on scroll (Intersection Observer) ----
+      function animateCounter(element) {
+        var target = parseInt(element.getAttribute('data-target'), 10);
+        var suffix = element.getAttribute('data-suffix') || '';
+
+        // For the "infinity" counter, just show the symbol
+        if (target === 0 && suffix === '∞') {
+          element.textContent = '∞';
+          return;
+        }
+
+        var duration = 2000;
+        var startTime = null;
+
+        function step(timestamp) {
+          if (!startTime) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+          var current = Math.floor(eased * target);
+          element.textContent = current + suffix;
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            element.textContent = target + suffix;
+          }
+        }
+
+        requestAnimationFrame(step);
+      }
+
+      var counterElements = document.querySelectorAll('.stats-grid__number[data-target]');
+
+      if ('IntersectionObserver' in window) {
+        var counterObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              counterObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.5 });
+
+        counterElements.forEach(function (el) {
+          counterObserver.observe(el);
+        });
+      } else {
+        // Fallback: animate immediately
+        counterElements.forEach(function (el) {
+          animateCounter(el);
+        });
+      }
+
+    })();
+  </script>
+
+</body>
+</html>

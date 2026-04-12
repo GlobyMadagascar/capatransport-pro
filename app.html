@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CapaTransport Pro - Plateforme d'entraînement pour l'examen Capacité de Transport">
+  <meta name="theme-color" content="#1a237e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>CapaTransport Pro - Tableau de Bord</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Chart.js v4 -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+
+  <!-- Firebase SDK v10 compat -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics-compat.js"></script>
+
+  <!-- Application CSS -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/dashboard.css">
+  <link rel="stylesheet" href="styles/exam.css">
+  <link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+
+  <!-- ===================== FIREBASE INIT ===================== -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAi8jK0KI2zaZVuPorVjOSxnFXd451_h6I",
+      authDomain: "ewacolis.firebaseapp.com",
+      projectId: "ewacolis",
+      storageBucket: "ewacolis.firebasestorage.app",
+      messagingSenderId: "835066153324",
+      appId: "1:835066153324:web:b415ca0f3e0ff566068b49",
+      measurementId: "G-HSVPCREYNS"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const analytics = firebase.analytics();
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+  </script>
+
+  <!-- ===================== LOADING OVERLAY ===================== -->
+  <div class="loading-overlay" id="loading-overlay" role="status" aria-label="Chargement en cours">
+    <div class="loading-overlay__spinner">
+      <i class="fas fa-truck-moving fa-spin"></i>
+    </div>
+    <p class="loading-overlay__text">Chargement...</p>
+  </div>
+
+  <!-- ===================== TOAST CONTAINER ===================== -->
+  <div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- ===================== SIDEBAR NAVIGATION ===================== -->
+  <aside class="sidebar" id="sidebar" role="navigation" aria-label="Navigation principale">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">
+        <i class="fas fa-truck sidebar__logo-icon" aria-hidden="true"></i>
+        <span class="sidebar__logo-text">CapaTransport Pro</span>
+      </div>
+      <button class="sidebar__close-btn" id="sidebar-close-btn" aria-label="Fermer le menu">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <nav class="sidebar__nav">
+      <ul class="sidebar__nav-list" role="menubar">
+        <li class="sidebar__nav-item" role="none">
+          <a href="#" class="sidebar__nav-link sidebar__nav-link--active" data-page="dashboard" role="menuitem" aria-current="page">
+            <i class="fas fa-tachometer-alt sidebar__nav-icon" aria-hidden="true"></i>
+            <span class="sidebar__nav-label">Tableau de bord</span>
+          </a>
+        </li>
+        <li class="sidebar__nav-item" role="none">
+          <a href="#" class="sidebar__nav-link" data-page="training" role="menuitem">
+            <i class="fas fa-play-circle sidebar__nav-icon" aria-hidden="true"></i>
+            <span class="sidebar__nav-label">Entra&icirc;nement</span>
+          </a>
+        </li>
+        <li class="sidebar__nav-item" role="none">
+          <a href="#" class="sidebar__nav-link" data-page="documents" role="menuitem">
+            <i class="fas fa-file-upload sidebar__nav-icon" aria-hidden="true"></i>
+            <span class="sidebar__nav-label">Documents</span>
+          </a>
+        </li>
+        <li class="sidebar__nav-item" role="none">
+          <a href="#" class="sidebar__nav-link" data-page="chat" role="menuitem">
+            <i class="fas fa-comments sidebar__nav-icon" aria-hidden="true"></i>
+            <span class="sidebar__nav-label">Chat avec MAX</span>
+          </a>
+        </li>
+        <li class="sidebar__nav-item" role="none">
+          <a href="#" class="sidebar__nav-link" data-page="stats" role="menuitem">
+            <i class="fas fa-chart-bar sidebar__nav-icon" aria-hidden="true"></i>
+            <span class="sidebar__nav-label">Statistiques</span>
+          </a>
+        </li>
+        <li class="sidebar__nav-item" role="none">
+          <a href="#" class="sidebar__nav-link" data-page="settings" role="menuitem">
+            <i class="fas fa-cog sidebar__nav-icon" aria-hidden="true"></i>
+            <span class="sidebar__nav-label">Param&egrave;tres</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sidebar__user">
+      <div class="sidebar__user-avatar" aria-hidden="true">
+        <i class="fas fa-user-circle"></i>
+      </div>
+      <div class="sidebar__user-info">
+        <span class="sidebar__user-name" id="sidebar-user-name">Utilisateur</span>
+        <span class="sidebar__user-role">Candidat</span>
+      </div>
+      <button class="sidebar__logout-btn" id="logout-btn" aria-label="Se d&eacute;connecter" title="Se d&eacute;connecter">
+        <i class="fas fa-sign-out-alt" aria-hidden="true"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ===================== SIDEBAR OVERLAY (mobile) ===================== -->
+  <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="main" id="main-content" role="main">
+
+    <!-- ===================== TOP BAR ===================== -->
+    <header class="topbar" role="banner">
+      <button class="topbar__hamburger" id="hamburger-btn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="sidebar">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <h1 class="topbar__title" id="topbar-title">Tableau de bord</h1>
+
+      <div class="topbar__actions">
+        <div class="topbar__countdown" id="exam-countdown" aria-label="Compte &agrave; rebours avant l'examen">
+          <i class="fas fa-calendar-day" aria-hidden="true"></i>
+          <span class="topbar__countdown-text" id="countdown-text">J-XX avant l'examen</span>
+        </div>
+        <button class="topbar__start-btn btn btn--primary" id="quick-start-btn" data-action="quick-start">
+          <i class="fas fa-play" aria-hidden="true"></i>
+          <span>Commencer une session</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ===================== PAGE: DASHBOARD ===================== -->
+    <section class="page page--active" id="page-dashboard" data-page="dashboard" aria-label="Tableau de bord">
+
+      <div class="dashboard__greeting">
+        <h2 class="dashboard__greeting-text">
+          Bonjour <span id="user-firstname">Candidat</span>, pr&ecirc;t pour la route ?
+        </h2>
+        <p class="dashboard__greeting-sub">Voici un r&eacute;sum&eacute; de ta progression</p>
+      </div>
+
+      <div class="dashboard__grid">
+
+        <!-- Widget: Score Global -->
+        <div class="widget widget--score" data-widget="score-global">
+          <div class="widget__header">
+            <h3 class="widget__title">
+              <i class="fas fa-gauge-high" aria-hidden="true"></i>
+              Score Global
+            </h3>
+          </div>
+          <div class="widget__body">
+            <div class="widget__gauge">
+              <canvas id="chart-score-global" aria-label="Jauge du score global" role="img" width="220" height="220"></canvas>
+              <div class="widget__gauge-value" id="score-global-value">0%</div>
+            </div>
+            <p class="widget__gauge-label">Taux de r&eacute;ussite global</p>
+          </div>
+        </div>
+
+        <!-- Widget: Blocs de Comp&eacute;tences -->
+        <div class="widget widget--blocs" data-widget="blocs-competences">
+          <div class="widget__header">
+            <h3 class="widget__title">
+              <i class="fas fa-layer-group" aria-hidden="true"></i>
+              Blocs de Comp&eacute;tences
+            </h3>
+          </div>
+          <div class="widget__body">
+            <canvas id="chart-blocs-radar" aria-label="Radar des blocs de comp&eacute;tences" role="img" width="300" height="300"></canvas>
+          </div>
+        </div>
+
+        <!-- Widget: Session Rapide -->
+        <div class="widget widget--quick-session" data-widget="session-rapide">
+          <div class="widget__header">
+            <h3 class="widget__title">
+              <i class="fas fa-rocket" aria-hidden="true"></i>
+              Session Rapide
+            </h3>
+          </div>
+          <div class="widget__body">
+            <div class="widget__quick-actions">
+              <button class="btn btn--outline btn--quick" data-action="start-exam-blanc" aria-label="D&eacute;marrer un examen blanc">
+                <i class="fas fa-file-alt" aria-hidden="true"></i>
+                <span>Examen Blanc</span>
+              </button>
+              <button class="btn btn--outline btn--quick" data-action="start-session-bloc" aria-label="D&eacute;marrer une session par bloc">
+                <i class="fas fa-layer-group" aria-hidden="true"></i>
+                <span>Session Bloc</span>
+              </button>
+              <button class="btn btn--outline btn--quick" data-action="start-quiz-eclair" aria-label="D&eacute;marrer un quiz &eacute;clair">
+                <i class="fas fa-bolt" aria-hidden="true"></i>
+                <span>Quiz &Eacute;clair</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Widget: Activit&eacute; R&eacute;cente -->
+        <div class="widget widget--activity" data-widget="activite-recente">
+          <div class="widget__header">
+            <h3 class="widget__title">
+              <i class="fas fa-clock" aria-hidden="true"></i>
+              Activit&eacute; R&eacute;cente
+            </h3>
+          </div>
+          <div class="widget__body">
+            <ul class="timeline" id="activity-timeline" aria-label="Historique des derni&egrave;res sessions">
+              <li class="timeline__item">
+                <div class="timeline__dot" aria-hidden="true"></div>
+                <div class="timeline__content">
+                  <span class="timeline__date">Aucune session</span>
+                  <span class="timeline__desc">Commencez votre premi&egrave;re session d'entra&icirc;nement</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Widget: Points Faibles -->
+        <div class="widget widget--weak-points" data-widget="points-faibles">
+          <div class="widget__header">
+            <h3 class="widget__title">
+              <i class="fas fa-crosshairs" aria-hidden="true"></i>
+              Points Faibles
+            </h3>
+          </div>
+          <div class="widget__body">
+            <ul class="weak-list" id="weak-points-list" aria-label="Liste des points faibles">
+              <li class="weak-list__item">
+                <div class="weak-list__info">
+                  <span class="weak-list__topic">Aucune donn&eacute;e</span>
+                  <span class="weak-list__score">--</span>
+                </div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar__fill" style="width: 0%"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Widget: Objectifs -->
+        <div class="widget widget--goals" data-widget="objectifs">
+          <div class="widget__header">
+            <h3 class="widget__title">
+              <i class="fas fa-bullseye" aria-hidden="true"></i>
+              Objectifs
+            </h3>
+          </div>
+          <div class="widget__body">
+            <div class="goals">
+              <div class="goals__item">
+                <i class="fas fa-calendar-check goals__icon" aria-hidden="true"></i>
+                <div class="goals__info">
+                  <span class="goals__label">Avant l'examen</span>
+                  <span class="goals__value" id="goal-countdown">J-XX</span>
+                </div>
+              </div>
+              <div class="goals__item">
+                <i class="fas fa-flag-checkered goals__icon" aria-hidden="true"></i>
+                <div class="goals__info">
+                  <span class="goals__label">Objectif du jour</span>
+                  <span class="goals__value" id="goal-daily">0 / 20 questions</span>
+                </div>
+              </div>
+              <div class="goals__item">
+                <i class="fas fa-fire goals__icon" aria-hidden="true"></i>
+                <div class="goals__info">
+                  <span class="goals__label">S&eacute;rie en cours</span>
+                  <span class="goals__value" id="goal-streak">0 jours</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== PAGE: TRAINING ===================== -->
+    <section class="page" id="page-training" data-page="training" style="display:none;" aria-label="Entra&icirc;nement">
+
+      <h2 class="page__title">Choisir un mode d'entra&icirc;nement</h2>
+
+      <div class="training__cards">
+
+        <!-- Examen Blanc -->
+        <div class="training-card" data-session-type="exam-blanc" tabindex="0" role="button" aria-label="Examen Blanc : 50 questions, 3h30, toutes mati&egrave;res">
+          <div class="training-card__icon">
+            <i class="fas fa-file-alt" aria-hidden="true"></i>
+          </div>
+          <div class="training-card__content">
+            <h3 class="training-card__title">Examen Blanc</h3>
+            <p class="training-card__desc">Conditions r&eacute;elles de l'examen. 50 questions couvrant toutes les mati&egrave;res.</p>
+            <div class="training-card__meta">
+              <span><i class="fas fa-question-circle" aria-hidden="true"></i> 50 questions</span>
+              <span><i class="fas fa-clock" aria-hidden="true"></i> 3h30</span>
+              <span><i class="fas fa-book" aria-hidden="true"></i> Toutes mati&egrave;res</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Session par Bloc -->
+        <div class="training-card" data-session-type="session-bloc" tabindex="0" role="button" aria-label="Session par Bloc : 20 questions, 45 minutes">
+          <div class="training-card__icon">
+            <i class="fas fa-layer-group" aria-hidden="true"></i>
+          </div>
+          <div class="training-card__content">
+            <h3 class="training-card__title">Session par Bloc</h3>
+            <p class="training-card__desc">Choisissez un bloc (1 &agrave; 4) et entra&icirc;nez-vous sur un th&egrave;me sp&eacute;cifique.</p>
+            <div class="training-card__meta">
+              <span><i class="fas fa-question-circle" aria-hidden="true"></i> 20 questions</span>
+              <span><i class="fas fa-clock" aria-hidden="true"></i> 45 min</span>
+              <span><i class="fas fa-layer-group" aria-hidden="true"></i> 1 bloc</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quiz &Eacute;clair -->
+        <div class="training-card" data-session-type="quiz-eclair" tabindex="0" role="button" aria-label="Quiz &Eacute;clair : 10 questions, 20 minutes, score imm&eacute;diat">
+          <div class="training-card__icon">
+            <i class="fas fa-bolt" aria-hidden="true"></i>
+          </div>
+          <div class="training-card__content">
+            <h3 class="training-card__title">Quiz &Eacute;clair</h3>
+            <p class="training-card__desc">Session courte avec score imm&eacute;diat. Id&eacute;al pour r&eacute;viser rapidement.</p>
+            <div class="training-card__meta">
+              <span><i class="fas fa-question-circle" aria-hidden="true"></i> 10 questions</span>
+              <span><i class="fas fa-clock" aria-hidden="true"></i> 20 min</span>
+              <span><i class="fas fa-bolt" aria-hidden="true"></i> Score imm&eacute;diat</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Points Faibles -->
+        <div class="training-card" data-session-type="points-faibles" tabindex="0" role="button" aria-label="Points Faibles : questions adaptatives">
+          <div class="training-card__icon">
+            <i class="fas fa-crosshairs" aria-hidden="true"></i>
+          </div>
+          <div class="training-card__content">
+            <h3 class="training-card__title">Points Faibles</h3>
+            <p class="training-card__desc">Questions adaptatives ciblant vos difficult&eacute;s identifi&eacute;es.</p>
+            <div class="training-card__meta">
+              <span><i class="fas fa-question-circle" aria-hidden="true"></i> Adaptatif</span>
+              <span><i class="fas fa-clock" aria-hidden="true"></i> Variable</span>
+              <span><i class="fas fa-crosshairs" aria-hidden="true"></i> Cibl&eacute;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Session Libre -->
+        <div class="training-card" data-session-type="session-libre" tabindex="0" role="button" aria-label="Session Libre : personnalis&eacute;e">
+          <div class="training-card__icon">
+            <i class="fas fa-sliders-h" aria-hidden="true"></i>
+          </div>
+          <div class="training-card__content">
+            <h3 class="training-card__title">Session Libre</h3>
+            <p class="training-card__desc">Cr&eacute;ez une session personnalis&eacute;e selon vos besoins.</p>
+            <div class="training-card__meta">
+              <span><i class="fas fa-question-circle" aria-hidden="true"></i> Personnalis&eacute;</span>
+              <span><i class="fas fa-clock" aria-hidden="true"></i> Libre</span>
+              <span><i class="fas fa-sliders-h" aria-hidden="true"></i> Flexible</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bloc Selector (hidden by default) -->
+      <div class="training__bloc-selector" id="bloc-selector" style="display:none;" aria-label="S&eacute;lection du bloc">
+        <h3 class="training__bloc-title">Choisir un bloc</h3>
+        <div class="training__bloc-buttons">
+          <button class="btn btn--bloc" data-bloc="1" aria-label="Bloc 1 - R&eacute;glementation">
+            <span class="btn__bloc-number">1</span>
+            <span class="btn__bloc-label">R&eacute;glementation</span>
+          </button>
+          <button class="btn btn--bloc" data-bloc="2" aria-label="Bloc 2 - RETM">
+            <span class="btn__bloc-number">2</span>
+            <span class="btn__bloc-label">RETM</span>
+          </button>
+          <button class="btn btn--bloc" data-bloc="3" aria-label="Bloc 3 - Normes Techniques">
+            <span class="btn__bloc-number">3</span>
+            <span class="btn__bloc-label">Normes Techniques</span>
+          </button>
+          <button class="btn btn--bloc" data-bloc="4" aria-label="Bloc 4 - Ventes Internationales">
+            <span class="btn__bloc-number">4</span>
+            <span class="btn__bloc-label">Ventes Internationales</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Difficulty Selector -->
+      <div class="training__difficulty" aria-label="S&eacute;lection de la difficult&eacute;">
+        <h3 class="training__difficulty-title">Niveau de difficult&eacute;</h3>
+        <div class="training__difficulty-buttons" role="radiogroup" aria-label="Difficult&eacute;">
+          <button class="btn btn--difficulty btn--difficulty--active" data-difficulty="melange" role="radio" aria-checked="true">
+            <i class="fas fa-random" aria-hidden="true"></i> M&eacute;lang&eacute;
+          </button>
+          <button class="btn btn--difficulty" data-difficulty="facile" role="radio" aria-checked="false">
+            <i class="fas fa-seedling" aria-hidden="true"></i> Facile
+          </button>
+          <button class="btn btn--difficulty" data-difficulty="moyen" role="radio" aria-checked="false">
+            <i class="fas fa-balance-scale" aria-hidden="true"></i> Moyen
+          </button>
+          <button class="btn btn--difficulty" data-difficulty="difficile" role="radio" aria-checked="false">
+            <i class="fas fa-mountain" aria-hidden="true"></i> Difficile
+          </button>
+        </div>
+      </div>
+
+      <!-- Start Button -->
+      <div class="training__start">
+        <button class="btn btn--primary btn--large" id="start-session-btn" data-action="start-session" aria-label="D&eacute;marrer la session">
+          <i class="fas fa-play" aria-hidden="true"></i>
+          D&eacute;marrer la session
+        </button>
+      </div>
+
+    </section>
+
+    <!-- ===================== PAGE: EXAM INTERFACE ===================== -->
+    <section class="page" id="page-exam" data-page="exam" style="display:none;" aria-label="Interface d'examen">
+
+      <!-- Exam Top Bar -->
+      <div class="exam__topbar">
+        <div class="exam__timer" aria-label="Temps restant" role="timer">
+          <i class="fas fa-stopwatch" aria-hidden="true"></i>
+          <span class="exam__timer-value" id="exam-timer">03:30:00</span>
+        </div>
+        <div class="exam__progress-info">
+          <span class="exam__question-counter" id="exam-question-counter">Question <strong>1</strong> / <strong>50</strong></span>
+        </div>
+        <div class="exam__progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Progression de l'examen">
+          <div class="exam__progress-fill" id="exam-progress-fill" style="width: 0%;">
+            <div class="exam__progress-truck" aria-hidden="true">
+              <i class="fas fa-truck"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Question Area -->
+      <div class="exam__question-area" id="exam-question-area">
+        <div class="exam__question-header">
+          <span class="exam__question-number" id="exam-question-number">Question 1</span>
+          <span class="exam__question-bloc badge" id="exam-question-bloc">Bloc 1</span>
+        </div>
+        <div class="exam__question-context" id="exam-question-context" aria-label="Contexte de la question" style="display:none;">
+          <!-- Context text if any -->
+        </div>
+        <p class="exam__question-text" id="exam-question-text">Chargement de la question...</p>
+      </div>
+
+      <!-- Choices Area: QCM -->
+      <div class="exam__choices" id="exam-choices" aria-label="Choix de r&eacute;ponses" role="radiogroup">
+        <button class="exam__choice" data-choice="A" role="radio" aria-checked="false">
+          <span class="exam__choice-letter">A</span>
+          <span class="exam__choice-text" id="choice-a-text">--</span>
+        </button>
+        <button class="exam__choice" data-choice="B" role="radio" aria-checked="false">
+          <span class="exam__choice-letter">B</span>
+          <span class="exam__choice-text" id="choice-b-text">--</span>
+        </button>
+        <button class="exam__choice" data-choice="C" role="radio" aria-checked="false">
+          <span class="exam__choice-letter">C</span>
+          <span class="exam__choice-text" id="choice-c-text">--</span>
+        </button>
+        <button class="exam__choice" data-choice="D" role="radio" aria-checked="false">
+          <span class="exam__choice-letter">D</span>
+          <span class="exam__choice-text" id="choice-d-text">--</span>
+        </button>
+      </div>
+
+      <!-- Alternative: Text Input (r&eacute;dactionnel) -->
+      <div class="exam__text-input" id="exam-text-input" style="display:none;">
+        <label for="exam-redactionnel" class="exam__text-label">Votre r&eacute;ponse r&eacute;dactionnelle :</label>
+        <textarea class="exam__textarea" id="exam-redactionnel" rows="6" placeholder="R&eacute;digez votre r&eacute;ponse ici..."></textarea>
+      </div>
+
+      <!-- Alternative: Number Input (calcul) -->
+      <div class="exam__number-input" id="exam-number-input" style="display:none;">
+        <label for="exam-calcul" class="exam__number-label">R&eacute;sultat du calcul :</label>
+        <input type="number" class="exam__number-field" id="exam-calcul" placeholder="Entrez votre r&eacute;ponse num&eacute;rique" step="any">
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="exam__bottombar">
+        <div class="exam__nav-buttons">
+          <button class="btn btn--secondary" id="exam-prev-btn" data-action="exam-prev" aria-label="Question pr&eacute;c&eacute;dente" disabled>
+            <i class="fas fa-arrow-left" aria-hidden="true"></i> Pr&eacute;c&eacute;dente
+          </button>
+          <button class="btn btn--secondary" id="exam-skip-btn" data-action="exam-skip" aria-label="Passer la question">
+            <i class="fas fa-forward" aria-hidden="true"></i> Passer
+          </button>
+          <button class="btn btn--primary" id="exam-next-btn" data-action="exam-next" aria-label="Question suivante">
+            Suivante <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <button class="btn btn--accent" id="exam-ask-max-btn" data-action="ask-max" aria-label="Demander aide &agrave; MAX">
+          <i class="fas fa-robot" aria-hidden="true"></i> Demander aide &agrave; MAX
+        </button>
+      </div>
+
+      <!-- Question Navigator -->
+      <div class="exam__navigator" id="exam-navigator" aria-label="Navigateur de questions">
+        <h4 class="exam__navigator-title">Questions</h4>
+        <div class="exam__navigator-grid" id="exam-navigator-grid" role="list">
+          <!-- Numbered buttons generated by JS -->
+        </div>
+        <button class="btn btn--danger btn--large" id="exam-finish-btn" data-action="exam-finish" aria-label="Terminer l'examen">
+          <i class="fas fa-flag-checkered" aria-hidden="true"></i> Terminer l'examen
+        </button>
+      </div>
+
+      <!-- ===== Results Screen (hidden until exam ends) ===== -->
+      <div class="exam__results" id="exam-results" style="display:none;" aria-label="R&eacute;sultats de l'examen">
+
+        <h2 class="exam__results-title">R&eacute;sultats de l'examen</h2>
+
+        <!-- Large Score Gauge -->
+        <div class="exam__results-gauge">
+          <canvas id="chart-results-score" aria-label="Score final" role="img" width="250" height="250"></canvas>
+          <div class="exam__results-score-value" id="results-score-value">0%</div>
+        </div>
+
+        <!-- Score Breakdown by Bloc -->
+        <div class="exam__results-breakdown">
+          <h3>R&eacute;partition par bloc</h3>
+          <canvas id="chart-results-blocs" aria-label="Score par bloc" role="img" width="400" height="200"></canvas>
+        </div>
+
+        <!-- Question Review List -->
+        <div class="exam__results-questions" id="results-questions-list" aria-label="D&eacute;tail des r&eacute;ponses">
+          <h3>D&eacute;tail des r&eacute;ponses</h3>
+          <ul class="results-list" id="results-list">
+            <!-- Generated by JS: each item is expandable -->
+          </ul>
+        </div>
+
+        <!-- Results Actions -->
+        <div class="exam__results-actions">
+          <button class="btn btn--primary" id="results-retry-btn" data-action="results-retry" aria-label="Recommencer">
+            <i class="fas fa-redo" aria-hidden="true"></i> Recommencer
+          </button>
+          <button class="btn btn--secondary" id="results-dashboard-btn" data-action="results-dashboard" aria-label="Retour au tableau de bord">
+            <i class="fas fa-home" aria-hidden="true"></i> Retour tableau de bord
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ===================== PAGE: DOCUMENTS ===================== -->
+    <section class="page" id="page-documents" data-page="documents" style="display:none;" aria-label="Gestion des documents">
+
+      <h2 class="page__title">Documents</h2>
+
+      <!-- Upload Zone -->
+      <div class="upload-zone" id="upload-zone" role="button" tabindex="0" aria-label="Zone de d&eacute;p&ocirc;t de fichiers">
+        <div class="upload-zone__content">
+          <i class="fas fa-cloud-upload-alt upload-zone__icon" aria-hidden="true"></i>
+          <p class="upload-zone__text">Glissez vos fichiers ici ou cliquez pour s&eacute;lectionner</p>
+          <p class="upload-zone__hint">PDF, Word, TXT - 10MB max</p>
+        </div>
+        <input type="file" class="upload-zone__input" id="file-input" accept=".pdf,.doc,.docx,.txt" multiple hidden aria-label="S&eacute;lectionner des fichiers">
+      </div>
+
+      <!-- Category Selector -->
+      <div class="upload-options">
+        <label for="doc-category" class="upload-options__label">Cat&eacute;gorie :</label>
+        <select class="form-select" id="doc-category" aria-label="Cat&eacute;gorie du document">
+          <option value="annales">Annales</option>
+          <option value="reglementation">R&eacute;glementation</option>
+          <option value="retm">RETM</option>
+          <option value="normes-techniques">Normes Techniques</option>
+          <option value="ventes-internationales">Ventes Internationales</option>
+          <option value="cours-personnels">Cours personnels</option>
+        </select>
+      </div>
+
+      <!-- Scan Existing Documents Button -->
+      <div class="upload-options">
+        <button class="btn btn--secondary" id="scan-existing-btn" data-action="scan-existing" aria-label="Scanner les documents existants">
+          <i class="fas fa-search" aria-hidden="true"></i> Scanner les documents existants
+        </button>
+      </div>
+
+      <!-- Processing Indicator -->
+      <div class="processing-indicator" id="processing-indicator" style="display:none;" aria-label="Traitement en cours">
+        <div class="processing-indicator__content">
+          <i class="fas fa-cog fa-spin" aria-hidden="true"></i>
+          <span class="processing-indicator__text">Traitement du document...</span>
+        </div>
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar__fill" id="processing-progress" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- Documents List -->
+      <div class="documents-list" id="documents-list" aria-label="Liste des documents">
+        <h3 class="documents-list__title">Mes documents</h3>
+        <div class="documents-list__grid" id="documents-grid">
+          <!-- Document cards generated by JS -->
+          <div class="documents-list__empty" id="documents-empty">
+            <i class="fas fa-folder-open" aria-hidden="true"></i>
+            <p>Aucun document import&eacute;. Ajoutez vos premiers fichiers ci-dessus.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===================== PAGE: CHAT WITH MAX ===================== -->
+    <section class="page" id="page-chat" data-page="chat" style="display:none;" aria-label="Chat avec MAX">
+
+      <div class="chat">
+
+        <!-- Message Area -->
+        <div class="chat__messages" id="chat-messages" role="log" aria-label="Messages du chat" aria-live="polite">
+          <!-- Welcome Message from MAX -->
+          <div class="chat__message chat__message--bot">
+            <div class="chat__avatar chat__avatar--bot" aria-hidden="true">
+              <i class="fas fa-robot"></i>
+            </div>
+            <div class="chat__bubble chat__bubble--bot">
+              <p>Salut ! Je suis <strong>MAX</strong>, ton copilote pour la Capacit&eacute; Transport. Pose-moi n'importe quelle question sur la r&eacute;glementation, les calculs, le RETM, les Incoterms... Je suis l&agrave; pour t'aider &agrave; r&eacute;ussir ton examen !</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Typing Indicator -->
+        <div class="chat__typing" id="chat-typing" style="display:none;" aria-label="MAX est en train d'&eacute;crire">
+          <div class="chat__avatar chat__avatar--bot" aria-hidden="true">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="chat__bubble chat__bubble--bot chat__bubble--typing">
+            <span class="chat__typing-dot"></span>
+            <span class="chat__typing-dot"></span>
+            <span class="chat__typing-dot"></span>
+          </div>
+        </div>
+
+        <!-- Suggested Questions -->
+        <div class="chat__suggestions" id="chat-suggestions" aria-label="Questions sugg&eacute;r&eacute;es">
+          <button class="chat__suggestion-chip" data-suggestion="Qu'est-ce que le PTAC ?">Qu'est-ce que le PTAC ?</button>
+          <button class="chat__suggestion-chip" data-suggestion="Temps de conduite max ?">Temps de conduite max ?</button>
+          <button class="chat__suggestion-chip" data-suggestion="Expliquer les Incoterms">Expliquer les Incoterms</button>
+        </div>
+
+        <!-- Input Area -->
+        <div class="chat__input-area">
+          <label for="chat-input" class="sr-only">Votre message</label>
+          <textarea class="chat__input" id="chat-input" rows="1" placeholder="Posez votre question &agrave; MAX..." aria-label="&Eacute;crire un message"></textarea>
+          <button class="chat__send-btn" id="chat-send-btn" aria-label="Envoyer le message">
+            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ===================== PAGE: STATISTICS ===================== -->
+    <section class="page" id="page-stats" data-page="stats" style="display:none;" aria-label="Statistiques">
+
+      <h2 class="page__title">Statistiques</h2>
+
+      <!-- Time Period Selector -->
+      <div class="stats__period-selector" role="tablist" aria-label="P&eacute;riode">
+        <button class="btn btn--period btn--period--active" data-period="7" role="tab" aria-selected="true">7 jours</button>
+        <button class="btn btn--period" data-period="30" role="tab" aria-selected="false">30 jours</button>
+        <button class="btn btn--period" data-period="all" role="tab" aria-selected="false">Tout</button>
+      </div>
+
+      <!-- Stats Summary Cards -->
+      <div class="stats__cards">
+        <div class="stats-card" data-stat="total-questions">
+          <div class="stats-card__icon"><i class="fas fa-question-circle" aria-hidden="true"></i></div>
+          <div class="stats-card__value" id="stat-total-questions">0</div>
+          <div class="stats-card__label">Total questions</div>
+        </div>
+        <div class="stats-card" data-stat="taux-reussite">
+          <div class="stats-card__icon"><i class="fas fa-check-circle" aria-hidden="true"></i></div>
+          <div class="stats-card__value" id="stat-taux-reussite">0%</div>
+          <div class="stats-card__label">Taux de r&eacute;ussite</div>
+        </div>
+        <div class="stats-card" data-stat="temps-total">
+          <div class="stats-card__icon"><i class="fas fa-hourglass-half" aria-hidden="true"></i></div>
+          <div class="stats-card__value" id="stat-temps-total">0h</div>
+          <div class="stats-card__label">Temps total</div>
+        </div>
+        <div class="stats-card" data-stat="streak">
+          <div class="stats-card__icon"><i class="fas fa-fire" aria-hidden="true"></i></div>
+          <div class="stats-card__value" id="stat-streak">0</div>
+          <div class="stats-card__label">Streak (jours)</div>
+        </div>
+      </div>
+
+      <!-- Charts Grid -->
+      <div class="stats__charts">
+
+        <div class="chart-container" data-chart="evolution-score">
+          <h3 class="chart-container__title">&Eacute;volution du score</h3>
+          <canvas id="chart-evolution-score" aria-label="Graphique d'&eacute;volution du score" role="img"></canvas>
+        </div>
+
+        <div class="chart-container" data-chart="radar-blocs">
+          <h3 class="chart-container__title">Radar des blocs</h3>
+          <canvas id="chart-stats-radar" aria-label="Radar des blocs de comp&eacute;tences" role="img"></canvas>
+        </div>
+
+        <div class="chart-container" data-chart="repartition-erreurs">
+          <h3 class="chart-container__title">R&eacute;partition des erreurs</h3>
+          <canvas id="chart-repartition-erreurs" aria-label="R&eacute;partition des erreurs par cat&eacute;gorie" role="img"></canvas>
+        </div>
+
+        <div class="chart-container" data-chart="temps-par-question">
+          <h3 class="chart-container__title">Temps par question</h3>
+          <canvas id="chart-temps-question" aria-label="Temps moyen par question" role="img"></canvas>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ===================== PAGE: SETTINGS ===================== -->
+    <section class="page" id="page-settings" data-page="settings" style="display:none;" aria-label="Param&egrave;tres">
+
+      <h2 class="page__title">Param&egrave;tres</h2>
+
+      <div class="settings">
+
+        <!-- Profil -->
+        <fieldset class="settings__section">
+          <legend class="settings__section-title">
+            <i class="fas fa-user" aria-hidden="true"></i> Profil
+          </legend>
+          <div class="form-group">
+            <label for="settings-prenom" class="form-label">Pr&eacute;nom</label>
+            <input type="text" class="form-input" id="settings-prenom" placeholder="Votre pr&eacute;nom" autocomplete="given-name">
+          </div>
+          <div class="form-group">
+            <label for="settings-region" class="form-label">R&eacute;gion</label>
+            <select class="form-select" id="settings-region" autocomplete="address-level1">
+              <option value="">-- S&eacute;lectionnez --</option>
+              <option value="auvergne-rhone-alpes">Auvergne-Rh&ocirc;ne-Alpes</option>
+              <option value="bourgogne-franche-comte">Bourgogne-Franche-Comt&eacute;</option>
+              <option value="bretagne">Bretagne</option>
+              <option value="centre-val-de-loire">Centre-Val de Loire</option>
+              <option value="corse">Corse</option>
+              <option value="grand-est">Grand Est</option>
+              <option value="hauts-de-france">Hauts-de-France</option>
+              <option value="ile-de-france">&Icirc;le-de-France</option>
+              <option value="normandie">Normandie</option>
+              <option value="nouvelle-aquitaine">Nouvelle-Aquitaine</option>
+              <option value="occitanie">Occitanie</option>
+              <option value="pays-de-la-loire">Pays de la Loire</option>
+              <option value="provence-alpes-cote-d-azur">Provence-Alpes-C&ocirc;te d'Azur</option>
+              <option value="guadeloupe">Guadeloupe</option>
+              <option value="martinique">Martinique</option>
+              <option value="guyane">Guyane</option>
+              <option value="la-reunion">La R&eacute;union</option>
+              <option value="mayotte">Mayotte</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="settings-exam-date" class="form-label">Date d'examen</label>
+            <input type="date" class="form-input" id="settings-exam-date">
+          </div>
+        </fieldset>
+
+        <!-- API Configuration -->
+        <fieldset class="settings__section">
+          <legend class="settings__section-title">
+            <i class="fas fa-key" aria-hidden="true"></i> Configuration API
+          </legend>
+          <div class="form-group">
+            <label for="settings-api-key" class="form-label">Cl&eacute; API Claude</label>
+            <div class="form-input-group">
+              <input type="password" class="form-input" id="settings-api-key" placeholder="sk-ant-..." autocomplete="off">
+              <button class="btn btn--secondary" id="test-api-btn" data-action="test-api" aria-label="Tester la connexion API">
+                <i class="fas fa-plug" aria-hidden="true"></i> Tester
+              </button>
+            </div>
+            <div class="form-status" id="api-status" aria-live="polite">
+              <span class="form-status__indicator" id="api-status-indicator"></span>
+              <span class="form-status__text" id="api-status-text">Non configur&eacute;</span>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Pr&eacute;f&eacute;rences -->
+        <fieldset class="settings__section">
+          <legend class="settings__section-title">
+            <i class="fas fa-palette" aria-hidden="true"></i> Pr&eacute;f&eacute;rences
+          </legend>
+          <div class="form-group">
+            <label for="settings-font-size" class="form-label">Taille du texte : <span id="font-size-value">16</span>px</label>
+            <input type="range" class="form-range" id="settings-font-size" min="14" max="20" value="16" step="1" aria-label="Taille du texte">
+          </div>
+          <div class="form-group form-group--toggle">
+            <label for="settings-notifications" class="form-label">Notifications</label>
+            <label class="toggle" aria-label="Activer les notifications">
+              <input type="checkbox" class="toggle__input" id="settings-notifications" checked>
+              <span class="toggle__slider"></span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Donn&eacute;es -->
+        <fieldset class="settings__section">
+          <legend class="settings__section-title">
+            <i class="fas fa-database" aria-hidden="true"></i> Donn&eacute;es
+          </legend>
+          <div class="settings__data-actions">
+            <button class="btn btn--secondary" id="export-data-btn" data-action="export-data" aria-label="Exporter les donn&eacute;es en JSON">
+              <i class="fas fa-download" aria-hidden="true"></i> Exporter (JSON)
+            </button>
+            <button class="btn btn--danger" id="reset-data-btn" data-action="reset-data" aria-label="R&eacute;initialiser la progression">
+              <i class="fas fa-trash-alt" aria-hidden="true"></i> R&eacute;initialiser la progression
+            </button>
+          </div>
+        </fieldset>
+
+        <!-- &Agrave; propos -->
+        <fieldset class="settings__section">
+          <legend class="settings__section-title">
+            <i class="fas fa-info-circle" aria-hidden="true"></i> &Agrave; propos
+          </legend>
+          <div class="settings__about">
+            <p><strong>CapaTransport Pro</strong> - Version 1.0.0</p>
+            <p>Plateforme d'entra&icirc;nement pour l'examen de Capacit&eacute; de Transport de marchandises.</p>
+            <p class="settings__credits">D&eacute;velopp&eacute; avec <i class="fas fa-heart" aria-hidden="true"></i> pour les futurs transporteurs.</p>
+          </div>
+        </fieldset>
+
+        <!-- Save Button -->
+        <div class="settings__save">
+          <button class="btn btn--primary btn--large" id="save-settings-btn" data-action="save-settings" aria-label="Enregistrer les param&egrave;tres">
+            <i class="fas fa-save" aria-hidden="true"></i> Enregistrer les param&egrave;tres
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ===================== MODAL: LOGIN / REGISTER ===================== -->
+  <div class="modal" id="modal-auth" role="dialog" aria-modal="true" aria-labelledby="modal-auth-title" style="display:none;">
+    <div class="modal__backdrop" data-action="close-modal"></div>
+    <div class="modal__content modal__content--auth">
+      <div class="modal__header">
+        <h2 class="modal__title" id="modal-auth-title">Bienvenue sur CapaTransport Pro</h2>
+      </div>
+      <div class="modal__body">
+
+        <!-- Tabs -->
+        <div class="auth-tabs" role="tablist" aria-label="Connexion ou inscription">
+          <button class="auth-tabs__tab auth-tabs__tab--active" data-tab="login" role="tab" aria-selected="true" aria-controls="auth-panel-login" id="auth-tab-login">
+            Connexion
+          </button>
+          <button class="auth-tabs__tab" data-tab="register" role="tab" aria-selected="false" aria-controls="auth-panel-register" id="auth-tab-register">
+            Inscription
+          </button>
+        </div>
+
+        <!-- Login Panel -->
+        <div class="auth-panel" id="auth-panel-login" role="tabpanel" aria-labelledby="auth-tab-login">
+          <form class="auth-form" id="login-form" novalidate>
+            <div class="form-group">
+              <label for="login-email" class="form-label">Adresse e-mail</label>
+              <input type="email" class="form-input" id="login-email" placeholder="votre@email.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="login-password" class="form-label">Mot de passe</label>
+              <input type="password" class="form-input" id="login-password" placeholder="Votre mot de passe" required autocomplete="current-password">
+            </div>
+            <button type="submit" class="btn btn--primary btn--large btn--full" aria-label="Se connecter">
+              <i class="fas fa-sign-in-alt" aria-hidden="true"></i> Se connecter
+            </button>
+          </form>
+        </div>
+
+        <!-- Register Panel -->
+        <div class="auth-panel" id="auth-panel-register" role="tabpanel" aria-labelledby="auth-tab-register" style="display:none;">
+          <form class="auth-form" id="register-form" novalidate>
+            <div class="form-group">
+              <label for="register-prenom" class="form-label">Pr&eacute;nom</label>
+              <input type="text" class="form-input" id="register-prenom" placeholder="Votre pr&eacute;nom" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <label for="register-email" class="form-label">Adresse e-mail</label>
+              <input type="email" class="form-input" id="register-email" placeholder="votre@email.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="register-password" class="form-label">Mot de passe</label>
+              <input type="password" class="form-input" id="register-password" placeholder="Cr&eacute;er un mot de passe" required autocomplete="new-password">
+            </div>
+            <div class="form-group">
+              <label for="register-region" class="form-label">R&eacute;gion</label>
+              <select class="form-select" id="register-region" required>
+                <option value="">-- S&eacute;lectionnez --</option>
+                <option value="auvergne-rhone-alpes">Auvergne-Rh&ocirc;ne-Alpes</option>
+                <option value="bourgogne-franche-comte">Bourgogne-Franche-Comt&eacute;</option>
+                <option value="bretagne">Bretagne</option>
+                <option value="centre-val-de-loire">Centre-Val de Loire</option>
+                <option value="corse">Corse</option>
+                <option value="grand-est">Grand Est</option>
+                <option value="hauts-de-france">Hauts-de-France</option>
+                <option value="ile-de-france">&Icirc;le-de-France</option>
+                <option value="normandie">Normandie</option>
+                <option value="nouvelle-aquitaine">Nouvelle-Aquitaine</option>
+                <option value="occitanie">Occitanie</option>
+                <option value="pays-de-la-loire">Pays de la Loire</option>
+                <option value="provence-alpes-cote-d-azur">Provence-Alpes-C&ocirc;te d'Azur</option>
+                <option value="guadeloupe">Guadeloupe</option>
+                <option value="martinique">Martinique</option>
+                <option value="guyane">Guyane</option>
+                <option value="la-reunion">La R&eacute;union</option>
+                <option value="mayotte">Mayotte</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="register-exam-date" class="form-label">Date d'examen</label>
+              <input type="date" class="form-input" id="register-exam-date" required>
+            </div>
+            <button type="submit" class="btn btn--primary btn--large btn--full" aria-label="Cr&eacute;er un compte">
+              <i class="fas fa-user-plus" aria-hidden="true"></i> Cr&eacute;er un compte
+            </button>
+          </form>
+        </div>
+
+        <!-- Guest Access -->
+        <div class="auth-guest">
+          <div class="auth-guest__divider"><span>ou</span></div>
+          <button class="btn btn--secondary btn--full" id="guest-access-btn" data-action="guest-access" aria-label="Commencer sans compte">
+            <i class="fas fa-user-secret" aria-hidden="true"></i> Commencer sans compte
+          </button>
+          <p class="auth-guest__hint">Vos donn&eacute;es seront sauvegard&eacute;es localement uniquement.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== MODAL: CONFIRMATION (Reusable) ===================== -->
+  <div class="modal" id="modal-confirm" role="alertdialog" aria-modal="true" aria-labelledby="modal-confirm-title" aria-describedby="modal-confirm-message" style="display:none;">
+    <div class="modal__backdrop" data-action="close-modal"></div>
+    <div class="modal__content modal__content--confirm">
+      <div class="modal__header">
+        <h2 class="modal__title" id="modal-confirm-title">Confirmation</h2>
+        <button class="modal__close-btn" data-action="close-modal" aria-label="Fermer">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="modal__body">
+        <p class="modal__message" id="modal-confirm-message">&Ecirc;tes-vous s&ucirc;r de vouloir effectuer cette action ?</p>
+      </div>
+      <div class="modal__footer">
+        <button class="btn btn--secondary" data-action="close-modal" aria-label="Annuler">Annuler</button>
+        <button class="btn btn--danger" id="modal-confirm-btn" aria-label="Confirmer">Confirmer</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== MODAL: RESULTS DETAIL ===================== -->
+  <div class="modal" id="modal-result-detail" role="dialog" aria-modal="true" aria-labelledby="modal-result-detail-title" style="display:none;">
+    <div class="modal__backdrop" data-action="close-modal"></div>
+    <div class="modal__content modal__content--result-detail">
+      <div class="modal__header">
+        <h2 class="modal__title" id="modal-result-detail-title">D&eacute;tail de la question</h2>
+        <button class="modal__close-btn" data-action="close-modal" aria-label="Fermer">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="modal__body" id="modal-result-detail-body">
+        <div class="result-detail">
+          <div class="result-detail__question" id="result-detail-question"></div>
+          <div class="result-detail__your-answer">
+            <h4>Votre r&eacute;ponse :</h4>
+            <p id="result-detail-your-answer"></p>
+          </div>
+          <div class="result-detail__correct-answer">
+            <h4>R&eacute;ponse correcte :</h4>
+            <p id="result-detail-correct-answer"></p>
+          </div>
+          <div class="result-detail__explanation">
+            <h4>Explication :</h4>
+            <p id="result-detail-explanation"></p>
+          </div>
+        </div>
+      </div>
+      <div class="modal__footer">
+        <button class="btn btn--secondary" data-action="close-modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SCREEN READER ONLY HELPER ===================== -->
+  <style>
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/documents.js"></script>
+  <script src="js/exam.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
