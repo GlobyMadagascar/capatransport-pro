@@ -1,0 +1,620 @@
+{
+  "year": 2018,
+  "session": "Session du 3 octobre 2018",
+  "qcm": [
+    {
+      "number": 1,
+      "text": "En l'absence de convention, le contrat type applicable aux transports publics routiers de marchandises exécutés par des sous-traitants est applicable pour les relations entre :",
+      "options": {
+        "a": "un transporteur routier de marchandises et un loueur de véhicules industriels avec conducteur",
+        "b": "une entreprise de transport pour compte propre et une entreprise de transport public routier de marchandises",
+        "c": "un commissionnaire de transport et un transporteur public routier de marchandises",
+        "d": "un commissionnaire de transport et un loueur de véhicules industriels avec conducteur"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 2,
+      "text": "La demande d'ouverture de la procédure de redressement judiciaire est de la compétence:",
+      "options": {
+        "a": "exclusive du chef d'entreprise",
+        "b": "exclusive du chef d'entreprise et des créanciers",
+        "c": "exclusive du président du tribunal de commerce et des créanciers de l'entreprise",
+        "d": "indifféremment du chef d'entreprise, des créanciers, des salariés, du président du tribunal de commerce, du procureur de la République"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 3,
+      "text": "Le président d'une société par actions simplifiée (S.A.S.) :",
+      "options": {
+        "a": "est toujours une personne morale",
+        "b": "est obligatoirement un associé de la S.A.S.",
+        "c": "est toujours désigné par un conseil d'administration",
+        "d": "peut être une personne physique ou morale"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 4,
+      "text": "Dans une S.A.R.L (société à responsabilité limitée), le gérant :",
+      "options": {
+        "a": "n'a pas obligatoirement la qualité de commerçant",
+        "b": "doit obligatoirement être associé",
+        "c": "ne peut être salarié qu'à la condition d'être actionnaire majoritaire",
+        "d": "devient automatiquement commerçant"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 5,
+      "text": "Dans une SARL (société à responsabilité limitée), les associés doivent répondre des dettes de la société :",
+      "options": {
+        "a": "dans leur totalité",
+        "b": "proportionnellement à leurs apports",
+        "c": "sauf en cas de liquidation judiciaire",
+        "d": "dans la limite de leurs apports"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 6,
+      "text": "La cessation de paiement d'une société commerciale est :",
+      "options": {
+        "a": "l'impossibilité de faire face au passif exigible avec son actif disponible",
+        "b": "la perte de la moitié de son capital social",
+        "c": "une infraction imputable aux dirigeants de la société",
+        "d": "la tenue d'une comptabilité irrégulière au regard des dispositions légales"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 7,
+      "text": "Un chef d'entreprise désire avoir le statut de salarié, il doit :",
+      "options": {
+        "a": "s'inscrire au registre du commerce et des sociétés en nom personnel",
+        "b": "être le gérant associé d'une EURL (entreprise unipersonnelle à responsabilité limitée)",
+        "c": "être le gérant unique d'une SARL (société à responsabilité limitée) dont il aura la majorité du capital",
+        "d": "être le gérant unique d'une SARL dont il aura la minorité du capital"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 8,
+      "text": "Lors d'un transport routier Paris-Rome, la marchandise est considérée comme perdue si elle n'a pas été livrée dans les :",
+      "options": {
+        "a": "15 jours suivant l'expiration du délai convenu",
+        "b": "30 jours suivant l'expiration du délai convenu",
+        "c": "35 jours suivant l'expiration du délai convenu",
+        "d": "60 jours suivant l'expiration du délai convenu"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 9,
+      "text": "L'entrepreneur individuel est imposé au titre :",
+      "options": {
+        "a": "des prélèvements effectués pour ses besoins personnels",
+        "b": "de ses revenus (bénéfices industriels et commerciaux)",
+        "c": "de l'impôt sur les sociétés",
+        "d": "des valeurs mobilières de placement"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 10,
+      "text": "En transport national, un destinataire constate, le jour de la livraison, des avaries sur la marchandise. La durée de la prescription de son action est de :",
+      "options": {
+        "a": "6 mois",
+        "b": "1 an",
+        "c": "2 ans",
+        "d": "3 ans"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 11,
+      "text": "Dans une SARL (société à responsabilité limitée), le gérant est élu à la majorité des associés :",
+      "options": {
+        "a": "à l'unanimité",
+        "b": "représentant un quart des parts sociales",
+        "c": "représentant plus des trois quarts des parts sociales",
+        "d": "représentant plus de la moitié des parts sociales"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 12,
+      "text": "Dans une EURL (société unipersonnelle à responsabilité limitée), le gérant associé unique est responsable :",
+      "options": {
+        "a": "de la totalité des dettes sociales",
+        "b": "des dettes sociales sur ses biens personnels",
+        "c": "des dettes sociales à concurrence de ses apports",
+        "d": "des dettes sociales à concurrence de son chiffre d'affaires annuel"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 13,
+      "text": "En transport routier intérieur de marchandises, le délai pour intenter une action récursoire :",
+      "options": {
+        "a": "est d'un mois à dater de la livraison",
+        "b": "est d'un mois à dater de l'action principale",
+        "c": "s'ajoute au délai de prescription",
+        "d": "annule le délai de prescription"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 14,
+      "text": "Les entretiens et réparations du matériel de bureau, dans le calcul du prix de revient, entrent dans les charges :",
+      "options": {
+        "a": "variables au kilomètre",
+        "b": "variables annuelles",
+        "c": "fixes du véhicule",
+        "d": "de structure"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 15,
+      "text": "Une provision pour grosses réparations sera inscrite au bilan dans les :",
+      "options": {
+        "a": "dotations aux amortissements et aux provisions exceptionnelles",
+        "b": "amortissements et provisions",
+        "c": "provisions pour risques et charges",
+        "d": "réserves réglementées"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 16,
+      "text": "Sont amortissables fiscalement en dégressif, entre autres :",
+      "options": {
+        "a": "les frais d'établissement",
+        "b": "certains matériels de transport acquis neufs",
+        "c": "les matériels de transport acquis d'occasion",
+        "d": "les immeubles et constructions"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 17,
+      "text": "La formation initiale minimale obligatoire (FIMO) est une formation :",
+      "options": {
+        "a": "non renouvelable et acquise une fois pour toutes",
+        "b": "renouvelable tous les 3 ans",
+        "c": "renouvelable tous les 5 ans",
+        "d": "non renouvelable en cas de suspension ou de retrait du permis de conduire"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 18,
+      "text": "Le règlement intérieur de l'entreprise contient des dispositions relatives notamment :",
+      "options": {
+        "a": "à la fixation de la durée du travail",
+        "b": "au respect des consignes en cas d'incendie",
+        "c": "aux dates de fermeture de l'entreprise pour congés payés",
+        "d": "au paiement des salaires"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 19,
+      "text": "Selon le règlement (CE) n° 561/2006 du 15 mars 2006, le repos hebdomadaire doit être pris à compter du temps de repos hebdomadaire précédent, après au maximum :",
+      "options": {
+        "a": "4 périodes de 24 h",
+        "b": "5 périodes de 24 h",
+        "c": "6 périodes de 24 h",
+        "d": "7 périodes de 24 h"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 20,
+      "text": "Les salariés sont informés de la convention collective de branche applicable dans l'entreprise par une mention :",
+      "options": {
+        "a": "déposée en mairie",
+        "b": "affichée au conseil de prud'hommes",
+        "c": "figurant sur le bulletin de paie",
+        "d": "affichée au tribunal de commerce"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 21,
+      "text": "Selon l'annexe 1 de la convention collective des transports routiers et des activités auxiliaires du transport routier (CCNTR), le conducteur d'une entreprise de transport routier de marchandises qui souhaite démissionner doit à son employeur un préavis de :",
+      "options": {
+        "a": "1 semaine",
+        "b": "2 semaines",
+        "c": "1 mois",
+        "d": "2 mois"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 22,
+      "text": "Un examen médical de reprise doit être organisé au bénéfice d'un salarié victime d'un accident du travail ayant occasionné un arrêt de travail d'au moins :",
+      "options": {
+        "a": "8 jours",
+        "b": "10 jours",
+        "c": "21 jours",
+        "d": "30 jours"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 23,
+      "text": "Dans une entreprise dépourvue de représentant du personnel, le salarié peut, au cours de l'entretien préalable au licenciement, se faire assister par :",
+      "options": {
+        "a": "un avocat du salarié",
+        "b": "un inspecteur du travail",
+        "c": "un conseiller du salarié inscrit sur une liste officielle",
+        "d": "un conseiller prud'homal"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 24,
+      "text": "Selon l'annexe 1 de la convention collective des transports routiers et des activités auxiliaires du transport routier (CCNTR), la durée maximale de la période d'essai non renouvelable d'un conducteur routier embauché sous contrat de travail à durée indéterminée, est de :",
+      "options": {
+        "a": "une semaine",
+        "b": "quinze jours",
+        "c": "un mois",
+        "d": "deux mois"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 25,
+      "text": "Sauf danger immédiat pour la sécurité, une inaptitude définitive au poste de travail est reconnue :",
+      "options": {
+        "a": "par le médecin traitant après un examen médical",
+        "b": "par le médecin du travail après au moins un examen médical et une étude du poste",
+        "c": "par le médecin du travail après deux examens médicaux",
+        "d": "par l'employeur après avis du médecin du travail et des délégués"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 26,
+      "text": "A l'occasion de certains évènements familiaux, tout salarié bénéficie d'une autorisation d'absence au travail d'un ou de plusieurs jours qui :",
+      "options": {
+        "a": "ne sont, en aucun cas, rémunérés",
+        "b": "n'entraînent pas de réduction de la rémunération",
+        "c": "s'imputent sur le droit acquis en repos compensateur pour heures supplémentaires",
+        "d": "ne sont pas assimilés à des jours de travail effectif"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 27,
+      "text": "Dans une opération de transport, le protocole de sécurité, lorsqu'il est obligatoire :",
+      "options": {
+        "a": "doit être établi par l'expéditeur, en ce qui concerne les marchandises à transporter",
+        "b": "doit être établi entre le transporteur et l'entreprise d'accueil pour les opérations de chargement et de déchargement du véhicule",
+        "c": "doit être établi à l'initiative du transporteur en ce qui concerne les opérations de transport",
+        "d": "n'est utilisé que dans les entreprises répondant aux normes ISO 9001"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 28,
+      "text": "Un employeur qui fait au salarié une avance sur salaire ne peut se rembourser qu'au moyen de retenues successives ne dépassant pas :",
+      "options": {
+        "a": "un vingtième du montant du salaire exigible",
+        "b": "un dixième du montant du salaire exigible",
+        "c": "un cinquième du montant du salaire exigible",
+        "d": "la moitié du montant du salaire exigible"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 29,
+      "text": "En application de l'article R. 3312-47 du Code des transports, la 44ème heure de travail hebdomadaire pour un conducteur routier de marchandises est majorée de :",
+      "options": {
+        "a": "25 %",
+        "b": "33 %",
+        "c": "50 %",
+        "d": "75 %"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 30,
+      "text": "Lors d'une opération d'affrètement en transport intérieur, le commissionnaire de transport doit :",
+      "options": {
+        "a": "établir seulement une lettre de voiture",
+        "b": "établir seulement un bordereau de groupage",
+        "c": "établir une lettre de voiture et un bordereau de groupage",
+        "d": "enregistrer ses opérations d'affrètement sur un registre"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 31,
+      "text": "En application de l'article L. 3222-6 du Code des transports, toute prestation annexe non prévue au contrat de transport routier de marchandises qui cause un dommage, engage :",
+      "options": {
+        "a": "la responsabilité du transporteur",
+        "b": "la responsabilité de l'entreprise bénéficiaire de la prestation",
+        "c": "le cas échéant, la responsabilité du commissionnaire de transport",
+        "d": "la responsabilité du conducteur du véhicule"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 32,
+      "text": "Vous êtes transporteur, à la suite d'un dommage subi à la marchandise, vous voulez recourir à une expertise dans le cadre de l'article L 133-4 du code de commerce :",
+      "options": {
+        "a": "vous faites établir un constat par un huissier",
+        "b": "vous présentez une requête au tribunal de commerce demandant la désignation d'un expert",
+        "c": "vous demandez à l'expert de votre compagnie d'assurances de procéder aux constatations utiles",
+        "d": "vous faites appel à un expert indépendant"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 33,
+      "text": "Selon le contrat type dit \"général\", les opérations de chargement sont à la charge du donneur d'ordre :",
+      "options": {
+        "a": "quel que soit le tonnage de l'envoi",
+        "b": "quel que soit le volume de l'envoi",
+        "c": "pour les envois égaux ou supérieurs à 3 tonnes",
+        "d": "pour les envois inférieurs à 3 tonnes"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 34,
+      "text": "Pour un envoi de 20 t de marchandises, le contrat type dit \"général\" prévoit, en cas de plage horaire respectée, un délai de chargement de :",
+      "options": {
+        "a": "1 heure",
+        "b": "2 heures",
+        "c": "3 heures",
+        "d": "4 heures"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 35,
+      "text": "Lorsque le document de suivi n'est pas dûment rempli et signé par le remettant ou son représentant, l'immobilisation immédiate du véhicule et de son chargement peut être prononcée lors d'un contrôle routier si le conducteur :",
+      "options": {
+        "a": "ne peut présenter de titre de transport",
+        "b": "n'a pas manipulé le sélecteur d'enregistrement du tachygraphe",
+        "c": "ne peut présenter son permis de conduire et le certificat d'immatriculation du véhicule",
+        "d": "a dépassé la vitesse maximale autorisée de plus de 20 %"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 36,
+      "text": "Les documents de transport ou de location établis conformément à l'arrêté du 9 novembre 1999 doivent être conservés par l'entreprise pendant un délai de :",
+      "options": {
+        "a": "1 an",
+        "b": "2 ans",
+        "c": "5 ans",
+        "d": "10 ans"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 37,
+      "text": "Conformément à l'article L 441-6 du code de commerce concernant le délai de paiement, le fait de convenir d'un délai supérieur à 30 jours peut générer :",
+      "options": {
+        "a": "une amende administrative d'un montant maximum de 75 000 € pour une personne physique",
+        "b": "une contravention",
+        "c": "aucune pénalité",
+        "d": "une amende délictuelle de 40 000 €"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 38,
+      "text": "Le prix d'un transport public routier de marchandises :",
+      "options": {
+        "a": "est fixe et ne peut pas être modifié pendant l'exécution du contrat",
+        "b": "peut être modifié par l'une ou l'autre des parties en cas de variation des charges de carburant",
+        "c": "est modifié de plein droit en cas de variation des charges de carburant",
+        "d": "est modifié de plein droit en cas de variation des charges salariales"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 39,
+      "text": "Le contrat de transport routier est formé lorsque :",
+      "options": {
+        "a": "les parties sont d'accord sur la nature et le prix de la prestation à fournir, même au cours d'un entretien téléphonique",
+        "b": "les parties se sont obligatoirement établi un écrit",
+        "c": "le transport a effectivement commencé et le document de transport a été dûment complété",
+        "d": "le document de transport a été émargé par l'expéditeur et le transporteur"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 40,
+      "text": "Selon le contrat type dit \"général\" applicable aux transports publics routiers de marchandises, le délai d'acheminement comprend :",
+      "options": {
+        "a": "le délai d'enlèvement et le délai de transport",
+        "b": "le délai de transport et le délai de livraison à domicile",
+        "c": "le délai de transport et le délai de livraison au quai de dégroupage",
+        "d": "le délai d'enlèvement, le délai de transport et le délai de livraison à domicile"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 41,
+      "text": "La location d'un véhicule industriel avec ou sans conducteur destiné au transport de marchandises donne lieu à l'établissement par l'entreprise de location :",
+      "options": {
+        "a": "d'une lettre de voiture",
+        "b": "d'un bon de livraison",
+        "c": "d'une feuille de location ou du contrat de location",
+        "d": "d'une lettre de voiture et d'une feuille de location"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 42,
+      "text": "En transport national, l'action en recouvrement du prix de transport est prescrite dans le délai de :",
+      "options": {
+        "a": "1 an",
+        "b": "3 ans",
+        "c": "5 ans",
+        "d": "10 ans"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 43,
+      "text": "La longueur maximale d'un train routier ne doit pas excéder :",
+      "options": {
+        "a": "16,50 m",
+        "b": "18 m",
+        "c": "18,75 m",
+        "d": "20 m"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 44,
+      "text": "Le frein de stationnement équipant un véhicule de plus de 3,5 tonnes doit obligatoirement être maintenu en fonction par un système :",
+      "options": {
+        "a": "pneumatique",
+        "b": "mécanique",
+        "c": "oléo-pneumatique",
+        "d": "hydraulique"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 45,
+      "text": "Sauf dérogation, les restrictions de circulation applicables en fin de semaine ou à l'occasion de jours fériés concernent les véhicules dont le PTAC excède :",
+      "options": {
+        "a": "3,5 T",
+        "b": "6 T",
+        "c": "7,5 T",
+        "d": "10 T"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 46,
+      "text": "L'intervalle entre deux visites médicales pour proroger le permis C(E) d'un conducteur âgé de 55 ans est de :",
+      "options": {
+        "a": "1 an",
+        "b": "2 ans",
+        "c": "4 ans",
+        "d": "5 ans"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 47,
+      "text": "En matières dangereuses, la pose des étiquettes sur les colis est de la responsabilité :",
+      "options": {
+        "a": "de l'expéditeur",
+        "b": "du transporteur",
+        "c": "du chargeur",
+        "d": "du destinataire"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 48,
+      "text": "Suite à un transport entre la France et l'Allemagne, un trafic intérieur allemand vous est proposé. Vous pouvez l'effectuer à l'aide d'une :",
+      "options": {
+        "a": "autorisation de cabotage délivrée par la France",
+        "b": "autorisation de cabotage délivrée par l'Allemagne",
+        "c": "autorisation CEMT",
+        "d": "copie certifiée conforme de votre licence communautaire"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 49,
+      "text": "En CMR, en cas de dommage à la marchandise, l'indemnité est calculée d'après la valeur de la marchandise :",
+      "options": {
+        "a": "à la date de livraison",
+        "b": "à la date de la prise en charge",
+        "c": "à la date d'établissement de la réclamation par le destinataire",
+        "d": "à la date de réception de la réclamation par le transporteur"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 50,
+      "text": "En CMR, en cas de dommages causés à la marchandise, le destinataire doit faire des réserves :",
+      "options": {
+        "a": "à la livraison en cas de dommages apparents",
+        "b": "dans un délai de 7 jours en cas de dommages apparents",
+        "c": "à la livraison en cas de dommages non apparents",
+        "d": "dans un délai de 3 jours en cas de dommages non apparents"
+      },
+      "answer": "A",
+      "explanation": null
+    }
+  ],
+  "problems": [
+    {
+      "number": 1,
+      "title": "PROBLÈME 1 : (50 points)",
+      "subject_text": "L’entreprise OKSITRANS souhaite se positionner sur le marché des livraisons urbaines à \nToulouse. Elle est implantée dans une zone logistique située en périphérie de cette métropole. \n \nSes activités actuelles sont multiples : \n- le transport public routier de marchandises à l’aide de véhicules légers et lourds, sur le \nsegment suivant : livraisons de marchandises générales dans les départements voisins, \n- la location de véhicules de transport avec conducteur, \n- la location de véhicules de transport sans conducteur, \n- l’entreposage de marchandises, la préparation de commandes, la gestion de stocks. \n \nElle exploite les 5 véhicules suivants récents, de motorisation diesel et destinés au transport de \nmarchandises :  \n- 1 fourgon, d’un PTAC de 2T900, \n- 1 fourgon, d’un PTAC de 2T900 et d’un PTRA de 5T, qui tracte 1 remorque plateau d’un \nPTAC de 2T, \n- 3 porteurs d’un PTAC de 19T. \n \nPTAC : poids total autorisé en charge \nPTRA : poids total roulant autorisé \n \n \nQUESTION 1 : \nParmi  les  activités  citées  ci-dessus,  précisez  celle(s)  qui ne  relève(nt)  pas de l’inscription \nobligatoire  au  registre  électronique  national  des  entreprises  de  transport par route tenu par la \nDREAL locale. \n \n \nQUESTION 2 : \nSur la base du parc actuel de véhicules d’OKSITRANS :  \n \na) Quels sont les titres administratifs de transport exigibles à bord :  \n - du fourgon sans remorque, \n - du fourgon avec remorque,  \n - des porteurs. \n \nb)  Quels  sont  les  supports  justificatifs  des  horaires  de  travail  journaliers  des  conducteurs \nsalariés de ces trois types de véhicules ? \n \n\noctobre 2018 \n \nc) Quel est le montant de la capacité financière exigible pour cette entreprise ? \n \nd) Comment est vérifié le respect de cette capacité financière ? \n \n \nQUESTION 3 : \nL’entreprise  OKSITRANS  étudie  la  faisabilité  de  livraisons  quotidiennes,  du  lundi  au \nvendredi,  de  plusieurs  magasins de  bricolage  et de décoration de l’enseigne URBIS localisés \nen centre-ville de Toulouse. \n \nEn  2017,  la  mairie  de  Toulouse  a  établi  un  document  de  référence  fixant  les  conditions  de \nréalisation  des  livraisons  urbaines,  intitulé  « Charte  livraisons  en  centre-ville  2017  pour  une \nlogistique urbaine innovante et durable ». \n \nÀ l’aide des informations de l’annexe 1 : \na) Indiquez la (ou les) période(s) possible(s) de livraisons en centre-ville de Toulouse. \nJustifiez votre réponse. \n \nb) En cas d’investissement dans un porteur motorisé au gaz, précisez la (ou les) période(s) \npossible(s) de livraison en centre-ville de Toulouse. \nJustifiez votre réponse. \n \n \nQUESTION 4 : \n \na) A l’aide de l’annexe  2 - A), déterminez le coût de revient de l’activité proposée par le \nchargeur URBIS, en distinguant :  \n - le terme kilométrique et le coût kilométrique total annuel, \n - le terme journalier du conducteur et le terme journalier du véhicule, \n - le coût total annuel, \n - le coût total journalier. \n \nb)  Afin  de  bénéficier  d’horaires  de  livraison  élargis,  OKSITRANS  s’interroge  sur \nl’opportunité d’investir dans des véhicules gaz. \n \nPour  faire  son  choix,  OKSITRANS  cherche  à  connaître  le  différentiel  de  coût  entre  un \nvéhicule diesel et un véhicule gaz. \n \nA  l’aide  de  l’annexe  2 - B) et  en  détaillant  vos  calculs,  déterminez,  pour  les  postes \nsélectionnés, l’écart de coût entre les deux types de véhicules. \nEn déduire l’écart de coût total. \n \nc)  Les  autres  chargeurs  étant  disposés à accepter des tarifs majorés, le taux d’utilisation du \nvéhicule fourni par OKSITRANS demeurerait à 60 % pour le chargeur URBIS. \n \nQuel serait le surplus de coût journalier du véhicule au gaz pour ce chargeur ? \n \n \n \n\noctobre 2018 \n \nQUESTION 5 \n \nAu 2 novembre 2018, OKSITRANS envisage de recruter un conducteur pour la conduite d’un \nporteur de 19 tonnes de PTAC. \n \nLa personne s’occupant du recrutement a résumé dans le tableau ci-dessous  les  critères  de \nsélection des candidats, préalablement à un entretien de recrutement.  \n \n \nJonathan \nB. \nAna Maria L. Mohamed \nO. \nEnrico M. Claude N. \nÂge 20 ans 30 ans 37 ans 55 ans 61 ans \nDate \nd’obtention de \nla FIMO \n \n02/07/2018 05/02/2012 15/03/2013 15/03/1999 29/04/2011 \nDate de fin de \nvalidité de la \nFCO \n \nnéant 02/02/2022 néant 12/02/2013 01/04/2021 \nDate de visite \nd’information \net de \nprévention \n(visite \nmédicale)  \n \n01/09/2018 10/03/2016 04/01/2018 25/11/2012 02/04/2017 \nPermis \n(catégorie     et \ndate  de  fin  de \nvalidité) \n \nPermis : C1 \n14/04/2023 \nPermis : CE \n10/05/2020 \nPermis : CE \n23/11/2019 \nPermis : D \n10/05/2016 \nPermis : CE \n10/02/2016 \n \na) Étudiez la recevabilité de chaque candidature au regard des conditions de conduite requises \npar l’entreprise.  \nJustifiez votre analyse. \n \nb) Après l’embauche, quel contrôle périodique l’employeur doit-il  effectuer  au  regard des \nconditions de conduite (en dehors de la carte conducteur) ?  \n \nc) En règle générale, quelle est la périodicité de la visite d’information et de prévention ? \nQui la fixe ? \n \nCitez d'autres périodicités possibles en fonction de cas particuliers. \n \n \n\noctobre 2018 \n \nANNEXE 1 \n \nA) Informations communiquées par URBIS : \n \nFret remis quotidiennement à l’aller : \n- 1 seul point de chargement : à l’entrepôt d’URBIS situé à l’entrée de la ville de Toulouse, \n- plusieurs points de livraison situés en centre-ville de Toulouse, \n- la marchandise peut être chargée en plusieurs fois, dans un ou plusieurs véhicules, durant les \nhoraires d’ouverture du chargeur. \n- conditions  de  livraison :  en  fonction  de  l’horaire  de  livraison  retenu,  il  se  peut  que  le \nmagasin  soit  fermé.  Le  conducteur  livreur sera détenteur des clés et des codes d’accès, et \ndéposera la marchandise dans le sas de stockage prévu dans le magasin. \n- Afin  de  ne  pas  perturber  l’activité  commerciale  et  le  fonctionnement  du  magasin,  le \ntransporteur s’abstiendra d’effectuer une livraison dans les créneaux horaires suivants : 09:00 \nà 13:00 et 16:00 à 22:00. \n \nFret remis quotidiennement au retour : \n- sur chaque point de livraison, le conducteur aura pour mission de rapatrier à l’entrepôt \nd’URBIS, des emballages vides. \n \nToutes  les  opérations de  manutention,  chargement  et déchargement  seront  réalisées  par  le \ntransporteur. \n \nB) Informations communiquées par le transporteur au chargeur URBIS :  \n \nParmi  sa  flotte,  OKSITRANS  a  arrêté  son  choix  au  profil  suivant  le  plus  approprié  :  un \nporteur isolé à moteur diesel et d’un volume supérieur à 20 m3. \n \nC) Informations relatives à la Charte des livraisons en centre-ville de Toulouse : \n \nTypes de véhicules  \n(motorisation et gabarit) \nHoraires autorisés des livraisons  \nen centre-ville de Toulouse : \nVéhicules Diesel et Essence ≤ 20 m3 09:30 à 12:00 et 20:00 à 06:00 \nVéhicules Diesel et Essence > 20 m3 09:30 à 12:00 et 20:00 à 06:00 \nVéhicules Gaz de tout gabarit 06:00 à 12:00 et 20:00 à 06:00 \n\noctobre 2018 \n \nANNEXE 2 \n \nToutes les valeurs en € sont données en HT. \n \nA) Éléments relatifs à la détermination du coût de revient : \n \n- véhicule de motorisation diesel avec additif AdBlue, \n- kilométrage annuel du véhicule : 75 000 km, dont 60 % estimé pour le chargeur URBIS, \n- nombre de jours d’exploitation pour le chargeur URBIS : 255 par an \n- carburant (gazole et AdBlue) pour le chargeur URBIS : coût annuel estimé à 11 250 €  \n- pneumatiques : 0,024 € / km \n- entretien – réparations : 0,096 € / km \n- péages : 20 € / jour pour le seul client URBIS \n \nUn conducteur est affecté à l’activité du chargeur URBIS. \nterme horaire (salaires + charges patronales) : 19 € / h \n \nOKSITRANS envisage les horaires de service suivants :  \nembauche  à  22:00  (jour  N) – fin  à  07:00  (jour  N+1),  avec  pause  à  mi-journée d’une durée \nd’01h00. \n \nLes charges fixes liées à l’activité du chargeur URBIS sont les suivantes :  \n- coût de détention du véhicule : 39 € / jour \n- assurances : 6 € / jour \n- charges de structure et autres charges indirectes : 75 € / jour \n \nB) Eléments de coût des véhicules selon leur motorisation (diesel / gaz) : \n \nOKSITRANS a listé les points de différenciation entre les 2 motorisations : \n \n- prix d’achat du véhicule : \nLe véhicule à moteur diesel est acheté 80 000 €. \nPour la motorisation au gaz, le surcoût est de 30 %, \n \n- subvention (octroyée pour un véhicule gaz) : 3 000 €, \n- taxe sur certificat d’immatriculation : gaz : 300 € - diesel 850 € \n- coût  d’entretien  supplémentaire  pour  le  véhicule  au  gaz : 5  000  €  (sur  la  durée \nd’exploitation) \n- moins-value estimée du véhicule au gaz, à la revente : 10 000 € \n- gazole : consommation de 25 litres / 100 km, avec un prix d’achat moyen estimé à 1,10 € / l, \n- AdBlue :  consommation  estimée  à  4 % de celle du gazole, pour un prix d’achat moyen \nestimé à 0,25 € / l, \n- gaz : consommation de 21 kg / 100 km, avec un prix d’achat moyen préférentiel estimé à  \n0,9 € / kg. \n- adhésion à un fournisseur à gaz pour profiter d’un tarif préférentiel : 3 000 € par an. \n- exploitation du véhicule : 75 000 km / an, durant 6 ans. \n\noctobre 2018",
+      "corrected_text": "QUESTION 1 : \nLa location de véhicule sans conducteur \nL’entreposage, la préparation de commandes et la gestion de stocks. \n \nQUESTION 2 : \na) Titres administratifs à bord :  \n• Fourgon sans remorque : copie conforme de la licence de transport intérieur ; \n• Fourgon avec remorque : copie conforme de la licence communautaire (PMA>3T5) ; \n•\n Porteurs : copie conforme de la licence communautaire. \n \nb) Support justificatifs des horaires de travail : \nFourgon sans remorque : livret individuel de contrôle ou horaire de service ; \nFourgon avec remorque : tachygraphe donc carte conducteur (ou disques) ; \nPorteurs : tachygraphe donc carte conducteur (ou disques). \n \nc)\n Montant de la capacité financière exigible :  \nVéhicule de -3.5 T de PMA : 1  \nSoit 1800 € \n \nVéhicules ou ensemble de +3.5 T de PMA : 4 \nSoit : 1 x 9000 + 3 x 5000 = 24 000 € \n \nTotal : 1 800 + 24 000 = 25 800 € \n \nd)\n La capacité financière est contrôlée tous les ans par la DREAL à l’aide de la liasse fiscale, le \nmontant des capitaux propres au passif du bilan doit être supérieur ou égal à la capacité \nfinancière exigible. \n  \n\n \n \nQUESTION 3 : \na)     Véhicule Diesel (quel que soit le volume) : livraison centre de Toulouse de 9h30 à 12h00 et de \n20h00 à 6h00, mais le client ne veut pas de livraison entre 9h00 et 13h00 et de 16h00 à 22h00, \ndonc livraison obligatoire sur la plage horaire de 22h00 à 6h00. \nb) Véhicule à gaz de tout gabarit livraison possible de 20h00 à 12h00, donc livraison possible pour \nle client sur la plage horaire de 22h à 9h. \nQUESTION 4 : \na) Calculs préliminaires : \n \nKilomètres 75000 60% 45000 \nNombre de jours   255 \n    \nConducteur    \nPrise service 22h00   \nFin service 7h00   \nPause 1h00   \nTemps service 8h00   \n \nTABLEAU DE VENTILATION DE CHARGES \n \nCHARGES VARIABLES CHERGES FIXES CHARGES DE STRUCTURE \nLibellé Montant Libellé Montant Libellé Montant \nCarburant 11 250 Conducteur    \nPneu  8x19x255 38 760 CS 19 125 \n0,024€x 45 000 1 080   75x255  \nEntretien  Véhicule    \n0,096€x45 000 4 320 39x255 9 945   \nPéage  Assurance    \n20€x255 5 100 6x255 1 530   \n      \nTOTAL 21 750 TOTAL 50 235 TOTAL 19 125 \n \nCoût de revient total annuel = 21 750 + 50 235 + 19 125 = 91 110 €/an \nMonôme kilométrique = 91 110 / 45 000 = 2,0247 €/km \nMonôme journalier = 91 110 / 255 = 357.29 €/jour \n \nTrinôme :  \nTK = 21 750 / 45 000 = 0,4833 €/km \nTJ chauffeur = 38 760 / 255 = 152 €/jour (ou 19 x 8 = 152 €/jour) \nTJ véhicule = (9945 + 1530 + 19125) / 255 = 120 €/jour \n \n \n  \n\n \n \nb) ECART DE COUTS ENTRE LES 2 VEHICULES \n \n-Poste achat véhicule : (80000 x 30% - 3000 - 850 + 300 + 10000) / 6 = +5075 €/an pour le \nvéhicule gaz \n-Poste entretien : (5000 / 6) / 75000 = +0,0111 €/km pour le véhicule gaz \n-Poste carburant : [(0.9 x 21 / 100) + (3000 / 75000)] – [(1.1 x 25 / 100) + (0.25 x 25 x 4% /100)] \n= - 0,0485 €/km pour le véhicule gaz \n \n-Écart total annuel : 5075 + 0,0111 x 75000 – 0,0485 x 75000 = +2270 Euros/an pour le véhicule \ngaz. \n \nL'investissement dans un porteur gaz coûterait ainsi à l'entreprise 2270 Euros de plus par an. \n \nc) SURPLUS DE COUT JOURNALIER POUR URBIS \nLe taux d’utilisation reste à 60% pour URBIS, ce qui donne :  \n2270 x 60% / 255 = 5.34 €/jour \n \nQUESTION 5 \na) recevabilité \n \n-Jonathan B. Son permis C1 ne lui permettra pas de conduire un porteur de 19T de PTAC. \n-Mohamed O. Sa Fco n'est pas à jour, elle aurait du être passée avant le 15 mars 2018. \n-Enrico M. Sa FCO n'est pas à jour, il possède le permis D inadapté à la conduite d'un \nvéhicule de transport de marchandises, sa visite médicale d'information et de prévention \ndate de plus de 5 ans il devra donc en repasser une. \n-Claude N. la visite médicale de son permis de conduire n'est pas à jour, elle aurait du être \nrepassée avant le 10 février 2016. \n \nLe seul candidat recevable est donc Ana Maria L. \n \nb) \nAprès l'embauche, l'employeur doit contrôler les dates de validité concernant les \nobligations de formation des chauffeurs (FIMO/FCO), leur visite médical d'information et de \nprévention, la validité de leur permis de conduire (visite médicale à jour pour les catégories \nlourdes). \n \nc) \nLa périodicité de la visite d'information et de prévention est de 5 ans en règle générale. Elle \nest fixée par la législation française du travail. \nElle peut être portée à un délai compris entre 6 mois et 3 ans en fonction de cas particuliers, \npar exemple les travailleurs handicapés, les travailleurs de nuit (6 mois), certains secteurs à \nrisques particuliers ou en fonction d'autres critères tel que l’âge ou l'état de santé initial du \n\n \n \nsalarié."
+    },
+    {
+      "number": 2,
+      "title": "PROBLÈME 2 (50 points)",
+      "subject_text": "La  SARL TRANSTRUK,  implantée  à  Caen,  exerce  la  profession  de  transporteur  public \nroutier de marchandises depuis 2008. \nJusqu’en 2016, elle était spécialisée en transport longue distance de conteneurs et disposait de \n14 ensembles de 44 tonnes.  \nAu cours de l’année 2016, cette entreprise a réorienté totalement son activité vers le transport \nfrigorifique longue distance. Son parc compte désormais 18 ensembles pris en location. \nÀ  la  clôture  de  l’exercice comptable 2017, l’entreprise affiche une perte importante, liée \nnotamment à une insuffisance de fret retour. \n \nVous disposez des éléments financiers des exercices 2016 et 2017 en annexes 3, 4 et 5. \n \nQUESTION 1 : \n \na) Calculez pour 2016 et 2017 : \n- le fonds de roulement net global (FRNG) \n- le besoin en fonds de roulement (BFR) \n- la trésorerie nette (TN) \n \nb) Comparez les résultats et commentez-les. \n \nQUESTION 2 : \n \na) Que pensez-vous du choix de réorientation de l’activité de la SARL TRANSTRUK ? \nJustifiez votre réponse. \n \nb) La SARL TRANSTRUCK avait prévu, au terme de l’exercice 2017, d’investir dans l’achat \nde 5 ensembles en remplacement de 5 véhicules pris en location. \n \nLa  SARL TRANSTRUK  peut-elle  espérer  obtenir  un  crédit  bancaire  pour  le  financement  de \nce matériel ? Justifiez votre réponse.  \n \nc) Définissez la capacité d’autofinancement. \n \nd) Calculez la capacité d’autofinancement de la SARL TRANSTRUK pour l’année 2017. \nDétaillez vos calculs. \n \ne) Le résultat de la CAF confirme-t-il les résultats précédents ? \n \n \nQUESTION 3 : \n \nMalgré  une  restructuration  de  son  activité  en  2018,  la  situation  financière  de  la  SARL \nTRANSTRUK continue de se dégrader.  \nDans  ce  contexte,  son  gérant  s’interroge  sur  les  actions  à  engager  pour  préserver  son \nentreprise. \nIl se renseigne sur les procédures de sauvegarde et de redressement judiciaire.  \nDéfinissez ces deux notions. \n\noctobre 2018 \n \n \nQUESTION 4 : \nEn quoi consiste l’action directe en paiement « voiturier » définie à l’article L. 132-8 du code \nde commerce ?  \n \n \nQUESTION 5 :  \nInquiets de la situation financière de la SARL TRANSTRUK, deux salariés ont décidé de \ndémissionner. \n- M. FRANCOIS, cadre responsable d’exploitation, en poste depuis la création de la société ;  \n- Mme ANNE, secrétaire en poste depuis 2015. \n \na) Quelle procédure ces 2 salariés devront-ils respecter ? \n \nb) Quelles pièces la SARL TRANSTRUK devra-t-elle leur remettre ? \n \nc) Quelles mentions doivent figurer dans un certificat de travail ? \n \n \nQUESTION 6 : \nLa SARL TRANSTRUK doit en outre traiter un litige dans lequel sa responsabilité est \nengagée. \n \nLors d’un transport de beurre (20 palettes de 750 kg chacune pour une valeur totale de  \n120 000 €) entre CAEN et PARIS, le groupe réfrigérant du véhicule n’a pas fonctionné. A \nl’arrivée, la marchandise n’est plus consommable. \n \na) Quel est le contrat type applicable à ce transport ? \n \nb) Déterminez le montant de l’indemnité prévue en réparation de ce dommage conformément \naux clauses de ce contrat. \n \n \nQUESTION 7 : \nLa SARL TRANSTRUK envisage de recourir à l’affacturage. Précisez le mécanisme de cette \ntechnique et ses avantages. \n \n \n \n\noctobre 2018 \n \n \nANNEXE 3 : Bilan simplifié (exprimé en €) de la SARL TRANSTRUK \nACTIF 2016 2017 PASSIF 2016 2017 \nImmobilisations 71 280 74 759 Capitaux propres 94 498 58 007 \nActif circulant \n Stocks \n Créances clients \n Disponibilités \n \n9250 \n259 724 \n4894 \n \n19 853 \n355 262 \n64 573 \nDettes \n Emprunts* \n Fournisseurs \n Fiscales et sociales \n \n1650 \n139 900 \n109 100 \n \n17 650 \n253 550 \n185 240 \nTotal 345 148 514 447 Total 345 148 514 447 \n *dont concours bancaires 500 2 550 \n \n \nANNEXE 4 : Soldes intermédiaires de gestion (exprimés en €)  \nd’après les comptes de résultat de la SARL TRANSTRUK \n \n \n2016 2017 \nChiffre d’affaires 985 191 1 798 515 \nValeur ajoutée 209 735 317 785 \nExcédent brut d’exploitation - 9 583 - 88 614 \nRésultat d’exploitation - 189 - 59 204 \nRésultat financier - 683 - 3 000 \nRevenu courant avant impôts - 872 - 62 204 \nRésultat exceptionnel 22 246 15 191 \nRésultat net 17 770 - 47 013 \n \n \nANNEXE 5 : Autres éléments comptables 2017 \n \n - Dotation aux amortissements et provisions (DAP) : 21 103 € \n - Reprise sur amortissements et provisions (RAP) :  55 025 € \n - Valeur nette comptable d’éléments d’actifs cédés (VNC) : 2 198 € \n - Produits comptables d’éléments d’actifs cédés (PCEAC) : 40 000 €",
+      "corrected_text": "QUESTION 1 : \na) -FRNG/BFR/TN 2016 ET 2017 \n \n 2016 2017 \nCapitaux Propres 94 498 58 007 \n+ Emprunt (hors découvert) 1 150 15 100 \n-Immobilisations 71 280 74 759 \nFRNG 24 368 -1 652 \nStocks 9 250 19 853 \n+Créances 259 724 355 262 \n-Fournisseurs 139 900 253 550 \n-Fiscales et sociales 109 100 185 240 \nBFR 19 974 -63 675 \nDisponibilité 4 894 64 573 \n-Découvert bancaire 500 2 550 \nTrésorerie 4 394 62 023 \nou   \nFRNG 24 368 -1 652 \n-BFR 19 974 -63 675 \nTrésorerie 4 394 62 023 \n \nb) -Commentaires \n \nLe FRNG s'est très nettement dégradé entre 2016 et 2017. Cela s'explique principalement par le \nrésultat déficitaire de 2017. \n \nDe façon assez surprenante le BFR s'est lui par contre beaucoup amélioré entre 2016 et 2017. Les \ncréances clients ont progressé ; (355 262-259 724) /259 724 = 36,78% ; mais pas dans les mêmes \nproportions que le chiffre d'affaires. Par contre les dettes aux tiers ont elles aussi progressé mais \ndans une proportion plus importante que les achats ; (253 250-139 900) /139 900 = 81,24%. \nLa conséquence directe est que la trésorerie s'est très nettement améliorée elle aussi. \n \nPour réaliser une analyse plus fine il faudrait pouvoir calculer les délais de règlement clients et \nfournisseurs, ce que nous ne pouvons pas faire, ne disposant pas du compte de résultat \nsuffisamment détaillé. \n \n \n\n \n \n \nQUESTION 2 : \na) - Avec une année de recul, le choix de réorientation de la SARL TRANSTRUCK ne semble pas \ndes plus judicieux. \nLe chiffre d'affaire a certes énormément progressé mais le résultat n'a pas suivi, il a été \nfranchement déficitaire en 2017. Les SIG (en proportion du CA) sont tous très mauvais. Les \ncharges ne sont donc sans doute pas maîtrisées. Il faudrait procéder à une analyse détaillée de \nchaque poste de charge pour comprendre pourquoi le résultat est si mauvais, et éventuellement \nrenégocier les tarifs auprès de la nouvelle clientèle. \nL'amélioration de la trésorerie fait illusion mais elle est due à des paramètres conjoncturels \n(délais de règlement clients qui s'est amélioré) et non aux résultat de l'entreprise qui est \ndéficitaire. \n \nb) - Possibilité de Financement  \nAu vu de la situation financière de l'entreprise il est peu probable qu'elle obtienne un crédit \nbancaire pour le financement de nouvelles immobilisations. En effet le résultat négatif de 2017 ne \nrassurera pas la banque quant à la capacité de remboursement de l'entreprise et ceci d'autant plus \nqu'il y a eu des reprises sur amortissements et provisions assez conséquentes en 2017 (cf calcul de \nla CAF sur les questions suivantes qui permettrait de calculer la capacité de remboursement). \n \nc)- Définition de la CAF  \nLa CAF représente l'ensemble des ressources internes générées par l'entreprise dans le cadre de son \nactivité qui permettent d'assurer son financement, la capacité de l'entreprise a couvrir ses besoins, à \ngénérer globalement assez de ressources pour pouvoir ensuite maintenir et développer son activité \nou rémunérer ses investisseurs. \n \nd)- Calcul de la CAF  \nCAF 2017 = résultat net + DAP - RAP + VNC – PCEAC \n \nCAF 2017 = - 47013 - 55025 + 21103 - 40000 + 2198 = -118737 Euros \ne)- Le résultat de la CAF confirme la mauvaise santé financière de l'entreprise. Une CAF négative \nsignifie que la société disposera en tendance de moins en moins de trésorerie, risquant \n\"d'asphyxier\" progressivement son exploitation. \nDe plus l’entreprise n’a aucune capacité de remboursement (Emprunt / CAF). \n \n \n \n \n \n\n \n \n \nQUESTION 3 : \nLes 2 procédures sont prononcées par jugement du tribunal de commerce. \n \nLa procédure de sauvegarde est une action préventive qui doit permettre à l'entreprise de traiter \nses difficultés avant d'être en cessation de paiement. Elle a pour but, par la mise en place d'un plan \nde sauvegarde, de permettre à l'entreprise de continuer son activité, au besoin en procédant à sa \nréorganisation, de maintenir l'emploi et d'apurer ses dettes. \n \nLa procédure de redressement judiciaire qui doit être mise en œuvre par toute entreprise en \ncessation de paiements dont le redressement est jugé possible, permet la poursuite de l'activité de \nl'entreprise, l'apurement de ses dettes et le maintien de l'emploi. Elle peut donner lieu à l'adoption \nd'un plan de redressement à l'issue d'une période d'observation, pendant laquelle un bilan \néconomique et social de l'entreprise est réalisé. \n \nQUESTION 4 : Action directe en paiement du voiturier \nL'action directe en paiement « voiturier » définie à l'article L. 132-8 du code du commerce permet \nau transporteur qui n’a pas été payé par son donneur d’ordre une action directe en paiement de ses \nprestations, à l’encontre indifféremment de l’expéditeur ou du destinataire, que la loi déclare \ngarants du prix du transport. \n \nQUESTION 5 : Démission \na) – PROCEDURE A RESPECTER PAR LES 2 SALARIES  \n \nLes 2 salariés doivent notifier leur volonté de démissionner par lettre recommandée ou \nremise en main propres à leur employeur. \nDe plus étant démissionnaires ils devront donc respecter le délai congé ou préavis de \ndépart. Ce délai congé sera de 3 mois pour Mr François qui a le statut cadre et de 1 mois \npour Mme Anne qui a le statut employé. \n \nb) - PIECES A LEUR REMETTRE \n \n- Dernière fiche de paie \n- Certificat de travail \n- Solde de tout compte \n- Attestation pôle emploi \n \n \n\n \n \nc)- MENTIONS SUR LE CERTIFICAT DE TRAVAIL \n- Nom et prénom du salarié \n- Identification de l’entreprise \n- Dates d’entrée et de sortie \n- Nature du ou des emplois successivement occupés et leur période \n- Maintien de la mutuelle collective pendant la période de chômage (si le salarié en \nbénéficiait) \n- Date et lieu de la remise du certificat \n- Signature de l’employeur. \n \nQUESTION 6 : LITIGE \na) – CONTRAT TYPE APPLICABLE \nLe contrat type applicable à ce type de transport est le contrat type de transport de \nmarchandises sous température dirigée. \n \nb) - MONTANT DE L’INDEMNITE PREVUE. \nPoids de l’envoie = 20 palettes x 750kg = 15 000 Kg \n\u0001 Donc envoi de plus de 3 tonnes et donc : \nValeur commercial de la marchandise : 120000 Euros \n1ere limite d'indemnisation prévue par le contrat type : 4000 x 20 x 750 / 1000 = 60000 Euros \n2eme limite d'indemnisation prévue par le contrat type : 14 x 20 x 750 = 210000 Euros \n \nLe transporteur remboursera la plus petite de ces sommes soit 60000 Euros."
+    }
+  ]
+}

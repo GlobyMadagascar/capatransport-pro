@@ -1,0 +1,620 @@
+{
+  "year": 2019,
+  "session": "Session du 2 octobre 2019",
+  "qcm": [
+    {
+      "number": 1,
+      "text": "L'injonction de payer est :",
+      "options": {
+        "a": "un effet de commerce",
+        "b": "une ordonnance du président du tribunal de commerce, ou du tribunal d'instance",
+        "c": "une lettre recommandée adressée par le créancier à son débiteur et exigeant le paiement immédiat de la créance",
+        "d": "une sommation signifiée par voie d'huissier"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 2,
+      "text": "En règle générale, le représentant légal d'une société anonyme à directoire et à conseil de surveillance est :",
+      "options": {
+        "a": "le président du conseil de surveillance",
+        "b": "le président du directoire",
+        "c": "l'actionnaire majoritaire",
+        "d": "le commissaire aux comptes"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 3,
+      "text": "Endosser un effet de commerce c'est :",
+      "options": {
+        "a": "bénéficier d'un crédit garanti sur le montant de l'effet",
+        "b": "désigner la banque qui paiera le montant de l'effet",
+        "c": "se porter garant du paiement du montant de l'effet",
+        "d": "transmettre le bénéfice de l'effet à une tierce personne"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 4,
+      "text": "Un de vos clients, commerçant, domicilié à Brest, vous fait des difficultés pour le règlement d'une facture de transport. Entreprise lilloise, vous optez pour la procédure d'injonction de payer en adressant votre requête :",
+      "options": {
+        "a": "au tribunal de commerce de Lille",
+        "b": "au tribunal d'instance de Lille",
+        "c": "au tribunal de commerce de Brest",
+        "d": "au tribunal d'instance de Brest"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 5,
+      "text": "En transport routier intérieur, en cas de retard, pour compenser le préjudice causé, le destinataire ou l'expéditeur peut réclamer, en application du contrat type général :",
+      "options": {
+        "a": "le prix de la marchandise",
+        "b": "le montant du préjudice quel qu'il soit",
+        "c": "au plus le prix du transport",
+        "d": "deux fois le prix du transport"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 6,
+      "text": "Possède la personnalité morale :",
+      "options": {
+        "a": "la société en participation",
+        "b": "la société de fait",
+        "c": "l'entreprise personnelle",
+        "d": "la société par actions simplifiée"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 7,
+      "text": "Les juges du tribunal de commerce, appelés juges consulaires, sont :",
+      "options": {
+        "a": "des magistrats traditionnels",
+        "b": "des commerçants élus par leurs pairs",
+        "c": "des commerçants désignés par la chambre de commerce",
+        "d": "des commerçants désignés par les organisations professionnelles"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 8,
+      "text": "Le crédit documentaire peut être annulé à la demande :",
+      "options": {
+        "a": "du vendeur",
+        "b": "des banquiers et de l'acheteur",
+        "c": "de l'acheteur",
+        "d": "du vendeur, de l'acheteur ou des banquiers"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 9,
+      "text": "Les sociétés coopératives d'entreprises de transport de marchandises :",
+      "options": {
+        "a": "sont inscrites au registre des transporteurs et composées d'entreprises non inscrites à ce registre",
+        "b": "sont inscrites au registre des transporteurs et composées d'entreprises inscrites à ce registre",
+        "c": "ne sont pas inscrites au registre des transporteurs mais sont composées d'entreprises inscrites à ce registre",
+        "d": "sont inscrites uniquement au registre des commissionnaires de transport et composées d'entreprises inscrites au registre des transporteurs"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 10,
+      "text": "Une société en nom collectif réunit au moins deux associés qui peuvent être des personnes :",
+      "options": {
+        "a": "physiques exclusivement",
+        "b": "morales exclusivement",
+        "c": "physiques ou morales",
+        "d": "physiques ou morales non commerçantes"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 11,
+      "text": "La responsabilité du transporteur routier peut être recherchée par son donneur d'ordre :",
+      "options": {
+        "a": "toujours lorsqu'il y a mauvaise exécution du contrat de transport, que ce soit du fait du transporteur ou de celui d'un tiers",
+        "b": "seulement pour les fautes lourdes du préposé du transporteur",
+        "c": "seulement pour les dommages résultant des opérations de conduite et de chargement",
+        "d": "seulement si les clauses exonératoires figurant dans les conditions générales de vente du transporteur le permettent"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 12,
+      "text": "Les clauses limitant les pouvoirs du gérant d'une société en nom collectif (S.N.C.) sont :",
+      "options": {
+        "a": "inopposables aux tiers",
+        "b": "opposables aux tiers",
+        "c": "inopposables aux associés",
+        "d": "opposables aux cocontractants de la société"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 13,
+      "text": "Dans une SARL (société à responsabilité limitée) familiale :",
+      "options": {
+        "a": "seuls les parents et les enfants sont associés",
+        "b": "c'est le chef de famille qui est gérant",
+        "c": "il n'y a pas d'assemblée générale",
+        "d": "la SARL peut opter pour l'impôt sur les sociétés ou l'impôt sur le revenu"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 14,
+      "text": "Les loyers des véhicules pris en location sont enregistrés :",
+      "options": {
+        "a": "à l'actif du bilan",
+        "b": "dans les charges exceptionnelles",
+        "c": "dans les charges d'exploitation",
+        "d": "dans les charges financières"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 15,
+      "text": "Lors des premières annuités, l'avantage de l'amortissement dégressif par rapport au linéaire est une diminution :",
+      "options": {
+        "a": "des charges d'exploitation",
+        "b": "du bénéfice imposable",
+        "c": "des intérêts d'emprunt",
+        "d": "des remboursements des capitaux empruntés"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 16,
+      "text": "Le report à nouveau est :",
+      "options": {
+        "a": "le cumul des bénéfices de l'entreprise sur plusieurs années",
+        "b": "le report sur le bilan des provisions pour risques et charges des années antérieures",
+        "c": "le report du résultat non encore affecté de l'année précédente",
+        "d": "un différé de remboursement d'emprunt"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 17,
+      "text": "La visite médicale d'information et de prévention doit être pratiquée :",
+      "options": {
+        "a": "avant la prise effective du poste de travail",
+        "b": "avant la fin de la période d'essai",
+        "c": "après la fin de la période d'essai",
+        "d": "dans les trois mois à compter de la prise effective du poste de travail"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 18,
+      "text": "Un salarié dont le contrat à durée déterminée est conclu du 15 avril au 15 juin, a un accident le 30 avril avec arrêt de 3 mois. Sauf clause de report mentionnée dans son contrat, celui-ci s'achèvera :",
+      "options": {
+        "a": "le 15 juillet",
+        "b": "le 30 juillet",
+        "c": "le 30 avril",
+        "d": "le 15 juin"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 19,
+      "text": "La déclaration préalable à l'embauche (DPAE) d'un salarié doit s'effectuer :",
+      "options": {
+        "a": "pendant la période d'essai",
+        "b": "au plus tôt dans les 8 jours avant l'embauche",
+        "c": "un mois avant l'embauche",
+        "d": "un mois après l'embauche"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 20,
+      "text": "Le document unique d'évaluation des risques pour la sécurité et la santé des travailleurs doit être établi par :",
+      "options": {
+        "a": "le médecin du travail",
+        "b": "l'employeur",
+        "c": "le comité d'hygiène, de sécurité des conditions de travail",
+        "d": "l'inspecteur du travail"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 21,
+      "text": "Un contrat à durée déterminée peut être renouvelé :",
+      "options": {
+        "a": "une fois sans que la durée totale du contrat puisse dépasser 12 mois",
+        "b": "une fois sans que la durée totale du contrat puisse dépasser 18 mois",
+        "c": "plusieurs fois sans que la durée totale du contrat puisse dépasser 12 mois",
+        "d": "deux fois sans que la durée totale du contrat puisse dépasser 18 mois"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 22,
+      "text": "Pour qu'un conducteur soit considéré comme conducteur \"courte distance\" (hors messagerie et transport de fonds), il doit :",
+      "options": {
+        "a": "uniquement travailler dans une région déterminée",
+        "b": "prendre son repos journalier hors domicile moins de 6 fois par mois",
+        "c": "rentrer obligatoirement quotidiennement à l'établissement d'attache",
+        "d": "avoir des horaires fixes tous les jours"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 23,
+      "text": "Conformément à la réglementation nationale, l'intervalle de temps entre deux téléchargements des données électroniques de la carte d'un conducteur ne peut excéder :",
+      "options": {
+        "a": "95 jours",
+        "b": "60 jours",
+        "c": "45 jours",
+        "d": "28 jours"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 24,
+      "text": "La prescription relative aux rappels de salaires est de :",
+      "options": {
+        "a": "7 ans",
+        "b": "5 ans",
+        "c": "3 ans",
+        "d": "2 ans"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 25,
+      "text": "Selon le règlement (UE) n°165/2014, l'employeur doit conserver les disques de tachygraphe utilisés par le conducteur ou les données téléchargées à partir de la carte de conducteur et de l'unité véhicule de l'appareil :",
+      "options": {
+        "a": "toute la vie de l'entreprise",
+        "b": "aussi longtemps que le conducteur est salarié dans l'entreprise",
+        "c": "au moins pendant 1 an",
+        "d": "au moins pendant 5 ans"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 26,
+      "text": "L'ouverture d'un droit à congés payés de 2,5 jours ouvrables a lieu dès que le salarié a travaillé chez le même employeur :",
+      "options": {
+        "a": "10 jours de travail effectif",
+        "b": "3 semaines de travail effectif",
+        "c": "1 mois de travail effectif",
+        "d": "2 mois de travail effectif"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 27,
+      "text": "Le conducteur d'un véhicule, soumis à la réglementation sociale européenne sur les temps de conduite et de repos, doit être en mesure de présenter, en cas de contrôle sur route, les données d'activités journalières :",
+      "options": {
+        "a": "de la journée en cours et des 28 jours précédents",
+        "b": "de la semaine en cours et du dernier jour de la précédente semaine",
+        "c": "de la journée en cours",
+        "d": "de la journée en cours et des 15 jours ouvrables précédant ladite semaine"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 28,
+      "text": "Pour la conduite en équipage, selon le règlement (C.E) n°561/2006 relatif aux temps de conduite et de repos, le repos journalier par conducteur est au minimum de 9 h consécutives par période de :",
+      "options": {
+        "a": "30 h et peut être pris à l'hôtel ou en véhicule à l'arrêt disposant d'un matériel de couchage convenable",
+        "b": "24 h en cas de repos à bord du véhicule en marche",
+        "c": "30 h et peut être pris à bord du véhicule en marche",
+        "d": "24 h et peut être pris à l'hôtel ou à bord du véhicule à l'arrêt"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 29,
+      "text": "Lors d'une traversée à bord d'un ferry, le conducteur routier est autorisé à interrompre son repos journalier :",
+      "options": {
+        "a": "1 fois 15 minutes",
+        "b": "2 fois 15 minutes",
+        "c": "2 fois sans dépasser une heure au total",
+        "d": "1 fois 1 heure"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 30,
+      "text": "Constituent l'exigence d'établissement d'une entreprise de transport :",
+      "options": {
+        "a": "les équipements administratifs et les installations techniques",
+        "b": "les équipements et les parkings des véhicules",
+        "c": "les installations administratives et les parkings des véhicules",
+        "d": "les semi-remorques détenues en pleine propriété ou en vertu d'un contrat de location-vente ou de crédit-bail"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 31,
+      "text": "L'article R. 3211-48 du code des transports :",
+      "options": {
+        "a": "autorise la location transfrontalière de véhicules avec conducteur",
+        "b": "interdit la location transfrontalière d'un véhicule avec conducteur",
+        "c": "interdit la location transfrontalière de véhicule sans conducteur",
+        "d": "interdit la location transfrontalière de véhicules avec ou sans conducteur"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 32,
+      "text": "Les réserves doivent être :",
+      "options": {
+        "a": "précisées et validées par le transporteur uniquement",
+        "b": "écrites sur la lettre de voiture avec la mention \"sous réserves de déballage\"",
+        "c": "écrites, précises, motivées et contradictoires",
+        "d": "toujours être approuvées par le transporteur au moment de la livraison"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 33,
+      "text": "Légalement, un prix de transport doit couvrir :",
+      "options": {
+        "a": "au moins des charges fixes et variables de l'entreprise de transport",
+        "b": "uniquement le flux de liquidités de l'entreprise",
+        "c": "uniquement les charges relatives au renouvellement des véhicules",
+        "d": "uniquement la retraite du chef de l'entreprise de transport"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 34,
+      "text": "L'autorisation d'exercer la profession de transporteur routier permet à :",
+      "options": {
+        "a": "une personne d'obtenir une attestation de capacité professionnelle",
+        "b": "une entreprise de satisfaire à la condition de capacité professionnelle",
+        "c": "une entreprise d'être inscrite au registre des entreprises de transport",
+        "d": "un gestionnaire de transport d'exercer la profession de transporteur routier"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 35,
+      "text": "Selon le droit français, un déménageur est considéré comme une entreprise de transport :",
+      "options": {
+        "a": "même si le déménagement ne comprend pas de transport",
+        "b": "lorsque le déménagement comprend pour partie une prestation de transport",
+        "c": "uniquement lorsque le transport constitue la partie principale du déménagement",
+        "d": "dès lors que le contrat passé avec le client le prévoit"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 36,
+      "text": "A la suite d'un transport international à destination de la France, un transporteur non établi peut effectuer :",
+      "options": {
+        "a": "sept opérations de cabotage en trois jours",
+        "b": "huit opérations de cabotage en sept jours",
+        "c": "trois opérations de cabotage en sept jours",
+        "d": "quatre opérations de cabotage en trois jours"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 37,
+      "text": "L'article L.3222-5 du code des transports prévoit que le dépassement des durées de réalisation des opérations de chargement et de déchargement par rapport à celles qui avaient été acceptées par le cocontractant du transporteur ouvre droit à :",
+      "options": {
+        "a": "un complément de rémunération",
+        "b": "une renégociation de la rémunération",
+        "c": "une majoration forfaitaire du prix du transport",
+        "d": "des pénalités pour retard"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 38,
+      "text": "L'article L. 3222-6 du Code des transports prévoit que toute prestation annexe non prévue par le contrat de transport qui cause un dommage engage la responsabilité :",
+      "options": {
+        "a": "de l'entreprise de transport",
+        "b": "du commissionnaire de transport",
+        "c": "de la bourse de fret",
+        "d": "de l'entreprise bénéficiaire de la prestation"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 39,
+      "text": "Dans le cadre d'un transport routier international, en cas de retard, le transporteur devra payer :",
+      "options": {
+        "a": "8,33 DTS par kilo",
+        "b": "une indemnité qui ne peut dépasser le prix du transport",
+        "c": "une indemnité qui ne peut dépasser la moitié du prix du transport",
+        "d": "une indemnité calculée sur la valeur de la marchandise"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 40,
+      "text": "Le montant de la capacité financière est calculée en fonction :",
+      "options": {
+        "a": "du type d'activité de l'entreprise : intérieure ou internationale",
+        "b": "du nombre de véhicules motorisés selon leur poids maximal autorisé (PMA)",
+        "c": "de la forme juridique de l'entreprise",
+        "d": "du nombre de véhicules non motorisés"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 41,
+      "text": "Dans le transport routier, le délai maximum de paiement est de :",
+      "options": {
+        "a": "30 jours à compter de l'émission de la facture",
+        "b": "45 jours fin de mois",
+        "c": "45 jours à compter de la livraison des marchandises",
+        "d": "60 jours à compter de l'émission de la facture"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 42,
+      "text": "Lors d'un transport routier international régi par la convention de Genève du 19 mai 1956, le retard à la livraison ne peut donner lieu à indemnité que si une réserve a été adressée par écrit dans le délai maximum de :",
+      "options": {
+        "a": "21 jours à dater de la livraison",
+        "b": "30 jours à dater de la livraison",
+        "c": "60 jours à dater de l'enlèvement",
+        "d": "un an à dater de la livraison"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 43,
+      "text": "Le poids maximal autorisé d'un ensemble routier (train routier) comportant 4 essieux ne doit pas dépasser :",
+      "options": {
+        "a": "32 tonnes",
+        "b": "35 tonnes",
+        "c": "38 tonnes",
+        "d": "40 tonnes"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 44,
+      "text": "Les dimensions d'une EURO palette sont de :",
+      "options": {
+        "a": "80 x 80 cm",
+        "b": "80 x 120 cm",
+        "c": "100 x 120 cm",
+        "d": "120 x 120 cm"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 45,
+      "text": "Selon l'ADR, les indications suivantes doivent figurer sur les documents de transport :",
+      "options": {
+        "a": "le nom et l'adresse du fabricant de la marchandise dangereuse",
+        "b": "le nom et l'adresse de l'emballeur de la marchandise dangereuse",
+        "c": "le(s) nom(s) et l'adresse(s) du/des destinataire(s)",
+        "d": "la date d'expiration du certificat d'agrément du véhicule"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 46,
+      "text": "Il y a suspicion d'infraction lorsque l'éthylotest permet de détecter la présence dans l'air expiré d'un taux d'alcool pur de :",
+      "options": {
+        "a": "0,25 milligrammes par litre",
+        "b": "0,35 milligrammes par litre",
+        "c": "0,40 milligrammes par litre",
+        "d": "0,50 milligrammes par litre"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 47,
+      "text": "Lors d'un contrôle sur route, le document justifiant la validité de la visite technique d'un véhicule poids-lourd est :",
+      "options": {
+        "a": "le carnet d'entretien",
+        "b": "le certificat d'immatriculation",
+        "c": "l'attestation d'assurance",
+        "d": "le feuillet d'enregistrement"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 48,
+      "text": "Pour un transport de marchandises entre la France et la Roumanie à l'aide d'un véhicule de plus de 7,5 tonnes de poids maximum autorisé, le titre administratif devant se trouver à bord du véhicule est :",
+      "options": {
+        "a": "une copie conforme de la licence de transport intérieur",
+        "b": "une autorisation bilatérale",
+        "c": "une autorisation de transit",
+        "d": "une copie certifiée conforme de la licence communautaire"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 49,
+      "text": "La Russie est partie à l'accord sur :",
+      "options": {
+        "a": "l'Espace économique européen (EEE)",
+        "b": "l'Organisation mondiale du commerce (OMC)",
+        "c": "le Forum International des transports (FIT/CEMT)",
+        "d": "l'Union européenne (UE)"
+      },
+      "answer": "B ou C",
+      "explanation": null
+    },
+    {
+      "number": 50,
+      "text": "En transport international, en cas de perte partielle, avarie ou retard, l'action en justice est prescrite :",
+      "options": {
+        "a": "1 an après le jour de la livraison",
+        "b": "1 an après la prise en charge par le transporteur",
+        "c": "3 ans après le jour de la livraison",
+        "d": "3 ans après la prise en charge par le transporteur"
+      },
+      "answer": "A",
+      "explanation": null
+    }
+  ],
+  "problems": [
+    {
+      "number": 1,
+      "title": "PROBLÈME 1 (50 points)",
+      "subject_text": "La SARL “Société Girondine de Logistique” (SGL) exploite plusieurs ensembles de \nvéhicules de transport routier de marchandises générales, frigorifiques et conteneurisées, pour \ndes trafics régionaux, nationaux et occasionnellement internationaux.  \nEn cas de surcroît d’activité, SGL a recours à la sous-traitance. \nSon siège social se trouve à Libourne (33). \nLa société SGL analyse a posteriori l’activité de ses conducteurs au cours de l’été 2019. \nIl  lui  reste  à  analyser  les  activités  de  Sébastien  et  Jacky,  tous  deux  conducteurs  « grands \nroutiers » affectés à un client permanent, le commissionnaire de transport CDT. \nEn annexe  1,  vous  disposez  d’une  édition  des  données  numériques  issues  de  la  carte \n« conducteur » de Sébastien du 12/08/2019 au 24/08/2019. \n \nQUESTION 1          (12 points) \nAnalyse de l’activité de Sébastien au regard de la Réglementation sociale européenne (RSE) \nselon le règlement (CE) n° 561/2006 \n1) Après  avoir  donné  une  définition  du  temps  de  pause, indiquez les  durées  maximales  de \nconduite continue et les durées minimales de pause prévues par la RSE. \n \n2) Indiquez : \na) les durées maximales de conduite journalière ;  \nb) la durée maximale de conduite hebdomadaire ;  \nc) la durée maximale de conduite sur 2 semaines consécutives ;  \nd) les durées minimales de repos journalier ;  \ne) les durées minimales de repos hebdomadaire ;  \nf) au  vu  des  données  de  l’annexe  1,  ces  durées  ont-elles  été  respectées ? \nJustifiez votre réponse. \n \nQUESTION 2         (9 points) \nAnalyse de l’activité de Sébastien au regard de la durée du travail prévue par le  code  des \ntransports : \n \n1) Donnez la définition d’un conducteur « grand routier » ou « longue distance ». \n \n2) Précisez quelle est la durée maximale de temps de service hebdomadaire sur une semaine \nisolée pour cette catégorie de conducteur . \nIndiquez la  durée  de  temps  de  service  de  Sébastien  pour  chacune  des  deux  semaines \nfigurant en annexe 1 et précisez si la durée maximale de temps de service hebdomadaire a \nété respectée. \n\n \n3) En  cas  de  non-respect  répété  de  la  durée  maximale  de  temps  de  service  hebdomadaire,  \nproposez une solution permettant à SGL d’être en conformité avec la réglementation tout \nen respectant le cahier des charges décrit en annexe 2. \n4) Pour le décompte du temps de service hebdomadaire de Sébastien entre heures normales, \nd'équivalence ou supplémentaires, à quelles catégories d'heures correspondent : \n- celles réalisées à compter de la 36ème heure et jusqu'à la 43ème heure ? \n- celles réalisées à compter de la 44ème heure ?  \n5) Sébastien  a  travaillé  le  jeudi 15  août 2019,  jour  férié :  selon  le  code  du  travail, \nl’employeur peut-il contraindre un conducteur à travailler un jour férié ? \n \nQUESTION 3         (2 points) \nLe  vendredi,  la  société  SGL  met  en  place  un  relais  en  permutant,  à  mi-parcours,  les  semi-\nremorques (cf annexe 2).  \nDu point de vue de la RSE, pour quelle raison cette organisation vous semble-t-elle avoir été \nretenue ? \n \nQUESTION 4         (3 points) \nLors  de  leur  permutation,  quels  documents  doivent  accompagner  les  2  semi-remorques  pour \nassurer la prestation de transport ? \n \nQUESTION 5         (2 points) \nLe jeudi 15 août 2019, le conducteur Sébastien n’a circulé qu’en France, à bord d’un ensemble \nroutier frigorifique de 44 tonnes transportant des produits de la mer (poissons frais).  \nLa  cargaison  occupait  les  ¾  de  la  surface  utile  de  chargement  de  la  semi-remorque  et  a  été \nlivrée ce même jour à une usine de transformation. \nLa société SBL pouvait-elle faire circuler cet ensemble routier à cette date ?  \nJustifiez votre réponse. \n \nQUESTION 6         (3 points) \nEn raison d’une surcharge de travail, la société SBL  a  décidé  de  sous-traiter  un  transport \nnational de palettes (10 tonnes) d’eau minérale « Eau Vive ». Cette offre a été déposée sur une \nbourse de fret. \nL’entreprise Transports STANISLAS, à Nancy, qui n’a jamais travaillé avec la société SBL, \ns’est déclarée intéressée. \n \n1) En application du code de commerce et du code des transports, que doit vérifier la société \nSBL, en qualité de donneur d’ordre, concernant l’entreprise STANISLAS ?  \n \n2) Par quels moyens la société SBL peut-elle réaliser cette vérification ? \n \n\n \n \n \nQUESTION 7         (2 points) \nLes Transports STANISLAS proposent de mettre à disposition un ensemble routier dont les \ncaractéristiques sont les suivantes : \n \n- Tracteur routier : \n motorisation de génération EURO II \n date de 1ère mise en circulation : 03/05/2000 \n nombre d’essieux : 2 \n PTAC : 19 tonnes \n PTRA : 44 tonnes \n \n- Semi-remorque : \n date de 1ère mise en circulation : 10/10/2010 \n nombre d’essieux : 3 \n PTAC : 34 tonnes \n PTRA : néant \n \nCet ensemble est-il autorisé à circuler à 44 tonnes ? Justifiez votre réponse. \n \n \nQUESTION 8         (3 points) \nLa société SBL et la société « Eau Vive » ont établi un protocole de sécurité. \n \n1) Précisez en une phrase l'utilité de ce document. \n \n2) Citez 2  informations  concernant  la  société  « Eau  Vive »  qui  doivent  figurer  dans  ce \ndocument. \n \n \nQUESTION 9         (14 points) \nLa société SBL cherche à actualiser la connaissance de son coût de revient. \n \n1) A partir des informations figurant à l’annexe 3, calculez le coût de revient total (arrondir à \nl’euro le plus proche) puis au kilomètre (arrondir à 3 chiffres après la virgule), d’un trajet \naller-retour Nouvelle-Aquitaine / Île-de-France. \n \n2) Calculez le prix de vente total puis au kilomètre d’un trajet aller-retour, en fixant la marge \nà 15 % du coût de revient. \n \n3) Afin d’établir la facturation des transports  du  mois  de  septembre  2019  réalisés  pour  le \ncompte de CDT, l’entreprise SGL a rassemblé les éléments suivants : \n- prix du carburant à la pompe en début d’année 2019 : 1,20 € H.T \n- prix du carburant à la pompe en septembre 2019 : 1,25 € H.T \n- part du carburant dans le coût de revient : 25 % \n \n \n\n \n \n \n a) Calculez la variation en pourcentage (arrondi à deux décimales) du coût du transport \n entre les deux périodes, en tenant compte de la hausse de prix du carburant. \n \n b) Pour un chiffre d’affaires annuel de 173 000 € par véhicule, indiquez le montant en \n euros de cette variation. \n \n c) Commentez son incidence éventuelle sur la rentabilité de l’entreprise SGL. \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\n \n \nANNEXE 1 \n \nDONNEES NUMERIQUES ISSUES  \nDE LA CARTE «CONDUCTEUR» DE SEBASTIEN \nDU 12 AU 24 AOUT 2019 \n \nTableau récapitulatif des données numériques traduisant les durées des activités du conducteur  \n \nDate Début Date Fin Conduite \njournalière \n \nDispo \n \nTravail \n \n \nTemps de \nservice \nRepos \njournaliers \n \nRepos \njournaliers \n/24 h \nAmplitude \n \nLundi \n12/08/19 \n08:35 \nLundi \n12/08/19 \n22:30 \n09h38 \n \n02h22 12h00 10h23 10h05 13h55 \nMardi \n13/08/19 \n08:53 \nMardi \n13/08/19 \n21:05 \n10h15 \n \n00h11 10h26 11h57 11h48 12h12 \nMercredi \n14/08/19 \n09:02 \nMercredi \n14/08/19 \n17:25 \n05h05 \n \n01h58 07h03 09h05 09h05 08h23 \nJeudi \n15/08/2019 \n02:30 \nJeudi \n15/08/2019 \n06:25 \n03h55 \n \n00h00 03h55 27h17 20h05 03h55 \nVendredi \n16/08/2019 \n09:42 \nVendredi \n16/08/2019 \n21:36 \n08h41 \n \n02h26 11h07 57h09 12h06 11h54 \n \nCumul semaine  \n37h34 \n \n06h57 44h31   50h19 \n \nLundi \n19/08/19 \n06:45 \nLundi \n19/08/19 \n21:10 \n09h48 \n \n02h12 12h00 11h03 09h35 14h25 \nMardi \n20/08/19 \n08:13 \nMardi \n20/08/2019 \n21:14 \n09h49 \n \n01h25 11h14 09h01 09h01 13h01 \nMercredi \n21/08/2019 \n06:15 \nMercredi \n21/08/2019 \n21:30 \n08h36 \n \n02h11 10h47 03h48 \n+ \n09h00 \n08h45 15h15 \nJeudi \n22/08/2019 \n06:30 \nJeudi \n22/08/2019 \n18:17 \n08h14 \n \n02h48 11h02 09h15 09h15 11h47 \nVendredi \n23/08/2019 \n03:32 \nVendredi \n23/08/2019 \n15:17 \n08h13 \n \n02h14 10h27 09h47 09h47 11h45 \n \nSamedi  \n24/08/2019 \n01:00 \nSamedi \n24/08/2019 \n04:53 \n03h53 \n \n00h00 03h53 50h12 24h00 03h53 \n \nCumul semaine \n48h33 \n \n10h50 59h23   70h06 \n \n \n\n \n \n \nANNEXE 2 \n \nEXTRAIT DU CAHIER DES CHARGES DU CLIENT CDT  \nET PLAN DE TRANSPORT ETABLI PAR SGL \n \n \nExtrait du cahier des charges du client CDT : \n \n- ligne  régulière  journalière  entre  la  région  Nouvelle-Aquitaine  et  la  région  Île-de-\nFrance, \n- besoins journaliers (du lundi au vendredi) : \n \n chargement  d’un  lot  complet  tous  les  matins  (du  lundi  au \nvendredi) chez le même expéditeur en région Nouvelle-Aquitaine, \npour  livraison  le  lendemain  matin  (sauf  chargement  du  vendredi, \nlivré le lundi), chez le même destinataire en région Île-de-France, \n \n chargement  d’un  lot  complet  tous  les  matins  (du  lundi  au \nvendredi) chez un expéditeur variable, mais situé en région Île-de-\nFrance,  pour  livraison  le  lendemain  matin  (sauf  chargement  du \nvendredi, livré le lundi), chez un destinataire variable, mais situé \nen Nouvelle-Aquitaine. \n \n \nPlan de transport mis en place par SGL : \n \n- mobilisation de 2 poids lourds : \n l’un conduit par Sébastien, domicilié en Nouvelle-Aquitaine, \n l’autre conduit par Jacky, domicilié en Île-de-France. \n \n- répartition des moyens :  \n \nPendant que l’un des conducteurs assure le chargement dans le sud-ouest, l’autre assure le \nchargement en région parisienne. Ensuite, chaque conducteur effectue l’intégralité du trajet \naller-retour. \n \nL’exception à cette organisation des trajets concerne les vendredis et les veilles de jour férié \n(recours à un relais). A mi-parcours, les conducteurs se retrouvent pour permuter leurs semi-\nremorques. Ainsi, chaque conducteur regagne sa région de provenance.  \n \n \n \n \n \n \n\n \n \n \nANNEXE 3 \n \nELEMENTS D’EXPLOITATION D’UN VEHICULE \nTRAJET : NOUVELLE-AQUITAINE / ÎLE-DE-FRANCE \n \n \n \nTrajet (aller + retour) :  \n- distance :  .................... 1 430 km \n- temps de conduite :  ............ 18 h \n- temps de travail :  ................. 4 h \n \nNombre annuel de trajets : 100 \n \n- carburant : \n - consommation : 33 litres / 100 km \n- coût : 1,2 €/litre (HT et hors remboursement TICPE) \n \n- remboursement TICPE :  .................................................17,56 € /100 litres \n \n- pneumatiques, entretien-réparations, péages :  ......................... 18 700 €/an \n \n- coût horaire du conducteur :  ..............................................................23 €/h \n \n- financement matériel :................................................13 000 €/an \n \n- assurances véhicule + marchandises :  ........................................ 2 100 €/an \n \n- taxe à l’essieu :  .............................................................................. 516 €/an \n \n- coûts de structure :  ................................................................... 17 000 €/an",
+      "corrected_text": "Question n°1 (12 points)  \n1) Les temps de pause sont des temps compris dans l’amplitude de travail mais non considérés comme \ntemps de travail effectif. Durant ces temps de pause, le conducteur est libre de son temps et peut \nvaquer à ses occupations personnelles.  \nLa réglementation sociale européenne prévoit :  \n- 4h30 de conduite continue maximum  \n- 45 minutes de pause après ces 4h30 de conduite continue \n- Possibilité de pause fractionnée :   \no  Une première pause de 15 minutes minimum  \no  Une seconde pause de 30 minutes minimum  \n \n2)   \nIndiquez  Règlementation  Respect  \na) Les durées \nmaximales de \nconduite \njournalière \n9h  maxi  par  jour  Possibilité  2  fois \n10h/semaine  \nINFRACTION   \nMardi 13/08   \n10h15 de conduite  \nb) La   durée   maximale   de \nconduite hebdomadaire  \n56  heures  de  conduite  maxi  par \nsemaine  \nRESPECT  \nConduite S1 : 37h34  \nConduite S2 : 48h33  \nc) La    durée    maximale    de \nconduite  sur  2  semaines \nconsécutives  \n90   heures   de   conduite   sur   2 \nsemaines consécutives  \nRESPECT  \nConduite cumulée   \n37h34 + 48h33 = 86h07  \nd) Les  durées  minimales  de \nrepos journalier  \nRepos normal : 11h  \nRepos  normal  fractionné  :  3  +  9 \nheures = 12 heures \nRepos réduit : 9h maxi  \n3/semaine  \n \nINFRACTIONS \nMercredi 21/08  \n08h45 de repos journalier  \nSemaine 2 : plus de 3 repos réduit \npar    période    de    24h    dans    la \nsemaine \ne) Les  durées  minimales  de \nrepos hebdomadaire  \nRepos normal : 45h  \nPossibilité  de  repos  réduit  durée \nminimal  :  24h00  sous  réserve  de \ncompensation  en  bloc  dans  les  3 \nsemaines qui  \nsuivent et interdiction de 2 repos \nréduits sur 2 semaines \nconsécutives  \nRESPECT  \nRepos hebdomadaire de 57h09  \n \n  \n\n \n \nsujet \"Transport de Marchandises” \n \n \n \n  \nQuestion n°2 (9 points)  \n  \n1) Dans le transport de marchandises, un conducteur « grand routier » est un conducteur qui effectue au \nminimum 6 repos journalier hors domicile par mois. Dans le cadre du déménagement, un conducteur « \ngrand routier » est un conducteur qui effectue au minimum 40 repos journaliers hors domicile par an.  \n  \n2) Le temps de service maximal pour un conducteur « grand routier » est de 56 heures maximal sur une \nsemaine isolée.  \n  \nSemaine 1 : 44h31 => RESPECT  \nSemaine 2 : 59h23 => INFRACTION  \n  \n3) Au vu des relevés des heures de temps de service, la solution consistera à affecter un troisième \nconducteur à cette ligne dont une partie des heures de travail permettra de réduire les temps de \nservice des deux autres conducteurs.  \n  \n4) Les heures comprises entre la 36\nème\n et la 43\nème\n heures sont les heures d’équivalence pour un \nconducteur « grand routier »  \nLes heures décomptées à partir de la 44\nème\n sont des heures supplémentaires.  \n  \n5) Oui. À l’exception du 1\ner\n mai et des salariés de moins de 18 ans, le repos pendant un jour férié n’est \npas obligatoire selon le code du travail. Un salarié ne peut donc pas refuser de travailler un jour férié.  \n \nQuestion n°3 : (2 points)  \n \nL’organisation d’un relai permet au deux salariés de regagner leur domicile dès le vendredi soir. Ceci permet \nd’éviter le retour à vide qui, au-delà de son coût très important, serait générateur de nombreuses heures de \nconduite supplémentaire pour les conducteurs qui se retrouverait alors en infraction. \n  \nQuestion n°4 : (3 points)  \n \nLors de la permutation des semi-remorques, les documents suivants doivent accompagner la semi-remorque :  \n- Certificat d’immatriculation de la semi-remorque  \n- Attestation d’assurance de la semi-remorque  \n- Lettre de voiture correspondant à la marchandise contenue dans la semi-remorque  \n  \nQuestion n°5 : (2 points)  \n \nSelon l’arrêté du 19 juillet 2011, le transport de poissons, denrée dont la conservation exige qu’elle soit \nréfrigérée, est soumis à dérogation permanente. Par conséquent, la circulation n’est pas interdite un jour férié \n(15 aout) pour cet ensemble.  \n  \nQuestion n°6 : (3 points)  \n \nUne entreprise agissant en qualité de donneur d’ordre et sollicitant un sous-traitant doit effectuer plusieurs \nvérifications lorsque le contrat de sous-traitance porte sur un montant minimum de 5 000 euros hors taxes.  \nCette obligation de vigilance est prévue par les articles L243-15 et D243-15 du Code de la sécurité sociale ainsi \nque par les articles L8222-1 à L8222-5 du Code du travail.  \n\n \n \nsujet \"Transport de Marchandises” \n \n \n \n  \nCode du commerce du travail  \n \nCode des transports  \n- L’inscription au RCS (K-bis)  \n- Une attestation de vigilance URSSAF ou \nattestation de non emploi de salariés  \n- La liste des travailleurs étrangers ou \nattestation de non-emploi de travailleurs \nétrangers  \n- Une attestation fiscale justifiant de la \nrégularité de sa situation fiscale  \n-  \n-  \n-  \n \nInscription au registre des transporteurs \n(licence)  \nPrésentation des copies conformes de \nlicence (intérieur et/ou communautaire) \nAttestation d’assurance marchandises (si \nspécifié par le donneur d’ordre)  \nAttestation responsabilité civile dans le \ncadre de la circulation automobile.  \n  \nLa société SGL doit demander l’ensemble de ses documents à son sous-traitant dès la conclusion du \ncontrat et demander tous les 6 mois les documents à jour.  \nLa société SGL peut aussi avoir recours à des plateformes externes comme « AndCo transport ».   \nSur cette plateforme, la société SGL recevra en temps réel les validités des documents, le transporteur \nquant à lui sera relancé automatiquement. Ce type de plateforme est intéressant pour le donneur d’ordre \ncar elle lui permette un gain de temps, mais elles ont malgré tout un coût.  \n  \nQuestion n°7 : (2 points)  \n \nDepuis le 01 octobre 2018, seuls les véhicules EURO 5 et 6 sont autorisés à circuler en configuration 44 \ntonnes. Par conséquent, cet ensemble ne pourra pas circuler à 44t.  \nD’autre part la semi-remorque présente un PTAC de 34 T ce qui est insuffisant pour circuler à 44 T (PTAC de \nla semi 3 essieux doit être de 38 T minimum dans ce cas). \n  \nQuestion n°8 : (3 points)  \n  \n1) Les opérations de chargement ou déchargement doivent faire l’objet d’un document écrit, appelé « \nprotocole de sécurité sur les opérations de chargement ou de déchargement ». Ce protocole comprend \nles informations utiles à l’évaluation des risques de toute nature générés par l’opération de chargement \nou de déchargement ainsi que les mesures de prévention et de sécurité à observer à chacune des phases \nde sa réalisation.  \n  \n\n \n \nsujet \"Transport de Marchandises” \n \n \n \n2)   \nPar l’entreprise d’accueil (Eau vivi) \nPar l’entreprise de transport (pour info) \n• Les consignes de sécurité, particulièrement celles \nqui concernent l'opération de chargement ou de \ndéchargement,  \n• Le lieu de livraison ou de prise en charge,  \n• Les modalités d'accès et de stationnement aux \npostes de chargement ou de déchargement \naccompagnées d'un plan et des consignes de \ncirculation,  \n• Les matériels et engins spécifiques utilisés pour le \nchargement ou le déchargement, \n• Les moyens de secours en cas d'accident ou \nd'incident,  \n• L’identité du responsable désigné par \nl'entreprise d'accueil auquel \nl'employeur délègue, le cas échéant, ses \nattributions. \n• Les caractéristiques du véhicule, son aménagement et ses \néquipements  \n• La nature et le conditionnement de la marchandise  \n• Les précautions ou sujétions particulières résultant de la \nnature des substances ou produits transportés, notamment \ncelles imposées par la réglementation relative au transport de \nmatières dangereuses. \n \n  \nQuestion n°9 : (14 points)  \n  \n1) Coût de revient total du trajet A/R Nouvelle Aquitaine-Ile-de-France  \n  \nCalcul préliminaire :  \n Kilométrage total : 1430 X 100 : 143 000 km  \n \no Carburant : \n33 / 100 X 1 430km X 1.2 = 566.28 €  \n \no Remboursement TICPE :   \n33 / 100 X 1 430km = 471.90 Litre de carburant consommé  \n471.90 / 100 X 17.56 = 82.87 € remboursé sur le trajet   \n  \nCoût Carburant après déduction de la TICPE : 566.28 – 82.87 = 483.41 €/trajet  \n  \no Pneumatiques, Entretien-Réparation, péages  \nCoût pour le trajet : 18 700 / 143 000 X 1430 = 187 €/trajet  \n  \no Coût du conducteur  \nNombre d’heures travaillées : 18 + 4 = 22h \n=> Coût du conducteur : 22 X 23 = 506 €/trajet  \n  \no Financement matériel   \n13 000 / 100 = 130 €/trajet  \n  \no Assurances véhicule + marchandises  \n2100 / 100 = 21€/trajet  \n   \n\n \n \nsujet \"Transport de Marchandises” \n \n \n \n \no Taxe à l’essieu = 516 / 100 = 5.16 €/trajet  \n  \no Coût de structure = 17000 / 100 = 170 €/trajet  \n  \nCOUT TOTAL DU TRAJET : 483.41 + 187 + 506 + 130 + 21 +5.16 + 170 = 1502.57 € soit 1503 €  \n  \nCOUT KILOMETRIQUE DU TRAJET : 1503 / 1430 = 1.051 €/km  \n  \n2) Prix de vente total du trajet   \n  \nPRIX DE VENTE TOTAL DU TRAJET : 1503 / 100 X 115 = 1728.45 € soit 1728€  \n  \nPRIX DE VENTE KILOMETRIQUE DU TRAJET : 1.051 / 100 X 115 = 1.209 €/km  \n  \n3) Variation du carburant :  \na)  \nIndice : Part du carburant X [(Prix du carburant à la date de réalisation / prix du carburant à la date de \nconclusion du contrat) -1]   \n  \n25/100 X [(1.25/1.20)-1]  \n0.25X[1.042-1] = 0.0104  \nIndice Carburant : 0.0104  \nPourcentage d’augmentation : 0.0104 X 100 = 1.04% d’augmentation du coût de transport entre les 2 \npériodes.  \n \nAutre méthode : le carburant a augmenté de 1.25 – 1.2 = 0.05 €/L \nCe qui représente une augmentation : 0.05/1.2 = 0.04166 soit 4.17% \nLa part carburant dans le transport étant de 25%, le transport a globalement augmenté de : \n4.17% x 25% = 0.0417 x 0.25 = 0.0104 soit 1.04% \n  \nb)  \nCA avant indice GO : 173 000 €  \nVariation = 173 000 X 0.0104 = + 1799.20 €  \n  \nc) La variation des charges de carburant n’a pas d’incidence sur la rentabilité de la prestation. En effet grâce à \nl’indexation gazole (report de la variation du coût du gazole sur la facture) la variation est supportée par le \nclient. La marge reste donc identique.  \n  \n   \n  \n  \n\n \n \nsujet \"Transport de Marchandises”"
+    },
+    {
+      "number": 2,
+      "title": "PROBLÈME 2 (50 points)",
+      "subject_text": "La société TRANSNORMANDE, spécialisée dans le transport routier de marchandises \nsur le territoire national, est implantée à Rouen (76). Elle exploite 8 porteurs de 19 tonnes.  \n \nVous avez été embauché(e) par cette société comme gestionnaire de transport.  \n \n \nQUESTION 1         (8 points) \n \nConcernant les conditions d’exercice du gestionnaire de transport :  \n \n a) Citez 2 exigences auxquelles il doit répondre. \n \n b) Citez 5 missions confiées au gestionnaire de transport par la réglementation. \n \n c) Dans l’hypothèse où le gestionnaire de transport n’est pas interne à l’entreprise, \n dans  combien  d’entreprises  de  transport  routier  au  maximum  peut-il  exercer  cette \n fonction ? \n \n \nQUESTION 2         (4 points) \n \nLe  dirigeant  de  la  société  TRANSNORMANDE  vous  charge  de  mettre  en  place  la  gestion \nprévisionnelle de la trésorerie de l’entreprise sur le 3ème trimestre de l’année.  \n \nQuel est l’intérêt pour une entreprise de mettre en place un plan de gestion prévisionnelle de \nsa trésorerie ? \n \n \nQUESTION 3         (15 points) \n \nA partir des éléments de l’annexe 4 :  \ncomplétez l’annexe 5 (« Les budgets des encaissements et des décaissements ») et l’annexe 6 \n(« Budget de trésorerie »), en détaillant vos calculs sur l’annexe 5. \n \nCes 2 annexes (5 et 6) sont à rendre avec la copie. \n \n \nQUESTION 4         (2 points) \n \nQuelle est l’incidence des dotations aux amortissements dans le budget de trésorerie ? \n \n \nQUESTION 5         (3 points) \n \nCommentez l’évolution de la trésorerie de l’entreprise de juillet à septembre. \n\n \n \n \nQUESTION 6         (4 points) \n \nEn cas de découvert, quelles solutions (au moins deux) pouvez-vous proposer ? \n \n \nQUESTION 7         (6 points) \n \nA sa demande, vous rappelez au dirigeant de la société TRANSNORMANDE :  \n \n a) la définition du bilan ;  \n \n b) les informations supplémentaires apportées par le compte de résultat ;  \n \n c) le délai de conservation des documents comptables. \n \n \nQUESTION 8         (8 points) \n \nAu cours de son dernier exercice comptable, la société TRANSNORMANDE a réalisé un \nchiffre d’affaires total de :  \n \n - 1 800 000 € (HT) sur l’activité transport public routier de marchandises  \n - 200 000 € (HT) sur l’activité de stockage. \n \nElle a sous-traité ses transports pour un montant de 290 000 € (HT). \n \n a) Indiquez dans quel compte est enregistré le montant de la sous-traitance.  \n \n b)  Dans  quelle  limite  la  sous-traitance  est-elle  autorisée ?  Au-delà,  que  doit  faire \n l’entreprise ?  \n \n c)  La  société  TRANSNORMANDE  a-t-elle  respecté  la  réglementation  ? Justifiez \n votre réponse. \n \n \n \n \n \n \n \n \n \n \n \n\n \n \n \nANNEXE 4  \n \nDONNEES PREVISIONNELLE ESTIMEES PAR L’ENTREPRISE \n \n1) Achats et ventes exprimés en Hors Taxes (HT) \n \n \nVentes (HT) Achats (HT) \nJuin \n170 000 90 000 \nJuillet \n150 000 80 000 \nAoût \n130 000 72 000 \nSeptembre \n180 000 95 000 \nTRANSNORMANDE facture en fin de mois de la façon suivante : \n- Les clients paient 30 % au comptant et 70 % à 30 jours fin de mois. \n- Les fournisseurs sont réglés 20 % comptant et le solde à 30 jours fin de mois. \nLe taux de TVA applicable est de 20 %. \n \n2) Budget de TVA \n \n \nJuillet Août Septembre \nTVA collectée 27 600 23 700 32 400 \nTVA déductible 14 710 12 640 15 830 \nTVA à décaisser 12 890 11 060 16 570 \nMontant de la TVA à décaisser en juin : 14 707 € \nLa TVA à décaisser est payable le 15 du mois suivant. \n \n3) Divers  \n \n- Les salaires nets sont payés le dernier jour du mois soit 28 650 €. Les charges sociales sont \névaluées 15 750 € par mois et payées le 15 du mois suivant. \n- La  location  de  divers  matériels s’élève à 3  000 € TTC (TVA à 20 %), payable à chaque \ndébut de semestre. \n- En juillet pour les besoins d’exploitation, l’entreprise envisage l’achat d’un chariot élévateur \npour  une  valeur  de 15 000 €  HT  (TVA  à  20  %).  L’entreprise  ayant  négocié  un  geste \ncommercial, le fournisseur exige en contrepartie un paiement immédiat. \n- L’échéance de l’emprunt du 08 juillet comprend un amortissement de 20 000 € et un intérêt \nde 5 000 €. \n- Le montant d’acompte d’impôt sur les sociétés qui doit être payé le 15 septembre est de \n8 500 €. \n- Les dotations aux amortissements sont estimées à 10 000 € par mois. \n- Le découvert autorisé par la banque est de 8 000 €. \n \n \n\n \nANNEXE 5 \nLES BUDGETS DES ENCAISSEMENTS ET DECAISSEMENTS  \n(À rendre avec la copie en justifiant vos calculs) \n \nBudget des encaissements Juillet Août Septembre \n \n \n \n  \n \n \n \n  \nTOTAL \n   \n \nBudget des décaissements  Juillet Août Septembre \n \n \n \n  \n \n \n \n  \n \n   \n \n   \n \n   \n \n   \n \n   \n \n \n \n  \n \n   \nTOTAL \n   \n \nANNEXE 6 \nBUDGET DE TRESORERIE  \n(À rendre avec la copie)  \nBudget de trésorerie Juillet Août Septembre \nTrésorerie début de mois + 3 200 \n  \nTotal des encaissements \n   \nTotal des décaissements \n   \nTrésorerie fin de mois",
+      "corrected_text": "Question n°1 (8 points)  \n  \na) Le gestionnaire de transport doit répondre aux exigences de capacité professionnelle, et \nd’honorabilité.  \nb) Le gestionnaire de transport est la personne titulaire de la capacité professionnelle, il doit gérer de \nfaçon permanente et effective la direction de l’entreprise (au minima l’activité transport). Il doit \ndisposer des pleins pouvoirs afin d’exercer ses fonctions. Il est le responsable pénal et civil en cas \nd’infractions à la réglementation social, commerciale, transport ...  Il est notamment en charge de :  \n- la gestion de l'entretien des véhicules ;  \n- la vérification des contrats et des documents de transport ;  \n- la comptabilité de base ;  \n- l'affectation des chargements aux conducteurs et aux véhicules ;  \n- la vérification des procédures de sécurité.  \nc) Lorsque le gestionnaire de transport est un prestataire extérieur, celui-ci ne peut exercer son activité \nqu'avec 2 entreprises maximum pour un total de 20 véhicules maximum.  \n  \nQuestion n°2 (4 points)  \n  \nLe plan de trésorerie est important pour l’entreprise car il permet de prévoir et d’anticiper le besoin en fonds \nde roulement, de prévoir ou planifier les placements financiers de surplus de trésorerie et il permet de \nnégocier les agios (frais bancaires) auprès de sa banque.  \n  \nQuestion n°3 : (15 points)  \nBudget encaissement  \nJuillet  Août  Septembre  \nCA Juin  \n170 000 X 1.2 X 0.70  \n142 800 €    \nCA Juillet  \n150 000 X 1.2 X 0.30  \n150 000 X 1.2 X 0.70  \n 54 000 € 126 000 €  \nCA Août  \n130 000 X 1.2 X 0.30  \n130 000 x 1.2 x 0.70 \n   46 800 € 109 200 € \nCA Septembre \n180 000 x 1.2 x 0.30 \n  64 800 € \nTOTAL  196 800 €  172 800 €  174 000 €  \nBudget décaissements  \nJuillet  Août  Septembre  \nAchats Juin  \n90 000 X 1.2 X 0.8  \n86 400 €      \nAchats Juillet  \n80 000 X 1.2 X 0.2  \n80 000 X 1.2 X 0.8  \n19 200 €  76 800 €    \nAchats Août  \n72 000 X 1.2 X 0.2  \n72 000 X 1.2 X 0.8  \n  17 280 €  69 120 €  \n\n \n \nsujet \"Transport de Marchandises” \n \n \n \nAchats Septembre  \n95 000 X 1.2 X 0.2  \n    22 800 €  \nTVA à décaisser 14 707 €   12 890 €  11 060 €  \nSalaires Net  28 650 €  28 650 €  28 650 €  \nCharges Sociales  15 750 €  15 750 €  15 750 €  \nLocation Matériels (TTC) 3 000 €      \nAchat Chariot  \n15 000 X 1.2  \n18 000 €      \nEchéance emprunt  \n20 000 + 5 000  \n25 000 €      \nAcompte IS      8 500 €  \nTOTAL  210 707 €  151 370 €  155 880 €  \nBudget de trésorerie  \nJuillet  Août  Septembre  \nTrésorerie début de mois  \n+ 3 200 €  - 10 707 €  10 723 €  \nTotal Encaissement  196 800 €  172 800 €  174 000 €  \nTotal Décaissement  210 707 €  151 370 €  155 880 €  \nTrésorerie Fin de mois  \n- 10 707 €  10 723 €  28 843 €  \n \nQuestion n°4 : (2 points)  \n \nLes dotations aux amortissements sont des charges non-décaissables. Elles n’ont donc aucune incidence sur le \nplan de trésorerie.  \n \nQuestion n° 5 : (3 points)  \n \nLa trésorerie est négative au mois de juillet au-delà du découvert autorisé par la banque. Cela est dû à \nl’échéance de l’emprunt et dans le même temps à l’achat du chariot élévateur.  \nOn constate tout de même une nette amélioration en aout qui se poursuit en juillet malgré l’acompte de l’IS.  \nOn peut en déduire que la situation de trésorerie de l’entreprise est plutôt saine, le « creux » de juillet n’étant \npas extrêmement important il sera facile de lui trouver des solutions.  \n  \nQuestion n° 6  (4 points)  \n \nAu vu du faible dépassement par rapport à l’autorisation qui a été accordé par la banque, il est possible pour \nl’entreprise de :  \n- Faire appel aux associés pour injecter de la trésorerie par apport en compte courant associé.   \n- Remettre à l’escompte certaines factures clients qui aurait été payé par effet de commerce (lettre \nde change ou billet à ordre).   \n\n \n \nsujet \"Transport de Marchandises” \n \n \n \n- Négocier un délai supplémentaire pour le paiement des fournisseurs, notamment le fournisseur \ndu chariot élévateur.   \n- Négocier avec la banque pour augmenter provisoirement l’autorisation de découvert.  \n- Faire un petit crédit de trésorerie pour passer le mois de juillet. \n  \nQuestion n°7  (6 points)  \n \na) Le bilan est un document comptable obligatoire au moins une fois par an à la date de clôture de \nl’exercice comptable. Il représente l’inventaire patrimonial de l’entreprise. On le compare à une photo \ndu patrimoine de l’entreprise à une date donnée.   \nÀ partir du bilan, il est possible de calculer des indicateurs importants : le Fonds de roulement net \nglobale, le besoin en fonds de roulement et la trésorerie nette. \n \nb) Le compte de résultat est un document comptable obligatoire au moins une fois par an à la date de \nclôture de l’exercice comptable. Il enregistre les appauvrissements économiques par les charges et il \nenregistre les enrichissements économiques par les produits. On le compare à un film au cours d’une \npériode, l’exercice comptable.  \nÀ partir du compte de résultat, il est possible de calculer des soldes intermédiaires de gestion, \nindicateurs nous permettant de suivre l’activité économique de l’entreprise.  \n \nc) L’ensemble des documents comptables sont à conserver pendant une durée de  \n10 ans.  \n  \nQuestion n°8 : (8 points)  \n \n- La sous-traitance est indiquée les charges d’exploitation dans le compte « Autres Achats et \nCharges Externes » \n \nb) Le code des transports autorise un transporteur routier de marchandises à sous-traiter un maximum \nde 15% de son chiffre d’affaires HT. Au-delà, l’entreprise de transport devra s’enregistrer au registre \nnational des commissionnaires de transports tenu par la DREAL. L’entreprise devra donc respecter les \nexigences relatives à l’exercice de la profession de commissionnaire de transports :  \n- Capacité professionnelle  \n- Honorabilité  \n \nc) Taux de sous-traitance : 290 000 / 1 800 000 X 100 = 16.11 %  \nL’entreprise de transport TRANSNORMANDE dépasse les 15% et ne respecte donc pas la réglementation \nen vigueur."
+    }
+  ]
+}

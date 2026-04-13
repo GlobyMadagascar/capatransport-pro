@@ -1,0 +1,620 @@
+{
+  "year": 2023,
+  "session": "Session du 4 octobre 2023",
+  "qcm": [
+    {
+      "number": 1,
+      "text": "La commission territoriale des sanctions administratives :",
+      "options": {
+        "a": "prend des décisions de sanctions administratives",
+        "b": "émet un avis préalablement à une décision préfectorale de sanctions administratives",
+        "c": "émet un avis préalablement à une décision d'autorisation d'exercer la profession",
+        "d": "émet des avis de sanctions administratives auprès du ministre chargé des transports"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 2,
+      "text": "La responsabilité du transporteur routier de marchandises peut être recherchée par son donneur d'ordre :",
+      "options": {
+        "a": "toujours lorsqu'il y a mauvaise exécution du contrat de transport, que ce soit du fait du transporteur ou de celui d'un tiers",
+        "b": "seulement pour les fautes lourdes du préposé du transporteur",
+        "c": "seulement pour les dommages résultant des opérations de conduite et de chargement",
+        "d": "seulement si les clauses exonératoires figurant dans les conditions générales de vente du transporteur le permettent"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 3,
+      "text": "Dans une entreprise individuelle :",
+      "options": {
+        "a": "les bénéfices sont toujours prélevés en totalité par l'associé unique",
+        "b": "le chef d'entreprise est responsable sur les biens affectés à l'activité professionnelle et en cas de faute, sur ses biens propres",
+        "c": "les bénéfices ne peuvent être distribués pendant les deux premières années",
+        "d": "les pertes viennent directement et obligatoirement abaisser le capital social"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 4,
+      "text": "L'ouverture de la procédure de redressement judiciaire est faite à la demande :",
+      "options": {
+        "a": "exclusive du chef d'entreprise",
+        "b": "exclusive du chef d'entreprise et des créanciers",
+        "c": "exclusive du président du tribunal de commerce et des créanciers de l'entreprise",
+        "d": "indifféremment du chef d'entreprise, des créanciers, du ministère public"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 5,
+      "text": "La lettre de change (traite) est :",
+      "options": {
+        "a": "un moyen de paiement et un procédé de crédit à court terme",
+        "b": "un ordre de paiement immédiat sans frais",
+        "c": "un effet de commerce obligatoire entre commerçants",
+        "d": "un moyen de paiement uniquement international"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 6,
+      "text": "Le conjoint marié sous le régime de la communauté légale peut-il être appelé indirectement comme caution et sans son consentement à l'acte de caution ?",
+      "options": {
+        "a": "Oui, le droit inclut ce conjoint-là en l'obligeant à caution",
+        "b": "Non, le droit protège ce conjoint-là quand ce dernier n'a pas donné son consentement à l'acte de caution",
+        "c": "Non, le droit protège le conjoint marié, que ce soit avec ou sans son consentement à être caution",
+        "d": "Oui, le droit peut l'obliger à être caution, quel que soit le régime matrimonial choisi par le couple"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 7,
+      "text": "En quoi consiste la caution personnelle d'un dirigeant d'une entreprise ?",
+      "options": {
+        "a": "il s'agit d'un gage où la caution porte sur le patrimoine de l'entreprise",
+        "b": "il s'agit d'un nantissement, une garantie en nature que le débiteur remet à un créancier",
+        "c": "il s'agit d'une garantie d'un gage donné par le créancier au dirigeant",
+        "d": "il s'agit d'une garantie de paiement donnée par le dirigeant à un créancier"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 8,
+      "text": "Pour quelle infraction la responsabilité civile du chef d'entreprise peut-elle être recherchée ?",
+      "options": {
+        "a": "les prix manifestement trop bas dans le cadre d'une sous-traitance",
+        "b": "la mise en danger de la vie d'autrui",
+        "c": "les infractions aux temps de repos",
+        "d": "la faute de gestion"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 9,
+      "text": "La capacité financière doit être satisfaite :",
+      "options": {
+        "a": "à tout moment de la vie de l'entreprise",
+        "b": "uniquement lors des formalités de création de l'entreprise",
+        "c": "durant la première année d'existence de l'entreprise",
+        "d": "seulement lors de la parution du bilan comptable"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 10,
+      "text": "Un de vos clients, commerçant, domicilié à Brest, vous fait des difficultés pour le règlement d'une facture de transport. Entreprise lilloise, vous optez pour la procédure d'injonction de payer en adressant votre requête :",
+      "options": {
+        "a": "au tribunal de commerce de Lille",
+        "b": "au tribunal judiciaire de Lille",
+        "c": "au tribunal de commerce de Brest",
+        "d": "au tribunal judiciaire de Brest"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 11,
+      "text": "La prescription extinctive entre commerçants pour des dettes, nées à l'occasion de leur commerce, est fixée, sauf prescriptions spéciales plus courtes, à :",
+      "options": {
+        "a": "1 an",
+        "b": "3 ans",
+        "c": "5 ans",
+        "d": "10 ans"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 12,
+      "text": "Depuis le 1er janvier 2023, le registre national des entreprises (RNE) se substitue :",
+      "options": {
+        "a": "au registre du commerce et des sociétés (RCS)",
+        "b": "au répertoire des métiers (RM)",
+        "c": "au registre des actifs agricoles (RAA)",
+        "d": "à l'ensemble des registres d'entreprises sus-cités"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 13,
+      "text": "En transport routier intérieur de marchandises, la prescription dans le cas de la perte totale de la marchandise est :",
+      "options": {
+        "a": "d'un an à compter du jour où la remise de la marchandise aurait dû être effectuée au destinataire",
+        "b": "d'un an à compter du jour de la prise en charge de la marchandise par le transporteur",
+        "c": "interrompue par la lettre recommandée adressée au transporteur confirmant les réserves",
+        "d": "interrompue par une demande de réparation du préjudice adressée par le destinataire au transporteur"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 14,
+      "text": "A la fin du contrat de crédit bail d'un véhicule, le transporteur ne peut pas :",
+      "options": {
+        "a": "le racheter pour une faible somme",
+        "b": "le relouer à des conditions minorées",
+        "c": "le restituer à l'établissement de crédit bail",
+        "d": "le vendre"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 15,
+      "text": "La variation de stock de votre entreprise est négative en fin d'exercice. Cela signifie que :",
+      "options": {
+        "a": "une erreur a été commise par votre magasinier",
+        "b": "vous avez consommé pour un montant supérieur à vos achats de l'exercice",
+        "c": "vous avez constitué du stock",
+        "d": "vos achats sont inférieurs à vos consommations"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 16,
+      "text": "Le seuil de rentabilité est atteint lorsque :",
+      "options": {
+        "a": "l'entreprise dégage sa marge bénéficiaire prévisionnelle",
+        "b": "le chiffre d'affaires permet de couvrir les charges fixes",
+        "c": "le chiffre d'affaires permet de couvrir toutes les charges",
+        "d": "le chiffre d'affaires permet de couvrir les charges sociales"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 17,
+      "text": "L'engagement des poursuites disciplinaires par l'employeur, à partir de sa connaissance d'un fait considéré comme fautif, sauf exercice de poursuites pénales pour le même fait, doit être réalisé dans un délai maximum de :",
+      "options": {
+        "a": "5 jours francs",
+        "b": "2 semaines",
+        "c": "2 mois",
+        "d": "6 mois"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 18,
+      "text": "Le règlement intérieur de l'entreprise contient des dispositions relatives notamment :",
+      "options": {
+        "a": "à la fixation de la durée du travail",
+        "b": "aux harcèlements",
+        "c": "aux dates de fermeture de l'entreprise pour congés payés",
+        "d": "au paiement des salaires"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 19,
+      "text": "La réglementation sociale européenne (RSE) concerne les conducteurs de véhicules de plus de 3,5 T de masse maximale autorisée circulant dans les Etats membres. En dehors de quelques activités particulières, cette réglementation s'applique :",
+      "options": {
+        "a": "uniquement aux conducteurs salariés",
+        "b": "uniquement aux entreprises de transport pour compte d'autrui",
+        "c": "uniquement aux conducteurs effectuant des transports internationaux",
+        "d": "à tous les conducteurs circulant sur le territoire des Etats membres de l'Union européenne"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 20,
+      "text": "L'organisation de l'élection des membres du comité social et économique (CSE) incombe à l'employeur :",
+      "options": {
+        "a": "tous les 2 ans",
+        "b": "tous les 3 ans",
+        "c": "tous les 4 ans",
+        "d": "tous les 5 ans"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 21,
+      "text": "En complément de la taxe d'apprentissage, la contribution supplémentaire à l'apprentissage (CSA) est due par :",
+      "options": {
+        "a": "toutes les entreprises",
+        "b": "les entreprises payant la taxe d'apprentissage",
+        "c": "les entreprises soumises à la taxe d'apprentissage, dont l'effectif est de plus de 250 salariés dont au moins 5% sont alternants ou salariés dans leur première année d'embauche en CDI",
+        "d": "l'entreprise qui emploie au moins 5% de salariés en alternance ou salariés dans leur première année d'embauche en CDI"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 22,
+      "text": "Selon la réglementation sociale européenne (RSE), la durée totale de la pause après 4 h 30 de conduite continue doit être au minimum de :",
+      "options": {
+        "a": "30 minutes",
+        "b": "45 minutes",
+        "c": "60 minutes",
+        "d": "70 minutes"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 23,
+      "text": "Selon le code du travail, en l'absence d'accord prévoyant des stipulations plus favorables, les membres de la délégation du comité social et économique (CSE) d'un établissement dont l'effectif est compris entre 11 et 49 salariés, disposent d'un crédit d'heures de délégation de :",
+      "options": {
+        "a": "5 heures par mois",
+        "b": "10 heures par mois",
+        "c": "15 heures par mois",
+        "d": "20 heures par mois"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 24,
+      "text": "Quel délai de prévenance doit respecter un inspecteur du travail lorsqu'il souhaite effectuer une visite nocturne dans une entreprise de transport travaillant la nuit ? :",
+      "options": {
+        "a": "15 jours",
+        "b": "1 semaine",
+        "c": "3 jours",
+        "d": "aucun"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 25,
+      "text": "Dans une entreprise dépourvue de représentant du personnel, le salarié peut, au cours de l'entretien préalable au licenciement, se faire assister par :",
+      "options": {
+        "a": "un avocat du salarié",
+        "b": "un inspecteur du travail",
+        "c": "un conseiller inscrit sur une liste préfectorale",
+        "d": "un conseiller prud'homal dans le ressort duquel se trouve l'entreprise"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 26,
+      "text": "Ne sont pas inclus dans l'assiette de calcul de l'indemnité de congés payés, les éléments suivants :",
+      "options": {
+        "a": "les primes de qualité",
+        "b": "les heures supplémentaires",
+        "c": "les primes de rendement",
+        "d": "les primes d'intéressement ou de participation de l'employeur"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 27,
+      "text": "La convention collective de branche, applicable dans l'entreprise, est mentionnée :",
+      "options": {
+        "a": "dans un journal d'annonces légales",
+        "b": "au Conseil de prud'hommes",
+        "c": "sur le bulletin de paie",
+        "d": "au tribunal de commerce"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 28,
+      "text": "Pour un contrat de travail à durée déterminée de moins de six mois, la période d'essai maximale est de :",
+      "options": {
+        "a": "1 semaine",
+        "b": "2 semaines",
+        "c": "3 semaines",
+        "d": "4 semaines"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 29,
+      "text": "Selon la réglementation sociale européenne (RSE), un conducteur salarié peut exiger que son employeur lui remette la copie de ses disques et/ou des données téléchargées à partir de sa carte de conducteur correspondant au plus aux périodes de travail :",
+      "options": {
+        "a": "de la semaine précédente",
+        "b": "du mois précédent",
+        "c": "de l'année précédente",
+        "d": "des cinq années précédentes"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 30,
+      "text": "Selon le contrat type de location d'un véhicule industriel avec conducteur pour le compte d'un transporteur routier de marchandises :",
+      "options": {
+        "a": "le locataire répond des conséquences des infractions du code de la route",
+        "b": "le loueur assume la maîtrise et la responsabilité des opérations de transport",
+        "c": "le locataire assume la maîtrise et la responsabilité des opérations de transport",
+        "d": "le loueur prend en charge les marchandises et en est garant"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 31,
+      "text": "Lorsque le conducteur est ressortisant d'un Etat tiers à l'Espace économique européen (EEE), l'attestation de conducteur est exigée quand le véhicule effectue un transport international sous le couvert d'une :",
+      "options": {
+        "a": "copie conforme de licence de transport intérieur",
+        "b": "copie conforme de licence communautaire",
+        "c": "autorisation FIT (Forum International des Transports)",
+        "d": "autorisation bilatérale"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 32,
+      "text": "Si le donneur d'ordre paie le transporteur au-delà du délai de paiement de 30 jours, il :",
+      "options": {
+        "a": "commet une contravention",
+        "b": "commet un délit",
+        "c": "doit au transporteur des pénalités de retard",
+        "d": "doit modifier son contrat pour indiquer les nouvelles conditions de paiement"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 33,
+      "text": "La livraison intervient lorsque la marchandise :",
+      "options": {
+        "a": "est remise au destinataire",
+        "b": "est remise au destinataire qui l'accepte",
+        "c": "est mise à la disposition du destinataire dans le véhicule",
+        "d": "commence à être déchargée chez le destinataire"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 34,
+      "text": "Les documents de transport ou de location, établis conformément à l'arrêté du 9 novembre 1999, doivent être conservés par l'entreprise de transport pendant un délai de :",
+      "options": {
+        "a": "1 an",
+        "b": "2 ans",
+        "c": "4 ans",
+        "d": "10 ans"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 35,
+      "text": "Une entreprise de transport routier de marchandises pour compte d'autrui a l'obligation légale de s'assurer pour :",
+      "options": {
+        "a": "les marchandises transportées pour les dommages supérieurs à 1 000 euros",
+        "b": "sa responsabilité civile dans le cadre de la circulation automobile",
+        "c": "les marchandises transportées pour tout type de dommages",
+        "d": "ses véhicules en cas de vol"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 36,
+      "text": "En transport national, le contrat type applicable à un envoi de 1 500 litres d'eau minérale en bouteilles est :",
+      "options": {
+        "a": "le contrat de denrées alimentaires périssables",
+        "b": "la convention de marchandises par route (CMR)",
+        "c": "le contrat type dit \"général\"",
+        "d": "il n'y a pas de contrat type qui s'applique"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 37,
+      "text": "Pour être exonéré de sa responsabilité, le transporteur, en charge de la marchandise :",
+      "options": {
+        "a": "n'émet aucune réserve écrite et contradictoire à la prise en charge de la marchandise",
+        "b": "peut refuser que le destinataire prenne des réserves sur le document de transport",
+        "c": "doit faire procéder obligatoirement à une expertise judiciaire",
+        "d": "doit justifier du vice propre de la marchandises et de la faute de l'ayant-droit"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 38,
+      "text": "L'établissement d'une lettre de voiture de déménagement est obligatoire pour effectuer un déménagement :",
+      "options": {
+        "a": "quel que soit le volume",
+        "b": "d'au moins 6 m3",
+        "c": "d'au moins 14 m3",
+        "d": "d'au moins 19 m3"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 39,
+      "text": "Le jeudi 23 décembre, dans le cadre d'un transport intérieur, un transporteur livre 6 cartons de 6 bouteilles de champagne. Lors de la livraison, le destinataire appose des réserves pour 3 bouteilles cassées. Le transporteur devra avoir reçu la confirmation de ces réserves au plus tard, avant minuit, le :",
+      "options": {
+        "a": "lundi 27 décembre",
+        "b": "mardi 28 décembre",
+        "c": "mercredi 29 décembre",
+        "d": "jeudi 30 décembre"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 40,
+      "text": "Un client vous propose un transport de marchandises. Bien que vous ne soyez pas inscrit au registre électronique national des entreprises de transport par route, vous acceptez cette offre. Vous commettez une infraction pénale pouvant se traduire par :",
+      "options": {
+        "a": "un timbre-amende avec paiement immédiat de 900 €",
+        "b": "une contravention de 5ème classe",
+        "c": "une peine d'emprisonnement de 18 mois et une amende de 25 000 € maximum",
+        "d": "une immobilisation du véhicule, une peine d'emprisonnement d'un an et une amende de 15 000 € au maximum"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 41,
+      "text": "Suite à une faute de conduite involontaire, un conducteur salarié d'une entreprise de transport endommage le quai du destinataire avec son véhicule. La responsabilité de ce dommage incombe :",
+      "options": {
+        "a": "à l'expéditeur",
+        "b": "au destinataire",
+        "c": "à l'employeur du conducteur",
+        "d": "au conducteur salarié"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 42,
+      "text": "Selon le contrat type dit \"général\", vous réalisez un transport de 20 T de marchandises non spécifiques. En l'absence de rendez-vous, vous pourrez demander le paiement de frais d'immobilisation du véhicule si l'attente au chargement dépasse :",
+      "options": {
+        "a": "1 heure",
+        "b": "3 heures",
+        "c": "4 heures",
+        "d": "5 heures"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 43,
+      "text": "La largeur maximale d'une semi-remorque conçue pour le transport de marchandises sous température dirigée ne doit pas excéder toutes saillies comprises :",
+      "options": {
+        "a": "2,50 mètres",
+        "b": "2,55 mètres",
+        "c": "2,60 mètres",
+        "d": "2,65 mètres"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 44,
+      "text": "L'écartement entre l'axe vertical des roues d'un même essieu d'un véhicule s'appelle :",
+      "options": {
+        "a": "la voie",
+        "b": "l'empattement",
+        "c": "la largeur hors-tout",
+        "d": "le porte-à-faux"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 45,
+      "text": "La classe de matières dangereuses \"6.1\" d'une marchandise signifie qu'il s'agit d'une matière :",
+      "options": {
+        "a": "comburante",
+        "b": "corrosive",
+        "c": "très inflammable",
+        "d": "toxique, même en qualité relativement faible"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 46,
+      "text": "A quelle fréquence le document unique d'évaluation des risques professionnels (DUERP) doit-il être revu systématiquement ?",
+      "options": {
+        "a": "tous les ans, quelle que soit la taille de l'entreprise",
+        "b": "tous les 5 ans, quelle que soit la taille de l'entreprise",
+        "c": "tous les ans pour les entreprises de plus de 11 salariés",
+        "d": "tous les 2 ans pour les entreprises de plus de 11 salariés"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 47,
+      "text": "Par temps de neige et lorsque la signalisation l'impose, dans les 48 départements des massifs montagneux, entre le 1er novembre et le 31 mars, les poids lourds doivent être équipés de :",
+      "options": {
+        "a": "pneus hiver",
+        "b": "chaînes à neige même s'ils possèdent des pneus hiver",
+        "c": "pneus à clous uniquement",
+        "d": "pneus à structures diagonales"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 48,
+      "text": "Un transporteur français enlève des marchandises en Italie pour les livrer en Allemagne. Son client néerlandais lui fournit un n° de TVA néerlandais. Le transporteur facture le transport :",
+      "options": {
+        "a": "avec le taux de TVA néerlandais",
+        "b": "avec le taux de TVA italien",
+        "c": "avec le taux de TVA français",
+        "d": "hors taxe"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 49,
+      "text": "En transport international, en cas de dol ou de faute inexcusable du transporteur, le délai de prescription prévu par la convention de marchandises par route (CMR) est :",
+      "options": {
+        "a": "de 1 an",
+        "b": "de 3 ans",
+        "c": "de 10 ans",
+        "d": "illimité"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 50,
+      "text": "Selon la convention de marchandises par route (CMR), l'indemnité en cas de pertes et avaries est calculée d'après :",
+      "options": {
+        "a": "la valeur des marchandises au lieu et date de prise en charge",
+        "b": "le prix de vente des marchandises au lieu de livraison",
+        "c": "le prix de vente des marchandises au lieu de prise en charge",
+        "d": "la valeur des marchandises au lieu et à la date de livraison"
+      },
+      "answer": null,
+      "explanation": null
+    }
+  ],
+  "problems": [
+    {
+      "number": 1,
+      "title": "PROBLÈME 1 (50 points)",
+      "subject_text": "Vous êtes gérant(e) de l’entreprise de transport public de marchandises PALEAS, basée à Arles dans\nles Bouches-du-Rhône (13).\nQuestion 1 (1,5 pts)\nVous réalisez un transport régional de foin, au départ de St-Martin-de-Crau (13), composé de 42\nballes de foin rondes sur la remorque et 40 sur le porteur. Chaque balle fait 122 cm de diamètre, 95\ncm de hauteur et pèse 350 kg.\nQuelques heures après son départ, votre conducteur vous informe au téléphone qu’il a été contrôlé par\nles services de la DREAL car il serait en infraction.\nLes contrôleurs ont en effet relevé une longueur hors tout de 19, 25 m.\na) Expliquez pourquoi votre ensemble routier est en infraction. \nb) Deux balles situées à l’avant du chargement ont un diamètre supérieur atteignant les 130 cm.\nRappelez la règle encadrant la largeur maximale autorisée. \nQuestion 2 (4,5 pts)\n Votre ensemble routier est également pesé lors du contrôle.\na) En vous appuyant sur les éléments suivants, expliquez pourquoi votre véhicule est encore en\ninfraction. \nRemorques\nCharge utile18.93 Tonnes\nPoids à vide / MV5.07 Tonnes\nPTAC / MCV24 Tonnes\nPorteur\nCharge utile14.3 Tonnes\nPoids à vide / MV11.7 Tonnes\nPTAC / MCV26 Tonnes\nPTRA / MCE44 Tonnes\nb) Rappelez la règle du rapport entre le poids d’un porteur et sa remorque. \nQuestion 3 (4,5 pts)\nUn appel d’offres est lancé par le service achat des Grandes Écuries du domaine de Chantilly, dans\nl’Oise (60).\nIl consiste à sélectionner un prestataire de transport pour effectuer une livraison de 100 tonnes de\npaille qui sont conditionnées sous forme de 350 balles de dimensions unitaires suivantes :\ndiamètre : 120 cm, hauteur : 95 cm, poids unitaire : 300 kg (attention : ce poids est différent de la\nQuestion 1).\nL’itinéraire de 800 km reliant Arles et Chantilly comprend des ponts de 4,4 m maximum de hauteur.\nUne marge de 15 cm entre le haut du chargement et les ponts est imposée.\n\nLe véhicule proposé pour effectuer le plan de chargement est un ensemble routier articulé de 5\nessieux présentant les dimensions suivantes :\nVÉHICULE TRACTEURVÉHICULE TRACTÉ\nTYPE\nPTRA /\nPTAC / PV\nCARROS-\nSERIE\n \nCARROS-\nSERIE\nPTAC /\nPV\nDIMENSIONS EN Mètres\n      \nLONGUEUR / LARGEUR /\nHAUTEUR \nENSEMBLE\nROUTIER 1\n44 / 19 / 7,3\nTRAC-\nTEUR\n \nPLATEAU\nBAS\n38 / 6,113,50 x 2,45 x 1,30\nCalculez le nombre de balles qu’il serait possible de transporter en respectant les éléments de\ncarrosserie et du code de la route. Indiquez le poids total du chargement transporté.\nQuestion 4 (14,5 pts)\nAfin   de   répondre   à   l’appel   d’offres,   3   types   de   moyens   sont   proposés,   chacun   ayant   ses\ncaractéristiques en termes de chargement et de coûts en euros.\n \nTK terme ki-\nlométriqueTJ terme journalierTH terme horaire\nLD* ensemble articulé plateau0,594 €190,23 €22,56 €\nLD EA* Savoyarde « débach \nvite »0,588 €170,79 €22,87 €\nCamion remorque + remorque0,599 €205,13 €21,72 €\n*LD longue distance – EA : ensemble articulé\nLe terme horaire est basé sur un temps de service de 10,2 heures par jour.\n Vitesse moyenne en km/h\nCapacité de chargement\nen nombre de balles\n \nLD ensemble plateau64\nLD EA Savoyarde « débach \nvite »67\nCamion remorque + remorque61\na) Calculez le nombre de camions nécessaires pour réaliser l’appel d’offres, et arrondissez vos calculs\nau camion complet pour chaque type d’ensemble routier. \nb) Sachant que le temps de chargement est estimé à 3 heures et celui  du déchargement à 1.5 heures,\ncalculez le temps de la prestation de transport pour chacun des ensembles routiers en détaillant vos\ncalculs. \nc) Calculer le coût de revient unitaire de chaque ensemble routier. Déterminez le terme kilométrique. \nd) A partir de vos calculs arrondis de la question a), calculez le coût de revient global de l’appel\nd’offres pour chaque ensemble routier. Quelle est la solution la plus économique et justifiez-la. \n\ne) Comment pouvez-vous optimiser le devis en mixant les moyens matériels engagés ? Recalculez le\ncoût de revient. \nQuestion 5 (10 pts) \nPour   le   retour   du   véhicule   depuis   l’Oise   vers   le   Sud-Est,   vous   avez   trouvé   par   le   biais   de\nl’affrètement, un rechargement de deux groupes électrogènes.\nChargement : Beauchamp (95) - Livraison : Nîmes (30)\nDimension de chaque unité : Longueur :  5 mètres / largeur :  1,6 mètre / Hauteur :  2,6 mètres /\nPoids :  7,756 tonnes.\nValeur Unitaire HT déclarée : 125 000 €\n \na) Sachant que l’entreprise PALEAS a souscrit une assurance à hauteur de 180 000,00€ par véhicule,\ndevez-vous souscrire une assurance complémentaire pour ce transport et de quel type ? Justifiez votre\nréponse. \nb) Afin d’augmenter la rentabilité de son véhicule, vous complétez cet envoi avec le lot suivant :\n1 caisse palette 100 x120 cm de matériel du bâtiment. Poids : 600 kg.\n Chargement : Goussainville (95) - Livraison : Avignon (84)\nLors de l’opération de chargement, le cariste de l’expéditeur à Goussainville a donné un coup de\nfourche dans le groupe électrogène déjà positionné sur le porteur.\nA qui incombe la responsabilité de l’avarie occasionnée sur le groupe électrogène ? Justifiez votre\nréponse. \n \nc) Y a-t-il un moyen de s’exonérer de sa responsabilité en cas d’avarie ou de perte ? \nd) Après expertise, le montant de l’avarie s’élève à 150 000 €. Dans cette situation, quelle est la\nvaleur du remboursement du litige ?\ne) Pour arrimer le chargement, le conducteur utilise une sangle avec un nœud, afin de renforcer la\ntoile qui présente une déchirure. Quelles obligations pèsent sur le transporteur lorsque l’expéditeur lui\ndemande de lui montrer les sangles d’arrimage utilisées pour le transport ? \nf) Que conseillez-vous pour arrimer les groupes électrogènes ? \n\nQuestion 6 (15 pts)\nLe conducteur des Transport PALEAS a effectué ses rotations sur les 2 semaines suivantes. Voici le\ntableau des temps de ses activités :  \na) En vous appuyant sur les données du tableau ci-dessus, calculez les temps de service journaliers et\nhebdomadaires des deux semaines. \nb) Relevez les infractions à la réglementation sociale européenne (RSE). \nc) Relevez les infractions au code du travail.",
+      "corrected_text": "Vous êtes gérant de l’entreprise de transport public de marchandises PALEAS, basée à Arles dans les \nBouches-du-Rhône (13). \n \nQuestion 1 : notation 1,5 pts \nVous réalisez un transport régional de foin, au départ de St-Martin-de-Crau (13), composé de 42 balles \nde foin rondes sur la remorque et 40 sur le porteur. Chaque balle fait 122 cm de diamètre, 95 cm de \nhauteur et pèse 350 kg. \n \nQuelques heures après son départ, votre conducteur vous informe au téléphone qu’il a été contrôlé \npar les services de la DREAL car il serait en infraction. \nLes contrôleurs ont en effet relevé une longueur hors tout de 19, 25 m. \n \na) Expliquez pourquoi votre ensemble routier est en infraction. \nRéponse : trains routiers max 18m75 (0,75 pts)   \n \nb) Deux balles situées à l’avant du chargement ont un diamètre supérieur atteignant les 130 cm. \nRappelez la règle encadrant la largeur maximale autorisée. \nRéponse : max 2,55 mètres de largeurs max (0,75 pts)  \n \nQuestion 2 : notation 4,5 pts \n Votre ensemble routier est également pesé lors du contrôle. \na) En vous appuyant sur les éléments suivants, expliquez pourquoi votre véhicule est encore en \ninfraction. \n \nRemorques \nCharge utile 18.93 Tonnes \nPoids à vide / MV 5.07 Tonnes \nPTAC / MCV 24 Tonnes \nPorteur \nCharge utile 14.3 Tonnes \nPoids à vide / MV 11.7 Tonnes \nPTAC / MCV 26 Tonnes \nPTRA / MCE \n \n44 Tonnes \nRéponse \n       Poids balles \nL’ensemble 27,230t Cu (1,5 pt)    L’ensemble  82 x 350 = 28,700t (1,5 pt)   \nPorteur  14,300t Cu    Remorque 42 x 350 = 14,700t \nRemorque 18,930t Cu    Porteur 40 x 350 = 14,000t \n \nLe poids total des balles s’élève à 28T700 alors que la charge utile maximale autorisée de l’ensemble \n(porteur + remorque) s’élève à 27T230. Le poids des balles est donc supérieur à la charge utile \nmaximale autorisée de l’ensemble. Le véhicule est donc en infraction. \n\n \nb) Rappelez la règle du rapport entre le poids d’un porteur et sa remorque. \nRéponse : \nRappel de la règle : (1,5pt)   \nArticle R312-3 \nModifié par Décret n°2011-368 du 4 avril 2011 - art. 3 \n \nLe poids réel de la remorque ou des remorques attelées derrière un véhicule tracteur ne peut excéder 1,3 fois le \npoids réel de celui-ci. \nToutefois dans le cas où le poids total roulant réel d'un ensemble constitué d'un véhicule tracteur et d'une remorque \nest supérieur à 32 tonnes, le coefficient 1,3 ci-dessus est majoré d'une valeur égale à 80 % du rapport entre la partie \ndu poids total roulant réel excédant 32 tonnes et 32 tonnes, sans pouvoir être supérieur à 1,5. \n \nQuestion 3 :  notation 4,5 pts \nUn appel d’offres est lancé par le service achat des Grandes Écuries du domaine de Chantilly, dans \nl’Oise (60). \nIl consiste à sélectionner un prestataire de transport pour effectuer une livraison de 100 tonnes de paille \nqui sont conditionnées sous forme de 350 balles de dimensions unitaires suivantes : \ndiamètre : 120 cm, hauteur : 95 cm, poids unitaire : 300 kg (attention : ce poids est différent de la \nQuestion 1). \nL’itinéraire de 800 km reliant Arles et Chantilly comprend des ponts de 4,4 m maximum de hauteur. \nUne marge de 15 cm entre le haut du chargement et les ponts est imposée. \n \nLe véhicule proposé pour effectuer le plan de chargement est un ensemble routier articulé de 5 essieux \nprésentant les dimensions suivantes : \n \nVEHICULE TRACTEUR VEHICULE TRACTE \nTYPE \nPTRA / PTAC \n/ PV \nCARROS-\nSERIE \n  \nCARROS-\nSERIE \nPTAC / \nPV \nDIMENSIONS EN Mètres \n            \nLONGUEUR / LARGEUR / \nHAUTEUR  \nENSEMBLE ROU-\nTIER 1 \n44 / 19 / 7,3 TRACTEUR   \nPLATEAU \nBAS \n38 / 6,1 13,50 x 2,45 x 1,30 \n \nCalculez le nombre de balles qu’il serait possible de transporter en respectant les éléments de \ncarrosserie et du code de la route. Indiquez le poids total du chargement transporté. \n \nRéponse : \nCalcul MMA - Rappel de la règle : \nPlus petite des 2 données entre le PTRA du Tracteur et la somme des PTAC en accord avec le code \nde la route : (0,75 pt) \n \nCode de la route 44 t car 5 essieux et transport national (0,75 pt) – somme des 2 PTAC = 57 t \ndonc retenu MMA = 44 t ;   \n \nCalcul de la charge utile :  CU = MMA- somme des PV \n = 44 – 7,3 – 6,1 = 30,6 tonnes (0,75 pt) \n PU d’une balle = 300 kg = 0,3 t \n Nombre de balles = 30,6 / 0,3 \n = 102 balles de paille (0,75 pt) \n \n \n \n \n \n\n \ncapacité de chargement  calcul MMA calcul CU en nbre de balle \nENSEMBLE ROUTIER 1 \nLD ensemble \nplateau 44 30,6 102 \nChargement : \nplan de charge-\nment \nNbre de balles \nen mpl \nen lar-\ngeur Hauteur utile \nNbre de balles \nen hauteur \ntotal \nchargé \nENSEMBLE \nROUTIER 1 \n13,5 /1,2 \n= 11 \n2,45/1,2 \n = 2 \n4,40 – 0,15-1,30 \n= 2,95 \n2,95 / 0,95 \n=3 \n11 x 2 x 3 \n= 66 \n \nLe nombre total de balles est de 66 (0,75 pt) pour un poids de chargement de 66 x 300kg = 19,8t \n(0,75 pt) \n \nQuestion 4 : notation 14,5 pts \nAfin de répondre à l’appel d’offres, 3 types de moyens sont proposés, chacun ayant ses \ncaractéristiques en termes de chargement et de coûts en euros. \n \n  \nTK terme ki-\nlométrique TJ terme journalier TH terme horaire \nLD* ensemble articulé plateau 0,594 € 190,23 € 22,56 € \n \nLD EA* Savoyarde « débach \nvite » 0,588 € 170,79 € 22,87 € \n \nCamion remorque + remorque 0,599 € 205,13 € 21,72 € \n \n \n*LD longue distance – EA : ensemble articulé \n \nLe terme horaire est basé sur un temps de service de 10,2 heures par jour. \n \n  Vitesse moyenne en km/h \nCapacité de chargement \nen nombre de balles \n   \n \nLD ensemble plateau 64 \nLD EA Savoyarde « débach \nvite » 67 \nCamion remorque + remorque 61 \n \n \na) Calculez le nombre de camions nécessaires pour réaliser l’appel d’offres, et arrondissez vos \ncalculs au camion complet pour chaque type d’ensemble routier. (2.25) \n \na) réponse : calculer le nombre de camion nécessaire pour réaliser l’appel d’offres   - \n \nnombre total de balles de l’appel d’offres : 350 \n \nnombre de camion nécessaire \nNombre de camions  \n(1,5 pt pour les 3 calculs) \nNbre de camions complets (arrondi \nsupérieur)  \n(0,75 pt pour les 3 arrondis) \nLD ensemble plateau 350/ 66 = 5,30 6,00 \nLD EA Savoyarde « débach vite » 350/ 44 = 7,95 8,00 \nCamion remorque + remorque 350/ 78 = 4,49 5,00 \n \n \n\n \nb) Sachant que le temps de chargement est estimé à 3 heures et celui du déchargement à 1.5 heures, \ncalculez le temps de la prestation de transport pour chacun des ensembles routiers en détaillant vos \ncalculs. (3 pts) \n \nLe temps de la prestation dépend de la vitesse moyenne du camion car les autres temps sont \nidentiques (chargement et déchargement) \n \n \n \nKm de la \npresta-\ntion \nTemps de \nroute  \n(1,5 pt pour \nles 3 calculs) \nTemps de \ncharge-\nment \nTemps de \ndécharge-\nment \nTemps total en \nheures  \n(1,5 pt pour les 3 \ncalculs) \nLD ensemble plateau 800 800x64=12,50 3 1,5  12,5 + 3 + 1,5 =17,00 \nLD EA Savoyarde débach vite 800 \n 800 X 67 = \n11,94 3 1,5 \n11,94 + 3 + 1,5 = \n16,44 \ncamion remorque + remorque 800 \n800 X 61 = \n13,11 3 1,5 \n13,11 + 3 + 1,5 \n=17,61 \n \nc) Calculer le coût de revient unitaire de chaque ensemble routier.  Déterminez le terme kilométrique. \n \nMéthode 1 : calculer le coût journalier des véhicules au prorata temporis \n \n \nMéthode 2 : considéré au vu des durées d’utilisation que les véhicules sont utilisés 2 jours complet \npour la prestation. \n \n \n \n \nCoût kilométrique \n(1 pt pour \nchaque colonne) \nCoût journalier \n(1 pt pour chaque \ncolonne) \nCoût Horaire \n(1 pt pour chaque \ncolonne) \nCoût total au camion \n(1 pt pour chaque \ncolonne) \nTK \n(0,75 pour les 3 \ncalculs) \nLD \nensemble \nplateau \n800 x 0,594 \n= 475,20 € \n(17/10,2) x 190,23 = \n317,05 € \n17x 22,56 = 383,52 € \nSomme des 3 termes \nprécédents   \n1 175,77 € \n1175,77 / 800 \n=1,47 € \nLD EA Sa-\nvoyarde \ndébach vite \n800 X 0,588 \n= 470,40 € \n(16,44/10,2) x 170,79 \n= 275,27 € \n16,44x 22,87 = \n375,99 € \nSomme des 3 termes \nprécédents   \n1 121,66 € \n1121,66 / 800 = \n1,40 € \ncamion re-\nmorque + \nremorque \n800 x 0,599 \n= 479,20 € \n(17,61/10,2) x 205,13 \n= 354,15 € \n17,61x 21,72 = \n382,49 € \nSomme des 3 termes \nprécédents   \n1 215,84 € \n1215,84 / 800 = \n1,52 € \n \nCoût kilométrique \n(1 pt pour \nchaque colonne) \nCoût journalier \n(1 pt pour chaque \ncolonne) \nCoût Horaire \n(1 pt pour chaque \ncolonne) \nCoût total au camion \n(1 pt pour chaque \ncolonne) \nTK \n(0,75 pour les 3 \ncalculs) \nLD \nensemble \nplateau \n800 x 0,594 \n= 475,20 € \n2 x 190,23 = 380,46 € 17x 22,56 = 383,52 € \nSomme des 3 termes \nprécédents   \n1239.18 € \n1175,77 / 800 \n=1,55 €/km \nLD EA Sa-\nvoyarde \ndébach vite \n800 X 0,588 \n= 470,40 € \n2 x 170,79 = 341,58 € \n16,44x 22,87 = \n375,99 € \nSomme des 3 termes \nprécédents   \n1 187.97 € \n1121,66 / 800 = \n1,48 € \ncamion re-\nmorque + \nremorque \n800 x 0,599 \n= 479,20 € \n2 x 205,13 = 410.26 € \n17,61x 21,72 = \n382,49 € \nSomme des 3 termes \nprécédents   \n1 271.95 € \n1215,84 / 800 = \n1,59 € \n\n \nd) A partir de vos calculs arrondis de la question a), calculez le coût de revient global de l’appel d’offres \npour chaque ensemble routier. Quelle est la solution la plus économique et justifiez la. \n \ncalcul de la prestation \nprévue à l'AO \nrappel cout au camion \narrondi au camion complet \n(1,5 pt pour les 3 calculs) \nMéthode 1 Méthode 2 Méthode 1 Méthode 2 \nLD ensemble plateau 1 175,77 € \n1239.18 € \n1 175,77 € x 6 \n= 7 054,62 € \n1239.18 x 6 = \n7435.08 \nLD EA Savoyarde débach vite 1 121,66 € \n1 187.97 € \n1 121,66 € x 8 \n= 8 973,28 € \n1187.97 x 8 = \n9503.73 € \ncamion remorque + remorque 1 215,84 € \n1 271.95 € \n1 215,84 € x 5 \n= 6 079,20 € \n1 271.95 x 5 = \n6359.75 € \n \nEléments de réponse :  c’est l’utilisation de 5 camions remorques (0,5 pt) qui est la solution \nla plus économique. \nJustification : En effet même si son coût unitaire est le plus élevé, sa capacité de chargement \nde 78 balles compense son coût. (0,5 pt) \n \ne) Comment pouvez-vous optimiser le devis en mixant les moyens matériels engagés ? Recalculez le \ncoût de revient. \n \nRéponse : \nLes moyens peuvent être optimisés de la manière suivante : \nAvec 4 camions remorques, c’est 4*78 = 312 balles de transportées. Il en reste 350 – 312 = 38 \nC’est le dernier voyage. Dans ce cas, la savoyarde, moyen le plus économique, peut être adaptée. \nElle a une capacité de 44 balles compatible avec le chargement restant. (1,5 pt) \n \nLe coût total de l’appel d’offres devient (méthode 1) : \n6 079,20 – 1 215,84 + 1 121,66 = 5985,02 €. (0,5 pt) \nou autre calcul : (1 215,84 x 4) + 1 121,66 = 5 985,02€ \n \nMême raisonnement avec la méthode 2 : Coût total = 6275.77 € \n \nQuestion 5 : notation 10 pts \nPour le retour du véhicule depuis l’Oise vers le Sud Est, vous avez trouvé par le biais de \nl’affrètement, un rechargement de deux groupes électrogènes. \nChargement : Beauchamp (95) - Livraison : Nîmes (30) \nDimension de chaque unité : Longueur :  5 mètres / largeur :  1,6 mètre / Hauteur :  2,6 mètres / \nPoids :  7,756 tonnes. \nValeur Unitaire HT déclarée : 125 000 € \n  \na) Sachant que l’entreprise PALEAS a souscrit une assurance à hauteur de 180 000,00€ par véhicule, \ndevez-vous souscrire une assurance complémentaire pour ce transport et de quel type ? Justifiez \nvotre réponse. \n Réponse : le transporteur doit souscrire une assurance complémentaire de type ad valorem. (0,5 pt) \nJustification : la valeur de la marchandise est de 2 *125 000 = 250 000 € et dépasse de 70 000 € la \nvaleur de l’assurance marchandises.  \nDonc la marchandise n’est pas assurée pour sa valeur réelle. (1 pt)  \n\n \nb) Afin d’augmenter la rentabilité de son véhicule, vous complétez cet envoi avec le lot suivant : \n1 caisse palette 100 x120 cm de matériel du bâtiment. Poids : 600 kg. \n Chargement : Goussainville (95) - Livraison : Avignon (84) \nLors de l’opération de chargement, le cariste de l’expéditeur à Goussainville a donné un coup de \nfourche dans le groupe électrogène déjà positionné sur le porteur. \n A qui incombe la responsabilité de l’avarie occasionnée sur le groupe électrogène ? Justifiez votre \nréponse. \n Réponse : \nEn cas de chargement de plusieurs envois dans un même véhicule, le transporteur (1,5 pt) doit \ns’assurer  que  tout  nouveau  chargement  ne  porte  pas  atteinte  aux  marchandises  déjà  chargées \n(obligation de résultat) (1,5pt). \nc) Y a-t-il un moyen de s’exonérer de sa responsabilité en cas d’avarie ou de perte ? \nEn cas de perte ou d’avarie de la marchandise intervenue dans le cadre du chargement, il exonérera \nsa responsabilité s’il prouve que le dommage a été provoqué par la faute de l’expéditeur lors des \nopérations de chargement ou que le transporteur a été empêché de procéder aux vérifications d’usage \nen raison de contraintes imposées sur le site par l’expéditeur. (1,5 pt) \n d) Après expertise, le montant de l’avarie s’élève à 150 000 €. Dans cette situation, quelle est la \nvaleur du remboursement du litige ? \n Réponse : Sur les bases du contrat type : envoi de + 3t avec une assurance ad valorem \nLa valeur déclarée de la marchandise se substitue aux limitations du contrat. \nDonc la valeur du remboursement est de 125 000 €. (1,5 pt) \n \ne) Pour arrimer le chargement, le conducteur utilise une sangle avec un nœud, afin de renforcer la toile \nqui présente une déchirure. Quelles obligations pèsent sur le transporteur lorsque l’expéditeur lui \ndemande de lui montrer les sangles d’arrimage utilisées pour le transport ? \nD’après le contrat type applicable aux transports publics routiers de marchandises pour lesquels il \nn'existe pas de contrat type spécifique, le transporteur a pour obligation de fournir sur demande de \nl’expéditeur, des sangles en nombre suffisant, en bon état, conformes aux normes requises et adaptées \nà la nature et au conditionnement de la marchandise. Les sangles d'arrimage avec dispositif de mise \nen tension doivent être en bon état, sans aucune déchirure ou amorce de rupture. Elles ne doivent pas \npasser sur des arêtes vives et ne doivent jamais être utilisées nouées. \n(1,5 pt pour cette question. Si le candidat cite 1 obligation : 0,75 pt. S’il en cite 2 ou plus : 1,5 pt) \n \nf) Que conseillez-vous pour arrimer les groupes électrogènes ? \nRéponse : les groupes ont les caractéristiques suivantes : \nDimension de chaque unité : Long 5 mètres / larg. 1,6 mètres / Haut 2.6 mètres / Poids 7,756 Tonnes. \nIls sont donc longs, peu larges et hauts avec un poids moyen au ml (7,7 / 5 = 1,54 tonnes au ml) \nSelon les crochets d’arrimage prévus normalement sur ce type de produit et sur l’ensemble routier, des \nchaines avec des tendeurs sont le moyen le plus adapté. Le passage de 2 sangles au-dessus du groupe \npermet d’éviter le basculement du groupe.   \nDes sangles à haute valeur de capacité d’arrimage (LC : lashing capacity) sont à privilégier. (1pt) \n \n\n \nQuestion 6 : notation 15 pts \nLe conducteur des Transport PALEAS a effectué ses rotations sur les 2 semaines suivantes. Voici le \ntableau des temps de ses activités. \n \n \na) En  vous  appuyant  sur  les  données  du  tableau  ci-dessus, calculez les  temps  de  service  journaliers  et \nhebdomadaires des deux semaines. \n \nb) Relevez les infractions à la règlementation sociale européenne (RSE). \n \nC) Relevez les infractions au code du travail. \n \n \n \n\n \nRéponse : \n \n \na) Complétez les temps de service sur les 2 semaines \nvoir le tableau : notation 4,5 pts pour les 12 calculs – 0,375 pt par calcul \nb) Relevez les infractions à la règlementation sociale européenne (RSE). \nCas N°1 – 2 – 7 (1,5 pt par infraction) \nC) Relevez les infractions au code du travail \nCas N°3 - 4 - 5 – 6 (1,5 pt par infraction)"
+    },
+    {
+      "number": 2,
+      "title": "PROBLÈME 2 (50 points)",
+      "subject_text": "Les Établissements ESPERHANTZ, SARL au capital de 10 000 € créée en 2003 en Saône-et-Loire\n(71), viennent de connaître trois années difficiles, en raison de la crise sanitaire de la Covid. Certes,\nleur   volume   d’activité   s’est   maintenu,   mais   la   rentabilité   et   l’aisance   financière   se   sont\nconsidérablement réduites.\nLes deux frères ESPERHANTZ s’interrogent sur l’opportunité de renouveler, début 2025, une partie\nde leur flotte de véhicules, constituée de 5 ensembles routiers utilisés pour le transport public routier\nde marchandises de produits en vrac (céréales, déchets de métaux), principalement sur le territoire\nnational et un peu à l’international.\nQuestion 1 (5 points) \na) Co-gérants de la société, les deux frères détiennent les pouvoirs de direction, en exerçant seuls les\nfonctions d’administration générale et de management de leurs 3 conducteurs/trices salarié(e)s.\nL’exigence de l’attestation de capacité professionnelle en transport public routier de marchandises,\nnécessaire pour gérer l’activité de transport de cette société, s’impose-t-elle à chacun des deux co-\ngérants ?\nJustifiez votre réponse.\n \nb) Leur cousin souhaiterait créer sa propre entreprise de transport public routier de marchandises et de\ndéménagement, mais il ne dispose pas encore de cette attestation.\nIl a donc interrogé ses deux cousins ESPERHANTZ :\n- Est-il possible de prendre en location l’attestation de capacité professionnelle d’un gestionnaire de\ntransport ? \n- Est-il possible de prendre en location une licence communautaire de transport routier ? \nc) Le cousin a deux autres questions, en matière de gestion sociale des conducteurs routiers, qui\nrelèvent de la convention collective nationale des transports routiers et activités auxiliaires du\ntransport :\n-   Tout   conducteur   est-il   en   droit   de   formuler   auprès   de   son   employeur   une   demande   de\ncommunication des données de sa carte de conducteur pour tachygraphe numérique ? \n- Qui doit prendre à sa charge le coût des visites médicales obligatoires pour le permis de conduire ? \nQuestion 2 (15 points) \nPour le projet de renouvellement d’un tracteur routier dont la mise en service serait envisagée au\ncours du premier trimestre 2025, les frères ESPERHANTZ souhaitent, dès à présent, avoir un aperçu\nsur la santé financière de leur entreprise, avant de solliciter des devis auprès des concessionnaires de\nvéhicules et des organismes de financement.\nA partir des liasses fiscales des deux exercices comptables précédents, les deux frères viennent d’en\nextraire les informations suivantes :\n\na) Déterminez le Besoin en Fonds de roulement (BFR) pour chacune des 2 années, en détaillant vos\ncalculs. \nb) Quel constat peut être tiré du BFR et quelles conclusions de son cycle de fonctionnement ?\nCommentez l’évolution du BFR. \nc) Déterminez pour chacune des 2 années, les délais moyens de paiement en jours des clients et des\nfournisseurs. La société est soumise à la TVA française au taux normal (20 %) pour l’intégralité de\nses achats ou de ses ventes.\nDétaillez vos calculs.\nExercices comptables20222021\nAchat de marchandises, fournitures et de services HT420 122 €336 461 €\nChiffres d'affaires HT577 892 €594 032 €\nCréances clients TTC124 204 €54 984 €\nDettes fournisseurs TTC60 706 €25 647 €\nd) Rappelez la règle relative aux délais de paiement des prestations de transport public routier de\nmarchandises en France. \nEn fonction des résultats obtenus à la question précédente, commentez la situation actuelle de\nl’entreprise et son évolution. \ne) Pour 2023, quels doivent être les points de vigilance sur le délai de paiement client ? \nQuestion 3 (6 points) \nPour tout dossier de financement de matériel de transport en achat ou en location de longue durée, les\nfrères ESPERHANTZ savent que les organismes de financement s’attachent à analyser différents\nratios relatifs à l’activité et à la structure financière de la société.\nPour  se faire une  idée  sur  leur propre  entreprise, les deux  frères tentent  de calculer  le  ratio\nd’indépendance financière selon la formule suivante :\n\na) Définissez la notion d’indépendance financière. \nb) Déterminez le ratio d’indépendance financière pour l’année 2022, en détaillant vos calculs.\nc) Commentez le ratio d’indépendance financière et son évolution, pour les deux années 2021 et\n2022. Que pensez-vous de la capacité de l’entreprise à investir ? \nQuestion 4 (7 points) \nLes Établissements ESPERHANTZ cherchent à connaître le nombre d’années théoriques nécessaires\nau remboursement de leurs dettes financières. Le ratio de capacité de remboursement est alors utilisé\nà cette fin.\na) Définissez le sigle CAF en lien avec la situation d’investissement ou de financement. \nb) Indiquez l’une des 2 formules de calcul de la CAF. \nc)   Quelle   indication   apporte   une   CAF   positive   à   une   entreprise   qui   souhaite   procéder   à   un\ninvestissement ? \nd) Le ratio de capacité de remboursement est utilisé pour avoir une idée générale du délai possible de\nremboursement des dettes financières d’une entreprise. \nLa formule de ce ratio est :  dettes financières / CAF.\nCe ratio s’établit à 5,60 en 2021 et 3,37 en 2022.\nPour l’année 2022, que signifie le ratio de capacité de remboursement au regard de la CAF ?\nQuestion 5 (10 points)\nPlusieurs   des   5   ensembles   routiers   composant   la   flotte   de   la   société   ESPERHANTZ   ont   été\nrenouvelés à des années différentes et ont été financés par emprunt bancaire, sauf en 2021 où la\nsociété a eu recours pour la première fois au financement d’un tracteur routier par crédit-bail.\nAu début de l’année 2023, le taux de vétusté du matériel de transport s’établit approximativement à\n60 %, sachant que les deux dernières années 2021 et 2022 ont chacune connu le renouvellement de\nmatériel et qu’aucun renouvellement n’est encore prévu en 2023.\nLe projet actuel des 2 frères concerne le renouvellement d’un tracteur routier pour une mise en\ncirculation au cours du 1\ner\n trimestre 2025.\n\nMais ils savent que cette possibilité dépendra fortement de l’octroi d’un financement en tout ou\npartie.\nLors d’un précédent achat d’un véhicule par emprunt bancaire, les frères ESPERHANTZ se sont déjà\nportés caution personnelle et ont chacun également augmenté le solde de leur compte courant\nd’associé, le montant de ces deux comptes s’élevant à ce jour aux environs de 20 000 €.\na) Comment un organisme de financement, qui ne connaîtrait pas en détail la composition du parc de\nvéhicules de la société ESPERHANTZ, peut-il interpréter ce ratio à 60 % ? \nb)  Après   avoir   défini   les   notions   d’emprunt   et   de   crédit-bail,   citez-en   les   avantages   et   les\ninconvénients (8 propositions attendues au total). \nc) A partir des données suivantes, calculez le loyer mensuel, le coût global de la location hors achat,\nle coût total avec achat, et le coût du crédit-bail par rapport à un achat comptant : \nPrix du véhicule :  100 000€\nTaux de crédit-bail : 2,5 % \nDurée de location :  4 ans – option d’achat finale : 10 %\nQuestion 6 (7 points) \nLes   Établissements   ESPERHANTZ   opèrent   très   majoritairement   en   transport   national   à   l’aide\nd’ensembles routiers soumis à la réglementation sociale européenne.\nExceptionnellement, 5 fois par an, ils effectuent l’opération triangulaire suivante au cours d’une\nsemaine :\n- transport France (21 Côte d’Or) > France (55 Meuse),\n- transport Luxembourg > Espagne (Catalogne)\n- transport Espagne (Catalogne) > France (26 Drôme).\nLa semaine prochaine, le plus jeune conducteur de cette société va réaliser son premier déplacement à\nl’international.\na) Précisez si chacun des 3 transports ci-dessus relève ou non de la situation de détachement de\nconducteur routier salarié au sein de l’Union européenne, uniquement au regard du droit social\neuropéen des transports routiers. \nb)  De quel document correspondant à cette situation devra disposer le conducteur salarié dans sa\ndocumentation de bord ?\nc) Après avoir comparé les taux horaires minimum de rémunération des conducteurs salariés au sein\nde l’Union européenne, la société ESPERHANTZ constate que son jeune salarié bénéficie d’un taux\nhoraire   supérieur   de   4   €   par   rapport   au   minima   espagnol,   mais   inférieur   de   2   €   au   minima\nluxembourgeois.\nSuite à cette comparaison et une fois le service de transport achevé, y a-t-il une obligation qui\nincombe à la société ESPERHANTZ en matière de rémunération des périodes de détachement ? \nd) Lorsqu’un détachement a lieu, le contrat de travail conclu initialement avec l’employeur peut-il\nêtre maintenu en l’état ?",
+      "corrected_text": "Les Établissements ESPERHANTZ, SARL au capital de 10 000 € créée en 2003 en Saône-et-Loire (71), \nviennent de connaître trois années difficiles, en raison de la crise sanitaire de la Covid. Certes, leur volume \nd’activité s’est maintenu, mais la rentabilité et l’aisance financière se sont considérablement réduites. \nLes deux frères ESPERHANTZ s’interrogent sur l’opportunité de renouveler, début 2025, une partie de leur \nflotte de véhicules, constituée de 5 ensembles routiers utilisés pour le transport public routier de marchandises \nde  produits  en  vrac  (céréales,  déchets  de  métaux),  principalement  sur  le  territoire  national  et  un  peu  à \nl’international. \n \nQuestion 1 (5 points)  \na) Co-gérants de la société, les deux frères détiennent les pouvoirs de direction, en exerçant seuls, les fonctions \nd’administration générale et de management de leurs 3 conducteur/trices salarié(e)s. \nL’exigence de l’attestation de capacité professionnelle en transport public routier de marchandises, nécessaire \npour gérer l’activité de transport de cette société, s’impose-t-elle à chacun des deux co-gérants ? Justifiez votre \nréponse. \nb)  Leur  cousin  souhaiterait  créer  sa  propre  entreprise  de  transport  public  routier  de  marchandises  et  de \ndéménagement, mais il ne dispose pas encore de cette attestation. \nIl a donc interrogé ses deux cousins ESPERHANTZ : \n- Est-il possible de prendre en location l’attestation de capacité professionnelle d’un gestionnaire de transport ? \n- Est-il possible de prendre en location une licence communautaire de transport routier ? \nc) Le cousin a deux autres questions, en matière de gestion sociale des conducteurs routiers, qui relèvent de la \nconvention collective nationale des transports routiers et activités auxiliaires du transport : \n- Tout conducteur est-il en droit de formuler auprès de son employeur une demande de communication des \ndonnées de sa carte de conducteur pour tachygraphe numérique ? \n- Qui doit prendre à sa charge le coût des visites médicales obligatoires pour le permis de conduire ? \n \nRéponse 1 – problème 2 : (5 points) \na) NON (1 pt), l’exigence de capacité professionnelle nécessaire pour l’activité de transport de cette société, ne \ns’impose pas à chacun des deux co-gérants. \nLa règle est que toute entreprise assujettie doit disposer d’au moins un gestionnaire de transport. \nb) Pour les interrogations du cousin : \n- NON (1 pt), il n’est pas possible de prendre en location la capacité professionnelle d’un gestionnaire de \ntransport, \n- NON (1 pt), il n’est pas possible de prendre en location une licence communautaire de transport routier. \nc) En matière de gestion sociale des conducteurs routiers qui relèvent de la convention collective nationale des \ntransports routiers et activités auxiliaires du transport : \n- OUI (1 pt), tout conducteur est en droit de formuler auprès de son employeur, une demande de communication \ndes données de sa carte de conducteur pour tachygraphe numérique. \nL’obligation de communication de ces données qui pèse sur l’employeur est notamment prévue à l’article \nD3312-60 du Code des transports, \n- l’employeur / entreprise de transport doit prendre à sa charge le coût des visites médicales obligatoires pour le \npermis de conduire (1 pt). \nCette obligation est prévue par la convention collective. \n \n\n \nQuestion 2 (15 points)  \nPour le projet de renouvellement d’un tracteur routier dont la mise en service serait envisagée au cours du \npremier  trimestre  2025,  les  frères  ESPERHANTZ  souhaitent,  dès  à  présent,  avoir  un  aperçu  sur  la  santé \nfinancière de leur entreprise, avant de solliciter des devis auprès des concessionnaires de véhicules et des \norganismes de financement. \nA partir des liasses fiscales des deux exercices comptables précédents, les deux frères viennent d’en extraire les \ninformations suivantes : \n \n \na) Déterminez le Besoin en Fonds de roulement (BFR) pour chacune des 2 années, en détaillant vos calculs. \nRéponse 2 – problème 2 : (15 points) \na) Besoin en Fonds de roulement (BFR) pour chacune des 2 années : \nActif circulant – passif circulant \n- 2021 :   83.802 - 136.487 = - 52.685 € (1 pt) \n- 2022 :  156.691- 208.816 =   - 52.125 € (1 pt) \n \nb) Quel constat peut être tiré du BFR et quelles conclusions de son cycle de fonctionnement ? Commentez \nl’évolution du BFR. \nb) Les conclusions suivantes sont à tirer à ce stade de la structuration du bilan de cette société et de son cycle \nde fonctionnement : \n- avec un BFR d’un montant anormalement négatif (1 pt), \n- doublement des actifs circulants et des passifs circulants entre 2021 et 2022, tout en ayant un BFR stable (1 \npt), \n- et ce cycle de fonctionnement est lui aussi déséquilibré (1 pt) (le passif circulant à savoir les dettes courantes \nsont plus élevées que l’actif circulant), ce qui est positif pour la trésorerie de l’entreprise mais témoigne d’une \nsituation instable (l’entreprise vit à crédit sur ses fournisseurs). \n \nc)  Déterminez  pour  chacune  des  2  années,  les délais moyens de paiement en jours des clients et des \nfournisseurs. La société est soumise à la TVA française au taux normal (20 %) pour l’intégralité de ses achats \nou de ses ventes. \nDétaillez vos calculs \n \nExercices comptables 2022 2021 \nAchat de marchandises, fournitures et de services HT 420 122 € 336 461 € \nChiffres d'affaires HT 577 892 € 594 032 € \nCréances clients TTC 124 204 € 54 984 € \nDettes fournisseurs TTC 60 706 € 25 647 € \n \n \n\n \nc) Délais moyens de paiement : \n- clients 2021 :  27,77 jours (1 pt) \n(créances clients TTC / chiffre d’affaires TTC) x 360 jours :   54.984 / (594.032 x 1,20)  x 360 \n- clients 2022 :  64,48 jours (1 pt) \n(créances clients TTC / chiffre d’affaires TTC) x 360 jours :   124.204 / (577.892 x 1,20)  x 360 \n- fournisseur 2021 :  22,87 jours (1 pt) \n(dettes fournisseurs TTC/ achats de biens et services TTC) x 360 jours :   25.647 / (336.461 x 1,20)  x 360 \n- fournisseur 2022 :  43,35 jours (1 pt) \n(dettes fournisseurs TTC / achats de biens et services TTC) x 360 jours :   60.706 / (420.122 x1,20) x 360 \n \nd) Rappelez la règle relative aux délais de paiement des prestations de transport public routier de marchandises \nen France. \nEn fonction des résultats obtenus à la question précédente, commentez la situation actuelle de l’entreprise et son \névolution. \n \nd) Règle relative aux délais de paiement : \nLa règle française pour des prestations de transport public routier de marchandises, est le paiement dans un \ndélai d’au plus 30 jours (1 pt), après la date d’émission de la facture de transport. \nRègle prévue à l’article L441-11 du Code de commerce. \nCommentaires de l’évolution des délais moyens de paiement : \n- évolution du délai de paiement clients :  allongement du double (1 pt) \n- évolution du délai de paiement fournisseurs :    allongement du double (1 pt) \n- la situation s’est fortement dégradée (1 pt) en 2022 pour le délai de paiement clients, alors que la règle était \nrespectée en 2021, et alors que l’entreprise règle d’abord ses fournisseurs avant d’être réglée par ses clients. \n \ne) Pour 2023, quels doivent être les points de vigilance sur le délai de paiement client ?  \n(2 pts si 3 idées parmi les suivantes)   \nLe chiffre d’affaires est comparable entre 2021 et 2022, alors que le délai a doublé : \n - Sortir ce client du calcul afin de voir si la situation générale de délai des paiement clients se \nrapproche de l’identique de 2021 \nSi ce n’est pas l’ensemble des clients qui ont modifié leur façon de payer mais  plutôt un client \nimportant qui doit avoir des soucis pour régler et qui a généré cette évolution, trouver des solutions \navec ce client ou ces clients (si plusieurs) \n - Détecter ce client puis le rencontrer pour mettre en place un système de paiement échelonné – \nou une facturation plus fréquente – continuer de suivre la santé financière de ce client – paiement \npossible avant le transport \n - Limiter le volume d’activité avec lui \n - Se tourner vers d’autres marchés ou clients \n - Faire appel à une société de recouvrement \n - Provisionner si besoin dans le compte de résultat \nSi l’ensemble de nos clients ont modifié leur façon de payer, revoir d’abord notre propre système de \nfacturation et faire un rappel général de l’article du code du commerce L 441-11 – commencer à mettre \nen place le système de pénalités. \n\n \nQuestion 3 (6 points)  \nPour tout dossier de financement de matériel de transport en achat ou en location de longue durée, les frères \nESPERHANTZ savent que les organismes de financement s’attachent à analyser différents ratios relatifs à \nl’activité et à la structure financière de la société. \nPour se faire une idée sur leur propre entreprise, les deux frères tentent de calculer le ratio d’indépendance \nfinancière selon la formule suivante : \n \n \na) Définissez la notion d’indépendance financière. \nb) Déterminez le ratio d’indépendance financière pour l’année 2022, en détaillant vos calculs. \nc) Commentez le ratio d’indépendance financière et son évolution, pour les deux années 2021 et 2022. Que \npensez vous de la capacité de l’entreprise à investir ? \n \nRéponse 3 – problème 2 : (6 points) \na) Définition de la notion d’indépendance financière (à l’appréciation des correcteurs) : \nMoins les dettes envers les organismes de financement sont élevées par rapport aux capitaux propres, plus \nl’entreprise est indépendante vis à vis à de ces organismes (1 pt) \nAutre  proposition :  Le  ratio  d’indépendance  financière  met  en  avant  l’état  de  l’endettement  financier  de \nl’entreprise par rapport à ses fonds propres.   \nb) Ratio d’indépendance financière pour l’année 2022 : (1 pt)    \n     \nc) Commentaires du ratio d’indépendance financière et de son évolution pour les deux années 2021 et 2022 : \n- ce ratio est anormalement inférieur à 1 (1 pt) au cours des 2 années 2021 et 2022. La société \nESPERHANTZ est donc très dépendante (1 pt) des organismes de financement :   \nle montant de ses capitaux propres est insuffisant. \n- néanmoins il y a une évolution favorable (1 pt) entre les 2 années :  amélioration significative de ce ratio \nLa réalisation d’un résultat déficitaire en 2021 a joué défavorablement (- 4.829 €). \nEt inversement, la réalisation d’un résultat bénéficiaire en 2022 pour une valeur significative (+ 23.008 €) a joué \nfavorablement pour l’amélioration de ce ratio. \nLa capacité à investir de l’entreprise est possible avec une négociation sur les taux d’intérêt, car le ratio évolue \nfavorablement mais l’entreprise est encore très dépendante. (1 pt)   \n \n\n \nQuestion 4 (7 points)  \nLes  Établissements  ESPERHANTZ  cherchent  à  connaître  le  nombre  d’années  théoriques  nécessaires  au \nremboursement de leurs dettes financières. Le ratio de capacité de remboursement est alors utilisé à cette fin. \na) Définissez le sigle CAF en lien avec la situation d’investissement ou de financement. \nb) Indiquez l’une des 2 formules de calcul de la CAF. \nc) Quelle indication apporte une CAF positive à une entreprise qui souhaite procéder à un investissement ? \nd)  Le  ratio  de  capacité  de  remboursement  est  utilisé  pour  avoir  une  idée  générale  du  délai  possible  de \nremboursement des dettes financières d’une entreprise. \nLa formule de ce ratio est :  dettes financières / CAF. \nCe ratio s’établit à 5,60 en 2021 et 3,37 en 2022. \nPour l’année 2022, que signifie le ratio de capacité de remboursement au regard de la CAF ? \n \nRéponse 4 – problème 2 : (7 points) \na) CAF = capacité d’autofinancement (1 pt)   \n \nb) Formule de calcul de la CAF (2 possibilités – notation de 3 points limitée à 1 des 2 possibilités) : \n- 1ère possibilité additive (notation de 3 points = 0,5 pt par ligne) :   \nRésultat Net de l’exercice   \n+ dotations aux amortissements et aux provisions DAP (exploitation, financières et exceptionnelles)   \n- reprises sur amortissements et provisions RAP (exploitation, financières et exceptionnelles) \n+ moins-values \n- plus-values \n- subventions d’investissement \n \n- 2nde possibilité soustractive (notation de 3 points) :   \nCAF = EBE \n + autres produits d’exploitation (sauf reprises) \n + produits financiers (sauf reprises) \n + produits exceptionnels (sauf reprises et PCEA) \n - autres charges d’exploitation (sauf dotations) \n - charges financières (sauf dotations) \n - charges exceptionnelles (sauf dotations et VNCEAC) \n - participations des salariés \n - impôts sur les bénéfices \n \nc) Pour une CAF positive pour une entreprise qui souhaite procéder à un investissement : \n- cela lui indique ses capacités d’investissement en fonds propres (1 pt)   \n- cela lui indique ses éventuels besoins de financement (1 pt) (ex : montant de l’emprunt nécessaire en cas de \ncapacités  d’investissement  en  fonds  propres  incomplètes  pour  couvrir  l’intégralité  du  montant  de \nl’investissement) \n \n\n \nd) Signification du ratio de capacité de remboursement au regard de la CAF : \nLa CAF des Etablissements ESPERHANTZ leur permet de rembourser les dettes financières dans un délai d’au \nmoins 3,37 ans (1 pt).   \n \nQUESTION 5 (10 points). \nPlusieurs des 5 ensembles routiers composant la flotte de la société ESPERHANTZ ont été renouvelés à des \nannées différentes et ont été financés par emprunt bancaire, sauf en 2021 où la société a eu recours pour la \npremière fois au financement d’un tracteur routier par crédit-bail. \nAu début de l’année 2023, le taux de vétusté du matériel de transport s’établit approximativement à 60 %, \nsachant  que  les  deux  dernières  années  2021  et  2022  ont  chacune  connu  le  renouvellement  de matériel  et \nqu’aucun renouvellement n’est encore prévu en 2023. \nLe projet actuel des 2 frères concerne le renouvellement d’un tracteur routier pour une mise en circulation au \ncours du 1\ner\n trimestre 2025. \nMais ils savent que cette possibilité dépendra fortement de l’octroi d’un financement en tout ou partie. \nLors d’un précédent achat d’un véhicule par emprunt bancaire, les frères ESPERHANTZ se sont déjà portés \ncaution personnelle et ont chacun également augmenté le solde de leur compte courant d’associé, le montant de \nces deux comptes s’élevant à ce jour aux environs de 20 000 €. \n \na) Comment un organisme de financement, qui ne connaîtrait pas en détail la composition du parc de \nvéhicules de la société ESPERHANTZ, peut-il interpréter ce ratio à 60 % ? \nRéponse 5 – problème 2 : (10 points) \na) Lecture du ratio de vétusté du matériel à hauteur de 60 % (1 pt parmi les formulations de réponse possibles \nci-dessous) : \n60 % du parc de véhicules est relativement ancien   \nou à l’inverse \n40 % du parc de véhicules est relativement récent (à savoir ici moins de 3 ans)   \n \nb) Après avoir défini les notions d’emprunt et de crédit-bail, citez en les avantages et inconvénients. \n(8 propositions attendues au total) \nCorrigé : \nDéfinition : Emprunt : dette financière à court ou long terme. Il est octroyé par un organisme de crédit (0,5 \npt) OK \nCrédit-bail : Contrat de location adossé à un contrat de vente. Option d’achat fixée dans le contrat initial \n(0,5 pt)   \n Avantages Inconvénients \nCrédit-bail \nNotation (2 pts – 0,5 pts \npar proposition parmi les \n7 suivantes) \nPas d'apport – financement total Montant total avec achat plus élevé \nNe figure pas au bilan donc pas en en-\ndettement \nPeu de service inclus \nCharges d'exploitation donc déductible \ndes impôts - optimisation fiscale \nabsence d’avance de TVA \nContrat non résiliable \nPénalités de résiliation \nEngagement sur une durée \nProtection du fonds de roulement Pas propriétaire du bien \nEmprunt \nNotation (2 pts – 0,5 pts \npar proposition parmi les \n6 suivantes) \nLe véhicule peut être cédé \nà tout moment – propriété du bien \nBilan alourdi \nAugmentation de l’endettement \nSimple, facile et rapide Taux d’emprunt élevé \nPatrimoine entreprise renforcé Immobilisation de trésorerie \n \nAmputation de la capacité d'em-\nprunt \n\n \nc) A partir des données suivantes, calculez le loyer mensuel, le coût global de la location hors achat, le \ncoût total avec achat, et le coût du crédit-bail par rapport à un achat comptant : (4 pts) \nPrix du véhicule :  100 000€ \nTaux de crédit-bail : 2,5 % \nDurée de location 4 ans – option d’achat finale : 10 % \nCorrigé : \nLoyer mensuel : 100 000 * 2,5% = 2500 € (1 pt)   \nOption d’achat finale : 10 %         100 000*10 %  = 10 000 € (0,5 pt)   \nCoût global de la location : 2500 € * 48 = 120000 € (1 pt)   \nCoût total avec achat : 120 000 + 10 000 = 130 000 € (0,5 pt)   \nCoût du crédit-bail avec achat : 130 000 – 100 000 = 30 000 € (1 pt)   \n \nQUESTION 6 (7 points)  \nLes Établissements ESPERHANTZ opèrent très majoritairement en transport national à l’aide d’ensembles \nroutiers soumis à la réglementation sociale européenne. \nExceptionnellement, 5 fois par an, ils effectuent l’opération triangulaire suivante au cours d’une semaine : \n- transport France (21 Côte d’Or) > France (55 Meuse), \n- transport Luxembourg > Espagne (Catalogne) \n- transport Espagne (Catalogne) > France (26 Drôme). \nLa  semaine  prochaine,  le  plus  jeune  conducteur  de  cette  société  va  réaliser  son  premier  déplacement  à \nl’international. \n \na) Précisez si chacun des 3 transports ci-dessus relève ou non de la situation de détachement de conducteur \nroutier salarié au sein de l’Union européenne, uniquement au regard du droit social européen des transports \nroutiers. \nb)  De quel document correspondant à cette situation devra disposer le conducteur salarié dans sa documentation \nde bord ? \nc) Après avoir comparé les taux horaires minimum de rémunération des conducteurs salariés au sein de l’Union \neuropéenne, la société ESPERHANTZ constate que son jeune salarié bénéficie d’un taux horaire supérieur de \n4 € par rapport au minima espagnol, mais inférieur de 2 € au minima luxembourgeois. \nSuite à cette comparaison et une fois le service de transport achevé, y a-t-il une obligation qui incombe à la \nsociété ESPERHANTZ en matière de rémunération des périodes de détachement ? \nd) Lorsqu’un détachement a lieu, le contrat de travail conclu initialement avec l’employeur peut-il être maintenu \nen l’état ? \n \nRéponse 6 – problème 2 : (7 points) \na) - transport France (21 Côte d’Or) > France (55 Meuse), Pas de détachement (1 pt) \n- transport Luxembourg > Espagne (Catalogne), il s’agit d’un trafic tiers, c’est-à-dire un transport réalisé entre \n2 pays dont aucun n’est le pays d’établissement du transporteur, donc détachement (1,5 pts) \n- transport Espagne (Catalogne) > France (26 Drôme), il s’agit d’un transport bilatéral entre un pays et le pays \nd’établissement du transporteur, donc Pas de détachement (1,5 pts) \nb)  Par incidence de la question précédente, le conducteur salarié devra disposer du document suivant dans sa \ndocumentation de bord : \ndéclaration de détachement européenne (1 pt) = déclaration IMI   \n\n \nc) Une fois le service de transport achevé, la société ESPERHANTZ sera soumise à l’obligation suivante en \nmatière de rémunération des périodes de détachement : \neffectuer un complément de rémunération au profit de son conducteur pour la durée du détachement passée \nau Luxembourg sur la base de l’écart de 2 € entre le taux horaire du salaire minimal luxembourgeois et le taux \nhoraire actuel du conducteur détaché (1 pt)   \nd) OUI (1 pt) le contrat de travail conclu initialement avec l’employeur est maintenu en l’état lorsqu’il y a \ndétachement."
+    }
+  ]
+}

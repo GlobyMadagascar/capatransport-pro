@@ -1,0 +1,620 @@
+{
+  "year": 2022,
+  "session": "Session du 5 octobre 2022",
+  "qcm": [
+    {
+      "number": 1,
+      "text": "En principe, le délai de prescription en matière commerciale est de :",
+      "options": {
+        "a": "2 ans",
+        "b": "5 ans",
+        "c": "10 ans",
+        "d": "30 ans"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 2,
+      "text": "Une machine-outil de 4 tonnes fixée au sol est un bien :",
+      "options": {
+        "a": "corporel et mobilier",
+        "b": "incorporel et immobilier",
+        "c": "corporel et immobilier",
+        "d": "incorporel et mobilier"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 3,
+      "text": "Le patrimoine d'une société est l'ensemble :",
+      "options": {
+        "a": "des biens, droits et obligations s'y rapportant",
+        "b": "de ses seuls biens corporels et droits qui y sont liés",
+        "c": "des droits conférés par ses biens et immeubles",
+        "d": "de ses biens fongibles et non fongibles"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 4,
+      "text": "Les trois causes d'exonération de la responsabilité civile du chef d'entreprise sont :",
+      "options": {
+        "a": "la force majeure - le fait du prince - la faute de la victime",
+        "b": "la faute de la victime - le fait de guerre - la force majeure",
+        "c": "le fait du prince - le fait d'un tiers - la force majeure",
+        "d": "le fait d'un tiers - la faute de la victime - la force majeure"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 5,
+      "text": "En cas de cessation de paiement, sont payables, immédiatement :",
+      "options": {
+        "a": "les créances fiscales et sociales antérieures au jugement d'ouverture de la procédure de redressement",
+        "b": "les dettes nées après le jugement d'ouverture de la procédure de redressement",
+        "c": "les dettes nées avant le dépôt de bilan",
+        "d": "les créances bancaires dûment produites à la date du jugement d'ouverture"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 6,
+      "text": "Une entreprise est tenue de conserver les livres comptables comme le livre journal et le grand livre, ainsi que les pièces justificatives (bons de commande, factures...) durant au moins :",
+      "options": {
+        "a": "3 ans",
+        "b": "5 ans",
+        "c": "8 ans",
+        "d": "10 ans"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 7,
+      "text": "Le contrat d'assurance est un contrat :",
+      "options": {
+        "a": "aléatoire",
+        "b": "unilatéral",
+        "c": "solennel",
+        "d": "type"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 8,
+      "text": "Dans une SARL (société à responsabilité limitée), le gérant est élu à la majorité des associés :",
+      "options": {
+        "a": "représentant le tiers des parts sociales",
+        "b": "représentant un quart des parts sociales",
+        "c": "représentant plus des trois quarts des parts sociales",
+        "d": "représentant plus de la moitié des parts sociales"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 9,
+      "text": "Le souscripteur d'un billet à ordre est :",
+      "options": {
+        "a": "l'acheteur",
+        "b": "le vendeur",
+        "c": "le banquier du client",
+        "d": "le banquier du vendeur"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 10,
+      "text": "Lors de la création d'une société de capitaux, l'argent constituant le capital social libéré :",
+      "options": {
+        "a": "reste bloqué pendant toute la durée de vie de la société sur un compte en banque spécial",
+        "b": "reste bloqué uniquement pendant l'accomplissement des formalités de création et est ensuite disponible pour rembourser les associés",
+        "c": "reste bloqué uniquement pendant l'accomplissement des formalités de création et est ensuite disponible pour les besoins de la société",
+        "d": "est fictif et n'est jamais disponible pour la société"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 11,
+      "text": "Dans le cas d'un chèque certifié, la banque du tireur :",
+      "options": {
+        "a": "s'engage à bloquer la provision pendant la durée légale du délai de présentation",
+        "b": "ne fait que constater la provision au moment de l'établissement du chèque",
+        "c": "paye tout de suite la somme due au bénéficiaire",
+        "d": "s'engage à bloquer la provision pendant un délai de 30 jours"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 12,
+      "text": "Dans une SAS (société par actions simplifiée), les associé doivent répondre des dettes de la société :",
+      "options": {
+        "a": "dans leur totalité",
+        "b": "à concurrence de la moitié de leurs apports uniquement",
+        "c": "dans la limite de leurs apports",
+        "d": "sauf en cas de liquidation judiciaire"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 13,
+      "text": "La procédure d'injonction de payer permet :",
+      "options": {
+        "a": "de demander par voie de justice le recouvrement de créances",
+        "b": "de retarder juridiquement le paiement des créanciers",
+        "c": "d'obtenir la liquidation judiciaire immédiate d'une entreprise",
+        "d": "de se faire payer sans passer par une voie judiciaire"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 14,
+      "text": "La condition de capacité financière exigible pour une entreprise de transport correspond :",
+      "options": {
+        "a": "à un impôt payé par le transporteur à la fin de chaque exercice",
+        "b": "au montant des capitaux permanents",
+        "c": "à un rapport entre les immobilisations et les capitaux permanents",
+        "d": "à un montant minimum de capitaux propres déterminé en fonction du parc de véhicules"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 15,
+      "text": "Les loyers des véhicules pris en location sont enregistrés :",
+      "options": {
+        "a": "à l'actif du bilan",
+        "b": "dans les charges exceptionnelles",
+        "c": "dans les charges d'exploitation",
+        "d": "dans les charges financières"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 16,
+      "text": "La variation de stock est calculée en fin d'exercice comptable pour déterminer :",
+      "options": {
+        "a": "le montant du stock final qui sera reporté au compte de résultat",
+        "b": "le montant des plus-values ou des moins-values sur les stocks afin de pouvoir les évaluer au bilan",
+        "c": "la partie des stocks qui a été égarée ou volée",
+        "d": "le montant réel des consommations de matières premières et d'autres approvisionnements pendant l'exercice comptable"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 17,
+      "text": "Dans les entreprises d'au moins 50 salariés, le règlement intérieur, établi par l'employeur doit :",
+      "options": {
+        "a": "concerner les qualifications et rémunérations des salariés",
+        "b": "concerner les règles d'hygiène et de sécurité applicables dans l'entreprise",
+        "c": "être transmis aux chambres syndicales des syndicats représentés dans l'entreprise",
+        "d": "être soumis pour avis à la Commission paritaire régionale interprofessionnelle (CPRI) avant sa mise en application"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 18,
+      "text": "Un salarié déclaré inapte à son poste de travail par le médecin du travail doit :",
+      "options": {
+        "a": "être considéré comme démissionnaire",
+        "b": "être licencié pour cas de force majeure",
+        "c": "être déclaré invalide",
+        "d": "être licencié pour inaptitude en cas d'impossibilité de reclassement"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 19,
+      "text": "Un licenciement économique individuel d'un salarié ne peut avoir lieu sans:",
+      "options": {
+        "a": "la consultation préalable des représentants du personnel sur le licenciement",
+        "b": "un plan social",
+        "c": "un entretien préalable",
+        "d": "une autorisation administrative"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 20,
+      "text": "Un contrat de travail à durée déterminée est requalifié en contrat à durée indéterminée lorsque :",
+      "options": {
+        "a": "le contrat ne précise pas de période d'essai",
+        "b": "le motif pour lequel il est conclu n'est pas indiqué",
+        "c": "le contrat est rompu avant le terme",
+        "d": "il est conclu pour remplacer un salarié absent"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 21,
+      "text": "Le comité social et économique (CSE) doit être constitué au sein de toute entreprise, à partir de :",
+      "options": {
+        "a": "11 salariés pendant 12 mois consécutifs",
+        "b": "25 salariés pendant 12 mois consécutifs",
+        "c": "50 salariés pendant 12 mois consécutifs",
+        "d": "100 salariés pendant 12 mois consécutifs"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 22,
+      "text": "Pour les élections de représentants du personnel, en cas d'absence de candidature de syndicats reconnus représentatifs, le chef d'entreprise doit :",
+      "options": {
+        "a": "renoncer aux élections",
+        "b": "organiser un second tour dans un délai d'1 mois",
+        "c": "prévenir l'inspecteur du travail",
+        "d": "organiser un second tour dans un délai de 15 jours"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 23,
+      "text": "En cas de licenciement économique d'un conducteur, l'employeur doit observer un délai de réflexion minimum entre l'entretien préalable et la notification de la lettre de licenciement au salarié. Ce délai minimal sera de :",
+      "options": {
+        "a": "1 jour",
+        "b": "4 jours",
+        "c": "7 jours",
+        "d": "15 jours"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 24,
+      "text": "Au moment de la rupture du contrat de travail, lors d'un licenciement pour faute lourde, l'employeur doit remettre obligatoirement au salarié :",
+      "options": {
+        "a": "une attestation Pôle Emploi signée pour lui permettre de faire valoir ses droits aux allocations chômage",
+        "b": "une indemnité compensatrice correspondant à l'ensemble des congés payés qu'il a acquis",
+        "c": "une indemnité compensatrice de préavis",
+        "d": "un document d'information sur le montant des droits à formation acquis par ce salarié sur son compte personnel de formation (CPF)"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 25,
+      "text": "La période d'essai pour un conducteur embauché en contrat à durée déterminée de 12 mois, est de :",
+      "options": {
+        "a": "1 mois renouvelable",
+        "b": "1 mois non renouvelable",
+        "c": "2 mois renouvelables",
+        "d": "2 mois non renouvelables"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 26,
+      "text": "La durée de la formation continue obligatoire des conducteurs (FCO) est de :",
+      "options": {
+        "a": "3 jours",
+        "b": "5 jours",
+        "c": "1 jour",
+        "d": "2 jours"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 27,
+      "text": "Avant d'affecter un conducteur à un camion isolé récent de plus de 7,5 tonnes de poids total autorisé en charge (PTAC), l'entreprise de transport doit vérifier qu'il est titulaire :",
+      "options": {
+        "a": "des permis C et CE, et de la carte de conducteur pour tachygraphe, en cours de validité",
+        "b": "du permis C, de la carte CQC et de la carte de conducteur pour tachygraphe, en cours de validité",
+        "c": "du permis C en cours de validité et de l'attestation de capacité professionnelle",
+        "d": "du permis D et de la carte de conducteur pour tachygraphe, en cours de validité"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 28,
+      "text": "En matière de règlementation sociale européenne (RSE), au sein d'une période de 24 heures consécutives, le repos journalier d'un conducteur peut être fractionné à condition :",
+      "options": {
+        "a": "que ce repos soit d'une durée totale d'au moins 11 heures",
+        "b": "de le fractionner en 4 périodes maximum",
+        "c": "qu'après 10 heures de durée de conduite, la durée du repos soit d'au moins 8 heures consécutives",
+        "d": "que ce repos soit d'une durée totale d'au moins 12 heures"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 29,
+      "text": "Avant toute embauche, il y a lieu de :",
+      "options": {
+        "a": "prévenir l'inspecteur du travail",
+        "b": "faire une déclaration préalable à l'embauche (DPAE) auprès de l'URSSAF",
+        "c": "établir un contrat de travail",
+        "d": "adresser copie du contrat de travail à l'inspection du travail"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 30,
+      "text": "Tout changement de nature à modifier la situation de l'entreprise inscrite à l'un des registres des professions réglementées du transport, doit être porté à la connaissance du préfet de région dans un délai maximum de :",
+      "options": {
+        "a": "8 jours",
+        "b": "15 jours",
+        "c": "28 jours",
+        "d": "31 jours"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 31,
+      "text": "En cas de contrôle sur route en Belgique d'un ensemble routier de 40 tonnes d'une entreprise de transport public routier française, un des documents suivants doit être obligatoirement présenté aux agents chargés du contrôle :",
+      "options": {
+        "a": "l'autorisation d'exercer la profession de transporteur, qui a été délivrée lors de l'inscription auprès du registre tenu par la DREAL",
+        "b": "l'extrait K-bis justifiant l'inscription au registre du commerce",
+        "c": "la copie certifiée conforme de la licence communautaire de transport",
+        "d": "le contrat de travail du conducteur salarié"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 32,
+      "text": "Les coopératives d'entreprises de transport :",
+      "options": {
+        "a": "sont obligatoirement inscrites au registre des commissionnaires de transport",
+        "b": "ne sont pas inscrites au registre des entreprises de transport",
+        "c": "sont inscrites au registre des entreprises de transport",
+        "d": "ne sont pas inscrites au registre du commerce et des sociétés"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 33,
+      "text": "La rubrique de la liasse fiscale au regard de laquelle s'apprécie la condition de capacité financière requise pour l'exercice de la profession de transporteur public routier de marchandises, est celle :",
+      "options": {
+        "a": "du chiffre d'affaires hors taxes de l'entreprise",
+        "b": "du résultat d'exploitation de l'entreprise",
+        "c": "des capitaux propres de l'entreprise",
+        "d": "de l'actif immobilisé de l'entreprise"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 34,
+      "text": "La licence de transport intérieur a une durée de validité maximale de :",
+      "options": {
+        "a": "3 ans",
+        "b": "5 ans",
+        "c": "7 ans",
+        "d": "10 ans"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 35,
+      "text": "Le document de suivi :",
+      "options": {
+        "a": "récapitule toutes les opérations prévues et non prévues effectuées par le conducteur pendant l'exécution du contrat",
+        "b": "est destiné à suivre en temps réel le trajet de la marchandise en cas de sous-traitance multiple",
+        "c": "est destiné à suivre le temps de conduite et d'autres travaux du conducteur",
+        "d": "est destiné à suivre un envoi en cas de fractionnement d'un lot"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 36,
+      "text": "Si les réserves du destinataire ne sont pas acceptées le jour de la livraison des marchandises, cette personne doit les :",
+      "options": {
+        "a": "confirmer à l'expéditeur dans les 3 jours suivants non compris les jours fériés",
+        "b": "signaler à son assureur dans les 3 jours suivants non compris les jours fériés",
+        "c": "confirmer au transporteur dans les 3 jours suivants non compris les jours fériés",
+        "d": "confirmer à l'assureur du transporteur dans les 3 jours suivants"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 37,
+      "text": "Un transporteur arrive à l'heure convenue pour prendre en charge un envoi de 20 tonnes ; en application du contrat type dit \"général\" relatif aux transports publics de marchandises, son véhicule devra normalement être chargé dans un délai de :",
+      "options": {
+        "a": "1 heure",
+        "b": "1 h 30",
+        "c": "2 h",
+        "d": "3 h"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 38,
+      "text": "Dans le contrat type dit \"général\", dans le cas des envois dont le poids est égal ou supérieur à 3 tonnes, le chargement, le calage et l'arrimage sont à la charge :",
+      "options": {
+        "a": "du destinataire",
+        "b": "du conducteur",
+        "c": "du transporteur",
+        "d": "de l'expéditeur"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 39,
+      "text": "Le délai de forclusion, tel que défini par l'article L 133-3 du code du commerce, est de :",
+      "options": {
+        "a": "2 jours, non compris les jours fériés, qui suivent celui de la réception de la marchandise transportée",
+        "b": "3 jours, non compris les jours fériés, qui suivent celui de la réception de la marchandise transportée",
+        "c": "7 jours, non compris les jours fériés, qui suivent celui de la réception de la marchandise transportée",
+        "d": "21 jours, non compris les jours fériés, qui suivent celui de la réception de la marchandise transportée"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 40,
+      "text": "Pour être inscrite au registre des entreprises de transport, une SARL (société à responsabilité limitée) doit justifier de l'honorabilité professionnelle des :",
+      "options": {
+        "a": "gérants et de la personne physique qui assure la direction des transports",
+        "b": "gérants obligatoirement majoritaires et de la personne physique qui assure la direction des transports",
+        "c": "gérants uniquement",
+        "d": "gérants obligatoirement minoritaires et de la personne physique qui assure la direction des transports"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 41,
+      "text": "Le contrat type sous-traitance s'applique entre :",
+      "options": {
+        "a": "un transporteur et le transporteur public qu'il a affrété",
+        "b": "le groupeur et le dégroupeur",
+        "c": "l'organisateur de transport et l'expéditeur",
+        "d": "le transporteur et le destinataire"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 42,
+      "text": "Selon l'article L.132-8 du Code de commerce, sont garants du paiement au transporteur du prix du transport :",
+      "options": {
+        "a": "le donneur d'ordre et le transitaire",
+        "b": "l'expéditeur et le destinataire",
+        "c": "le transporteur principal et le transitaire",
+        "d": "le voiturier et le destinataire"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 43,
+      "text": "Sauf transports exceptionnels, un chargement de grumes ou de pièces de grande longueur ne doit pas dépasser de plus de :",
+      "options": {
+        "a": "0,50 m à l'avant, 1 m à l'arrière",
+        "b": "1 m à l'avant, 2 m à l'arrière",
+        "c": "1 m à l'avant, 3 m à l'arrière",
+        "d": "3 m à l'arrière, aucun dépassement n'est toléré à l'avant"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 44,
+      "text": "Un véhicule peut être équipé de pneumatiques de structure et de sculpture différentes lorsqu'ils sont montés sur :",
+      "options": {
+        "a": "un même essieu",
+        "b": "un jumelage",
+        "c": "des essieux différents",
+        "d": "l'essieu directeur"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 45,
+      "text": "La remorque d'un train routier, dont le poids maximum autorisé (PMA) est de 40 tonnes, doit porter à l'arrière et de façon bien lisible :",
+      "options": {
+        "a": "deux disques de limitation de vitesse, indiquant 60 et 80",
+        "b": "deux disques de limitation de vitesse, indiquant 80 et 90",
+        "c": "trois disques de limitation de vitesse, indiquant 60, 80 et 90",
+        "d": "trois disques de limitation de vitesse, indiquant 60, 70 et 80"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 46,
+      "text": "L'extincteur le plus adapté aux différents types de feux, est un extincteur :",
+      "options": {
+        "a": "à eau",
+        "b": "à eau plus additif",
+        "c": "à gaz carbonique",
+        "d": "à poudre A, B, C"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 47,
+      "text": "Le transport d'un engin de travaux publics de 3,20 m de large, toutes autres caractéristiques conformes aux règles du code de la route, nécessite, pour effectuer un déplacement dans un même département :",
+      "options": {
+        "a": "une autorisation individuelle de transport exceptionnel de 1ère catégorie",
+        "b": "une autorisation individuelle de transport exceptionnel de 2ème catégorie",
+        "c": "le respect d'un arrêté préfectoral portant Autorisation de portée locale (APL)",
+        "d": "une autorisation individuelle au voyage"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 48,
+      "text": "Dans le cadre de la Convention relative au contrat de transport international de marchandises par route (CMR), la lettre de voiture internationale est établie par :",
+      "options": {
+        "a": "le transporteur, obligatoirement lors du chargement",
+        "b": "l'expéditeur, dès la conclusion du contrat de vente avec le destinataire",
+        "c": "le transporteur, dès qu'il reçoit l'ordre de transport de l'expéditeur",
+        "d": "l'expéditeur ou le transporteur sous la responsabilité de l'expéditeur"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 49,
+      "text": "La déclaration de détachement, réalisée sur internet via la plateforme européenne IMI :",
+      "options": {
+        "a": "est obligatoire lors d'un transport routier international",
+        "b": "est obligatoire lors d'une opération de cabotage",
+        "c": "concerne les conducteurs routiers travailleurs indépendants",
+        "d": "est valable au maximum 24 mois"
+      },
+      "answer": null,
+      "explanation": null
+    },
+    {
+      "number": 50,
+      "text": "Les autorisations bilatérales de transport peuvent être utilisées pour assurer des trafics routiers de marchandises entre la France et :",
+      "options": {
+        "a": "les Pays-Bas",
+        "b": "la Lituanie",
+        "c": "le Maroc",
+        "d": "le Royaume-Uni"
+      },
+      "answer": null,
+      "explanation": null
+    }
+  ],
+  "problems": [
+    {
+      "number": 1,
+      "title": "PROBLÈME 1 (50 points)",
+      "subject_text": "Vous venez de décrocher un emploi salarié à la direction de l’entreprise de transport routier SOL-ON basée\nà proximité de Blois (F-41). Vous avez en charge les dossiers administratifs et l’exploitation de 10 véhicules\nà moteur, dont 9 affectés à des transports régionaux.\nParmi les contrats commerciaux, l’un est un contrat de traction négocié exclusivement avec l’organisateur\nde transport néerlandais NEWOLANDS, à qui est réservé le 10ème tracteur à temps plein.\nLa conductrice, affectée à ce 10ème véhicule, habite au sud de Paris, à Étampes (F-91), et stationne\nl’ensemble routier à proximité de son domicile en fin de semaine.\nQUESTION 1 (3 points) \nNEWOLANDS organise le relais suivant :\nEnvoi de marchandises en provenance de Eindhoven (Pays-Bas) et à destination de Cholet (F-49) : \n- chargement et trajet d’approche jusqu’à Lesquin (F-59) effectué par un transporteur allemand,\n- trajet final et livraison à Cholet (F-49) par vos soins.\na) Citez la réglementation relative au contrat de transport applicable à cette situation. Pour quelle raison ?\nb) Indiquez le délai dont dispose le destinataire français pour formuler des réserves en cas de dommages non\napparents au moment de la livraison.\nQUESTION 2 (4 points)\nL’entreprise NEWOLANDS a confié la semaine dernière la réalisation des services suivants de transport\npublic routier de marchandises, au véhicule fourni par l’entreprise SOL-ON :\n- d’abord 1 service international intégralement déchargé le lundi après-midi à Rennes (F-35),\n-   puis   6   services   au   cours   des   4   jours   suivants,   consistant   en   des   chargements   et   des   livraisons\nexclusivement en France.\na) La notion de cabotage routier s’applique-t-elle ici aux 6 services de transport réalisés en France ?  Pour\nquelle raison ?\nb) La réalisation de ces 6 services de transport en France par un transporteur allemand aurait-elle été légale ?\nPourquoi ?\nQUESTION 3 (21 points)\nEn vous référant aux informations de l’annexe 1, l’entreprise NEWOLANDS vous contacte afin de\ndéterminer la faisabilité d’une livraison lundi prochain chez un premier destinataire à Langon (F-33), puis\nd’une seconde livraison, prévue le lendemain à Marmande (F-47).\n\nLe transport de ces deux envois débutera vendredi 07/10/2022 à Liège (B) ;  la conductrice effectuera le\ntrajet depuis la frontière franco-belge jusqu’à Étampes, où elle prendra un temps de repos hebdomadaire.\nLa conductrice se dit prête à conduire intégralement de nuit, même si elle en a peu l’habitude. Elle pourrait\ndébuter son service hebdomadaire le dimanche, mais pas avant 22:30 pour des raisons d’organisation\nfamiliale.\nLa société SOL-ON a sensibilisé son personnel aux risques du travail de nuit.\na) Indiquez les périodes de début et de fin d’interdiction de circulation en fin de semaine en France pour les\nvéhicules qui transportent des marchandises générales.\nb) NEWOLANDS vous interroge pour connaître l’horaire de livraison envisageable au plus tôt, lundi, à\nLangon.\nDeux hypothèses sont alors retenues :\n- départ le dimanche à 22:30 et conduite d’un trait avec pause(s) requise(s),\n- départ le lundi à 01:00 et conduite d’un trait avec pause(s) requise(s).\nTravail demandé détaillé ci-dessous : \nÉtudiez la faisabilité des deux hypothèses, en indiquant pour chacune les 3 informations suivantes :\n- 1ère information demandée :  la durée de  temps de travail effectif journalier, consommée depuis\nÉtampes jusqu’à Langon, une fois la livraison achevée ;\n- 2ème information demandée : l’horaire estimé d’arrivée à Langon permettra-t-il de respecter l’horaire\nattendu par le destinataire (lundi à 11:00 au plus tard) ?\n- 3ème information demandée : l’horaire estimé optimum de fin de livraison à Langon.\nParmi les possibilités de présentation des deux hypothèses sur la copie de composition, une présentation\nsous forme chronologique est envisageable (indication des horaires, des natures et des durées des activités\njournalières de la conductrice).\nc) Sera t-il ensuite possible de se rapprocher, au cours de la journée du lundi, du second point de livraison à\nMarmande ? Quelle suite doit être envisagée par la conductrice ?\nd) Indiquez les inconvénients de chaque hypothèse.\ne) L’entreprise SOL-ON retient finalement la 1ère hypothèse. Pour quelles raisons à votre avis ? (Indiquez\nau moins 2 raisons)\nQUESTION 4 (3 points) \nEn cas de travail de nuit par du personnel conducteur routier salarié :\na) Précisez son incidence éventuelle sur la rémunération du conducteur.\nb) Quelle autre compensation est prévue en faveur du conducteur qui réalise au moins 50 heures mensuelles\nde travail de nuit ?\nc)  En  matière  de  droit  social,  de  quelle   priorité  bénéficie  le  conducteur  lorsqu’il  ressent  des   effets\ndéfavorables du travail de nuit, confirmés par la médecine du travail ?\n\nQUESTION 5 (4 points)\nPrésente sur le site de chargement d’une scierie située dans les Ardennes belges, la conductrice vous\ntéléphone au sujet du chargement d’un envoi de planches à livrer directement à Loudéac (F-22).\nEn effet, l’expéditeur l’a avertie auparavant qu’il allait être disponible dans les 5 minutes pour lui charger\nl’envoi constitué de 30 tonnes de planches.\nLa conductrice a-t-elle eu raison de réagir en rendant compte sans délai à l’entreprise SOL-ON ? Pour\nquelles raisons ?\nQUESTION 6 (11 points)\nÁ l’aide de l’annexe 2, sur la base des paramètres connus au 01/10/2022 : déterminez le coût de revient\ntotal annuel, puis journalier du véhicule à moteur dédié à l’activité de traction, en détaillant vos calculs\n(arrondir à 2 chiffres après la virgule).\nQUESTION 7 (4 points) \nLe contrat de traction avec le client NEWOLANDS a été conclu début janvier 2022, en retenant d’un\ncommun accord un dispositif d’indexation du carburant, basé sur la variation mensuelle d’indices de suivi\ndes coûts d’achat du gazole.\nCe mécanisme se traduit par l’utilisation par la société SOL-ON, d’un \"pied de facture d’indexation du\ncarburant\" inséré dans ses factures de vente des prestations de traction.\na) Citez un enjeu en matière de gestion financière de toute entreprise de transport routier, sur lequel porte\nl’application du \"pied de facture d’indexation du carburant\".\nb) Pour les contrats de transport soumis au droit français, le client est-il en droit de refuser à son fournisseur\ntransporteur routier, le bénéfice du dispositif d’indexation du carburant, lorsque le coût d’achat du carburant\naugmente entre le jour de la commande du transport et le jour de réalisation du transport ?\nc) Si le coût d’achat du carburant diminue significativement de plusieurs dizaines de centimes par litre, et en\nl’absence de clauses contraires prévues au contrat de transport, quel en sera l’effet sur la facture de vente\ndes prestations de transport routier ?\nd) Quel est l’organisme de référence qui développe et met à disposition les informations et les outils\nnécessaires à la mise en place du \"pied de facture d’indexation du carburant\" ?\n\nANNEXE 1 - PROBLÈME 1\nÉtude de faisabilité des deux livraisons à réaliser en début de semaine prochaine\nDurée prise de service\nen début de semaine\nDurée estimée\ntemps de conduite\nDurée estimée\ntemps de pause\nTrajet Etampes –\nLangon\n15 mn\n08h45 livraison achevée\n(*)\n1 heure\nTrajet Langon -\nMarmande\n50 mn\nHoraires attendus de\nlivraison\nHoraires d’ouverture du\ndestinataire\nDurée estimée du\ndéchargement\n1ère livraison\nà Langon\nLundi 10 octobre, à 11:00\nau plus tard\nLundi – Vendredi :\n08:30 – 17:45\n1 heure et sans attente\n2nde livraison\nà Marmande\nMardi 11 octobre dans la\njournée\nÀ partir de 8:0030 mn au plus\n(*) dont 5 minutes de marge pour sortir l’ensemble routier de l’enceinte du destinataire, avec parking public \nà proximité si nécessaire.\nEnvironnement réglementaire \n- Réglementation sociale européenne (RSE)\nUne règle générale prévoit la durée maximale du temps de conduite journalière (9 heures), avec possibilité \nde conduite de 10 heures, deux fois par semaine.\n- Droit social applicable aux conducteurs routiers salariés et prévu par le Code des transports\nLes règles spécifiques au travail de nuit concernent notamment toute période de travail réalisée entre 24:00\net 05:00.\n\nANNEXE 2 - PROBLÈME 1\nParamètres d’exploitation connus ou prévisionnels au 01/10/2022, concernant l’exploitation du\ntracteur routier dédié à l’année au client NEWOLANDS \n(toutes les données suivantes sont en HT)\nVéhicule utilisé exclusivement durant 45 semaines, soit 11 mois par an ou 225 jours, avec la conductrice\nattitrée.\nLe reste du temps correspond aux périodes de congés et de non-activité de la conductrice et du véhicule.\nKilométrage hebdomadaire parcouru estimé à 2 560 kilomètres\nCoûts variables\n- Carburant : consommation de 30,5 litres/100 km à un coût de 1,50 € après remboursement partiel de la\ntaxe intérieure sur la consommation des produits énergétiques (TICPE)\n- Ad-blue : 5 litres/100 km à un coût de 0,70 €/litre\n- Maintenance : 0,10 €/km\n- Péages : 7 000 €/an\nCoûts fixes \n- Coûts de personnel :\n- taux horaire de 11,35 €/heure\n- salaire : 200 heures payées sur 11 mois, dont 34,33 heures d’équivalence à + 25 %\net 14 heures supplémentaires à + 50 %\n- Le salaire mensuel est maintenu à 200 heures lors des périodes de congés.\n- charges sociales patronales annuelles estimées à 11 000 €\n- frais de déplacement - estimation pour chaque semaine :\n3 jours d’indemnité de grand déplacement à 58, 42 € + 1 repas à 13, 92 €, et 1 jour passé hors de\nFrance qui ouvre droit à majoration de l’indemnité de grand déplacement de 18 %\n- Coût annuel de détention du tracteur routier de 7 314,29 €, avec une utilisation envisagée durant 7 ans,\npour ce véhicule de seconde main relativement récent financé par crédit-bail\n- Autres coûts fixes annuels liés au véhicule (assurances, taxes, contrôles techniques, etc.) : 2 900 €\n- Autres coûts fixes annuels de structure : 52 000 € à répartir sur les 10 ensembles routiers exploités par\nl’entreprise SOL-ON",
+      "corrected_text": "Réponse 1 – problème 1 :  \na) La réglementation est la Convention Marchandises Route (= CMR)  \nLa raison est que, indépendamment des modalités techniques de réalisation, cela reste un transport routier \ninternational de bout en bout  \nb) Le délai dont dispose le destinataire français pour formuler des réserves en cas de dommage non apparent \nau moment de la livraison est de 7 jours ) (dimanche et jours fériés non compris). \n \nRéponse 2 – problème 1 :  \na) NON la notion de cabotage routier ne s’applique pas ici aux 6 services de transport réalisés en France.   \nLa raison est que ces 6 services transports ont été réalisés en France par un transporteur également établi \nen France (autre formulation possible : transporteur national, résident. La société SOL-ON a ainsi réalisé \ndes opérations de transport intérieur et non pas des opérations de cabotage)   \nb) NON la situation n’aurait pas été conforme si à la place de la société SOL-ON, un transporteur allemand \navait réalisé ces 6 services de transport en France, car il y aurait eu dépassement de la limite maximale de \n3 opérations successives de cabotage routier  en France après y avoir déchargé un transport \ninternational (ici, 6 opérations successives de cabotage en France). \n \nRéponse 3 – problème 1 :  \na) Les périodes de début et de fin d’interdiction de circulation en fin de semaine en France pour les \nvéhicules qui transportent des marchandises générales sont : \n - début d’interdiction de circulation le samedi 22:00  \n - fin d’interdiction de circulation le dimanche 22:00  \n \nb) Simulations pour faisabilité livraison au plus tôt à Langon : \n1ère hypothèse : si départ le dimanche à 22:30, et conduite d’un trait  avec pause(s) requise(s) : \n- départ Etampes 22:30 \n- prise de service 00h15 + conduite journalière 08h45 + pause 01h00 \n- temps de travail effectif journalier (durée consommée entre Etampes et Langon, une fois la livraison \nachevée) : 00h15 prise de service + 08h45 conduite + 01h00 déchargement = 10h00  \n- horaire estimé d’arrivée au plus tôt le lundi à Langon :  08:30  \nOUI, cet horaire permet de respecter l’horaire attendu maximal de livraison. \n- horaire estimé optimum de fin de livraison à Langon :  09:30   \n(heure d’arrivée 08:30 + 01h00 de déchargement) \n \n \n \n \n \n \n\n2nde hypothèse : si départ le lundi à 01:00 :   \n- départ Etampes 01:00 \n- prise de service 00h15 + conduite journalière 08h45 + pause 01h00 \n- temps de travail effectif journalier (durée consommée entre Etampes et Langon, une fois la livraison \nachevée) : 00h15 prise de service + 08h45 conduite + 01h00 déchargement = 10h00   \n- horaire estimé d’arrivée au plus tôt le lundi à Langon :  11:00   \nOUI, cet horaire permet de respecter l’horaire maximal de livraison. \n- horaire estimé  optimum de fin de livraison à Langon :  12:00   \n(heure d’arrivée 11:00 + 01h00 de déchargement) \n \nc) Pas possible ensuite de se rapprocher du 2nd point de livraison à Marmande, pour les 2 hypothèses  \nEn effet : \n - en situation de travail de nuit (la conductrice a travaillé entre 22:30 et 05:00 pour la 1ère hypothèse \net  entre 01:00 et 05:00 pour la 2ème hypothèse), la conséquence est que le temps de travail effectif \n journalier est alors limité à 10h00  \n - la durée maximale du temps de temps de travail effectif journalier sera atteinte, une fois la \n livraison  effectuée à Langon, pour les 2 hypothèses. \n \nSuite à envisager par la conductrice : repos journalier à prendre sur place à Langon  \n \nCommentaire pour les correcteurs - discernement de la règle la plus restrictive applicable entre TTE (temps de travail \neffectif) et conduite journalière : \nl'hypothèse de se rapprocher du 2nd point de livraison à Marmande le lundi générerait une durée excessive de temps de \ntravail effectif (TTE), car la limite maximale de 10 heures  de TTE a été atteinte à Langon, une fois la livraison achevée.   \nA  contrario,  sous  le  seul  aspect  de  la  réglementation  sociale  européenne  (RSE),  la  durée  de  conduite  journalière \nnécessaire entre Etampes et Marmande via Langon (09h25 = 08h45 jusqu'à  Langon + 00h50 de conduite jusqu'à \nMarmande) ne dépasserait pas la limite maximale de 10h00 de conduite journalière. \n \nd) Inconvénients de chaque hypothèse : \n - inconvénients des 2 hypothèses : \n  - circulation de nuit (08h45 de temps de conduite), alors que la conductrice y est peu  \n   habituée. \n  - Enjeu de sécurité routière et de sécurité au travail,  \n - inconvénient de la 1ère hypothèse :   arrêt prolongé à Langon (lié à l’exigence de prise d’un temps \nde repos  journalier), durée  de  cet  arrêt  plus  longue (environ  une  demi-journée)  que pour  la  2nde \n hypothèse : \n   - 1ère hypothèse : début du repos journalier le lundi à partir de 09:30,   \n   \n   - 2nde hypothèse : début du repos journalier le lundi à partir de 12:00, \n   sachant que la livraison à Marmande ne peut se faire que le mardi à partir de 08:00. \nCe temps d’arrêt prolongé ne crée pas de valeur ajoutée : temps improductif pour l’entreprise SOL-ON et \npour la conductrice. \n \n \n \n\n \n \ne) Raisons du choix de la 1ère hypothèse  : \n- pour des raisons commerciales de qualité de service : maintenir une petite marge de précaution  d’avance, \npour honorer l’horaire attendu d’arrivée à 11:00 au plus tard chez le 1\ner\n destinataire à Langon, \n- pour des raisons de sécurité routière, notamment  pour couvrir les aléas possibles et les retards liés \n(circulation, petit problème technique, contrôle routier, ...), \n- pour des raisons de santé au travail : couvrir les aléas possibles (santé, stress, fatigue, somnolence), \npossibilité de prendre davantage de temps de pause ou de repos durant le trajet, \n- pour une raison d’encouragement salarial  - rétribution financière pour cet effort :  éventuelle prime \naccordée au conducteur en cas de départ le dimanche soir. \nAutre réponse à l’appréciation des correcteurs. \n \n \nRéponse 4 – problème 1 :  \na) Les heures de nuit ont l’incidence suivante sur la rémunération du conducteur : \nindemnisation supplémentaire - prime de chaque heure de nuit à hauteur de 20 % du taux horaire de base  \nb) Une autre compensation est prévue en plus de la compensation financière, pour les conducteurs  qui \neffectuent au moins 50 heures mensuelles de travail de nuit :  repos compensateur   \nc) Le conducteur salarié qui ressent des effets défavorables du travail de nuit sur sa santé, confirmés par la \nmédecine du travail, bénéficie de la priorité suivante : \nreclassement / repositionnement pour occuper ou reprendre un poste de jour dans le même établissement \npour l’attribution d’un emploi correspondant à sa catégorie professionnelle ou un emploi équivalent  \n \n \nRéponse 5 – problème 1 :  \nOUI la conductrice a eu raison de réagir sans délai en rendant compte à l’entreprise SOL-ON. \nLa raison est que le poids annoncé du chargement revient à constituer un ensemble dont le poids réel serait \nsupérieur à 40 tonnes (autre formulation possible de la réponse : poids réel d’au moins 44 tonnes) pour un \ntransport international  \nLe problème est qu’une fois chargé, l’ensemble routier circulerait en surcharge administrative  \nRègle pour un transport international routier au sein de l’Union européenne à l’aide d’un ensemble routier \nconventionnel d’au moins 5 essieux, le poids maximal autorisé est limité à 40 tonnes. \nRappel du contexte :  le contrat de traction conclu avec le client NEWOLANDS ne fait pas disparaître le lien \nde subordination entre la conductrice et son employeur la société SOL-ON. Il était donc normal que la \nconductrice rende compte de la situation à son employeur. \n \nRéponse 6 – problème 1 :  \na) Coût de revient total annuel, puis kilométrique du véhicule à moteur dédié à l’activité de traction : \nNota-bene :  les 2 présentations suivantes du corrigé sont au choix des correcteurs. \n \n Présentation n°1 : \n- Kilométrage annuel de cet ensemble routier : 2 560 km x 45 semaines = 115 200 km  \n \n\n \n \nCoûts variables : \n- carburant :  115 200 km x 30,50 l/100 = 35 136 litres x 1,50 € = 52 704 € - Ad-blue : 115 200 km x 5 l/100 \nx 0,70 € =  4 032 €  \n- maintenance :  115 200 km x 0,10 € =  11 520 €  \n- péages :  7 000 € \nTotal des charges variables :  75 256 € \n \nCoûts fixes : \nCoûts du personnel : \n- salaire : \n - 151,67 heures x 11,35 € x 12 mois  =  20 657,45 €   \n - heures d’équivalence : 34,33 heures x 11,35 € x 1,25 x 12 mois  =  5 844,68 €   \n - heures supplémentaires : 14 heures x 11,35 € x 1,50 x 12 mois  =  2 860,20 €   \n- charges sociales patronales :  11 000 € \n- frais de déplacement :  ((national = 3 jours d’indemnités de grand déplacement x 58€42 + 1 repas 13€92) \n+(international = 1 jour d’indemnités de grand déplacement x 58€42 x 1,18 de majoration) x 45 semaines = \n11 615,40 € ) \n(Autre résultat possible inférieur de 20 centimes, lié à un calcul intermédiaire sans arrondi : 11 615,20 €) \n(Total des coûts de personnel : 51 977,73 €)   \n(Autre résultat possible inférieur de 19 centimes, lié à un calcul intermédiaire sans arrondi : 51 977,54 €) \n \nCoûts fixes du véhicule : \n- coût de détention du tracteur routier : 7 314,29 € \n- Autres coûts fixes annuels liés au véhicule (assurances, taxes, contrôles techniques, etc.) = 2 900 € \n- Autres coûts fixes annuels de structure : 52 000 € / 10 ensembles routiers = 5 200 €  \nTotal des coûts fixes : 67 392,02 €   \n(Autre résultat possible inférieur de 20 centimes, lié à un calcul intermédiaire sans arrondi : 67 391,82 €) \n \nCoût de revient total annuel du véhicule à moteur : 75 256 € + 67 392,02 € = 142 648,02 €  \n(Autre résultat possible inférieur de 20 centimes, lié à un calcul intermédiaire sans arrondi : \n 75 256 € + 67 391,82 € = 142 647,82 € ) \n \nCoût de revient journalier du véhicule à moteur :  142 648,02 € / 225 jours = 633,99 €  \n(Autre présentation possible liée à un calcul intermédiaire sans arrondi, mais résultat final identique : \n 142 647,82 €/ 225 jours = 633,99 €) \n \n \n \n \n \n\nPrésentation n°2 : \ndonnées de base  \n     \n225 jours  \n  \ntotal \nkilomètres  \n2560 km hebdo 45 semaines  115200  \n \n      \nconsommation GZL 30,5  \n    \nConsommation AD blue 5  \n    \n       \ncoûts variables UO coût à L'UO nombre d'UO  \n  \ncarburant LITRE 1,5 35136  52 704,00 €  \nad blue litre 0,7 5760  4 032,00 €  \nmaintenance km 0,1 115200  11 520,00 €  \npéages an 7000  \n \n7 000,00 €  \nsous total 1  \n   \n75 256,00 €  \ncoûts fixes UO coût à L'UO nombre d'UO  \n  \ncoûts personnels heure 11,35 €  \n   \nheures normales heure 11,35 € 1820,04  20 657,45 €  \nheures supp à 25 % heure 14,19 € 411,96  5 844,68 €  \nheures supp à 50 % heure 17,03 € 168  2 860,20 €  \ncharges patronales an 11 000,00 €  \n \n11 000,00 €  \nsous total salaire chargé  \n   \n40 362,34 €  \nfrais déplacement  \n     \nrepas semaine 13,92 € 45  626,40 €  \nind grand deplact semaine 58,42 € 135  7 886,70 €  \netranger semaine 68,94 € 45  3 102,30 €  \nsous total deplact \n! autre résultat possible 11 615,20 € (détail : cf page précédente) \n11 615,40 €  \nss total personnel \n! autre résultat possible 51 977,54 € (détail : cf page précédente) \n51 977,73 €  \n       \nmatériel UO coût à L'UO nombre d'UO  \n  \ndétention VH an 7 314,29 € 1  7 314,29 €  \nautres coûts fixes an 2900 1  2 900,00 €  \nss total matériel  \n   \n10 214,29 €  \n       \ncoûts de structure UO coût à L'UO nombre d'UO  \n  \nautres coûts 10 VH 52000 0,1  5 200,00 €  \n \n      \ncharges variables  \n   \n75 256,00 € 0,65 € \ncharges fixes  \n   \n67 392,02 € 0,58 € \ntotal \n! autre résultat possible 142 647,82 € (détail : cf page précédente) \n142 648,02 €  \ncoût de revient \nkilométrique  \n   \n1,24 €  \n       \n   \nformule \nmonôme  633,99 €  \n \n\n \n \n \n \nRéponse 7 – problème 1 :  \na) L’enjeu suivant en matière de gestion financière de toute entreprise de transport routier peut être cité, portant sur \nl’application du pied de facture d’indexation du carburant : \nune réponse de parmi les suivantes : \n-  cela ne rapporte pas de marge supplémentaire – ce n’est qu’un mécanisme de rééquilibrage des \ncoûts \n -  maintien de la marge / résultat bénéficiaire ou déficitaire / profit ou perte  \n -  maintien de la rentabilité \n -  pérennité - viabilité – survie de la société, alors que le montant des charges de carburant  \n  augmente (hausse du prix de vente du carburant à la pompe ou à la cuve) \n \nb) NON  le client ne peut pas refuser à son fournisseur transporteur routier, le bénéfice du dispositif \nd’indexation du carburant, pour les contrats de transport soumis au droit français. \n \nc) Dans l’hypothèse où le coût d’achat du carburant diminue, et en l’absence de clauses contraires prévues \nau contrat de transport, l’effet sur la facture de vente des prestations de transport en sera le suivant : \nune réponse parmi les suivantes :  \n - montant négatif du pied de facture d’indexation du carburant, \n - minoration du prix de vente. \n - le client bénéficie d’une réduction du montant sur sa facture d’achat des prestations de transport. \n \nd) Le Comité national routier ou CNR (1 pt) est l’organisme de référence qui développe et met à disposition \nles informations et les outils nécessaires à la mise en place du pied de facture d’indexation du carburant."
+    },
+    {
+      "number": 2,
+      "title": "PROBLÈME 2 (50 points)",
+      "subject_text": "L’étude de cas suivante porte sur l’analyse des données financières de la SARL TOUTFRET (gérant : M. \nFrets) pour les années 2020 et 2021. \nHistorique de la SARL TOUTFRET : \nPériodes 20082008 - 2019202020212022\nÉvénements \nCréation de la\nSARL\nTOUTFRET\nAnnées\nprospères\nForte croissance\nde l’activité pour\nle compte du\nclient principal\nPerte du client\nprincipal\nActivité\nchaotique\nInformations\n- Capital \nsocial de  \n9 000 €\n- Inscription au \nregistre du \ncommerce et \ndes sociétés,\net au registre \nélectronique \ndes entreprises \nde transport par\nroute\n- Conduite \nd’un \nensemble \nroutier par M.\nFrets\n- Constitution\nde réserves \nd’une dizaine \nde milliers \nd’euros\n- Doublement des\nmoyens de \nfonctionnement\navec l’achat d’un \n2nd ensemble \nroutier\net embauche d’un\nconducteur \nroutier salarié\n- Recours à la \nsous-traitance \ntransport\n- Licenciement\ndu salarié\n- Vente de \nl’ensemble \nroutier le plus \nancien\n- Délais de \npaiement \nrespectés par la\nclientèle \nhistorique\nM. Frets \ns’interroge sur \nson avenir \nprofessionnel.\nEn vous référant à l’annexe 3 et en veillant à bien détailler vos calculs : \nQUESTION 1 (4 points)\na) Déterminez le taux de sous-traitance de l’activité de transport public routier de marchandises de la société\nTOUTFRET au cours de l’année 2020.\nb) Si le taux de sous-traitance avait doublé au cours de l’année 2020, cette pratique aurait-elle été conforme\nà la réglementation des transports ?\nQUESTION 2 (3 points) \nDéterminez les capacités financières exigibles et disponibles pour les 2 situations suivantes : exploitation \nde 2 ensembles routiers en 2020 puis d’un seul en 2021.\nLa société TOUTFRET était-elle en droit d’exploiter le 2nd ensemble routier en 2020 ?\nQUESTION 3  (9 points) :\nLa SARL TOUTFRET a pour associés son fondateur M. Frets, qui détient 60 % des parts sociales, et sa\ncompagne, qui en possède 40 %.\na) Depuis la création de cette SARL, M. Frets en est le gérant unique et le gestionnaire de transport. Bien\noccupée par son emploi salarié dans une clinique, sa compagne n’a pas la possibilité de consacrer du temps\nde travail à la société familiale.\nPrécisez le statut social de M. Frets au sein de cette SARL.\n\nb) En l'absence d’indication sur les pouvoirs de M. Frets dans les statuts de la société TOUTFRET, ce\ndernier   peut-il   détenir   les   pleins   pouvoirs   pour   engager   sa   société,   notamment   dans   des   dépenses\nd’investissement en matériel de transport par exemple ?\nLe cas échéant, indiquez les éléments qui peuvent être mis en place pour limiter les pleins pouvoirs.\nc) Pour la rétribution de son activité estimée à un peu plus de 200 heures par mois, M. Frets a fait le choix\nd’une indemnisation forfaitaire mensuelle sur 12 mois, qui couvre également ses périodes de congés\nannuels.\nÀ l’aide de l’annexe 3, déterminez le montant de son indemnisation forfaitaire mensuelle pour l’année\n2021, en retenant comme volume théorique d’activité 200 heures mensuelles.\nEn l’état sur le seul aspect des revenus du travail, est-ce plus intéressant pour M. Frets d’être conducteur\nroutier en tant que travailleur indépendant au sein de son entreprise, ou bien en tant que salarié dans une\nentreprise de transport avec un contrat de travail de 200 heures mensuelles ? Précisez votre réponse.\nd) Pour les années 2020 et 2021, M. Frets pouvait-il espérer des revenus supplémentaires pour rétribuer son\ninvestissement personnel ? Précisez votre réponse.\ne) En France et au sein de l’Union européenne, la durée de travail sur une semaine isolée des conducteurs\nroutiers travailleurs indépendants est-elle illimitée ou limitée, et à quelle durée ? Précisez votre réponse.\nQUESTION 4  (34 points) :   \nUne comparaison de la situation économique de TOUTFRET en 2020 et 2021 est envisagée afin de mieux\ncomprendre les impacts liés aux changements intervenus au cours de cette période.\nÀ l’aide de l’annexe 3 et en détaillant vos calculs : \na) Déterminez pour l’année 2020 :\n- le Fonds de Roulement Net Global (FRNG),\n- le Besoin en Fonds de Roulement (BFR),\n- la Trésorerie Nette.\nb)   Déterminez   pour   l’année   2020,   en   opérant   les   retraitements   éventuels   nécessaires,   les   soldes\nintermédiaires de gestion (SIG) suivants :\n- le chiffre d’affaires net transport,\n- le résultat d’exploitation,\n- le résultat net comptable.\nc) Analysez le bilan fonctionnel et les SIG des 2 années 2020 et 2021 :\n- Commentez chaque année, notamment au regard des taux de marge du résultat d’exploitation et du résultat\nnet par rapport au chiffre d’affaires net transport.\n- Donnez votre avis général sur la situation et la rentabilité de cette société.\n- Qu’aurait dû faire M. Frets pour que sa société présente un bilan fonctionnel équilibré ? \n\nANNEXE 3 - PROBLÈME 2\nBILAN simplifié (montants exprimés en €)\nACTIFAnnée 2021\nAnnée\n2020\nPASSIFAnnée 2021Année 2020\nImmobilisations incorporelles24 39024 390Capitaux propres\n Capital social9 0009 000\nImmobilisations corporelles\nInstallations techniques, matérielRéserve légale900900\nAutres immobilisations \ncorporelles\n179 158198 743Autres réserves58 66458 664\nImmobilisations financières1 4801 480Report à nouveau-11 125-2 222\nRésultat de l'exercice-16 364-8 903\nTOTAL actif immobilisé205 028224 613Total capitaux propres41 07557 439\nProvisions pour risques et charges\nActif circulantDettes\nStocks matières premières300504\nEmprunts et dettes auprès des \nétablissements de crédits  (1)\n161 768158 564\nCréances clients et comptes \nrattachés\n19 84924 741Fournisseurs et comptes rattachés11 85914 113\nAutres créancesDettes fiscales et sociales11 23823 291\n Disponibilités7633 549Dettes sur immobilisations\nCharges constatées d'avanceAutres dettes\nTOTAL actif circulant20 91228 794TOTAL dettes184 865195 968\nTOTAL ACTIF225 940253 407TOTAL PASSIF225 940253 407\n(1)  dont concours bancaires pour l’année 2021 :  650 €\nCOMPTE DE RÉSULTAT simplifié (montants exprimés en €)\nCHARGESAnnée 2021\nAnnée\n2020\nPRODUITSAnnée 2021Année 2020\nConsommations intermédiaires (2)127 155175 702Production vendue de services165 153237 655\nImpôts et taxes4 9386 569Produits exceptionnels1 41914 132\nRémunération du personnel15 39442 348\nCharges sociales12 37413 788\nDotations aux amortissements et \naux provisions\n19 58518 478\nCharges financières3 4904 151\nImpôts sur les bénéfices346\nTOTAL182 936261 382Total166 572251 787\n(2) dont sous-traitance transport :  25 000 € en 2020\nANALYSE DES DONNÉES de l’année 2021 (montants exprimés en €)\n Bilan fonctionnel- Fonds de Roulement Net Global (FRNG) :              - 2 835\n- Besoin en Fonds de Roulement (BFR :                    - 2 948\n- Trésorerie Nette (TN) :                                                  113\n Soldes intermédiaires de gestion (SIG) avec   \n retraitements éventuels :\n- chiffre d’affaires net transport :                              165 153\n- résultat d’exploitation :                                          - 14 293\n- résultat net comptable :                                          - 16 364",
+      "corrected_text": "Réponse 1 – problème 2 :  \n \na) Le taux de sous-traitance de l’activité de transport public routier de marchandises de la société \nTOUTFRET au cours de l’année 2020 est de 10,52 %  \n Calcul :   (25 000 / 237 655) x 100 = 10,52 % \n sous-traitance transport              25 000 € \n production vendue de services   237 655 € \n soit taux de sous-traitance de                10,52% \n \nb) NON le doublement du taux de sous-traitance n’était pas possible en 2020, pour les raisons suivantes, \ninscrites dans la réglementation des transports : \n- le taux de sous-traitance transport aurait été supérieur au taux de 15 % du chiffre d’affaires transport, qui \ncorrespond au seuil maximal de sous-traitance transport autorisée sans inscription au registre des \ncommissionnaires de transport,   \n- société non autorisée à exercer la profession de commissionnaire de transport   \nAutre formulation possible de la réponse : \n\n- elle n’est pas inscrite au registre des commissionnaires de transport.   \n \n \n \nRéponse 2 – problème 2 :  \nLes capacités financières (CAFI) de la société TOUTFRET étaient les suivantes : \n - en 2020, pour l’exploitation de 2 ensembles routiers : \n  - CAFI exigible :  14 000 € (ou autre réponse possible :  9 000  €  pour le 1\ner\n   \n ensemble routier + 5 000 € pour le 2nd ensemble routier)   \n  - CAFI disponible :  57 439 €  \n - en 2021, pour l’exploitation d’1 ensemble routier : \n  - CAFI exigible :  9 000 €  \n  - CAFI disponible :  41 075 €  \n \nOUI la société TOUTFRET était en droit d’exploiter le 2nd ensemble routier en 2020, la condition de \ncapacité financière étant largement respectée (14 000€ de capacité exigée pour 2 ensembles routiers et \n57 439€ de capitaux propres).  \n \nRéponse 3 – problème 2 :  \n \na) Statut social de M. FRETS au sein de cette S.a.r.l : \nUne réponse de parmi les deux suivantes :   \n- gérant majoritaire, \n- non salarié, travailleur indépendant \n \nb) OUI en l'absence de la détermination des pouvoirs de M. FRETS dans les statuts de la société \nTOUTFRET, ce statut de gérant majoritaire donne les pleins pouvoirs à M. FRETS. \n \nRéférence : donne prévue à l’article L221-4 du Code de commerce. \n \nLes éléments qui peuvent être mis en place pour limiter les pleins pouvoirs, sont (une réponse de parmi les \ndeux suivantes ) : \n- statuts  (autre formulation : rédaction de clauses dédiées dans les statuts), \n- assemblée générale extra-ordinaire (AGE) :    \n(autre formulation : les statuts peuvent prévoir l’autorisation préalable de l’AGE avant de procéder à des \ndépenses d’investissement).  \nc) Montant de l’indemnisation forfaitaire mensuelle de M. FRETS pour l’année 2021 : \n15 394 € / 12 mois = 1 282€83   \nNON l’emploi comme travailleur indépendant est moins intéressant qu’un emploi de conducteur routier \nsalarié, sur le seul aspect des revenus du travail.  \nEn effet, le montant des revenus perçus est ici bien inférieur à celui exigible pour un emploi salarié   \nPar exemple, chaque heure de travail est ici rémunérée 6€41 (= 1 283€33 / 200 heures), alors que le SMIC \nhoraire s’établit à un peu plus de 10€50 en 2022 (10€87 depuis le 01/05/2022, 10€57 jusqu’au 30/04/2022, \n10€25 en 2021 et 10€15 en 2020). \n \nd) NON M. FRETS ne pouvait pas espérer des revenus supplémentaires pour rétribuer son investissement \npersonnel.  \nEn effet, les 2 années 2020 et 2021 se caractérisent chacune par un résultat net déficitaire  \n(2020 :  - 8 903 €,  et 2021 :  - 16 364 €)   \n \ne) La durée de travail sur une semaine isolée des conducteurs routiers travailleurs indépendants est limitée \nen France et au sein de l’Union européenne à 60 heures  \n\n \nRéponse 4 – problème 2  \na) Etude du bilan fonctionnel pour l’année 2020 : \n \n- le Fonds de Roulement Net Global (FRNG) : \n        (points de repère pour la correction \n          avec report de données de 2021 \n            mentionnées en annexe 3) \n \n Capitaux propres      41 075     \n   57 439   \n + dettes financières à long terme         + 161 768             + \n158 564   \n - concours bancaires                        - 650      \n - actif immobilisé net            - 205 028              - \n224 613   \n                 ------------                      \n   ----------- \n= FRNG                       - 2 835                \n       - 8 610   \n \n- le Besoin en Fonds de Roulement (BFR) :  \n Stocks                     300           \n + créances clients et autres créances    + 19 849                 + \n24 741  \n - dettes fournisseurs                   - 11 859                 - \n14 113   \n - dettes  fiscales et sociales               - 11 238                     - \n23 291   \n                 ------------                                              \n----------- \n= BFR                       - 2 948                \n     - 12 159   \n \n- la Trésorerie Nette. \n Disponibilités               763         \n    3 549   \n - concours bancaires               - 650       \n                 ------------                       \n    ----------- \n  = TN              113                 \n    3 549   \n \n \n \n \n\n \n \nVérification TN =  FRNG - BFR \n                        - 2 835    \n        - 8 610 \n          - (-2 948)         \n       - (-12 159) \n              \n     \nb) Etude des Soldes intermédiaires de gestion demandés pour l’année 2020 : \n           \nAnnée 2021        Année 2020 \n        \n \n- le chiffre d’affaires net transport :  \n Production vendue de services   165 153      \n  237 655   \n - sous-traitance transport (= retraitement)                             - \n25 000   \n (soit taux de sous-traitance transport             \n         10,52%)    \n                              ------------                     \n      ----------- \n= CA net transport :               165 153                       \n212 655  \n- le résultat d’exploitation : \n CA net transport                165 153                \n 212 655 \n - consommations intermédiaires           - 127 155               - \n175 702   \n + sous-traitance transport (= retraitement)                           + 25 000   \n - impôts et taxes                - 4 938           \n    - 6 569   \n - charges de personnel             - 27 768          \n       - 56 136   \n (Détail -  2021 : 15 394 + 12 374   /   2020 : 42 348 + 13 788)  \n - dotations amortissements et provisions  - 19 585              - 18 \n                     ------------                      \n      ----------- \n= résultat d’exploitation retraité :      - 14 293                - 19 230   \n - charges financières           - 3 490               \n   - 4 151   \n \n + produits exceptionnels       + 1 419              \n  + 14 132   \n - impôts sur les bénéfices                              \n        - 346   \n \n\n                       ------------                    \n     ----------- \n= résultat net comptable :                  - 16 364                 - 9 \n \nc) Commentaires du bilan fonctionnel :    \n- pour chaque année, la situation est déséquilibrée défavorablement pour l’entreprise \n - elle a un FRNG anormalement négatif : elle finance pour partie ses investissements à long \n terme avec des ressources financières à court terme  \n - le BFR est anormalement négatif  \n Il reste négatif la 2nde année, même s’il s’est réduit significativement. L’arrêt d’exploitation du 2nd \n ensemble routier a pu aider à la réduction de ce besoin  \n - la trésorerie affiche exceptionnellement un solde positif  \n malgré sa diminution la 2nde année. \n Le comportement de la clientèle historique a joué favorablement avec le respect des délais de \n paiement, même si cela n’a pas empêché la société TOUTFRET d’être à découvert en 2021 (650 € de \n concours bancaires)  \n \n \n \n \nCommentaires des SIG : \n- pour chaque année, la situation est déséquilibrée défavorablement pour l’entreprise \n - le résultat d’exploitation : \n  - est négatif au cours des 2 années  \n  - et de façon importante  \n  - taux de marge (= résultat d’exploitation / CA net transport) : \n   - 2020 :  - 9,04 %  (= - 19 230 / 212 655)  \n   - 2021 :   - 8,65 %  (= - 14 293 / 165 153)  \n - le résultat net :   \n  - est négatif au cours des 2 années  \n  - et de façon importante  \n  - et la réalisation d’un résultat exceptionnel (cession d’une immobilisation) a permis  de \n     réduire le résultat déficitaire de la 1ère année, \n  - taux de marge (= résultat net / CA net transport) : \n   - 2020 :  - 4,51 %  (= - 9 595 / 212 655)  \n   - 2021 :   - 9,91 %  (= - 16 364 / 165 153)  \n \n \n \n \n \n\n \n \n \n \nAvis général : \n - situation non pérenne aussi bien au niveau du bilan que du compte de résultat  \n - bilan :  urgence à financer des emplois stables par des ressources stables  \n - compte de résultat : \n l’activité réalisée avec 1 ou 2 ensembles routiers, n’a pas été rentable : déficitaire  \n Autre formulation possible de la réponse : \n Les taux de marge mettent en lumière une activité déficitaire de façon prononcée. \n Cette absence de rentabilité vient dégrader les ressources stables, et explique notamment le pourquoi \nd’un FRNG négatif. \n Situation déjà déficitaire en 2020 malgré des produits exceptionnels importants de 14 132 € générés \npar la cession de l’ensemble routier le plus ancien. \n Autre réponse à l’appréciation des correcteurs. \n \nActions nécessaires : \nM. FRETS aurait dû agir de la sorte pour que sa société dispose d’un bilan fonctionnel équilibré (une \nréponse de parmi les suivantes) : \n - assurer pleinement le financement des immobilisations avec des ressources stables.  \n Exemple d’action : effectuer un apport complémentaire en capital (2 possibilités : en \n numéraire ou en nature) afin d’augmenter le montant des capitaux propres,  \n - ne pas exploiter le 2nd ensemble routier, à défaut de disposer de suffisamment de ressources de \nfinancement stables.  \nAutre réponse à l’appréciation des correcteurs."
+    }
+  ]
+}

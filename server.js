@@ -912,6 +912,359 @@ function getAllFiles(dirPath) {
 }
 
 // ============================================================================
+// Admin Panel — Data & Routes
+// ============================================================================
+
+const USERS_JSON = path.join(__dirname, 'data', 'users.json');
+
+// Ensure data directory exists
+const DATA_DIR = path.join(__dirname, 'data');
+if (!fs.existsSync(DATA_DIR)) {
+  fs.mkdirSync(DATA_DIR, { recursive: true });
+}
+
+function readUsers() {
+  try {
+    if (!fs.existsSync(USERS_JSON)) return [];
+    const data = fs.readFileSync(USERS_JSON, 'utf-8');
+    return JSON.parse(data);
+  } catch (err) {
+    console.error('[ADMIN] Erreur lecture users.json :', err.message);
+    return [];
+  }
+}
+
+function saveUsers(users) {
+  fs.writeFileSync(USERS_JSON, JSON.stringify(users, null, 2), 'utf-8');
+}
+
+// Simple admin auth middleware (checks x-admin-token header)
+function adminAuth(req, res, next) {
+  const token = req.headers['x-admin-token'];
+  if (token === 'capa-admin-session-valid') {
+    return next();
+  }
+  return res.status(401).json({ error: 'Non autorisé. Veuillez vous connecter.' });
+}
+
+// --- Serve admin.html ---
+app.get('/admin', (_req, res) => {
+  res.sendFile(path.join(__dirname, 'admin.html'));
+});
+
+// --- Admin login ---
+app.post('/api/admin/login', (req, res) => {
+  const { username, password } = req.body;
+  if (username === 'admin' && password === 'CapaTransport2024!') {
+    return res.json({ success: true, token: 'capa-admin-session-valid' });
+  }
+  return res.status(401).json({ error: 'Identifiants incorrects.' });
+});
+
+// --- Dashboard stats ---
+app.get('/api/admin/stats', adminAuth, (_req, res) => {
+  const users = readUsers();
+  const totalUsers = users.length;
+  const activeUsers = users.filter(u => u.active).length;
+  const validatedPayments = users.filter(u => u.paymentStatus === 'validated').length;
+  const pendingPayments = users.filter(u => u.paymentStatus === 'pending').length;
+  const expiredPayments = users.filter(u => u.paymentStatus === 'expired').length;
+  const revenue = validatedPayments * 430;
+
+  // Registration over time (by month)
+  const registrationsByMonth = {};
+  users.forEach(u => {
+    const month = u.registrationDate.substring(0, 7); // YYYY-MM
+    registrationsByMonth[month] = (registrationsByMonth[month] || 0) + 1;
+  });
+
+  // Recent activity (last 10 users sorted by lastLogin)
+  const recentActivity = [...users]
+    .filter(u => u.lastLogin)
+    .sort((a, b) => new Date(b.lastLogin) - new Date(a.lastLogin))
+    .slice(0, 10)
+    .map(u => ({
+      id: u.id,
+      name: `${u.firstName} ${u.lastName}`,
+      lastLogin: u.lastLogin,
+      paymentStatus: u.paymentStatus
+    }));
+
+  res.json({
+    success: true,
+    stats: {
+      totalUsers,
+      activeUsers,
+      validatedPayments,
+      pendingPayments,
+      expiredPayments,
+      revenue,
+      registrationsByMonth,
+      recentActivity
+    }
+  });
+});
+
+// --- List users (with search & pagination) ---
+app.get('/api/admin/users', adminAuth, (req, res) => {
+  let users = readUsers();
+  const { search, status, page = 1, limit = 50 } = req.query;
+
+  if (search) {
+    const s = search.toLowerCase();
+    users = users.filter(u =>
+      u.firstName.toLowerCase().includes(s) ||
+      u.lastName.toLowerCase().includes(s) ||
+      u.email.toLowerCase().includes(s)
+    );
+  }
+
+  if (status) {
+    users = users.filter(u => u.paymentStatus === status);
+  }
+
+  const total = users.length;
+  const offset = (parseInt(page) - 1) * parseInt(limit);
+  const paginated = users.slice(offset, offset + parseInt(limit));
+
+  res.json({
+    success: true,
+    total,
+    page: parseInt(page),
+    limit: parseInt(limit),
+    users: paginated
+  });
+});
+
+// --- Single user detail ---
+app.get('/api/admin/users/:id', adminAuth, (req, res) => {
+  const users = readUsers();
+  const user = users.find(u => u.id === req.params.id);
+  if (!user) return res.status(404).json({ error: 'Utilisateur non trouvé.' });
+  res.json({ success: true, user });
+});
+
+// --- Activate user ---
+app.post('/api/admin/users/:id/activate', adminAuth, (req, res) => {
+  const users = readUsers();
+  const user = users.find(u => u.id === req.params.id);
+  if (!user) return res.status(404).json({ error: 'Utilisateur non trouvé.' });
+  user.active = true;
+  saveUsers(users);
+  res.json({ success: true, message: `${user.firstName} ${user.lastName} activé.` });
+});
+
+// --- Deactivate user ---
+app.post('/api/admin/users/:id/deactivate', adminAuth, (req, res) => {
+  const users = readUsers();
+  const user = users.find(u => u.id === req.params.id);
+  if (!user) return res.status(404).json({ error: 'Utilisateur non trouvé.' });
+  user.active = false;
+  saveUsers(users);
+  res.json({ success: true, message: `${user.firstName} ${user.lastName} désactivé.` });
+});
+
+// --- Validate payment ---
+app.post('/api/admin/users/:id/validate-payment', adminAuth, (req, res) => {
+  const users = readUsers();
+  const user = users.find(u => u.id === req.params.id);
+  if (!user) return res.status(404).json({ error: 'Utilisateur non trouvé.' });
+  user.paymentStatus = 'validated';
+  user.paymentDate = new Date().toISOString();
+  user.paymentMethod = user.paymentMethod || 'manuel';
+  saveUsers(users);
+  res.json({ success: true, message: `Paiement validé pour ${user.firstName} ${user.lastName}.` });
+});
+
+// --- Reject payment ---
+app.post('/api/admin/users/:id/reject-payment', adminAuth, (req, res) => {
+  const users = readUsers();
+  const user = users.find(u => u.id === req.params.id);
+  if (!user) return res.status(404).json({ error: 'Utilisateur non trouvé.' });
+  user.paymentStatus = 'expired';
+  user.paymentDate = null;
+  saveUsers(users);
+  res.json({ success: true, message: `Paiement rejeté pour ${user.firstName} ${user.lastName}.` });
+});
+
+// --- Delete user ---
+app.delete('/api/admin/users/:id', adminAuth, (req, res) => {
+  let users = readUsers();
+  const idx = users.findIndex(u => u.id === req.params.id);
+  if (idx === -1) return res.status(404).json({ error: 'Utilisateur non trouvé.' });
+  const deleted = users.splice(idx, 1)[0];
+  saveUsers(users);
+  res.json({ success: true, message: `${deleted.firstName} ${deleted.lastName} supprimé.` });
+});
+
+// --- List payments ---
+app.get('/api/admin/payments', adminAuth, (_req, res) => {
+  const users = readUsers();
+  const payments = users.map(u => ({
+    userId: u.id,
+    userName: `${u.firstName} ${u.lastName}`,
+    email: u.email,
+    amount: u.paymentStatus === 'validated' ? 430 : 0,
+    status: u.paymentStatus,
+    date: u.paymentDate,
+    method: u.paymentMethod,
+    registrationDate: u.registrationDate
+  }));
+  res.json({ success: true, payments });
+});
+
+// --- Analytics ---
+app.get('/api/admin/analytics', adminAuth, (_req, res) => {
+  const users = readUsers();
+
+  const totalSessions = users.reduce((s, u) => s + (u.sessions || 0), 0);
+  const totalTime = users.reduce((s, u) => s + (u.timeSpentMinutes || 0), 0);
+  const totalPages = users.reduce((s, u) => s + (u.pagesVisited || 0), 0);
+  const totalQcm = users.reduce((s, u) => s + (u.qcmAttempts || 0), 0);
+  const totalCorrect = users.reduce((s, u) => s + (u.qcmCorrect || 0), 0);
+
+  // Average scores per bloc
+  const blocScores = { bloc1: [], bloc2: [], bloc3: [], bloc4: [] };
+  users.forEach(u => {
+    if (u.examScores) {
+      for (const [bloc, score] of Object.entries(u.examScores)) {
+        if (score !== null && score !== undefined) blocScores[bloc].push(score);
+      }
+    }
+  });
+  const avgScores = {};
+  for (const [bloc, scores] of Object.entries(blocScores)) {
+    avgScores[bloc] = scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
+  }
+
+  // Most active users
+  const mostActive = [...users]
+    .sort((a, b) => (b.sessions || 0) - (a.sessions || 0))
+    .slice(0, 10)
+    .map(u => ({ id: u.id, name: `${u.firstName} ${u.lastName}`, sessions: u.sessions, timeSpent: u.timeSpentMinutes }));
+
+  // Bloc popularity
+  const blocPopularity = { bloc1: 0, bloc2: 0, bloc3: 0, bloc4: 0 };
+  users.forEach(u => {
+    (u.favoriteBlocs || []).forEach(b => {
+      if (blocPopularity[b] !== undefined) blocPopularity[b]++;
+    });
+  });
+
+  res.json({
+    success: true,
+    analytics: {
+      totalSessions,
+      totalTimeMinutes: totalTime,
+      totalPages,
+      totalQcmAttempts: totalQcm,
+      totalQcmCorrect: totalCorrect,
+      qcmSuccessRate: totalQcm > 0 ? Math.round((totalCorrect / totalQcm) * 100) : 0,
+      avgScoresPerBloc: avgScores,
+      mostActiveUsers: mostActive,
+      blocPopularity
+    }
+  });
+});
+
+// --- Content stats ---
+app.get('/api/admin/content', adminAuth, (_req, res) => {
+  const documents = readDocuments();
+
+  const byCategory = {};
+  documents.forEach(d => {
+    const cat = d.category || 'general';
+    if (!byCategory[cat]) byCategory[cat] = { count: 0, totalSize: 0 };
+    byCategory[cat].count++;
+    byCategory[cat].totalSize += d.size || 0;
+  });
+
+  // Check annales files on disk
+  const annalesDir = path.join(__dirname, 'data');
+  let annalesFiles = [];
+  try {
+    annalesFiles = fs.readdirSync(annalesDir).filter(f => f.endsWith('.txt'));
+  } catch (e) { /* ignore */ }
+
+  res.json({
+    success: true,
+    content: {
+      totalDocuments: documents.length,
+      byCategory,
+      annalesFiles: annalesFiles.length,
+      annalesDetail: annalesFiles
+    }
+  });
+});
+
+// ============================================================================
+// API : Annales (QCM + Problèmes)
+// ============================================================================
+
+// GET /api/annales — Liste toutes les annales disponibles
+app.get('/api/annales', (_req, res) => {
+  try {
+    const allFile = path.join(DATA_DIR, 'all_annales.json');
+    if (!fs.existsSync(allFile)) {
+      return res.json({ success: true, annales: [] });
+    }
+    const annales = JSON.parse(fs.readFileSync(allFile, 'utf-8'));
+    // Retourner un résumé léger (sans le texte complet des problèmes)
+    const summary = annales.map(a => ({
+      year: a.year,
+      session: a.session,
+      qcmCount: a.qcm.length,
+      answeredCount: a.qcm.filter(q => q.answer).length,
+      problemsCount: a.problems.length
+    }));
+    return res.json({ success: true, annales: summary });
+  } catch (err) {
+    console.error('[ERREUR ANNALES]', err.message);
+    return res.status(500).json({ error: 'Erreur lors du chargement des annales.' });
+  }
+});
+
+// GET /api/annales/:year — Détail d'une annale avec QCM et problèmes
+app.get('/api/annales/:year', (req, res) => {
+  try {
+    const year = req.params.year;
+    const filePath = path.join(DATA_DIR, `annales_${year}.json`);
+    if (!fs.existsSync(filePath)) {
+      return res.status(404).json({ error: `Annale ${year} non trouvée.` });
+    }
+    const annale = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    return res.json({ success: true, annale });
+  } catch (err) {
+    console.error('[ERREUR ANNALE]', err.message);
+    return res.status(500).json({ error: 'Erreur lors du chargement de l\'annale.' });
+  }
+});
+
+// GET /api/annales/:year/qcm — Uniquement les QCM d'une annale (pour l'entraînement)
+app.get('/api/annales/:year/qcm', (req, res) => {
+  try {
+    const year = req.params.year;
+    const filePath = path.join(DATA_DIR, `annales_${year}.json`);
+    if (!fs.existsSync(filePath)) {
+      return res.status(404).json({ error: `Annale ${year} non trouvée.` });
+    }
+    const annale = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    // En mode entraînement, ne pas envoyer les réponses
+    const hideAnswers = req.query.mode === 'exam';
+    const qcm = annale.qcm.map(q => {
+      if (hideAnswers) {
+        return { number: q.number, text: q.text, options: q.options };
+      }
+      return q;
+    });
+    return res.json({ success: true, year: annale.year, session: annale.session, qcm });
+  } catch (err) {
+    console.error('[ERREUR QCM]', err.message);
+    return res.status(500).json({ error: 'Erreur lors du chargement des QCM.' });
+  }
+});
+
+// ============================================================================
 // Gestion des erreurs Multer
 // ============================================================================
 

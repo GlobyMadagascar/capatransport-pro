@@ -1,0 +1,620 @@
+{
+  "year": 2021,
+  "session": "Session du 6 octobre 2021",
+  "qcm": [
+    {
+      "number": 1,
+      "text": "Les associés d'une SAS (société par actions simplifiée) ont signé leurs statuts le 13 janvier. L'inscrip- tion au RCS (registre du commerce et des sociétés) a été effectuée le 25 janvier. La publicité de la constitution de la société est parue dans un journal d'annonces légales le 30 janvier. L'activité de la société a débuté le 4 mars. A quelle date la société a-t-elle acquis la personnalité morale ?",
+      "options": {
+        "a": "le 13 janvier",
+        "b": "le 30 janvier",
+        "c": "le 25 janvier",
+        "d": "le 4 mars"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 2,
+      "text": "Un commerçant parisien confie à un transporteur lyonnais une expédition au départ de Lille et à desti- nation de Marseille. Le transporteur n'est pas payé et assigne son client en paiement. Le tribunal de commerce normalement compétent sera celui de :",
+      "options": {
+        "a": "Paris",
+        "b": "Lyon",
+        "c": "Lille",
+        "d": "Marseille"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 3,
+      "text": "Dans une SARL à associé unique, hors faute de gestion, le gérant associé unique est responsable :",
+      "options": {
+        "a": "de la totalité des dettes sociales",
+        "b": "des dettes sociales sur ses biens personnels",
+        "c": "des dettes sociales à concurrence de ses apports",
+        "d": "des dettes sociales à concurrence de son chiffre d'affaires annuel"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 4,
+      "text": "L'escompte d'une traite consiste à :",
+      "options": {
+        "a": "indiquer au dos de l'effet un nouveau bénéficiaire",
+        "b": "compter des frais d'agio en cas de non paiement",
+        "c": "obtenir la signature de sa banque pour confirmer la traite",
+        "d": "obtenir de sa banque une avance sur le montant de la traite"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 5,
+      "text": "Un chèque certifié est un chèque :",
+      "options": {
+        "a": "dont la provision est bloquée pendant le délai légal de présentation",
+        "b": "visé par le banquier",
+        "c": "pour lequel le porteur a obtenu de la banque un certificat de non-paiement",
+        "d": "dont le banquier atteste que la provision, non bloquée, existe au moment de la certification"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 6,
+      "text": "Sur les documents commerciaux d'une entreprise, quelle mention est facultative :",
+      "options": {
+        "a": "le numéro SIRET délivré par l'INSEE (Institut national de la statistique et des études écono- miques)",
+        "b": "la mention RCS (Registre du commerce et des sociétés)",
+        "c": "le lieu du siège social",
+        "d": "le code NAF (Nomenclature des activités françaises)"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 7,
+      "text": "En transport national, un destinataire constate des avaries sur la marchandise le jour de la livraison. Dans les 3 jours, il émet des réserves au transporteur. Ce dernier ne donnant pas suite à cette réclama- tion, le destinataire dispose d'un délai de prescription de :",
+      "options": {
+        "a": "6 mois",
+        "b": "1 an",
+        "c": "2 ans",
+        "d": "3 ans"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 8,
+      "text": "Le retrait par le préfet de région de l'autorisation d'exercer la profession de transporteur peut être contesté par l'entreprise devant le tribunal :",
+      "options": {
+        "a": "de commerce",
+        "b": "judiciaire",
+        "c": "administratif",
+        "d": "de police"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 9,
+      "text": "Le commerçant doit conserver ses documents comptables pendant :",
+      "options": {
+        "a": "3 ans",
+        "b": "5 ans",
+        "c": "8 ans",
+        "d": "10 ans"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 10,
+      "text": "Les associés d'une SARL (Société à responsabilité limitée) décident d'augmenter le capital social en faisant appel à de nouveaux apports. Ils doivent le faire :",
+      "options": {
+        "a": "lors de l'assemblée générale ordinaire",
+        "b": "lors de l'assemblée générale constitutive",
+        "c": "lors de l'assemblée générale extraordinaire :",
+        "d": "en dehors de toute assemblée"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 11,
+      "text": "Quand une personne a pris en gérance libre une entreprise, cela signifie qu'elle est au moins loca- taire :",
+      "options": {
+        "a": "du fonds de commerce",
+        "b": "du local commercial",
+        "c": "du matériel",
+        "d": "de l'ensemble fonds + local"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 12,
+      "text": "En cas de désaccord avec une décision de justice rendue par le tribunal de commerce, concernant un montant de 7 500 €, vous pouvez porter l'affaire devant :",
+      "options": {
+        "a": "la Cour de Cassation",
+        "b": "la Cour d'Appel",
+        "c": "le tribunal judiciaire",
+        "d": "la Cour d'Assises"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 13,
+      "text": "Trois associés \"X\", \"Y\" et \"Z\" décident de constituer une S.A.R.L.\"X\" apporte 4 500 € en espèces,\"Y\" apporte un terrain évalué à 10 000 €, \"Z\" apporte 3 000 € et un véhicule évalué à 9 000 € - L'Assem- blée Générale des associés décide que \"Z\" sera le gérant unique de la S.A.R.L :",
+      "options": {
+        "a": "il sera majoritaire",
+        "b": "il sera minoritaire",
+        "c": "il pourra être salarié",
+        "d": "il devra obligatoirement être salarié"
+      },
+      "answer": "B (et C)",
+      "explanation": null
+    },
+    {
+      "number": 14,
+      "text": "Le ratio capitaux propres sur capitaux permanents est égal à 0,3. Cela signifie que :",
+      "options": {
+        "a": "vous êtes insolvable",
+        "b": "vous risquez d'avoir des difficultés à réemprunter",
+        "c": "vous devez faire appel à de nouveaux associés",
+        "d": "votre fonds de roulement permanent est insuffisant"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 15,
+      "text": "La dépréciation envisagée sur un stock se constate par l'enregistrement :",
+      "options": {
+        "a": "d'une provision",
+        "b": "d'un amortissement",
+        "c": "d'une perte exceptionnelle",
+        "d": "d'une moins-value"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 16,
+      "text": "Le fonds de roulement permanent se calcule de la manière suivante :",
+      "options": {
+        "a": "capitaux propres - actif immobilisé",
+        "b": "(capitaux propres + dettes à plus d'un an) - actif immobilisé",
+        "c": "dettes à long et moyen terme - actif immobilisé",
+        "d": "dettes à court terme - actif immobilisé"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 17,
+      "text": "L'absence de contrat écrit à l'issue d'un contrat à durée déterminée, si le salarié est maintenu dans l'en- treprise, entraîne :",
+      "options": {
+        "a": "la rupture du contrat",
+        "b": "le renouvellement systématique pour une même durée",
+        "c": "la régularisation par un écrit",
+        "d": "un contrat réputé tacitement à durée indéterminée"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 18,
+      "text": "Sauf cas particulier, la durée maximale d'un contrat à durée déterminée conclu pour un accroissement temporaire d'activité est de :",
+      "options": {
+        "a": "6 mois",
+        "b": "12 mois",
+        "c": "18 mois",
+        "d": "24 mois"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 19,
+      "text": "Selon l'arrêté du 6 juillet 2005 relatif aux modalités de téléchargement des données de conduite, l'in- tervalle entre deux téléchargements des données de la carte d'un conducteur ne doit pas excéder :",
+      "options": {
+        "a": "16 jours calendaires",
+        "b": "28 jours calendaires",
+        "c": "60 jours calendaires",
+        "d": "95 jours calendaires"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 20,
+      "text": "Le certificat de travail mentionne obligatoirement :",
+      "options": {
+        "a": "les dates d'entrée et de sortie",
+        "b": "le motif de la fin du contrat (rupture)",
+        "c": "une appréciation générale sur les qualités professionnelles",
+        "d": "l'existence d'une clause de non concurrence"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 21,
+      "text": "Un salarié qui se trouve dans une situation dont il a un motif raisonnable de penser qu'elle comporte un risque pour sa vie ou sa santé, peut :",
+      "options": {
+        "a": "exercer uniquement son droit d'alerte",
+        "b": "exercer ses droits d'alerte et de retrait",
+        "c": "être sanctionné si le danger réel n'est pas prouvé",
+        "d": "exercer une action en référé devant le Conseil de prud'hommes"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 22,
+      "text": "Selon le règlement (CE) n° 561/2006, la durée maximale de conduite par période de deux semaines consécutives est de :",
+      "options": {
+        "a": "86 heures",
+        "b": "90 heures",
+        "c": "92 heures",
+        "d": "96 heures"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 23,
+      "text": "Suite à un accident du travail, un salarié est déclaré inapte à son emploi. L'employeur ne pouvant pas le reclasser doit :",
+      "options": {
+        "a": "licencier le salarié pour motif économique",
+        "b": "solliciter la démission du salarié",
+        "c": "licencier le salarié et verser une indemnité spéciale de licenciement",
+        "d": "prononcer un licenciement pour faute grave"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 24,
+      "text": "L'application d'une convention collective étendue est obligatoire :",
+      "options": {
+        "a": "uniquement pour les employeurs ayant signé la convention",
+        "b": "uniquement pour les employeurs qui ont demandé l'extension",
+        "c": "pour tous les employeurs exerçant les activités entrant dans son champ d'application",
+        "d": "pour les employeurs de la branche professionnelle concernée qui ont plus de 10 salariés"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 25,
+      "text": "Une convention collective de branche est un accord conclu entre :",
+      "options": {
+        "a": "les employeurs après consultation de l'inspection du travail",
+        "b": "le ministère du travail et les syndicats",
+        "c": "les représentants du personnel et les délégués syndicaux",
+        "d": "les organisations professionnelles d'employeurs et les organisations syndicales de salariés, représentatives au niveau de cette branche"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 26,
+      "text": "Sauf faute grave, le licenciement d'un conducteur d'une entreprise de transport routier ayant une an- cienneté comprise entre six mois et deux ans donne droit au minimum à un délai congé de :",
+      "options": {
+        "a": "1 semaine",
+        "b": "1 mois",
+        "c": "2 mois",
+        "d": "3 mois"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 27,
+      "text": "L'établissement d'un réglement intérieur est obligatoire à partir du seuil de :",
+      "options": {
+        "a": "10 salariés",
+        "b": "20 salariés",
+        "c": "50 salariés",
+        "d": "100 salariés"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 28,
+      "text": "Selon l'article R. 3312-50 du Code des transports, la durée de temps de service maximale hebdoma- daire sur 3 ou 4 mois après accord, d'un conducteur grand routier ou longue distance conduisant ex- clusivement des véhicules de plus de 3,5 tonnes, ne peut dépasser :",
+      "options": {
+        "a": "52 heures",
+        "b": "56 heures",
+        "c": "53 heures",
+        "d": "48 heures"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 29,
+      "text": "Un conducteur prenant 7 repos journaliers par mois hors domicile effectue une journée de travail se décomposant ainsi : temps de conduite (7 h), autres travaux (1 h), temps d'attente (2 h), temps de pause et de repas (1 h 30). Son temps de service est de :",
+      "options": {
+        "a": "9 h",
+        "b": "10 h",
+        "c": "10 h 30",
+        "d": "11 h 30"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 30,
+      "text": "Selon le contrat type dit \"général\" applicable aux transports publics de marchandises, pour les envois de 3 tonnes et plus, le donneur d'ordre doit :",
+      "options": {
+        "a": "préparer uniquement les envois pour le chargement, le calage et l'arrimage",
+        "b": "s'assurer que le chargement, le calage et l'arrimage effectués par le transporteur sont corrects",
+        "c": "refuser le départ du véhicule si le calage et l'arrimage effectués par le transporteur ne sont pas conformes",
+        "d": "effectuer le chargement, le calage et l'arrimage"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 31,
+      "text": "Une entreprise de transport public routier de marchandises :",
+      "options": {
+        "a": "peut être son propre assureur (auto-assurance)",
+        "b": "doit souscrire une assurance pour couvrir notamment le risque de responsabilité civile",
+        "c": "doit vérifier que son conducteur dispose d'une assurance personnelle en responsabilité civile",
+        "d": "peut commercialiser des contrats d'assurance auprès de sa clientèle"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 32,
+      "text": "Un transporteur public routier effectue un transport intérieur de 10 tonnes de boissons. Les marchan- dises sont acheminées avec un véhicule articulé d'un PMA de 44 tonnes. Le conducteur doit obligatoi- rement détenir à bord du véhicule :",
+      "options": {
+        "a": "le certificat d'inscription au registre électronique national des entreprises de transport par route",
+        "b": "l'original de la licence de transport intérieur",
+        "c": "l'original de la licence communautaire",
+        "d": "la copie certifiée conforme de la licence communautaire"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 33,
+      "text": "Avant chaque transport, le donneur d'ordre fournit en principe au transporteur :",
+      "options": {
+        "a": "un document de suivi",
+        "b": "un document de confirmation de commande valant devis accepté",
+        "c": "un ordre de mission",
+        "d": "une lettre de voiture pré-renseignée"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 34,
+      "text": "Une entreprise effectue un transport public routier de marchandises sans être inscrite au registre élec- tronique national des entreprises de transport par route. Le fait est constaté par procès-verbal lors d'un contrôle routier. La nature de l'infraction relevée est :",
+      "options": {
+        "a": "une amende administrative",
+        "b": "un délit",
+        "c": "une contravention de la 4ème classe",
+        "d": "une contravention de la 5ème classe"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 35,
+      "text": "Transporteur, vous prenez rendez-vous avec votre client afin de procéder au chargement de votre vé- hicule. Au jour et à l'heure prévus, vous n'avez pas donné signe de vie à votre client. Le contrat type dit général prévoit que celui-ci :",
+      "options": {
+        "a": "peut remettre immédiatement le chargement à un autre transporteur",
+        "b": "peut rechercher un autre transporteur deux heures après l'heure fixée pour la mise à disposi- tion du véhicule",
+        "c": "peut rechercher un autre transporteur huit heures après l'heure fixée pour la mise à disposi- tion du véhicule",
+        "d": "doit attendre votre véhicule pendant 24 heures"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 36,
+      "text": "Les véhicules motorisés pris en compte pour la détermination de la capacité financière sont :",
+      "options": {
+        "a": "l'ensemble des véhicules à l'exception de ceux pris en location sans conducteur",
+        "b": "l'ensemble des véhicules à l'exception de ceux pris en location avec conducteur",
+        "c": "l'ensemble des véhicules à l'exception de ceux pris en crédit bail",
+        "d": "ceux possédés en pleine propriété, ceux pris en location avec ou sans conducteur et ceux pris en crédit bail"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 37,
+      "text": "Conformément à l'article L.132-8 du Code de commerce, le transporteur peut avoir une action directe en paiement de ses prestations à l'encontre :",
+      "options": {
+        "a": "uniquement de l'expéditeur",
+        "b": "uniquement du commissionnaire, s'il est intervenu dans la prestation",
+        "c": "uniquement du destinataire",
+        "d": "de l'expéditeur, du commissionnaire (s'il est intervenu dans la prestation) ou du destinataire"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 38,
+      "text": "Sauf dérogation, les restrictions de circulation applicables du samedi 22 h au dimanche 22 h concernent les véhicules de transport routier de marchandises dont le poids total autorisé en charge excède :",
+      "options": {
+        "a": "3,5 tonnes",
+        "b": "6 tonnes",
+        "c": "7,5 tonnes",
+        "d": "12 tonnes"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 39,
+      "text": "Pèse sur le transporteur public routier de marchandises :",
+      "options": {
+        "a": "une responsabilité simple en cas de dommages aux marchandises",
+        "b": "une présomption de responsabilité en cas de dommages aux marchandises ou de perte des ob- jets à transporter",
+        "c": "une responsabilité uniquement en cas de dommages aux marchandises",
+        "d": "une présomption de responsabilité uniquement en cas de dommages aux marchandises"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 40,
+      "text": "Selon l'article L.3221-2 du Code des transports, toute opération de transport public routier de mar- chandises est rémunérée sur la base notamment :",
+      "options": {
+        "a": "de la présentation du véhicule et de son équipage au lieu de chargement uniquement",
+        "b": "des durées pendant lesquelles le véhicule et son équipage sont à disposition en vue du dé- chargement uniquement",
+        "c": "de la durée d'acheminement uniquement",
+        "d": "des durées pendant lesquelles le véhicule et son équipage sont à disposition en vue du char- gement et du déchargement et de la réalisation du transport"
+      },
+      "answer": "D",
+      "explanation": null
+    },
+    {
+      "number": 41,
+      "text": "En transport routier intérieur, pour confirmer ses réserves (protestation motivée) au transporteur, le destinataire dispose d'un délai non compris les jours féries à compter de :",
+      "options": {
+        "a": "3 jours de la livraison",
+        "b": "7 jours de la livraison",
+        "c": "30 jours de la livraison",
+        "d": "30 jours de l'enlèvement"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 42,
+      "text": "La commission territoriale des sanctions administratives émet :",
+      "options": {
+        "a": "un avis préalablement à une décision préfectorale de sanctions administratives pour des in- fractions délictuelles de conduite commises par tout conducteur routier",
+        "b": "un avis préalablement à une décision préfectorale de sanctions administratives pour des in- fractions en matière de réglementations des transports et sociale applicables aux entreprises de transport routier",
+        "c": "un avis préalablement à une décision d'autorisation d'exercer la profession",
+        "d": "un avis préalablement à une décision de sanctions émise par le conseil de prud'hommes"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 43,
+      "text": "La longueur maximale d'un ensemble routier composé d'une semi-remorque attelée à un tracteur rou- tier est de :",
+      "options": {
+        "a": "15 mètres",
+        "b": "16 mètres",
+        "c": "16,50 mètres",
+        "d": "18 mètres"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 44,
+      "text": "L'usage de pneumatiques rechapés est :",
+      "options": {
+        "a": "interdit sur le ou les essieux-avant du véhicule à moteur",
+        "b": "autorisé",
+        "c": "interdit pour les livraisons urbaines",
+        "d": "interdit en période estivale"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 45,
+      "text": "En règle générale, à la date d'obtention du permis de conduire, celui-ci sera affecté d'un nombre initial de :",
+      "options": {
+        "a": "12 points",
+        "b": "6 points définitivement et de 3 autres chaque année pour atteindre 12 points",
+        "c": "6 points pendant un délai probatoire de 3 ans plus 2 points qui seront acquis au terme de chaque année de ce délai si aucune infraction n'a été commise",
+        "d": "6 points puis de 6 autres au bout d'un an si aucune infraction n'a été commise"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 46,
+      "text": "La durée de validité du certificat de formation des conducteurs routiers de véhicules transportant des marchandises dangereuses en citerne est de :",
+      "options": {
+        "a": "3 ans",
+        "b": "4 ans",
+        "c": "5 ans",
+        "d": "6 ans"
+      },
+      "answer": "C",
+      "explanation": null
+    },
+    {
+      "number": 47,
+      "text": "Un véhicule réalisant un transport national de marchandises, dont le PTAC (poids total autorisé en charge) est de 9 tonnes et circulant sur autoroute, est limité à :",
+      "options": {
+        "a": "90 km/h",
+        "b": "100 km/h",
+        "c": "110 km/h",
+        "d": "130 km/h"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 48,
+      "text": "Lors d'un transport international, en cas de marchandises manquantes ou avariées ou d'avaries appa- rentes lors de la livraison, la CMR (Convention marchandises par route) prévoit que le destinataire :",
+      "options": {
+        "a": "a un délai de 3 jours pour notifier ses réserves par écrit au transporteur",
+        "b": "doit émettre des réserves par écrit au moment de la livraison",
+        "c": "a un délai de 7 jours pour notifier ses réserves par écrit au transporteur",
+        "d": "a un délai de 21 jours pour notifier ses réserves par écrit au transporteur"
+      },
+      "answer": "B",
+      "explanation": null
+    },
+    {
+      "number": 49,
+      "text": "Vous devez effectuer un transport pour compte d'autrui entre la France et l'Allemagne au moyen d'un tracteur routier vous appartenant et d'une semi-remorque immatriculée en Belgique. L'ensemble arti- culé doit être couvert par la copie certifiée conforme de :",
+      "options": {
+        "a": "votre licence communautaire",
+        "b": "la licence communautaire délivrée au propriétaire de la semi-remorque",
+        "c": "votre licence communautaire ainsi que celle de la licence communautaire délivrée au pro- priétaire de la semi-remorque",
+        "d": "votre licence communautaire ainsi qu'une autorisation de transport délivrée au propriétaire de la semi-remorque"
+      },
+      "answer": "A",
+      "explanation": null
+    },
+    {
+      "number": 50,
+      "text": "Vous venez de vous inscrire au registre électronique national des entreprises de transport par route de votre région. Vous envisagez de faire du transport international sous le régime TIR (transit internatio- nal routier).Vous demandez donc un certificat d'agrément auprès :",
+      "options": {
+        "a": "du service des mines",
+        "b": "de la Direction régionale de l'environnement, de l'aménagement et du logement (DREAL)",
+        "c": "du service des douanes",
+        "d": "de l'Association française des transporteurs routiers internationaux (AFTRI)"
+      },
+      "answer": "C",
+      "explanation": null
+    }
+  ],
+  "problems": [
+    {
+      "number": 1,
+      "title": "PROBLÈME 1 (50 points)",
+      "subject_text": "La société AUBENNE a pour activité exclusive le transport public routier de produits en vrac\n(matériaux de construction et produits agricoles). \nSon parc est composé de 15 ensembles routiers articulés, avec des semi-remorques bennes.\nElle est implantée dans le département du Pas-de-Calais, à proximité de Béthune (62).\nCette semaine du 4 octobre a mal débuté, avec une panne mécanique «boîte de vitesses\ncassée» sur l’un des tracteurs routiers de l’entreprise.\nPar chance, le conducteur a pu effectuer le trajet retour depuis Dijon et déposer ce tracteur\nchez le concessionnaire réparateur local NORDMOTOR, mercredi matin.\nUn véhicule de remplacement lui a été gracieusement mis à sa disposition par NORDMOTOR\n(un tracteur routier conventionnel en vue de reconstituer un ensemble articulé de 44 tonnes de\npoids maximal autorisé).\nQUESTION 1 (7 points)\nEn matière de Réglementation Sociale Européenne (RSE), quelle est la règle générale en ce \nqui concerne :\na)la durée maximale de temps de conduite hebdomadaire ?\nb)la durée maximale de temps de conduite sur 2 semaines consécutives ?\nc)Un conducteur routier, qui débute sa semaine professionnelle le dimanche 10/10/2021\nà 22:00 et la termine le samedi 16/10/2021 à 18:00, pourra-t-il prendre son repos\nhebdomadaire suffisamment à temps au regard de la RSE ? Justifiez votre réponse en\ndéterminant la durée d'amplitude hebdomadaire de travail. \nQUESTION 2 (11 points)\nLors de l’échange de véhicules chez NORDMOTOR, le conducteur a eu le temps de transférer\nses effets personnels et professionnels dans le véhicule de remplacement.\nCe dernier est équipé en accessoires facilitant la vie à bord (réfrigérateur et four à micro-\nondes) et la prise autonome, autant que possible, de temps de pause repas par le conducteur.\nCe véhicule est également équipé de la climatisation.\nUne partie des équipements de sécurité affectés à cet ensemble routier sont stockés dans le\nvéhicule tracteur.\na)Le tracteur routier de prêt doit-il être doté d’extincteur(s) ? Le cas échéant, précisez-en\nle nombre, la capacité minimale et l’emplacement requis.\nb)Quels sont les 2 autres équipements supplémentaires de sécurité obligatoires à bord du\nvéhicule ?\nc)Dans les documents se trouvant dans sa boîte à gants, le conducteur retrouve des\nconsignes concernant les mesures à prendre s'il était impliqué dans un accident de la\nroute. A votre avis, quelles sont ces consignes au vu du contexte exposé ci-dessus ?\n\nd)La société AUBENNE s'est engagée dans une démarche de « Responsabilité sociétale\ndes entreprises ». \nConcernant l'aspect environnemental, la société a mis en place des actions\nconcernant les 3 axes suivants :\n- la gestion des déchets,\n- les véhicules,\n- les conducteurs. \nCitez une action qui pourrait être mise en place sur chacun des 3 axes. \nQUESTION 3 (6 points)\nUn des conducteurs de la société AUBENNE vient d'être père d’un enfant né le week-end du 9\noctobre. Pour profiter de sa famille, il envisage de prendre plusieurs périodes de congés d’ici\nla fin de l’année.\na)Quelle est la période de référence pour le calcul des droits à congés payés, sachant que\nl’entreprise n’adhère pas à une caisse de congés payés ?\nb)Combien de jours de congés payés seront acquis par mois par un salarié présent dans\nl'entreprise pendant toute la période de référence ?\nc)En règle générale, un salarié peut-il prendre la totalité de ses congés payés en une\nseule fois ?\nd)Ce conducteur a-t-il droit à un congé spécifique supplémentaire en raison de la\nnaissance de son enfant, en plus de son congé de naissance de 3 jours ? Précisez votre\nréponse.\nQUESTION 4 (26 points)\nDans  le  cadre du volet  environnemental  de sa démarche « Responsabilité  sociétale  des\nentreprises », la société AUBENNE cherche à connaître son coût de revient prévisionnel pour\nle projet d’investissement suivant, en début d’année 2022 : l’exploitation d’un tracteur routier\nqui utilise le carburant B100 issu de la culture du colza. \nLa mise en œuvre de ce carburant risquant de générer des surcoûts, la société AUBENNE\ncherche à identifier l’écart de coût de revient entre un véhicule à  carburant  gazole et un\nvéhicule à carburant B100.\n\nÁ l’aide de l’annexe 1, sur la base des paramètres connus au 01/10/2021 :\na)Déterminez le coût de revient total annuel, puis kilométrique d’un véhicule à carburant\ngazole (arrondir à 3 chiffres derrière la virgule).\nb)Déterminez   le   coût   de   revient   prévisionnel   total   annuel,   puis   kilométrique   d’un\nvéhicule à carburant B100  (arrondir  à  3 chiffres   derrière  la  virgule). Il n’est pas\nnécessaire de refaire tous les calculs. La détermination des valeurs de majoration ou de\nminoration de coûts est un cheminement possible.\nc)Dans l’hypothèse de prix de vente identiques à ceux pratiqués pour les véhicules à\ncarburant gazole et d'un point de vue économique, quel projet d’investissement semble\nle plus profitable pour la société AUBENNE ?\nd)En cas de coût de revient plus élevé pour le véhicule à carburant B100, indiquez quelle\npourrait en être la raison principale ? \ne)La société AUBENNE espère en la viabilité de ce projet, même si sa réalisation devait\nêtre reportée de quelques années, car cette société souhaite se préparer aux prochaines\nmutations du secteur des transports en matière de transition énergétique. Citez un\nélément qui pourrait faire évoluer favorablement ce projet.\nf)La   société   AUBENNE   a   entendu   parler   d'un   dispositif   de   suramortissement\n(amortissement dérogatoire) pour l’investissement opéré dans des véhicules utilisant\ndes carburants alternatifs au gazole. \nUn   tel   dispositif   pourrait-il   permettre   de   réduire   le   coût   de   revient   du   véhicule  \nconcerné ? \nSi la société AUBENNE venait à remplir les conditions de ce dispositif, quel avantage \npourrait-elle en retirer ?\n\nANNEXE 1\nParamètres d’exploitation connus ou prévisionnels au 01/10/2021,\nconcernant l’un des ensembles routiers composant le parc de la société AUBENNE\n(toutes les données suivantes sont en HT)\nA) Technologie Gazole :\nExploitation en zone courte d’un ensemble routier de 44 T pour le transport en benne \ncéréalière.\nConservation du véhicule à moteur : 504 000 km durant 8 ans.\n210 jours d’exploitation par an.\nCoûts variables :\n-Carburant (intégrant l'utilisation de la pompe hydraulique sur le tracteur) : consommation \n43 litres/100 km à un coût de 1,25 € avant remboursement partiel de la taxe intérieure sur \nla consommation des produits énergétiques (TICPE),\n-Remboursement partiel de la TICPE - taux forfaitaire pondéré : 15,71 €/hectolitre,\n-AdBlue : 5 litres/100 km à un coût de 0,26 €/litre,\n-Péages : néant,\n-Entretien et pneumatiques : 0,24 €/km.\nCoûts fixes :\n-Coûts de personnel : salaire 151,67 heures/mois à 11 €/heure + 40 % charges sociales \npatronales (zone courte sans accomplissement d'heures supplémentaires),\n-Frais de déplacement : néant – le salarié prend la pause déjeuner à domicile,\n-Coût de l'amortissement du véhicule à moteur neuf et de la pompe hydraulique sur 8 ans :\nPrix d'achat du véhicule : 95 000 €,\nValeur résiduelle du véhicule dans 8 ans : 15 000 €,\nAchat de la pompe hydraulique pour le levage de la benne : 2 000 €.\n-Coût d'amortissement de la semi-remorque sur 15 ans : 30 000 €,\n-Coût total annuel du financement de cet ensemble routier : 625 €,\n-Autres coûts fixes annuels liés au véhicule (assurances, taxes, contrôles techniques, etc.) :  \n3 325 €,\n-Autres coûts fixes annuels : 75 000 € à répartir sur les 15 ensembles routiers exploités par \nAUBENNE.\n\nANNEXE 1 (suite)\nB) Technologie B100 - colza :\nExploitation en zone courte d’un ensemble routier 44 T pour le transport en benne céréalière :\nEn comparaison du véhicule à carburant gazole, seuls les paramètres suivants évoluent :\n-Carburant B100 : consommation 44 litres/100 à un coût de 1,25 € (prix de vente de ce \ncarburant indexé sur celui du gazole),\n-Remboursement TICPE : néant,\n-Entretien et pneumatiques : coût annuel majoré de 530 € pour réaliser une vidange \nsupplémentaire par an exigée par le constructeur.\nPar précaution, la société AUBENNE préfère anticiper certaines dépenses au cours de la\npériode   de   détention   du  tracteur   (8   ans),  à   savoir   4  200   €  de   réparation   d’un  organe\nmécanique, pour éviter que le moteur ne soit mal réglé ou subisse une corrosion plus\nprononcée.\nÉquipement nécessaire pour le stockage et la distribution du carburant B100 (citerne de\nstockage, pompe) : coût pris en charge par le fournisseur en carburant.\nCoût de détention du véhicule : + 800 € pris  en charge par le fournisseur en énergie\n(basculement d'énergie gazole en énergie B100). \nPour simplifier, il est supposé que le prix d’achat est identique à celui d’un véhicule gazole.\nLa conversion du véhicule en énergie gazole selon la norme Euro 6 d'un montant de 1 000 €,\nafin de faciliter sa revente, sera prise en charge par le fournisseur en carburant.",
+      "corrected_text": "Question n°1 (7 points)  \n \na) 56h (Règlement CE 561/2006, article 6, paragraphe 2) \n \nb) 90h (Règlement CE 561/2006, article 6, paragraphe 3) \n \nc) Un temps de repos hebdomadaire commence au plus tard à la fin de six périodes de \nvingt-quatre heures  à  compter du  temps  de  repos  hebdomadaire  précédent  (Règlement  CE \n561/2006, article 8, paragraphe 6). Ce qui donne une amplitude hebdomadaire maximale de \n24 x 6 = 144h.  \n \nOr le conducteur a effectué une amplitude hebdomadaire de 140 h (2 h dimanche soir + 5 x \n24  h du  lundi  au  vendredi  + 18  h  le  samedi =  140  h)  inférieure au  144h  maximum.  Le repos \npourra  donc  être correct, s’il est suffisamment  long  au  regard  de  la  RSE  évidement  (45h  si \nnormal et minimum 24h si réduit). \n \nAutre approche possible : le conducteur a commencé sa semaine de travail (et donc finit son \nrepos hebdomadaire précédent) le dimanche soir à 22h. Il a donc le droit de finir sa semaine \nde travail (et donc de débuter son prochain repos hebdomadaire) 144h plus tard au maximum \nc’est-à-dire le  samedi  suivant  à  22h  (6  x  24h).  Le  conducteur  débute  son  repos  le  samedi  à \n18h, donc avant 22h, le repos peut donc être correct, s’il est suffisamment long au regard de \nla RSE évidement (45h si normal et minimum 24h si réduit). \n \nNote : attention à ne pas confondre semaine « de travail » et semaine « réglementaire », tel \nque définies par les différentes réglementations.  \nLa  semaine  de  travail  correspond  à l’intervalle entre 2 repos hebdomadaires successifs. Sa \ndurée correspond donc à l’amplitude hebdomadaire.  \nLa semaine réglementaire telle que définit par le règlement CE 561/2006 (RSE) et par le code \ndes  transports  français  correspond  à  la  période  allant  du  lundi  matin  00h  au  dimanche  soir \n24h.  \nLes   règles   concernant   les   temps   de   conduite hebdomadaire se   base   sur   la   semaine \nréglementaire. \nPar contre les règles concernant les temps de repos hebdomadaire (telles que demandées dans \nla question 1-c) se base sur la semaine de travail. Il faut donc bien décompter les 2 heures du \ndimanche soir de 22h à 24h dans l’amplitude hebdomadaire. \n \n \n \n\n \n \nQuestion n°2 (11 points)  \n  \na) Oui le tracteur routier doit être doté d'au moins un extincteur à poudre ABC d'une \ncapacité d'au moins 2 kilogrammes, placé à l’intérieur de la cabine, dans un endroit aisément \naccessible au conducteur (Arrêté du 2 mars 1995 relatif à l'équipement en extincteurs des \nvéhicules de transport de marchandises, article 1). \n \nNote : La  semi-remorque doit aussi être équipée d’un extincteur à poudre ABC de 6 kg \nminimum, placé à l’extérieur du véhicule dans un endroit aisément accessible au conducteur. \nCet  extincteur  peut  également  être  placé  sur  le  véhicule  tracteur.  Ainsi  les  semi-remorques \ndételées peuvent être dépourvues d'extincteur (Arrêté du 2 mars 1995 relatif à l'équipement \nen  extincteurs  des  véhicules  de  transport  de  marchandises, article  2). Dans  le  cas  présent  il \nconvient donc que le conducteur soit vigilant : en effet si l’extincteur extérieur de son ensemble \narticulé  habituel  (tracteur  +  semi-remorque)  était  placé  sur  son  tracteur (celui  qui  est  en \npanne),  il  lui  faudra  vérifier que le tracteur de remplacement soit lui aussi équipé d’un \nextincteur  de  6 kg.  Dans  le  cas  contraire  il  faudra  équiper  un  des  2  véhicules  composant  le \nnouvel ensemble constitué avec cet extincteur, qui reste obligatoire en toutes situations. \n  \nb) Les   deux   autres   équipements   de   sécurité   obligatoires   sont   le triangle   de pré-\nsignalisation et le gilet haute visibilité (article R416-19 du code de la route, paragraphe I. et \nII.). \n \nc) Compte-tenu du contexte, les mesures à prendre par le conducteur doivent être :  \n Restez Calme. \n Utiliser la méthodologie du P.A.S. (Protéger / Alerter / Secourir) : \no Protéger les lieux de l’accident (feux  de  détresse, enfiler le  gilet  fluorescent, \ntriangle de pré-signalisation, coupez-le(s) moteur(s)). \no Alerter les  secours  en  cas  de  blessés  corporels,  y  compris  légers (numéros \nd’urgence en cas d’accident de la route avec blessé corporel : 15, 18 ou 112) \no Secourir les  blessés s’il y en a et si le conducteur est compétant. Dans tous les \ncas se référer aux consignes téléphoniques du médecin urgentiste.   \n Remplir le constat amiable en cas d’accident matériel. \n Déclarer l’accident au loueur. \n \nd) La   responsabilité sociétale  des   entreprises   (RSE) est  définie   par   la commission \neuropéenne comme l'intégration volontaire par les entreprises de préoccupations sociales et \nenvironnementales à leurs activités commerciales et leurs relations avec les parties prenantes. \nIl s’agit donc de tenir compte des contraintes du  développement  durable  dans  la  stratégie \néconomique de l’entreprise. \n \nLa RSE repose sur 3 grands piliers :  \n- Environnemental \n- Social \n- Économique \n\n \n \nExemple d’action que la société AUBENNE pourrait mettre en place concernant le pilier \nenvironnemental de la RSE (liste non exhaustive) :  \n \n- Gestion  des  déchets :  réduction  puis  collecte, tri et valorisation de l’ensemble des \ndéchets émis par l’entreprise, sensibilisation  \n- Véhicules :   identification   et   réduction  des   km   à vide, amélioration   du   taux  de \nremplissage, utilisation  de  véhicule  à  carburant  plus  écologique  (biodiesel,  gaz,  hybride, \nélectrique ...), amélioration du suivi et de l’entretien des véhicules. \n- Conducteur : formation à l’éco-conduite, mise en place de primes consommation. \n \nNote : tout autre réponse acceptable à l’appréciation du correcteur. \n  \nQuestion n°3 : (6 points)  \n \na) La  période  de  référence  pour  le  calcul  des  droits  à  congés  payés  va  du 1\ner\n juin de \nl’année précédente au  31  mai de l’année en cours (article L3141-11 et R3141-4 du  code  du \ntravail) \n \nb) Un salarié présent dans l’entreprise toute la période de référence acquiert 2.5  jours \nouvrables de congé payé par mois (article L3141-3 du code du travail), soit 30 jours ouvrables \npar période de référence, équivalent à 25 jours ouvrés. \n \nc) Non. En règle générale un salarié ne peut pas poser plus de 24 jours ouvrables (soit 4 \nsemaines de congés payés) en une seule fois.  \nCependant l’employeur peut dans certains cas accorder une période de congés plus longue \n(article L3141-17 du code du travail). \n \nd) Oui le conducteur a droit à un congé de paternité de 25 jours calendaires en plus du \ncongé de naissance. Ce congé peut être fractionné en 3 périodes dont la première doit être \nconsécutive  au  congé  de  naissance  et  de  4  jours calendaires minimum.  Les  2  dernières \npériodes doivent être de 5 jours minimum (pour un total de 25 – 4 = 21 jours calendaires). La \ntotalité du congé de paternité doit être pris dans les 6 mois suivant la naissance de l’enfant \n(article L1225-35 et D1225-8 du code du travail). \n \nNote : ceci est possible car son enfant est né le 9 octobre c’est-à-dire après le 1\ner\n juillet 2021, \ndate à laquelle le congé de paternité a été porté de 11 jours calendaires à 25 jours calendaires. \nIl  est  à  supposer  que  la  réponse  attendu  par  la  DREAL  sur  cette  question  ne  soit  pas  aussi \nprécise, en particulier en ce qui concerne la durée de 25 jours du congé, vu que le changement \nde règle est très récent par rapport à la date de l’examen. Se référer au CELSE 2021 \n \n \n \n \n\n \n \nQuestion n°4 : (26 points)  \n \na) Base de calcul sur 1 an : \n 210 jours/an \n 504 000 / 8 = 63 000 km/an \n \n \nCFD CS CV Calculs \nCarburant \n       33 862,50 €  1,25 x 63000 x 43 / 100 \nRemboursement TICPE \n    -   4 255,84 €  43 / 100 x 63000 x 15,71 / 100 \nAdblue \n            819,00 €  0,26 x 63000 x 5 / 100 \nEntretien et \npneumatiques \n       15 120,00 €  0,24 x 63000 \nCoût de personnel \n   20 020,44 €      151,67 x 11 x 12 \nCharges patronales  \n     8 008,18 €      20020,44 x 40 / 100 \nAmortissement tracteur \n   10 250,00 €      (95000 + 2000 - 15000) / 8 \nAmortissement semi-\nremorque \n     2 000,00 €      30000 / 15 \nCoût financement (intérêt \nd'emprunt) \n        625,00 €        \nAutres coûts fixe annuels \n     3 325,00 €        \nQuote part des charges \nde structure \n     5 000,00 €    75000 / 15 \nSOUS TOTAUX \n   44 228,62 €     5 000,00 €     45 545,66 €  \n \n     \nCoût de revient annuel                                          94 774,28 €/an  \n44228,62 + 5000 + 45545.66 \nCoût de revient \nkilométrique                                                1,504 €/km \n94774.28 / 63000 \n \nPrécisions : la TICPE est un remboursement, il faut donc bien la compter négativement. \nLes questions ne portant ni sur le binôme ni sur le trinôme, le tableau de répartition des charges \nn’était pas indispensable, il était possible de réaliser tous les calculs en ligne sans distinguer \nles différentes catégories de charges (CFD, CS et CV) \n \nb) Détermination des valeurs de majoration ou de minoration des coûts : \n \n Carburant B100 : 1.25 x 63000 x 44 / 100 = 34650 €/an \nAugmentation carburant = 34650 – 33862.50 = + 787.50 €/an \n \n TICPE = + 4255.84 €/an \n \n Vidange supplémentaire = + 530 €/an \n \n Réparation supplémentaire = 4200 / 8 = + 525 €/an \n \nLes surcoûts de détention du véhicule et de conversion énergétique ne sont pas à prendre en \ncompte puisque pris en charge par le fournisseur en carburant. \n\n \n \nTotal des coûts supplémentaires = 787.50 + 4255.84 + 530 + 525 = 6098.34 €/an \n \nCoût de revient annuel du véhicule B100 = 94774.28 + 6098.34 = 100872.62 €/an \n \nCoût de revient kilométrique du véhicule B100 = 100872.62 / 63000 = 1.601 €/km \n \nAutres  possibilité :  refaire  le  tableau  de  répartition  des  charges  en  modifiant  les  charges \nspécifiques  au  véhicule  B100. Ce  travail  plus  long  et  fastidieux  présentait  le  défaut  de  faire \nperdre du temps. \n \nc) Le projet d’investissement plus profitable à la société Aubenne est le véhicule gasoil, \npour un coût de 6098.34 €/an inférieur au véhicule B100. \n \nd) La  raison  principale  au  coût  de  revient  plus  élevé  du  véhicule  B100  est l’absence de \nremboursement  de  la  TICPE pour un coût supplémentaire de 4255.84 €/an soit 69.79 % de \nl’augmentation totale (4255.84 x 100 / 6098.34) \n \ne) Les éléments qui pourrait faire évoluer favorablement ce projet sont : \n \n Une politique fiscale plus favorable au bio-carburant tel que le B100. \n Une demande impérative de la part du client, lui-même sensibilisé aux problématiques \nenvironnementales. \n Des aides ou subventions publiques sur l’investissement  dans  des  véhicules  à  bio- \ncarburant. \n Des  contraintes  environnementales  plus  sévères,  imposant  aux  transporteurs  et  aux \nchargeurs l’usage de véhicule à bio-carburant. \n L’augmentation progressive du coût des carburants fossiles traditionnels tel  que  le \ngasoil, rendant par conséquent les bio-carburant plus attractif économiquement. \n \nNote : tout autre réponse acceptable à l’appréciation du correcteur. \n \nf) Non, sur la durée totale d’utilisation du véhicule le dispositif de l’amortissement \ndérogatoire ne permet pas de faire baisser le coût de revient du véhicule.  \n \nEn utilisant ce dispositif la société Aubenne baisserait son résultat fiscal et donc son impôt sur \nles sociétés les premières année d’utilisation du véhicule. Sur la durée totale d’utilisation il n’y \naurait pas d’écart significatif."
+    },
+    {
+      "number": 2,
+      "title": "PROBLÈME 2 (50 points)",
+      "subject_text": "La SARL TRANSFRANC, spécialisée dans le transport public routier de marchandises\ngénérales et dont le gérant est M. Franc, est implantée à Rouen (76).\nSon parc de véhicule est composé de 5 ensembles routiers.\nAu cours d’échanges réguliers entre M. Franc et son principal client, ce dernier lui a fait part\nde son intention d'augmenter le volume de fret qu'il lui confie actuellement et lui a demandé\nde mettre en service un ensemble supplémentaire au début de l'année prochaine.\nPour répondre à cette proposition, M. Franc prévoit de recourir pour la première fois au crédit-\nbail pour le financement d'un nouveau tracteur :\n. durée du crédit-bail : 5 ans,\n. coût du véhicule pour l'organisme de crédit-bail : 110 000 € HT.\nL'achat d'une nouvelle semi-remorque sera intégralement autofinancé par apport en compte\ncourant.\nEn cas de surcroît d’activité, la SARL TRANSFRANC a aussi recours à la sous-traitance.\nQUESTION 1 (12 points)\na)Donnez une définition du crédit-bail. \nb)Indiquez un avantage et un inconvénient du financement du matériel de transport par \ncrédit-bail .\nc)Selon quelles modalités le crédit-bail est-il pris en compte lors d'une analyse financière\nd'un bilan et d'un compte de résultat ?\nd)Déterminez le loyer mensuel HT à verser à l'organisme de crédit-bail pour le nouveau\ntracteur, sachant que cet organisme applique un coefficient de 1,36 % sur le coût\nd'achat du véhicule HT.\nQUESTION 2 (4 points)\nLe chiffre d'affaires transport sous-traité de la SARL TRANSFRANC pour l'année N est de\n215 745 € par rapport à son chiffre d'affaires transport total de 1 166 185 €.\nCe volume de sous-traitance vous paraît-il compatible avec la réglementation en matière de\nsous-traitance transport ? Justifiez votre réponse.\nLe   cas   échéant,   comment   s’opérera   la   régularisation   de   la   situation   par   la   société\nTRANSFRANC ?\n\nQUESTION 3 (18 points)\nM. Franc souhaite à présent analyser la situation financière de son entreprise. \na)A partir du bilan en annexe 2, reportez de façon détaillée vos calculs des postes \nsuivants, pour chacun des exercices N-1 et N :\nLe fond de roulement net global (FRNG),\nLe besoin en fonds de roulement (BFR),\nLa trésorerie nette (TN).\na)Indiquez l’évolution des 3 ratios entre les 2 exercices N-1 et N et commentez-la.\nQUESTION 4 (16 points)\nM. Franc dispose du compte de résultat  en annexe 3 qui complète l'analyse précédente. Il\nsouhaite évaluer notamment l’évolution de 2 Soldes intermédiaires de gestion (SIG) : la\nValeur ajoutée (VA) et l’Excédent brut d’exploitation (EBE).\na)Donnez une définition de ces 2 SIG.\nb)Reportez de façon détaillée vos calculs de la VA et l’EBE pour chaque exercice N-1 et\nN.\nc)Indiquez l’évolution de ces 2 SIG entre ces deux exercices et commentez-la.\n\nANNEXE 2 : BILAN DE LA SARL TRANSFRANC  (en euros)\nACTIF\nEXERCICE \nN\nEXERCICE\nN-1\nPASSIF\nEXERCICE \nN\nEXERCICE\nN-1\nBRUT\nAMORT.\nPROVIS.\nNETNET\nACTIF IMMOBILISE\nImmobilisations corporelles\nImmobilisations financières\n9 4144 7424 672\n4 834\n2 400\nCAPITAUX PROPRES\nCapital social\nRéserve légale\nReport à nouveau\nRésultat de l’exercice\n14 000\n1 400\n92 625\n36 400\n14 000\n51 631\n42 393\nTOTAL I – Capitaux\npropres144 425108 024\nProvision pour risques et \ncharges\nTOTAL ACTIF\nIMMOBILISE \n9 4144 7424 6727 234TOTAL II - Provision\npour risques et charges00\nACTIF CIRCULANT\nCréances réalisables\nClients\nAutres créances\nDisponibilités\n292 726\n112 490\n292 726\n112 490\n212 088\n23 165\nDETTES\nDettes financières\nEmprunts\n(1)\nDettes aux tiers\nFournisseurs\nFiscales et sociales\nAutres dettes\n16 182\n72 533\n175 368\n1 380\n19 426\n54 205\n60 832\nTOTAL ACTIF\nCIRCULANT405  216405 216235 253TOTAL DES DETTES265 463134 463\nTOTAL ACTIF414  6304 742409 888242 487TOTAL PASSIF409 888242 487\n(1) dont concours bancaires15 79719 276\n \n\nANNEXE 3 : COMPTE DE RÉSULTAT DE LA SARL TRANSFRANC (en euros)\nCHARGESPRODUITS\nCHARGES D'EXPLOITATIONPRODUITS D'EXPLOITATION\nAutres achats et charges externesChiffre d'affaires net\nImpôts et taxesSubventions d'exploitation \nSalaires et traitementsReprises sur amortissement et provision\nCharges socialesAutres produits130\nDotations aux amortissements et provisions\nAutres charges409\nTOTAL CHARGES D'EXPLOITATIONTOTAL PRODUITS D'EXPLOITATION\n32100\nTOTAL CHARGES FINANCIÈRES321TOTAL PRODUITS FINANCIERS\nTOTAL CHARGES EXCEPTIONNELLESPRODUITS EXCEPTIONNELS\nCharges exceptionnelles sur opérations de gestionProduits exceptionnels sur opérations de gestion64\nCharges exceptionnelles sur opérations en capitalProduits exceptionnels sur opérations en capital\nTOTAL CHARGES EXCEPTIONNELLESTOTAL PRODUITS EXCEPTIONNELS0\nImpôts sur les bénéfices\nBénéfice\nTOTAL DES CHARGESTOTAL DES PRODUITS\nEXERCICE\nN\nEXERCICE\nN-1\nEXERCICE\nN\nEXERCICE\nN-1\n864   996518   9311 166   185730   296\n13  7049 4467 117\n263   420135   80734  06322  043\n31  57419  256\n2 7791 786\n1 176   513685   2351 207   365752   469\nCHARGES FINANCIÈRES\nIntérêts et charges assimilés3 416\nPRODUITS FINANCIERS\nAutres Intérêts et produits assimilés\n3 416\n1 0961 405\n8 99914  47424  000\n10  09515  87924  064\n5 0058 641\n36  40042  393\n1 231   429752   4691 231   429752   469",
+      "corrected_text": "Question n°1 (12 points)  \n \na) Le  crédit-bail  est  une  opération  financière  qui  permet d'acquérir  un  bien  par  un \npaiement  forfaitaire  mensuel  appelé  redevance  et  de  faire  valoir  une  option  d'achat  à \nl'échéance du contrat de crédit-bail. \n \nSource : https://www.insee.fr/fr/metadonnees/definition/c1195 \n \nNote : tout autre réponse acceptable à l’appréciation du correcteur. \n \nb) Avantages du crédit-bail : \n \n Le financement des immobilisations de l’entreprise ne nécessite pas d’apport initial, \nce  qui  facilite  les  investissements,  en  particulier  pour  les  jeunes  entreprises  ne \ndisposant pas des fonds nécessaires. \n La possibilité de devenir propriétaire du bien loué en fin de contrat. \n Le matériel loué n’est pas inclus dans le bilan, ce qui permet à l’entreprise de ne pas \nimpacter négativement son niveau d’endettement. \n Contrat   très   souple,   la  majorité   de   ces   éléments   pouvant  être  négocier   avec \nl’établissement financier. \n \nInconvénients du crédit-bail : \n \n Le  coût  global  de  détention  du  bien loué  est  généralement  supérieur que lors d’un \nfinancement par crédit classique ou autofinancement. \n Accès  au  crédit-bail  parfois  difficile,  les  établissements  financiers  demandant  des \ngaranties  de  solvabilité  aux  entreprises  locataires  plus  sévères  que  pour  un  crédit \nclassique. \n Difficulté de mettre fin au contrat avant son échéance, les loyers non échus restant \ndus.  \n \nNote :  tout  autre  réponse  acceptable à l’appréciation du correcteur, un avantage et un \ninconvénient. \n \nc) Le  crédit-bail  correspondant  en  réalité  à  un  investissement,  il  convient donc de  le \nretraiter au bilan et au compte de résultat lors de l’analyse financière de ces documents. \n \nSelon le plan comptable générale les redevances du crédit-bail (loyer) sont enregistrées en \ntotalité  en  charges  dans  le  compte « autres  achats  et charges  externes » (compte  61) du \ncompte de résultat. \n \nAu  compte  de  résultat  le  retraitement  consiste  à  soustraire  la  totalité  du  crédit-bail \ndes « autres achats et charges externes » (compte 61) et à réintégrer la part correspondant \naux amortissements avec les « dotations aux amortissements » (compte 68), généralement \n80% du montant des redevances. \nLes 20% restant doivent être réintégrés dans les « charges financières » (compte 66). \n \n\n \n \nCes manipulations auront pour conséquence de modifier les soldes intermédiaires de gestion \ndu comte de résultat pour obtenir des valeurs plus cohérentes au niveau de l’analyse, le \ncrédit-bail correspondant à un investissement. \n \nAu  bilan le retraitement  est  plus  complexe  et  plusieurs  méthodes  peuvent  être  acceptées. \nPour la plus courante les loyers non échus doivent être intégrés aux « dettes à long termes » \n(compte   16). La  totalité  du  prix  d’achat  du  bien  loué  doit  être  intégré  dans  les \n« immobilisations  corporelles »  (compte  21)  puis  progressivement  diminué  de  la  part  des \nloyers  échus  correspondant  aux  dotations  aux  amortissements  dans  le  compte  de  résultat \naprès retraitement du crédit-bail. \nCes manipulations permettront d’avoir une vision plus précise sur le niveau d’endettement \nréel de l’entreprise ainsi que sur la valeur de ses immobilisations. \n \nNote : tout autre réponse acceptable à l’appréciation du correcteur. \n \nd) 2 approches possibles : \n Montant du loyer mensuel : 110000 x 1,36 / 100 = 1496€/mois \nCette approche présente le problème que le montant des loyers total sur 60 mois ne \ncouvre pas le prix du véhicule neuf (1496 x 60 = 89760 € < 110000 €) \n Montant des intérêts : 110000 x 1.36 / 100 = 1496 € \nCoût total du crédit-bail : 110000 + 1496 = 111496 € \nMontant des loyers mensuels : 111496 / (12 x 5) = 1858.27 €/mois. \nCette approche   présente   le   problème   que   les   intérêts   totaux   sur   5   ans   ne \nreprésentent que 1496 € ce qui est très peu crédible. \n \nRemarque : la question est assez imprécise. Un coefficient n’est pas exprimé en pourcentage. \nTel que posée l’approche la plus logique consiste à  priori  à considérer que l’organisme \nfinancier appliquera des intérêts de 1.36% sur 5 ans (ce qui parait cependant très faible). La \nquestion a donc été neutralisée par la DREAL. \n \nQuestion n°2 (4 points)  \n  \nCe volume de sous-traitance n’est pas compatible avec la réglementation puisqu’il dépasse la \nlimite autorisée de 15%. \nTaux de sous-traitance de l’entreprise = 215745 x 100 / 1166185 = 18.50% \n \nLa régularisation peut s’opérer de 2 façons possibles :  \n Diminuer le recours à la sous-traitance. \n Procéder à l’inscription de l‘entreprise au registre des commissionnaires de transport. \n \nQuestion n°3 : (18 points)  \n \na)  \n \nAnnée N : \n FRNG = (144425 + 16182 – 15797) – 4672 = 140138 € \n BFR = (292726 + 112490) – (72533 + 175368 + 1380) = 155935 € \n TN = 0 – 15797 = 140138 – 155935 = - 15797 € \n\n \n \n \nAnnée N-1 : \n FRNG = (108024 + 19426 – 19276) – 7234 = 100940 € \n BFR = (212088 + 23165) – (54205 + 60832) = 120216 € \n TN = 0 – 19276 = 100940 – 120216 = - 19276 € \n \nb) De l’année N-1 à l’année N le FRNG a augmenté, le BFR a augmenté aussi mais de \nfaçon moins importante et la trésorerie, assez mauvaise en N-1, s’est ainsi légèrement \naméliorée en N quoique toujours négative. \nLe FRNG est correct (positif), l’entreprise présente très peu d’immobilisations. Les \nexplications à la mauvaise trésorerie sont plutôt à chercher en analysant le BFR qui est plus \nimportant que le FRNG. Les créances clients en particulier sont trop élevées et participe à la \ndégradation du BFR (hausse). Une renégociation des délais de règlement des clients semble \ns’imposer d’urgence pour améliorer le BFR et par conséquent la trésorerie de l’entreprise. \n \nNote : tout autre réponse acceptable à l’appréciation du correcteur. \n \nQuestion n°4 : (16 points)  \n \na)  \n \nCorrespondant à la richesse produite lors du processus de production, la valeur ajoutée traduit \nle  supplément de  valeur donné par l'entreprise  par  son  activité  (le  travail)  aux biens  et  aux \nservices en provenance des tiers. Elle se répartit ensuite entre revenus du travail, revenus du \ncapital, et prélèvements par l’État. \n \nSource : https://www.economie.gouv.fr/facileco/definition-valeur-ajoutee \n \nL’Excédent  Brut  d’Exploitation  (EBE)  permet  de  visualiser  la  rentabilité  dégagée   par \nl’entreprise grâce à son simple système de production. En effet, l’excédent brut d’exploitation \nne  prend  pas  en  compte  les  produits  exceptionnels,  les  charges  exceptionnelles,  ni  les \namortissements ou la manière qu’a l’entreprise de financer son activité. \n \nSource : https://www.l-expert-comptable.com/fiches-pratiques/qu-est-ce-que-l-excedent-\nbrut-d-exploitation-ebe.html \n \nNote : tout autre réponse acceptable à l’appréciation du correcteur. \n \nb)  \n \nAnnée N : \n VA = 1166185 - 864966 = 301189 € \n EBE = 301189 + 7117 – (13704 + 263420 + 31574) = - 392 € \n \n\n \n \nAnnée N-1 : \n VA = 730296 - 518931 = 211365 € \n EBE = 211365 – (9446 + 135807 + 19256) = 46856 € \n \nc) La valeur ajoutée s’est fortement améliorée entre les 2 années. Cela est dû à un chiffre \nd’affaires plus important couplé à une bonne maîtrise des charges qui n’ont pas augmenté \ndans les mêmes proportions que le CA. \n \nPar contre l’EBE s’est très fortement dégradé. L’explication se trouve au niveau des charges \nde  personnel  (salaires  et  charges  sociales)  qui  ont  augmenté  dans  des  proportions  trop \nimportantes. Soit les salariés sont trop nombreux et donc sous employés, soit leur productivité \nest  mauvaise,  soit les salaires pratiqués par l’entreprise sont trop élevés par rapport à la \nmoyenne de la profession, ou une combinaison de ces 3 paramètres. \n \nNote : tout autre réponse acceptable à l’appréciation du correcteur."
+    }
+  ]
+}
