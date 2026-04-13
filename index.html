@@ -439,12 +439,21 @@
               animObserver.unobserve(entry.target);
             }
           });
-        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        }, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
 
         animatedElements.forEach(function (el, i) {
           el.style.transitionDelay = (i % 4) * 0.12 + 's';
           animObserver.observe(el);
         });
+
+        // Safety fallback: if elements are still hidden after 2s, force them visible
+        setTimeout(function () {
+          animatedElements.forEach(function (el) {
+            if (!el.classList.contains('is-visible')) {
+              el.classList.add('is-visible');
+            }
+          });
+        }, 2000);
       } else {
         animatedElements.forEach(function (el) { el.classList.add('is-visible'); });
       }
