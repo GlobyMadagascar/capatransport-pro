@@ -800,7 +800,7 @@ CT.Exam = (function () {
         div.id = 'exam-max-explanation';
         div.className = 'exam__max-explanation';
         div.innerHTML = '<div class="exam__max-explanation-header">' +
-            '<i class="fas fa-robot" aria-hidden="true"></i> <strong>MAX dit :</strong>' +
+            '<i class="fas fa-user-tie" aria-hidden="true"></i> <strong>MAX dit :</strong>' +
             '<button class="exam__max-explanation-close" aria-label="Fermer">&times;</button>' +
             '</div><p>' + escapeHtml(text) + '</p>';
         area.appendChild(div);

@@ -435,7 +435,7 @@ app.post('/api/analyze', async (req, res) => {
   } catch (err) {
     console.error('[ERREUR] Analyse :', err.message);
     res.status(500).json({
-      error: 'Erreur lors de l\'analyse du document. Le moteur d\'IA est peut-être temporairement indisponible.',
+      error: 'Erreur lors de l\'analyse du document. Le service est peut-être temporairement indisponible.',
       code: 'ANALYSIS_ERROR',
       details: err.message
     });
@@ -580,7 +580,7 @@ app.post('/api/explain', async (req, res) => {
 });
 
 // ============================================================================
-// API : Chat avec MAX (tuteur IA)
+// API : Chat avec MAX (assistant expert)
 // ============================================================================
 
 app.post('/api/chat', async (req, res) => {

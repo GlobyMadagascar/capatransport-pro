@@ -606,7 +606,7 @@ CT.App = (function () {
             // Ajouter la r\u00e9ponse de MAX
             var botBubble =
                 '<div class="chat__message chat__message--bot">' +
-                    '<div class="chat__avatar chat__avatar--bot"><i class="fas fa-robot"></i></div>' +
+                    '<div class="chat__avatar chat__avatar--bot"><i class="fas fa-user-tie"></i></div>' +
                     '<div class="chat__bubble chat__bubble--bot"><p>' + formatChatResponse(response) + '</p></div>' +
                 '</div>';
             messagesEl.insertAdjacentHTML('beforeend', botBubble);
@@ -620,7 +620,7 @@ CT.App = (function () {
             if (typingEl) typingEl.style.display = 'none';
             var errorBubble =
                 '<div class="chat__message chat__message--bot">' +
-                    '<div class="chat__avatar chat__avatar--bot"><i class="fas fa-robot"></i></div>' +
+                    '<div class="chat__avatar chat__avatar--bot"><i class="fas fa-user-tie"></i></div>' +
                     '<div class="chat__bubble chat__bubble--bot"><p>D\u00e9sol\u00e9, je rencontre une erreur. R\u00e9essayez dans quelques instants.</p></div>' +
                 '</div>';
             messagesEl.insertAdjacentHTML('beforeend', errorBubble);
