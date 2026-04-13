@@ -920,15 +920,22 @@
 /* ============================================================
    SCROLL ANIMATIONS
    ============================================================ */
-[data-animate] {
+[data-animate="fade-up"] {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-[data-animate].is-visible {
+[data-animate="fade-up"].is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Fallback: show elements if JS hasn't loaded or observer fails */
+.no-js [data-animate],
+noscript ~ * [data-animate] {
+  opacity: 1;
+  transform: none;
 }
 
 /* Hero entrance */
