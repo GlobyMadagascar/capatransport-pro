@@ -524,9 +524,9 @@ CT.Exam = (function () {
             var qType = (q.type || 'qcm').toLowerCase();
 
             if (qType === 'qcm' || qType === 'vrai_faux') {
-                isCorrect = userAnswer !== null && String(userAnswer).toUpperCase() === String(q.bonne_reponse).toUpperCase();
+                isCorrect = userAnswer !== null && String(userAnswer).toUpperCase() === String((q.bonne_reponse || q.reponse)).toUpperCase();
             } else if (qType === 'calcul') {
-                var expected = parseFloat(q.bonne_reponse);
+                var expected = parseFloat((q.bonne_reponse || q.reponse));
                 var given = parseFloat(userAnswer);
                 if (!isNaN(expected) && !isNaN(given)) isCorrect = Math.abs(expected - given) < 0.01;
             } else if (qType === 'redactionnel') {
@@ -542,7 +542,7 @@ CT.Exam = (function () {
 
             questionResults.push({
                 index: i, question: q, userAnswer: userAnswer,
-                correctAnswer: q.bonne_reponse, isCorrect: isCorrect,
+                correctAnswer: (q.bonne_reponse || q.reponse), isCorrect: isCorrect,
                 explication: q.explication || null
             });
         }
@@ -587,9 +587,9 @@ CT.Exam = (function () {
             var isCorrect = false;
 
             if (qType === 'qcm' || qType === 'vrai_faux') {
-                isCorrect = userAnswer !== null && String(userAnswer).toUpperCase() === String(q.bonne_reponse).toUpperCase();
+                isCorrect = userAnswer !== null && String(userAnswer).toUpperCase() === String((q.bonne_reponse || q.reponse)).toUpperCase();
             } else if (qType === 'calcul') {
-                var exp = parseFloat(q.bonne_reponse);
+                var exp = parseFloat((q.bonne_reponse || q.reponse));
                 var giv = parseFloat(userAnswer);
                 if (!isNaN(exp) && !isNaN(giv)) isCorrect = Math.abs(exp - giv) < 0.01;
             } else if (qType === 'redactionnel') {

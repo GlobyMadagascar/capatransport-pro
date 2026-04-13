@@ -446,62 +446,135 @@ app.post('/api/analyze', async (req, res) => {
 // API : Génération de questions d'examen
 // ============================================================================
 
+// ---------- Helpers : charger les QCM depuis les annales JSON ----------
+function loadAllAnnalesQCM() {
+  const allFile = path.join(DATA_DIR, 'all_annales.json');
+  if (!fs.existsSync(allFile)) return [];
+  const annales = JSON.parse(fs.readFileSync(allFile, 'utf-8'));
+  const pool = [];
+  for (const annale of annales) {
+    for (const q of annale.qcm) {
+      if (!q.answer) continue; // Ignorer les QCM sans réponse
+      pool.push({
+        id: `annale_${annale.year}_q${q.number}`,
+        bloc: null,
+        bloc_label: `Annale ${annale.year}`,
+        theme: `Examen officiel ${annale.year}`,
+        question: q.text,
+        type: 'qcm',
+        choix: {
+          A: q.options.a || '',
+          B: q.options.b || '',
+          C: q.options.c || '',
+          D: q.options.d || ''
+        },
+        reponse: q.answer,
+        explication: q.explanation || null,
+        difficulte: 3,
+        source: `Session ${annale.year}`
+      });
+    }
+  }
+  return pool;
+}
+
+let _annalesPool = null;
+function getAnnalesPool() {
+  if (!_annalesPool) _annalesPool = loadAllAnnalesQCM();
+  return _annalesPool;
+}
+
+function shuffleArray(arr) {
+  const copy = arr.slice();
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
 app.post('/api/generate-questions', async (req, res) => {
   try {
-    const { bloc, count, difficulty, documentContext } = req.body;
-
+    const { bloc, count, difficulty, documentContext, sessionType } = req.body;
     const questionCount = count || 5;
+
+    // 1) D'abord, essayer de piocher dans les annales JSON (vraies questions d'examen)
+    const pool = getAnnalesPool();
+    if (pool.length > 0) {
+      const shuffled = shuffleArray(pool);
+      const selected = shuffled.slice(0, Math.min(questionCount, shuffled.length));
+      console.log(`[QUESTIONS] ${selected.length} questions piochées dans les annales (pool: ${pool.length})`);
+      return res.json({
+        success: true,
+        count: selected.length,
+        questions: selected
+      });
+    }
+
+    // 2) Fallback : génération via Claude si aucune annale disponible
     const questionDifficulty = difficulty || 3;
-
-    // Construction du prompt utilisateur
     let userPrompt = `Génère exactement ${questionCount} questions d'examen`;
-
-    if (bloc) {
-      userPrompt += ` pour le Bloc ${bloc}`;
-    }
-
+    if (bloc) userPrompt += ` pour le Bloc ${bloc}`;
     userPrompt += ` de niveau de difficulté ${questionDifficulty}/5.`;
-
     if (documentContext) {
-      userPrompt += `\n\nBase-toi sur le contenu suivant pour créer des questions pertinentes :\n---\n${documentContext.substring(0, 20000)}\n---`;
+      userPrompt += `\n\nBase-toi sur le contenu suivant :\n---\n${documentContext.substring(0, 20000)}\n---`;
     }
+    userPrompt += `\n\nIMPORTANT : Chaque question DOIT avoir le format suivant :
+{
+  "id": "identifiant unique",
+  "bloc": numéro (1-4),
+  "bloc_label": "nom du bloc",
+  "theme": "thème",
+  "question": "énoncé complet",
+  "type": "qcm",
+  "choix": { "A": "texte option A", "B": "texte option B", "C": "texte option C", "D": "texte option D" },
+  "reponse": "A",
+  "explication": "explication détaillée",
+  "difficulte": ${questionDifficulty}
+}
+Retourne UNIQUEMENT le tableau JSON.`;
 
-    userPrompt += '\n\nRetourne UNIQUEMENT le tableau JSON des questions, sans aucun texte supplémentaire.';
-
-    console.log(`[QUESTIONS] Génération de ${questionCount} questions (Bloc: ${bloc || 'tous'}, Difficulté: ${questionDifficulty})`);
+    console.log(`[QUESTIONS] Génération Claude de ${questionCount} questions (Bloc: ${bloc || 'tous'})`);
 
     const response = await client.messages.create({
       model: CLAUDE_MODEL,
       max_tokens: 8192,
       temperature: 0.7,
       system: SYSTEM_PROMPT_QUESTIONS,
-      messages: [
-        {
-          role: 'user',
-          content: userPrompt
-        }
-      ]
+      messages: [{ role: 'user', content: userPrompt }]
     });
 
     const responseText = response.content[0].text;
-
-    // Parsing du tableau JSON
     let questions;
     try {
       const jsonMatch = responseText.match(/\[[\s\S]*\]/);
-      if (jsonMatch) {
-        questions = JSON.parse(jsonMatch[0]);
-      } else {
-        questions = JSON.parse(responseText);
-      }
+      questions = jsonMatch ? JSON.parse(jsonMatch[0]) : JSON.parse(responseText);
+      // Normaliser le format pour exam.js
+      questions = questions.map((q, i) => ({
+        id: q.id || `gen_${i}_${Date.now()}`,
+        bloc: q.bloc || null,
+        bloc_label: q.bloc_label || (q.bloc ? `Bloc ${q.bloc}` : 'Général'),
+        theme: q.theme || '',
+        question: q.question || q.texte || '',
+        type: q.type || 'qcm',
+        choix: q.choix || (q.options ? {
+          A: (q.options[0] || '').replace(/^[A-D]\)\s*/, ''),
+          B: (q.options[1] || '').replace(/^[A-D]\)\s*/, ''),
+          C: (q.options[2] || '').replace(/^[A-D]\)\s*/, ''),
+          D: (q.options[3] || '').replace(/^[A-D]\)\s*/, '')
+        } : {}),
+        reponse: q.reponse || q.reponse_correcte || q.answer || '',
+        explication: q.explication || q.explanation || null,
+        difficulte: q.difficulte || questionDifficulty
+      }));
     } catch (parseErr) {
-      console.warn('[QUESTIONS] Réponse non-JSON, tentative de récupération');
-      questions = [{ raw: responseText, error: 'Format de réponse inattendu' }];
+      console.warn('[QUESTIONS] Réponse non-JSON :', parseErr.message);
+      questions = [];
     }
 
     res.json({
       success: true,
-      count: Array.isArray(questions) ? questions.length : 0,
+      count: questions.length,
       questions: questions
     });
   } catch (err) {
