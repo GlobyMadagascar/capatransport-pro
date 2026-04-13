@@ -89,8 +89,8 @@
         </li>
         <li class="sidebar__nav-item" role="none">
           <a href="#" class="sidebar__nav-link" data-page="documents" role="menuitem">
-            <i class="fas fa-file-upload sidebar__nav-icon" aria-hidden="true"></i>
-            <span class="sidebar__nav-label">Documents</span>
+            <i class="fas fa-book sidebar__nav-icon" aria-hidden="true"></i>
+            <span class="sidebar__nav-label">Annales &amp; Cours</span>
           </a>
         </li>
         <li class="sidebar__nav-item" role="none">
@@ -797,22 +797,13 @@
           </div>
         </fieldset>
 
-        <!-- API Configuration -->
-        <fieldset class="settings__section">
-          <legend class="settings__section-title">
-            <i class="fas fa-key" aria-hidden="true"></i> Configuration API
-          </legend>
+        <!-- API Configuration hidden - managed server-side -->
+        <fieldset class="settings__section" style="display:none;">
           <div class="form-group">
-            <label for="settings-api-key" class="form-label">Cl&eacute; API Claude</label>
-            <div class="form-input-group">
-              <input type="password" class="form-input" id="settings-api-key" placeholder="sk-ant-..." autocomplete="off">
-              <button class="btn btn--secondary" id="test-api-btn" data-action="test-api" aria-label="Tester la connexion API">
-                <i class="fas fa-plug" aria-hidden="true"></i> Tester
-              </button>
-            </div>
+            <input type="hidden" class="form-input" id="settings-api-key" value="">
             <div class="form-status" id="api-status" aria-live="polite">
               <span class="form-status__indicator" id="api-status-indicator"></span>
-              <span class="form-status__text" id="api-status-text">Non configur&eacute;</span>
+              <span class="form-status__text" id="api-status-text">OK</span>
             </div>
           </div>
         </fieldset>

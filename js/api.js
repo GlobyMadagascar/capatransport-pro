@@ -70,7 +70,7 @@ CT.API = (function () {
                 // ignore
             }
             if (body && body.error && /cl[eé]\s*api/i.test(body.error)) {
-                CT.Toast.show('Cl\u00e9 API non configur\u00e9e. Allez dans Param\u00e8tres.', 'error');
+                CT.Toast.show('Service temporairement indisponible. R\u00e9essayez dans quelques instants.', 'error');
                 return null;
             }
             var errMsg = (body && body.error) ? body.error : 'Erreur serveur (' + response.status + ')';
@@ -248,7 +248,7 @@ CT.API = (function () {
             localStorage.setItem('ct_api_key', key);
             return true;
         } catch (err) {
-            CT.Toast.show('Impossible de sauvegarder la cl\u00e9 API.', 'error');
+            CT.Toast.show('Erreur de configuration. Contactez le support.', 'error');
             return false;
         }
     }
