@@ -26,10 +26,10 @@
   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics-compat.js"></script>
 
   <!-- Application CSS -->
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/dashboard.css">
-  <link rel="stylesheet" href="styles/exam.css">
-  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/main.css?v=2">
+  <link rel="stylesheet" href="styles/dashboard.css?v=2">
+  <link rel="stylesheet" href="styles/exam.css?v=2">
+  <link rel="stylesheet" href="styles/components.css?v=2">
 </head>
 <body>
 
@@ -61,6 +61,16 @@
   <!-- ===================== TOAST CONTAINER ===================== -->
   <div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="true"></div>
 
+  <!-- ===================== GUEST COUNTDOWN BANNER ===================== -->
+  <div class="guest-banner" id="guest-banner" style="display:none;" role="alert" aria-live="polite">
+    <i class="fas fa-hourglass-half" aria-hidden="true"></i>
+    <span class="guest-banner__text">
+      Mode d&eacute;couverte &mdash; Il vous reste
+      <strong id="guest-countdown">15:00</strong>
+      pour tester la plateforme. <a href="#" id="guest-banner-signup">Cr&eacute;er un compte</a>
+    </span>
+  </div>
+
   <!-- ===================== SIDEBAR NAVIGATION ===================== -->
   <aside class="sidebar" id="sidebar" role="navigation" aria-label="Navigation principale">
     <div class="sidebar__header">
@@ -88,7 +98,7 @@
           </a>
         </li>
         <li class="sidebar__nav-item" role="none">
-          <a href="#" class="sidebar__nav-link" data-page="documents" role="menuitem">
+          <a href="#" class="sidebar__nav-link" data-page="library" role="menuitem">
             <i class="fas fa-book sidebar__nav-icon" aria-hidden="true"></i>
             <span class="sidebar__nav-label">Annales &amp; Cours</span>
           </a>
@@ -578,62 +588,39 @@
 
     </section>
 
-    <!-- ===================== PAGE: DOCUMENTS ===================== -->
-    <section class="page" id="page-documents" data-page="documents" style="display:none;" aria-label="Gestion des documents">
+    <!-- ===================== PAGE: LIBRARY (Annales + Cours JSON) ===================== -->
+    <section class="page" id="page-library" data-page="library" style="display:none;" aria-label="Annales et cours">
 
-      <h2 class="page__title">Documents</h2>
+      <h2 class="page__title">Annales &amp; Cours</h2>
+      <p class="page__subtitle" style="color:var(--ct-text2);margin-top:-1rem;margin-bottom:1.5rem;">
+        Contenu structur&eacute; pour votre pr&eacute;paration. Cliquez sur une fiche pour la consulter.
+      </p>
 
-      <!-- Upload Zone -->
-      <div class="upload-zone" id="upload-zone" role="button" tabindex="0" aria-label="Zone de d&eacute;p&ocirc;t de fichiers">
-        <div class="upload-zone__content">
-          <i class="fas fa-cloud-upload-alt upload-zone__icon" aria-hidden="true"></i>
-          <p class="upload-zone__text">Glissez vos fichiers ici ou cliquez pour s&eacute;lectionner</p>
-          <p class="upload-zone__hint">PDF, Word, TXT - 10MB max</p>
-        </div>
-        <input type="file" class="upload-zone__input" id="file-input" accept=".pdf,.doc,.docx,.txt" multiple hidden aria-label="S&eacute;lectionner des fichiers">
+      <!-- Category tabs -->
+      <div class="library__tabs" role="tablist" aria-label="Cat&eacute;gories">
+        <button class="btn btn--period btn--period--active" data-lib-tab="annales" role="tab" aria-selected="true">Annales</button>
+        <button class="btn btn--period" data-lib-tab="bloc1" role="tab" aria-selected="false">Bloc 1 - Droit</button>
+        <button class="btn btn--period" data-lib-tab="bloc2" role="tab" aria-selected="false">Bloc 2 - RETM</button>
+        <button class="btn btn--period" data-lib-tab="bloc3" role="tab" aria-selected="false">Bloc 3 - Normes</button>
+        <button class="btn btn--period" data-lib-tab="bloc4" role="tab" aria-selected="false">Bloc 4 - VIM</button>
       </div>
 
-      <!-- Category Selector -->
-      <div class="upload-options">
-        <label for="doc-category" class="upload-options__label">Cat&eacute;gorie :</label>
-        <select class="form-select" id="doc-category" aria-label="Cat&eacute;gorie du document">
-          <option value="annales">Annales</option>
-          <option value="reglementation">R&eacute;glementation</option>
-          <option value="retm">RETM</option>
-          <option value="normes-techniques">Normes Techniques</option>
-          <option value="ventes-internationales">Ventes Internationales</option>
-          <option value="cours-personnels">Cours personnels</option>
-        </select>
-      </div>
-
-      <!-- Scan Existing Documents Button -->
-      <div class="upload-options">
-        <button class="btn btn--secondary" id="scan-existing-btn" data-action="scan-existing" aria-label="Scanner les documents existants">
-          <i class="fas fa-search" aria-hidden="true"></i> Scanner les documents existants
-        </button>
-      </div>
-
-      <!-- Processing Indicator -->
-      <div class="processing-indicator" id="processing-indicator" style="display:none;" aria-label="Traitement en cours">
-        <div class="processing-indicator__content">
-          <i class="fas fa-cog fa-spin" aria-hidden="true"></i>
-          <span class="processing-indicator__text">Traitement du document...</span>
-        </div>
-        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-          <div class="progress-bar__fill" id="processing-progress" style="width: 0%"></div>
+      <div class="library__grid" id="library-grid">
+        <div class="library__empty">
+          <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+          <p>Chargement du contenu...</p>
         </div>
       </div>
 
-      <!-- Documents List -->
-      <div class="documents-list" id="documents-list" aria-label="Liste des documents">
-        <h3 class="documents-list__title">Mes documents</h3>
-        <div class="documents-list__grid" id="documents-grid">
-          <!-- Document cards generated by JS -->
-          <div class="documents-list__empty" id="documents-empty">
-            <i class="fas fa-folder-open" aria-hidden="true"></i>
-            <p>Aucun document import&eacute;. Ajoutez vos premiers fichiers ci-dessus.</p>
-          </div>
+      <!-- Reader modal -->
+      <div class="library__reader" id="library-reader" style="display:none;">
+        <div class="library__reader-header">
+          <h3 class="library__reader-title" id="library-reader-title">Titre</h3>
+          <button class="btn btn--secondary btn--sm" id="library-reader-close">
+            <i class="fas fa-times"></i> Fermer
+          </button>
         </div>
+        <div class="library__reader-body" id="library-reader-body"></div>
       </div>
 
     </section>
@@ -1033,12 +1020,12 @@
   </style>
 
   <!-- ===================== SCRIPTS ===================== -->
-  <script src="js/utils.js"></script>
-  <script src="js/api.js"></script>
-  <script src="js/documents.js"></script>
-  <script src="js/exam.js"></script>
-  <script src="js/dashboard.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/utils.js?v=2"></script>
+  <script src="js/api.js?v=2"></script>
+  <script src="js/library.js?v=2"></script>
+  <script src="js/exam.js?v=2"></script>
+  <script src="js/dashboard.js?v=2"></script>
+  <script src="js/app.js?v=2"></script>
 
 </body>
 </html>

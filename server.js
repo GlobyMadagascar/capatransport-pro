@@ -56,12 +56,17 @@ if (process.env.NODE_ENV === 'production') {
   app.set('trust proxy', 1);
 }
 
-// --- Security headers ---
+// --- Security headers + no-cache en dev ---
 app.use((_req, res, next) => {
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.setHeader('X-Frame-Options', 'SAMEORIGIN');
   res.setHeader('X-XSS-Protection', '1; mode=block');
   res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  if (process.env.NODE_ENV !== 'production') {
+    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '0');
+  }
   next();
 });
 
@@ -86,14 +91,36 @@ const apiLimiter = rateLimit({
 
 app.use('/api/', apiLimiter);
 
+// --- Blocage des PDFs et dossiers sources (jamais expos\u00e9s \u00e0 l'utilisateur) ---
+// Les PDFs contiennent les sources et explications qu'il ne faut pas divulguer.
+// Tout est servi via les JSON pr\u00e9-trait\u00e9s dans /data.
+const BLOCKED_PATHS = [
+  '/Annales_CAP3T5',
+  '/Bloc2_RETM',
+  '/Normes_Techniques',
+  '/Re\u0301glementations_pro',
+  '/Réglementations_pro',
+  '/Ventes_Internationales',
+  '/uploads'
+];
+app.use((req, res, next) => {
+  var urlPath = decodeURIComponent(req.path || '');
+  for (var i = 0; i < BLOCKED_PATHS.length; i++) {
+    if (urlPath.indexOf(BLOCKED_PATHS[i]) === 0) {
+      return res.status(404).send('Not found');
+    }
+  }
+  if (/\.pdf($|\?)/i.test(urlPath)) {
+    return res.status(404).send('Not found');
+  }
+  next();
+});
+
 // --- Fichiers statiques depuis la racine du projet ---
 const staticOptions = process.env.NODE_ENV === 'production'
   ? { maxAge: '1d', etag: true }
-  : {};
+  : { etag: false, lastModified: false, setHeaders: (res) => { res.setHeader('Cache-Control', 'no-store'); } };
 app.use(express.static(__dirname, staticOptions));
-
-// --- Fichiers uploadés accessibles publiquement ---
-app.use('/uploads', express.static(UPLOADS_DIR));
 
 // ============================================================================
 // Configuration Multer (upload de fichiers)
@@ -1310,6 +1337,21 @@ app.get('/api/annales/:year', (req, res) => {
   } catch (err) {
     console.error('[ERREUR ANNALE]', err.message);
     return res.status(500).json({ error: 'Erreur lors du chargement de l\'annale.' });
+  }
+});
+
+// GET /api/cours — Cours structurés issus du build_cours_json.js
+app.get('/api/cours', (_req, res) => {
+  try {
+    const coursFile = path.join(DATA_DIR, 'cours.json');
+    if (!fs.existsSync(coursFile)) {
+      return res.json({ bloc1: [], bloc2: [], bloc3: [], bloc4: [] });
+    }
+    const data = JSON.parse(fs.readFileSync(coursFile, 'utf-8'));
+    return res.json(data);
+  } catch (err) {
+    console.error('[ERREUR COURS]', err.message);
+    return res.status(500).json({ error: 'Erreur lors du chargement des cours.' });
   }
 });
 

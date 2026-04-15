@@ -920,7 +920,35 @@
   }
 
   .topbar {
-    padding: 0.6rem 1rem;
+    padding: 0.6rem 0.75rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .topbar__title {
+    font-size: 1rem;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .topbar__actions {
+    gap: 0.4rem;
+  }
+
+  .topbar__countdown {
+    display: none;
+  }
+
+  /* Sur mobile, le bouton "Commencer une session" ne garde que l'ic\u00f4ne */
+  .topbar__start-btn {
+    padding: 0.55rem 0.85rem;
+    font-size: 0.75rem;
+  }
+  .topbar__start-btn span {
+    display: none;
   }
 
   .widget {
@@ -933,5 +961,260 @@
 
   .dashboard__greeting-text {
     font-size: 1.25rem;
+  }
+
+  .page {
+    padding: 1rem;
+  }
+
+  .page__title {
+    font-size: 1.25rem;
+  }
+}
+
+/* ============================================================
+   Guest 15-minute Banner
+   ============================================================ */
+.guest-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  background: linear-gradient(90deg, #f59e0b, #ef4444);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.guest-banner i {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.guest-banner strong {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1rem;
+  padding: 0 0.25rem;
+}
+
+.guest-banner a {
+  color: #fff;
+  text-decoration: underline;
+  margin-left: 0.5rem;
+  font-weight: 700;
+}
+
+body:has(.guest-banner[style*="flex"]) .main,
+body:has(.guest-banner[style*="flex"]) .sidebar {
+  padding-top: 44px;
+}
+
+@media (max-width: 767px) {
+  .guest-banner {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    text-align: center;
+  }
+  .guest-banner__text {
+    line-height: 1.3;
+  }
+}
+
+/* ============================================================
+   Library (Annales & Cours)
+   ============================================================ */
+.library__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.library__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.library__card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(22, 33, 62, 0.6);
+  border: 1px solid rgba(42, 63, 95, 0.5);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  color: var(--ct-text);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.library__card:hover {
+  border-color: rgba(255, 107, 0, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.library__card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(255, 107, 0, 0.12);
+  color: var(--ct-primary);
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.library__card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.library__card-title {
+  margin: 0 0 0.25rem 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  color: var(--ct-text);
+}
+
+.library__card-subtitle,
+.library__card-meta {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--ct-text2);
+}
+
+.library__card-arrow {
+  color: var(--ct-text2);
+  flex-shrink: 0;
+}
+
+.library__empty {
+  padding: 3rem 1rem;
+  text-align: center;
+  color: var(--ct-text2);
+  grid-column: 1 / -1;
+}
+
+.library__empty i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.library__empty-hint {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.library__empty-hint code {
+  background: rgba(255,255,255,0.1);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.library__reader {
+  margin-top: 2rem;
+  background: rgba(22, 33, 62, 0.85);
+  border: 1px solid rgba(42, 63, 95, 0.7);
+  border-radius: 12px;
+  padding: 1.5rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.library__reader-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--ct-border);
+}
+
+.library__reader-title {
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25rem;
+  color: var(--ct-text);
+}
+
+.library__reader-body {
+  color: var(--ct-text);
+  line-height: 1.6;
+  font-size: 0.9rem;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.library__reader-body h4 {
+  color: var(--ct-primary);
+  margin-top: 1.5rem;
+  font-family: 'Oswald', sans-serif;
+}
+
+.library__reader-body h5 {
+  color: var(--ct-text);
+  margin-top: 1rem;
+}
+
+.library__qcm-list li {
+  margin-bottom: 1rem;
+}
+
+.library__qcm-question {
+  font-weight: 600;
+}
+
+.library__qcm-options {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0.5rem 0;
+}
+
+.library__qcm-options li {
+  padding: 0.25rem 0;
+  color: var(--ct-text2);
+}
+
+.library__qcm-answer {
+  color: #22c55e;
+  font-size: 0.85rem;
+}
+
+.library__problem,
+.library__cours-text,
+.library__problem-text {
+  background: rgba(0,0,0,0.25);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 0.75rem 0;
+  white-space: normal;
+}
+
+@media (max-width: 767px) {
+  .library__grid {
+    grid-template-columns: 1fr;
+  }
+  .library__tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  .library__tabs .btn--period {
+    flex-shrink: 0;
   }
 }

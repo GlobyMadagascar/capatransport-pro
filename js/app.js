@@ -37,11 +37,15 @@ CT.App = (function () {
         dashboard:  'Tableau de bord',
         training:   'Entra\u00eenement',
         exam:       'Examen en cours',
-        documents:  'Documents',
+        library:    'Annales & Cours',
         chat:       'Chat avec MAX',
         stats:      'Statistiques',
         settings:   'Param\u00e8tres'
     };
+
+    // Dur\u00e9e du mode invit\u00e9 : 15 minutes
+    var GUEST_DURATION_MS = 15 * 60 * 1000;
+    var guestTimerInterval = null;
 
     // =========================================================================
     // R\u00e9ponses d\u00e9mo du chat MAX (hors-ligne)
@@ -172,6 +176,20 @@ CT.App = (function () {
     function initApp() {
         if (!state.user) return;
 
+        // Si invit\u00e9 : v\u00e9rifier si les 15 minutes sont d\u00e9pass\u00e9es
+        if (state.user.isGuest) {
+            var started = state.user.guestStartedAt || CT.Utils.loadData('ct_guest_started_at', null);
+            if (started) {
+                var elapsed = Date.now() - started;
+                if (elapsed >= GUEST_DURATION_MS) {
+                    handleGuestExpired();
+                    return;
+                }
+                state.user.guestStartedAt = started;
+                startGuestCountdown();
+            }
+        }
+
         // Mettre \u00e0 jour l'interface avec les infos utilisateur
         updateUserUI();
 
@@ -180,9 +198,9 @@ CT.App = (function () {
             try { CT.Dashboard.init(); } catch (e) { console.warn('[CT.App] Erreur init Dashboard :', e); }
         }
 
-        // Charger les documents
-        if (CT.Documents && typeof CT.Documents.loadDocuments === 'function') {
-            try { CT.Documents.loadDocuments(); } catch (e) { console.warn('[CT.App] Erreur chargement documents :', e); }
+        // Charger la biblioth\u00e8que annales/cours
+        if (CT.Library && typeof CT.Library.load === 'function') {
+            try { CT.Library.load(); } catch (e) { console.warn('[CT.App] Erreur chargement biblioth\u00e8que :', e); }
         }
 
         // Naviguer vers le tableau de bord
@@ -244,8 +262,8 @@ CT.App = (function () {
             try { CT.Dashboard.renderStats(); } catch (e) { /* ignor\u00e9 */ }
         }
 
-        if (page === 'documents' && CT.Documents && typeof CT.Documents.loadDocuments === 'function') {
-            try { CT.Documents.loadDocuments(); } catch (e) { /* ignor\u00e9 */ }
+        if (page === 'library' && CT.Library && typeof CT.Library.load === 'function') {
+            try { CT.Library.load(); } catch (e) { /* ignor\u00e9 */ }
         }
 
         if (page === 'settings') {
@@ -452,13 +470,77 @@ CT.App = (function () {
             email: '',
             region: '',
             examDate: examDateStr,
-            isGuest: true
+            isGuest: true,
+            guestStartedAt: now.getTime()
         };
 
         CT.Utils.saveData('ct_profile', state.user);
+        CT.Utils.saveData('ct_guest_started_at', now.getTime());
         hideAuthModal();
         initApp();
-        CT.Toast.show('Bienvenue ! Vous acc\u00e9dez en mode invit\u00e9.', 'info');
+
+        // Avertir clairement l'utilisateur
+        CT.Toast.show('Mode d\u00e9couverte activ\u00e9 : vous avez 15 minutes pour tester la plateforme.', 'warning');
+        if (CT.Modal && typeof CT.Modal.alert === 'function') {
+            CT.Modal.alert(
+                'Mode d\u00e9couverte',
+                'Vous avez 15 minutes pour explorer la plateforme sans compte. Pass\u00e9 ce d\u00e9lai, vous serez invit\u00e9 \u00e0 cr\u00e9er un compte pour continuer.'
+            );
+        }
+
+        startGuestCountdown();
+    }
+
+    function startGuestCountdown() {
+        if (!state.user || !state.user.isGuest) return;
+
+        var startedAt = state.user.guestStartedAt || CT.Utils.loadData('ct_guest_started_at', Date.now());
+        var banner = document.getElementById('guest-banner');
+        var countdownEl = document.getElementById('guest-countdown');
+        if (banner) banner.style.display = 'flex';
+
+        function tick() {
+            var remaining = GUEST_DURATION_MS - (Date.now() - startedAt);
+            if (remaining <= 0) {
+                if (guestTimerInterval) clearInterval(guestTimerInterval);
+                guestTimerInterval = null;
+                if (countdownEl) countdownEl.textContent = '00:00';
+                handleGuestExpired();
+                return;
+            }
+            var mins = Math.floor(remaining / 60000);
+            var secs = Math.floor((remaining % 60000) / 1000);
+            if (countdownEl) {
+                countdownEl.textContent = (mins < 10 ? '0' : '') + mins + ':' + (secs < 10 ? '0' : '') + secs;
+            }
+        }
+
+        tick();
+        if (guestTimerInterval) clearInterval(guestTimerInterval);
+        guestTimerInterval = setInterval(tick, 1000);
+
+        var signupLink = document.getElementById('guest-banner-signup');
+        if (signupLink) {
+            signupLink.onclick = function (e) {
+                e.preventDefault();
+                handleGuestExpired(true);
+            };
+        }
+    }
+
+    function handleGuestExpired(manual) {
+        if (guestTimerInterval) { clearInterval(guestTimerInterval); guestTimerInterval = null; }
+        var banner = document.getElementById('guest-banner');
+        if (banner) banner.style.display = 'none';
+        CT.Utils.removeData('ct_profile');
+        CT.Utils.removeData('ct_guest_started_at');
+        state.user = null;
+        if (!manual) {
+            CT.Toast.show('Le mode d\u00e9couverte est termin\u00e9. Cr\u00e9ez un compte pour continuer.', 'warning');
+        }
+        showAuthModal();
+        // Forcer l'onglet inscription
+        setTimeout(function () { switchAuthTab('register'); }, 100);
     }
 
     function handleLogout() {
@@ -964,13 +1046,46 @@ CT.App = (function () {
     function setupEventListeners() {
         // --- Sidebar ---
         var hamburger = $('hamburger-btn');
-        if (hamburger) hamburger.addEventListener('click', openSidebar);
+        if (hamburger) hamburger.addEventListener('click', function (e) {
+            e.stopPropagation();
+            openSidebar();
+        });
 
         var closeBtn = $('sidebar-close-btn');
         if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
 
         var overlay = $('sidebar-overlay');
         if (overlay) overlay.addEventListener('click', closeSidebar);
+
+        // --- Fermeture au clic en dehors (mobile) ---
+        document.addEventListener('click', function (e) {
+            if (!state.sidebarOpen) return;
+            var sidebar = $('sidebar');
+            var hamb = $('hamburger-btn');
+            if (!sidebar) return;
+            if (sidebar.contains(e.target)) return;
+            if (hamb && hamb.contains(e.target)) return;
+            closeSidebar();
+        });
+
+        // --- Swipe pour fermer la sidebar sur mobile ---
+        var touchStartX = null;
+        var sidebarEl = $('sidebar');
+        if (sidebarEl) {
+            sidebarEl.addEventListener('touchstart', function (e) {
+                if (!state.sidebarOpen) return;
+                touchStartX = e.touches[0].clientX;
+            }, { passive: true });
+            sidebarEl.addEventListener('touchmove', function (e) {
+                if (touchStartX === null) return;
+                var dx = e.touches[0].clientX - touchStartX;
+                if (dx < -50) {
+                    closeSidebar();
+                    touchStartX = null;
+                }
+            }, { passive: true });
+            sidebarEl.addEventListener('touchend', function () { touchStartX = null; }, { passive: true });
+        }
 
         // --- Navigation sidebar ---
         var navLinks = qsa('.sidebar__nav-link[data-page]');

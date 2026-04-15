@@ -430,6 +430,65 @@
 }
 
 /* ============================================================
+   MAX inline explanation bubble
+   ============================================================ */
+.exam__max-explanation {
+  margin-top: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 107, 0, 0.08), rgba(255, 154, 68, 0.05));
+  border: 1px solid rgba(255, 107, 0, 0.35);
+  border-radius: 12px;
+  color: var(--ct-text);
+  animation: fadeIn 0.4s ease;
+}
+
+.exam__max-explanation-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+  color: var(--ct-primary);
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.exam__max-explanation-header strong {
+  flex: 1;
+}
+
+.exam__max-explanation-close {
+  background: none;
+  border: none;
+  color: var(--ct-text2);
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 0.35rem;
+}
+
+.exam__max-explanation-close:hover {
+  color: var(--ct-text);
+}
+
+.exam__max-explanation-q {
+  color: var(--ct-text2);
+  margin: 0 0 0.5rem 0;
+  padding-left: 0.75rem;
+  border-left: 3px solid rgba(255, 107, 0, 0.4);
+}
+
+.exam__max-explanation-ua {
+  font-size: 0.85rem;
+  color: var(--ct-text2);
+  margin: 0 0 0.75rem 0;
+}
+
+.exam__max-explanation p {
+  line-height: 1.5;
+}
+
+/* ============================================================
    BOTTOM BAR
    ============================================================ */
 .exam__bottombar {
@@ -454,12 +513,63 @@
 .exam__nav-buttons {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: var(--ct-space-sm);
+  width: 100%;
+}
+
+.exam__nav-buttons .btn {
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 @media (min-width: 768px) {
   .exam__nav-buttons {
     gap: var(--ct-space-md);
+    width: auto;
+  }
+  .exam__nav-buttons .btn {
+    flex: 0 1 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .exam__bottombar {
+    padding: 0.75rem;
+    gap: 0.5rem;
+  }
+  .exam__bottombar .btn--accent {
+    width: 100%;
+    justify-content: center;
+  }
+  .exam__nav-buttons .btn {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.4rem;
+  }
+  .training__bloc-buttons,
+  .training__difficulty-buttons {
+    gap: 0.5rem;
+  }
+  .btn--bloc,
+  .btn--difficulty {
+    flex: 1 1 calc(50% - 0.25rem);
+    min-width: 0;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
+  .training__start .btn--large,
+  .training__start .btn {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.9rem 1rem;
+  }
+  .exam__topbar {
+    flex-wrap: wrap;
+    padding: 0.75rem;
+    gap: 0.5rem;
   }
 }
 

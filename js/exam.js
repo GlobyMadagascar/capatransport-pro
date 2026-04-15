@@ -773,10 +773,13 @@ CT.Exam = (function () {
         var q = state.questions[state.currentIndex];
         var currentAnswer = state.answers[q.id] || null;
 
-        toast('MAX r\u00e9fl\u00e9chit...', 'info');
+        // Afficher imm\u00e9diatement la bulle MAX avec indicateur de r\u00e9flexion
+        showMaxThinking(q, currentAnswer);
 
         var explanation = null;
         try {
+            // L'API re\u00e7oit la question compl\u00e8te + la r\u00e9ponse de l'\u00e9tudiant
+            // MAX sait donc d\u00e9j\u00e0 exactement quelle est la question
             var result = await CT.API.getExplanation(q, currentAnswer);
             if (result && result.explanation) explanation = result.explanation;
             else if (result && typeof result === 'string') explanation = result;
@@ -785,28 +788,60 @@ CT.Exam = (function () {
         }
 
         if (!explanation) {
-            explanation = q.explication || 'Aucune explication disponible pour cette question en mode hors-ligne.';
+            explanation = q.explication ||
+                'Pour cette question, la bonne r\u00e9ponse est ' +
+                (q.bonne_reponse || q.reponse || '(non disponible)') +
+                '. Relisez attentivement la question et comparez chaque option.';
         }
 
-        showInlineExplanation(explanation);
+        updateMaxAnswer(explanation);
     }
 
-    function showInlineExplanation(text) {
+    function showMaxThinking(q, userAnswer) {
         removeInlineExplanation();
         var area = $('exam-question-area');
-        if (!area) { toast(text, 'info'); return; }
+        if (!area) return;
+
+        var qText = q.question || q.texte || '';
+        var truncated = qText.length > 120 ? qText.substring(0, 120) + '...' : qText;
 
         var div = document.createElement('div');
         div.id = 'exam-max-explanation';
         div.className = 'exam__max-explanation';
         div.innerHTML = '<div class="exam__max-explanation-header">' +
-            '<i class="fas fa-user-tie" aria-hidden="true"></i> <strong>MAX dit :</strong>' +
+            '<i class="fas fa-user-tie" aria-hidden="true"></i> <strong>MAX r\u00e9pond \u00e0 votre question</strong>' +
             '<button class="exam__max-explanation-close" aria-label="Fermer">&times;</button>' +
-            '</div><p>' + escapeHtml(text) + '</p>';
+            '</div>' +
+            '<p class="exam__max-explanation-q"><em>\u00ab ' + escapeHtml(truncated) + ' \u00bb</em></p>' +
+            (userAnswer ? '<p class="exam__max-explanation-ua">Votre r\u00e9ponse : <strong>' + escapeHtml(userAnswer) + '</strong></p>' : '') +
+            '<p id="exam-max-answer"><i class="fas fa-spinner fa-spin"></i> MAX analyse la question...</p>';
         area.appendChild(div);
 
         var closeBtn = div.querySelector('.exam__max-explanation-close');
         if (closeBtn) closeBtn.addEventListener('click', function () { removeInlineExplanation(); });
+
+        div.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function updateMaxAnswer(text) {
+        var ans = $('exam-max-answer');
+        if (ans) {
+            ans.innerHTML = escapeHtml(text).replace(/\n/g, '<br>');
+        } else {
+            // Fallback si la bulle a disparu
+            var area = $('exam-question-area');
+            if (!area) { toast(text, 'info'); return; }
+            var div = document.createElement('div');
+            div.id = 'exam-max-explanation';
+            div.className = 'exam__max-explanation';
+            div.innerHTML = '<div class="exam__max-explanation-header">' +
+                '<i class="fas fa-user-tie"></i> <strong>MAX dit :</strong>' +
+                '<button class="exam__max-explanation-close">&times;</button>' +
+                '</div><p>' + escapeHtml(text) + '</p>';
+            area.appendChild(div);
+            var cb = div.querySelector('.exam__max-explanation-close');
+            if (cb) cb.addEventListener('click', function () { removeInlineExplanation(); });
+        }
     }
 
     function removeInlineExplanation() {
