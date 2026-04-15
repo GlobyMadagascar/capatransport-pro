@@ -747,8 +747,26 @@ CT.App = (function () {
 
     function formatChatResponse(text) {
         if (!text) return '';
-        // Convertir les retours \u00e0 la ligne en <br>
-        return escapeHtml(text).replace(/\n/g, '<br>');
+        // Mini-rendu Markdown -> HTML
+        var html = escapeHtml(text);
+        html = html.replace(/^######\s+(.+)$/gm, '<h6>$1</h6>');
+        html = html.replace(/^#####\s+(.+)$/gm, '<h5>$1</h5>');
+        html = html.replace(/^####\s+(.+)$/gm, '<h4>$1</h4>');
+        html = html.replace(/^###\s+(.+)$/gm, '<h4>$1</h4>');
+        html = html.replace(/^##\s+(.+)$/gm, '<h3>$1</h3>');
+        html = html.replace(/^#\s+(.+)$/gm, '<h3>$1</h3>');
+        html = html.replace(/\*\*([^\*\n]+)\*\*/g, '<strong>$1</strong>');
+        html = html.replace(/__([^_\n]+)__/g, '<strong>$1</strong>');
+        html = html.replace(/(^|[^\*])\*([^\*\n]+)\*(?!\*)/g, '$1<em>$2</em>');
+        html = html.replace(/`([^`\n]+)`/g, '<code>$1</code>');
+        html = html.replace(/^[\-\*]\s+(.+)$/gm, '<li>$1</li>');
+        html = html.replace(/(<li>[\s\S]*?<\/li>)(?:\s*(<li>[\s\S]*?<\/li>))+/g, function (match) {
+            return '<ul>' + match.replace(/\s*\n\s*/g, '') + '</ul>';
+        });
+        html = html.replace(/\n+/g, function (m) { return m.length > 1 ? '<br><br>' : '<br>'; });
+        html = html.replace(/<br>\s*(<\/?(h[1-6]|ul|li|p)>)/g, '$1');
+        html = html.replace(/(<\/?(h[1-6]|ul|li|p)>)\s*<br>/g, '$1');
+        return html;
     }
 
     function escapeHtml(str) {

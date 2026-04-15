@@ -823,10 +823,52 @@ CT.Exam = (function () {
         div.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 
+    // Mini-rendu Markdown -> HTML (titres, gras, italique, listes, code inline)
+    function renderMarkdown(text) {
+        if (!text) return '';
+        var html = escapeHtml(text);
+
+        // Titres ### / ## / #
+        html = html.replace(/^######\s+(.+)$/gm, '<h6>$1</h6>');
+        html = html.replace(/^#####\s+(.+)$/gm, '<h5>$1</h5>');
+        html = html.replace(/^####\s+(.+)$/gm, '<h4>$1</h4>');
+        html = html.replace(/^###\s+(.+)$/gm, '<h4>$1</h4>');
+        html = html.replace(/^##\s+(.+)$/gm, '<h3>$1</h3>');
+        html = html.replace(/^#\s+(.+)$/gm, '<h3>$1</h3>');
+
+        // Gras **texte** et __texte__
+        html = html.replace(/\*\*([^\*\n]+)\*\*/g, '<strong>$1</strong>');
+        html = html.replace(/__([^_\n]+)__/g, '<strong>$1</strong>');
+
+        // Italique *texte* et _texte_ (en évitant ** déjà traité)
+        html = html.replace(/(^|[^\*])\*([^\*\n]+)\*(?!\*)/g, '$1<em>$2</em>');
+        html = html.replace(/(^|[^_])_([^_\n]+)_(?!_)/g, '$1<em>$2</em>');
+
+        // Code inline `code`
+        html = html.replace(/`([^`\n]+)`/g, '<code>$1</code>');
+
+        // Listes à puces (- ou *)
+        html = html.replace(/^[\-\*]\s+(.+)$/gm, '<li>$1</li>');
+        // Regrouper les <li> consécutifs en <ul>
+        html = html.replace(/(<li>[\s\S]*?<\/li>)(?:\s*(<li>[\s\S]*?<\/li>))+/g, function (match) {
+            return '<ul>' + match.replace(/\s*\n\s*/g, '') + '</ul>';
+        });
+        // Cas d'un <li> isolé
+        html = html.replace(/(?<!<\/ul>)(?<!<ul>)(<li>[\s\S]*?<\/li>)(?!<li>)(?!<\/ul>)/g, '<ul>$1</ul>');
+
+        // Sauts de ligne -> <br> (sauf après un bloc HTML)
+        html = html.replace(/\n+/g, function (m) { return m.length > 1 ? '<br><br>' : '<br>'; });
+        // Nettoyage des <br> autour des blocs
+        html = html.replace(/<br>\s*(<\/?(h[1-6]|ul|li|p)>)/g, '$1');
+        html = html.replace(/(<\/?(h[1-6]|ul|li|p)>)\s*<br>/g, '$1');
+
+        return html;
+    }
+
     function updateMaxAnswer(text) {
         var ans = $('exam-max-answer');
         if (ans) {
-            ans.innerHTML = escapeHtml(text).replace(/\n/g, '<br>');
+            ans.innerHTML = renderMarkdown(text);
         } else {
             // Fallback si la bulle a disparu
             var area = $('exam-question-area');
@@ -837,7 +879,7 @@ CT.Exam = (function () {
             div.innerHTML = '<div class="exam__max-explanation-header">' +
                 '<i class="fas fa-user-tie"></i> <strong>MAX dit :</strong>' +
                 '<button class="exam__max-explanation-close">&times;</button>' +
-                '</div><p>' + escapeHtml(text) + '</p>';
+                '</div><div class="exam__max-explanation-body">' + renderMarkdown(text) + '</div>';
             area.appendChild(div);
             var cb = div.querySelector('.exam__max-explanation-close');
             if (cb) cb.addEventListener('click', function () { removeInlineExplanation(); });

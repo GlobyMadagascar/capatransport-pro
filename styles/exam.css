@@ -488,6 +488,53 @@
   line-height: 1.5;
 }
 
+/* Rendu Markdown dans la bulle MAX */
+.exam__max-explanation h3,
+.exam__max-explanation h4,
+.exam__max-explanation h5,
+.exam__max-explanation h6 {
+  margin: var(--ct-space-md) 0 var(--ct-space-xs);
+  font-weight: 700;
+  line-height: 1.3;
+  color: inherit;
+}
+.exam__max-explanation h3 { font-size: 1.05rem; }
+.exam__max-explanation h4 { font-size: 1rem; }
+.exam__max-explanation h5,
+.exam__max-explanation h6 { font-size: 0.95rem; }
+
+.exam__max-explanation strong { font-weight: 700; }
+.exam__max-explanation em { font-style: italic; }
+.exam__max-explanation code {
+  background: rgba(0, 0, 0, 0.08);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.9em;
+}
+
+.exam__max-explanation ul {
+  margin: var(--ct-space-xs) 0 var(--ct-space-sm);
+  padding-left: 1.4em;
+  list-style: disc;
+}
+.exam__max-explanation li {
+  margin: 0.15em 0;
+  line-height: 1.5;
+}
+
+#exam-max-answer {
+  line-height: 1.55;
+}
+#exam-max-answer h3,
+#exam-max-answer h4 {
+  margin: var(--ct-space-md) 0 var(--ct-space-xs);
+}
+#exam-max-answer ul {
+  margin: var(--ct-space-xs) 0 var(--ct-space-sm);
+  padding-left: 1.4em;
+}
+
 /* ============================================================
    BOTTOM BAR
    ============================================================ */
