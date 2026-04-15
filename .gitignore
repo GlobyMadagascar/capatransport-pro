@@ -7,3 +7,12 @@ uploads/*.txt
 *.log
 .DS_Store
 __MACOSX/
+
+# Deployment scripts containing credentials
+upload_ftp.sh
+upload_reglementations.sh
+ssh_deploy.py
+
+# Intermediate PDF extraction artifacts
+data/raw_*.txt
+
