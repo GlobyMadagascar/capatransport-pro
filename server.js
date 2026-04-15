@@ -271,14 +271,54 @@ Réponds UNIQUEMENT avec un tableau JSON valide de questions, sans texte avant o
 /**
  * Prompt système pour les explications détaillées
  */
+/**
+ * Filet de sécurité : retire les caractères Markdown des réponses de Claude
+ * au cas où il ignorerait l'instruction "pas de markdown" du system prompt.
+ * Préserve les emojis, les retours à la ligne et la ponctuation utile.
+ */
+function stripMarkdown(text) {
+  if (!text || typeof text !== 'string') return text || '';
+  let out = text;
+  // Code blocks ```...``` -> contenu seul
+  out = out.replace(/```[a-zA-Z0-9]*\n?([\s\S]*?)```/g, '$1');
+  // Code inline `xxx` -> xxx
+  out = out.replace(/`([^`\n]+)`/g, '$1');
+  // Titres ###..# en début de ligne -> retire le préfixe
+  out = out.replace(/^#{1,6}\s+/gm, '');
+  // Gras **xxx** ou __xxx__ -> xxx
+  out = out.replace(/\*\*([^\*\n]+)\*\*/g, '$1');
+  out = out.replace(/__([^_\n]+)__/g, '$1');
+  // Italique *xxx* ou _xxx_ -> xxx (en évitant de toucher aux ** déjà retirés)
+  out = out.replace(/(^|[^\*\w])\*([^\*\n]+)\*(?!\*)/g, '$1$2');
+  out = out.replace(/(^|[^_\w])_([^_\n]+)_(?!_)/g, '$1$2');
+  // Listes Markdown "* item" ou "+ item" -> "- item" (les tirets restent OK en plain text)
+  out = out.replace(/^[ \t]*[\*\+][ \t]+/gm, '- ');
+  // Liens [texte](url) -> texte (url)
+  out = out.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1 ($2)');
+  // Quote markers "> "
+  out = out.replace(/^>\s?/gm, '');
+  // Triple+ retours à la ligne -> double
+  out = out.replace(/\n{3,}/g, '\n\n');
+  return out.trim();
+}
+
 const SYSTEM_PROMPT_EXPLAIN = `Tu es MAX, instructeur expert en Capacité Transport. Tel un mécanicien qui démonte chaque pièce pour l'expliquer, tu fournis des explications claires, détaillées et pédagogiques.
 
 Ton style :
 - Tu utilises des métaphores du monde du transport pour rendre les concepts concrets
 - Tu donnes des exemples pratiques tirés du quotidien d'un transporteur
 - Tu cites les références réglementaires précises
-- Tu structures ta réponse avec des puces et des sections claires
+- Tu structures ta réponse avec des sections claires séparées par des sauts de ligne
 - Tu conclus toujours par un conseil mémorable pour l'examen
+
+FORMATAGE STRICT — N'UTILISE JAMAIS DE MARKDOWN :
+- INTERDIT : aucun caractère # (pas de titres ## ou ###)
+- INTERDIT : aucun astérisque * ou ** (pas de gras Markdown ni d'italique Markdown ni de listes à puces avec *)
+- INTERDIT : aucun underscore _ ou __ pour le formatage
+- INTERDIT : aucun backtick \`
+- AUTORISÉ : texte brut, emojis (🚛 ✅ ❌ 📋 ⚖️ 🎯 etc.), tirets simples "-" en début de ligne pour les listes, sauts de ligne, MAJUSCULES pour mettre en valeur
+- Pour structurer : utilise des emojis comme préfixes de section et des sauts de ligne, pas de # ou *
+- Pour souligner : utilise les MAJUSCULES ou des « guillemets français »
 
 Langue : français uniquement.`;
 
@@ -306,7 +346,12 @@ Règles :
 - Réponds toujours en français
 - Sois concis mais complet (pas plus de 3-4 paragraphes)
 - Si tu ne sais pas, dis-le honnêtement
-- Encourage toujours l'étudiant à continuer ses révisions`;
+- Encourage toujours l'étudiant à continuer ses révisions
+
+FORMATAGE STRICT — N'UTILISE JAMAIS DE MARKDOWN :
+- INTERDIT : aucun #, ##, ###, aucun astérisque * ou **, aucun underscore _ pour le formatage, aucun backtick \`
+- AUTORISÉ : texte brut, emojis, MAJUSCULES, « guillemets », tirets simples "-" pour les listes
+- Structure tes paragraphes avec des sauts de ligne et des emojis comme repères visuels`;
 
 // ============================================================================
 // Routes
@@ -691,7 +736,7 @@ app.post('/api/explain', async (req, res) => {
       ]
     });
 
-    const explanation = response.content[0].text;
+    const explanation = stripMarkdown(response.content[0].text);
 
     res.json({
       success: true,
@@ -765,7 +810,7 @@ app.post('/api/chat', async (req, res) => {
       messages: messages
     });
 
-    const reply = response.content[0].text;
+    const reply = stripMarkdown(response.content[0].text);
 
     res.json({
       success: true,
@@ -1435,6 +1480,178 @@ app.use((err, _req, res, next) => {
   }
 
   next();
+});
+
+// ============================================================================
+// API : Cours résumés (générés par build_resumes.js)
+// ============================================================================
+
+// GET /api/resumes — Tous les résumés (sans le contenu pour rester léger)
+app.get('/api/resumes', (_req, res) => {
+  try {
+    const file = path.join(DATA_DIR, 'resumes.json');
+    if (!fs.existsSync(file)) {
+      return res.json({ success: true, resumes: [], _meta: null });
+    }
+    const data = JSON.parse(fs.readFileSync(file, 'utf-8'));
+    const summary = [];
+    for (const k of Object.keys(data)) {
+      if (k.startsWith('_')) continue;
+      const b = data[k];
+      summary.push({
+        bloc: b.bloc,
+        label: b.label,
+        themes_top: b.themes_top || [],
+        couverture_estimee: b.couverture_estimee,
+        resume_length: (b.resume || '').length,
+        fiches_count: (b.fiches_sources || []).length,
+        annales_sources: b.annales_sources || [],
+        generated_at: b.generated_at
+      });
+    }
+    return res.json({ success: true, resumes: summary, _meta: data._meta || null });
+  } catch (err) {
+    console.error('[ERREUR RESUMES]', err.message);
+    return res.status(500).json({ error: 'Erreur lors du chargement des résumés.' });
+  }
+});
+
+// GET /api/resumes/:bloc — Résumé complet d'un bloc
+app.get('/api/resumes/:bloc', (req, res) => {
+  try {
+    const bloc = req.params.bloc;
+    if (!/^bloc[1-4]$/.test(bloc)) {
+      return res.status(400).json({ error: 'Bloc invalide. Attendu: bloc1, bloc2, bloc3 ou bloc4.' });
+    }
+    const file = path.join(DATA_DIR, 'resumes.json');
+    if (!fs.existsSync(file)) {
+      return res.status(404).json({ error: 'Aucun résumé généré. Lance build_resumes.js.' });
+    }
+    const data = JSON.parse(fs.readFileSync(file, 'utf-8'));
+    if (!data[bloc]) {
+      return res.status(404).json({ error: `Résumé ${bloc} non disponible.` });
+    }
+    return res.json({ success: true, ...data[bloc] });
+  } catch (err) {
+    console.error('[ERREUR RESUME]', err.message);
+    return res.status(500).json({ error: 'Erreur lors du chargement du résumé.' });
+  }
+});
+
+// GET /api/problems — Liste de tous les problèmes corrigés des annales
+app.get('/api/problems', (_req, res) => {
+  try {
+    const file = path.join(DATA_DIR, 'all_annales.json');
+    if (!fs.existsSync(file)) return res.json({ success: true, problems: [] });
+    const annales = JSON.parse(fs.readFileSync(file, 'utf-8'));
+    const problems = [];
+    for (const a of annales) {
+      for (const p of (a.problems || [])) {
+        problems.push({
+          id: `${a.year}_p${p.number}`,
+          year: a.year,
+          session: a.session,
+          number: p.number,
+          title: p.title,
+          subject_preview: (p.subject_text || '').substring(0, 300) + '...',
+          subject_length: (p.subject_text || '').length,
+          has_correction: !!(p.corrected_text && p.corrected_text.trim().length > 0)
+        });
+      }
+    }
+    return res.json({ success: true, problems });
+  } catch (err) {
+    console.error('[ERREUR PROBLEMS]', err.message);
+    return res.status(500).json({ error: 'Erreur lors du chargement des problèmes.' });
+  }
+});
+
+// GET /api/problems/:year/:num — Détail d'un problème
+app.get('/api/problems/:year/:num', (req, res) => {
+  try {
+    const year = parseInt(req.params.year, 10);
+    const num = parseInt(req.params.num, 10);
+    const file = path.join(DATA_DIR, 'all_annales.json');
+    if (!fs.existsSync(file)) return res.status(404).json({ error: 'Aucune annale trouvée.' });
+    const annales = JSON.parse(fs.readFileSync(file, 'utf-8'));
+    const annale = annales.find(a => a.year === year);
+    if (!annale) return res.status(404).json({ error: `Annale ${year} non trouvée.` });
+    const problem = (annale.problems || []).find(p => p.number === num);
+    if (!problem) return res.status(404).json({ error: `Problème ${num} non trouvé.` });
+    return res.json({
+      success: true,
+      year,
+      session: annale.session,
+      problem
+    });
+  } catch (err) {
+    console.error('[ERREUR PROBLEM]', err.message);
+    return res.status(500).json({ error: 'Erreur lors du chargement du problème.' });
+  }
+});
+
+// POST /api/explain-problem — MAX explique un problème étape par étape
+app.post('/api/explain-problem', async (req, res) => {
+  try {
+    const { problem, question_specifique, bloc } = req.body;
+    if (!problem || (!problem.subject_text && !problem.title)) {
+      return res.status(400).json({ error: 'Problème manquant ou invalide.', code: 'MISSING_PROBLEM' });
+    }
+
+    // Charger le résumé du bloc concerné comme contexte (si fourni)
+    let coursContext = '';
+    if (bloc && /^bloc[1-4]$/.test(bloc)) {
+      const file = path.join(DATA_DIR, 'resumes.json');
+      if (fs.existsSync(file)) {
+        const all = JSON.parse(fs.readFileSync(file, 'utf-8'));
+        if (all[bloc] && all[bloc].resume) {
+          // Tronquer le cours à 12000 chars pour rester raisonnable
+          coursContext = all[bloc].resume.substring(0, 12000);
+        }
+      }
+    }
+
+    let userPrompt = `Explique ce PROBLÈME D'EXAMEN étape par étape, comme un instructeur le ferait au tableau.\n\n`;
+    userPrompt += `=== ÉNONCÉ ===\n${problem.title || ''}\n${problem.subject_text || ''}\n\n`;
+    if (problem.corrected_text) {
+      userPrompt += `=== CORRIGÉ OFFICIEL (référence pour vérifier ta réponse) ===\n${problem.corrected_text.substring(0, 6000)}\n\n`;
+    }
+    if (coursContext) {
+      userPrompt += `=== EXTRAIT DU COURS (utilise-le comme source de vérité) ===\n${coursContext}\n\n`;
+    }
+    if (question_specifique) {
+      userPrompt += `=== QUESTION DE L'ÉTUDIANT ===\n${question_specifique}\n\n`;
+    } else {
+      userPrompt += `Décompose le problème en étapes claires : 1) Lecture de l'énoncé et identification de la situation, 2) Notions de cours mobilisées, 3) Raisonnement étape par étape, 4) Solution finale, 5) Pièges fréquents et conseils pour l'examen.\n\n`;
+    }
+    userPrompt += `Sois précis, structuré, pédagogique. Cite les articles de loi quand pertinent. Donne des exemples chiffrés.`;
+
+    console.log('[EXPLAIN-PROBLEM] Demande pour problème');
+
+    const response = await client.messages.create({
+      model: CLAUDE_MODEL,
+      max_tokens: 4096,
+      temperature: 0.4,
+      system: SYSTEM_PROMPT_EXPLAIN,
+      messages: [{ role: 'user', content: userPrompt }]
+    });
+
+    const explanation = stripMarkdown(response.content[0].text);
+
+    return res.json({
+      success: true,
+      explanation,
+      bloc_used: bloc || null,
+      cours_context_used: coursContext.length > 0
+    });
+  } catch (err) {
+    console.error('[ERREUR EXPLAIN-PROBLEM]', err.message);
+    return res.status(500).json({
+      error: 'Erreur lors de l\'explication du problème. Réessayez !',
+      code: 'EXPLAIN_PROBLEM_ERROR',
+      details: err.message
+    });
+  }
 });
 
 // ============================================================================

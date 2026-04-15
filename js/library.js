@@ -11,6 +11,7 @@ CT.Library = (function () {
     var state = {
         annales: [],
         cours: { bloc1: [], bloc2: [], bloc3: [], bloc4: [] },
+        resumesMeta: [], // [{bloc,label,themes_count,couverture_estimee,resume_chars}]
         currentTab: 'annales',
         loaded: false
     };
@@ -58,6 +59,17 @@ CT.Library = (function () {
                 }
             }
         } catch (e) { /* hors-ligne */ }
+
+        // Charger la liste des r\u00e9sum\u00e9s examen
+        try {
+            var resumesResp = await fetch('/api/resumes');
+            if (resumesResp.ok) {
+                var resumesData = await resumesResp.json();
+                if (resumesData && Array.isArray(resumesData.resumes)) {
+                    state.resumesMeta = resumesData.resumes;
+                }
+            }
+        } catch (e) { /* pas encore g\u00e9n\u00e9r\u00e9 */ }
 
         // Charger les cours pr\u00e9-convertis (data/cours.json g\u00e9n\u00e9r\u00e9 par build_cours_json.js)
         try {
@@ -129,6 +141,20 @@ CT.Library = (function () {
                     key: c.id
                 };
             });
+
+            // Carte sp\u00e9ciale : R\u00e9sum\u00e9 orient\u00e9 examen (si disponible)
+            var resumeMeta = state.resumesMeta.find(function (r) { return r.bloc === blocKey; });
+            if (resumeMeta) {
+                items.unshift({
+                    title: '\ud83d\udcab R\u00e9sum\u00e9 orient\u00e9 examen',
+                    subtitle: 'L\'essentiel \u00e0 retenir \u2014 bas\u00e9 sur les annales',
+                    meta: ((resumeMeta.themes_top || []).length) + ' th\u00e8mes \u2022 couverture ' + (resumeMeta.couverture_estimee || '?'),
+                    icon: 'fa-star',
+                    type: 'resume',
+                    key: blocKey,
+                    featured: true
+                });
+            }
         }
 
         if (items.length === 0) {
@@ -143,7 +169,7 @@ CT.Library = (function () {
         items.forEach(function (it) {
             var card = document.createElement('button');
             card.type = 'button';
-            card.className = 'library__card';
+            card.className = 'library__card' + (it.featured ? ' library__card--featured' : '');
             card.innerHTML =
                 '<div class="library__card-icon"><i class="fas ' + it.icon + '"></i></div>' +
                 '<div class="library__card-body">' +
@@ -167,6 +193,21 @@ CT.Library = (function () {
         body.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Chargement...';
         reader.style.display = 'block';
         reader.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        if (it.type === 'resume') {
+            try {
+                var rResp = await fetch('/api/resumes/' + it.key);
+                var rData = await rResp.json();
+                if (rData && rData.success && rData.resume) {
+                    body.innerHTML = renderResume(rData);
+                } else {
+                    body.innerHTML = '<p>R\u00e9sum\u00e9 indisponible.</p>';
+                }
+            } catch (e) {
+                body.innerHTML = '<p>Erreur lors du chargement du r\u00e9sum\u00e9.</p>';
+            }
+            return;
+        }
 
         if (it.type === 'annale') {
             try {
@@ -227,6 +268,32 @@ CT.Library = (function () {
                 html += '</div>';
             });
         }
+
+        html += '</div>';
+        return html;
+    }
+
+    function renderResume(r) {
+        var html = '<div class="library__reader-content library__resume">';
+        html += '<p class="library__reader-meta">' + escapeHtml(r.label || '') + ' \u00b7 ' + escapeHtml(r.couverture_estimee || '') + '</p>';
+
+        if (Array.isArray(r.themes_top) && r.themes_top.length > 0) {
+            html += '<h4>\ud83c\udfaf Th\u00e8mes prioritaires (loi de Pareto)</h4>';
+            html += '<div class="library__themes">';
+            r.themes_top.forEach(function (t) {
+                html += '<div class="library__theme">' +
+                    '<div class="library__theme-head">' +
+                        '<strong>' + escapeHtml(t.theme || '') + '</strong>' +
+                        (t.frequency ? '<span class="library__theme-freq">' + t.frequency + ' occ.</span>' : '') +
+                    '</div>' +
+                    (t.notes ? '<p class="library__theme-notes">' + escapeHtml(t.notes) + '</p>' : '') +
+                '</div>';
+            });
+            html += '</div>';
+        }
+
+        html += '<h4>\ud83d\udcd6 Cours r\u00e9sum\u00e9</h4>';
+        html += '<div class="library__resume-text">' + escapeHtml(r.resume || '').replace(/\n/g, '<br>') + '</div>';
 
         html += '</div>';
         return html;
