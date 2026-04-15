@@ -620,24 +620,52 @@ Retourne UNIQUEMENT le tableau JSON.`;
 
 app.post('/api/explain', async (req, res) => {
   try {
-    const { question, reponse, options, userAnswer } = req.body;
+    let { question, reponse, options, userAnswer } = req.body;
 
-    if (!question) {
+    // Le frontend peut envoyer soit (question: string, options: array, reponse: string),
+    // soit (question: objet complet contenant question/texte, choix/options, reponse/bonne_reponse).
+    let questionText = '';
+    let optionsList = [];
+    let correctAnswer = reponse || '';
+
+    if (typeof question === 'string') {
+      questionText = question;
+    } else if (question && typeof question === 'object') {
+      questionText = question.question || question.texte || question.text || '';
+      // Choix peut être un objet {A:'...',B:'...'} ou un tableau
+      const choix = question.choix || question.choices || question.options || options;
+      if (Array.isArray(choix)) {
+        optionsList = choix;
+      } else if (choix && typeof choix === 'object') {
+        optionsList = Object.keys(choix).map(k => `${k}) ${choix[k]}`);
+      }
+      if (!correctAnswer) {
+        correctAnswer = question.bonne_reponse || question.reponse || question.answer || '';
+      }
+    }
+
+    if (Array.isArray(options) && options.length > 0 && optionsList.length === 0) {
+      optionsList = options;
+    }
+
+    if (!questionText) {
       return res.status(400).json({
         error: 'Veuillez fournir une question à expliquer.',
         code: 'MISSING_QUESTION'
       });
     }
 
-    let userPrompt = `Explique en détail la question suivante :\n\n**Question :** ${question}`;
+    let userPrompt = `Explique en détail la question suivante :\n\n**Question :** ${questionText}`;
 
-    if (options && Array.isArray(options) && options.length > 0) {
-      userPrompt += `\n\n**Options :**\n${options.join('\n')}`;
+    if (optionsList.length > 0) {
+      userPrompt += `\n\n**Options :**\n${optionsList.join('\n')}`;
     }
 
-    if (reponse) {
-      userPrompt += `\n\n**Réponse correcte :** ${reponse}`;
+    if (correctAnswer) {
+      userPrompt += `\n\n**Réponse correcte :** ${correctAnswer}`;
     }
+    // Garder l'ancien nom local 'reponse' pour la suite de la fonction
+    reponse = correctAnswer;
 
     if (userAnswer) {
       userPrompt += `\n\n**Réponse de l'étudiant :** ${userAnswer}`;
