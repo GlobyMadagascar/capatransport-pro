@@ -1400,13 +1400,26 @@ app.get('/api/annales', (_req, res) => {
 // GET /api/annales/:year — Détail d'une annale avec QCM et problèmes
 app.get('/api/annales/:year', (req, res) => {
   try {
-    const year = req.params.year;
-    const filePath = path.join(DATA_DIR, `annales_${year}.json`);
-    if (!fs.existsSync(filePath)) {
-      return res.status(404).json({ error: `Annale ${year} non trouvée.` });
+    const year = String(req.params.year || '');
+    // Tolère 2018 / 18 — essaie les deux formats de fichier.
+    const candidates = [
+      path.join(DATA_DIR, `annales_${year}.json`),
+      path.join(DATA_DIR, `annales_${year.slice(-2)}.json`),
+    ];
+    const filePath = candidates.find(p => fs.existsSync(p));
+    if (filePath) {
+      const annale = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+      return res.json({ success: true, annale });
     }
-    const annale = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-    return res.json({ success: true, annale });
+    // Fallback : chercher dans all_annales.json (source de vérité, 6 annales)
+    const allFile = path.join(DATA_DIR, 'all_annales.json');
+    if (fs.existsSync(allFile)) {
+      const all = JSON.parse(fs.readFileSync(allFile, 'utf-8'));
+      const yNum = parseInt(year, 10);
+      const found = all.find(a => a.year === yNum || a.year === yNum + 2000 || String(a.year).slice(-2) === year.slice(-2));
+      if (found) return res.json({ success: true, annale: found });
+    }
+    return res.status(404).json({ error: `Annale ${year} non trouvée.` });
   } catch (err) {
     console.error('[ERREUR ANNALE]', err.message);
     return res.status(500).json({ error: 'Erreur lors du chargement de l\'annale.' });
@@ -1431,12 +1444,27 @@ app.get('/api/cours', (_req, res) => {
 // GET /api/annales/:year/qcm — Uniquement les QCM d'une annale (pour l'entraînement)
 app.get('/api/annales/:year/qcm', (req, res) => {
   try {
-    const year = req.params.year;
-    const filePath = path.join(DATA_DIR, `annales_${year}.json`);
-    if (!fs.existsSync(filePath)) {
+    const year = String(req.params.year || '');
+    const candidates = [
+      path.join(DATA_DIR, `annales_${year}.json`),
+      path.join(DATA_DIR, `annales_${year.slice(-2)}.json`),
+    ];
+    let filePath = candidates.find(p => fs.existsSync(p));
+    let annale;
+    if (filePath) {
+      annale = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    } else {
+      // Fallback all_annales.json
+      const allFile = path.join(DATA_DIR, 'all_annales.json');
+      if (fs.existsSync(allFile)) {
+        const all = JSON.parse(fs.readFileSync(allFile, 'utf-8'));
+        const yNum = parseInt(year, 10);
+        annale = all.find(a => a.year === yNum || a.year === yNum + 2000 || String(a.year).slice(-2) === year.slice(-2));
+      }
+    }
+    if (!annale) {
       return res.status(404).json({ error: `Annale ${year} non trouvée.` });
     }
-    const annale = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
     // En mode entraînement, ne pas envoyer les réponses
     const hideAnswers = req.query.mode === 'exam';
     const qcm = annale.qcm.map(q => {
