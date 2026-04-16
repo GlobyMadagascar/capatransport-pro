@@ -13,6 +13,10 @@ upload_ftp.sh
 upload_reglementations.sh
 ssh_deploy.py
 
+# Admin panel (local only, not shared online)
+admin.html
+
 # Intermediate PDF extraction artifacts
 data/raw_*.txt
+data/_resume_*_raw.txt
 

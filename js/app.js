@@ -47,6 +47,64 @@ CT.App = (function () {
     var GUEST_DURATION_MS = 15 * 60 * 1000;
     var guestTimerInterval = null;
 
+    // ---------- Device fingerprint (survit au clear cache via server) ----------
+    function generateFingerprint() {
+        var parts = [];
+        parts.push(navigator.userAgent || '');
+        parts.push(navigator.language || '');
+        parts.push(screen.width + 'x' + screen.height + 'x' + screen.colorDepth);
+        parts.push(new Date().getTimezoneOffset());
+        parts.push(navigator.hardwareConcurrency || 0);
+        parts.push(navigator.platform || '');
+        // Canvas fingerprint
+        try {
+            var canvas = document.createElement('canvas');
+            var ctx = canvas.getContext('2d');
+            canvas.width = 200; canvas.height = 50;
+            ctx.textBaseline = 'top';
+            ctx.font = '14px Arial';
+            ctx.fillStyle = '#f60';
+            ctx.fillRect(125, 1, 62, 20);
+            ctx.fillStyle = '#069';
+            ctx.fillText('CapaTransport', 2, 15);
+            ctx.fillStyle = 'rgba(102,204,0,0.7)';
+            ctx.fillText('fingerprint', 4, 35);
+            parts.push(canvas.toDataURL());
+        } catch (e) { parts.push('no-canvas'); }
+        // Simple hash
+        var str = parts.join('|||');
+        var hash = 0;
+        for (var i = 0; i < str.length; i++) {
+            hash = ((hash << 5) - hash) + str.charCodeAt(i);
+            hash = hash & hash; // 32-bit
+        }
+        // Create a longer hex string for reliability
+        var h1 = Math.abs(hash).toString(16);
+        var h2 = Math.abs(hash * 31 + str.length).toString(16);
+        var h3 = Math.abs(hash * 17 + parts[2].length).toString(16);
+        return 'ct-' + h1 + '-' + h2 + '-' + h3;
+    }
+
+    function getDeviceFingerprint() {
+        // Try multiple storage mechanisms
+        var fp = null;
+        try { fp = localStorage.getItem('ct_device_fp'); } catch(e) {}
+        if (!fp) try { fp = sessionStorage.getItem('ct_device_fp'); } catch(e) {}
+        if (!fp) {
+            // Check cookie
+            var match = document.cookie.match(/ct_device_fp=([^;]+)/);
+            if (match) fp = match[1];
+        }
+        if (!fp) {
+            fp = generateFingerprint();
+        }
+        // Persist everywhere
+        try { localStorage.setItem('ct_device_fp', fp); } catch(e) {}
+        try { sessionStorage.setItem('ct_device_fp', fp); } catch(e) {}
+        try { document.cookie = 'ct_device_fp=' + fp + ';path=/;max-age=' + (365*86400) + ';SameSite=Lax'; } catch(e) {}
+        return fp;
+    }
+
     // =========================================================================
     // R\u00e9ponses d\u00e9mo du chat MAX (hors-ligne)
     // =========================================================================
@@ -176,18 +234,35 @@ CT.App = (function () {
     function initApp() {
         if (!state.user) return;
 
-        // Si invit\u00e9 : v\u00e9rifier si les 15 minutes sont d\u00e9pass\u00e9es
-        if (state.user.isGuest) {
-            var started = state.user.guestStartedAt || CT.Utils.loadData('ct_guest_started_at', null);
-            if (started) {
-                var elapsed = Date.now() - started;
-                if (elapsed >= GUEST_DURATION_MS) {
-                    handleGuestExpired();
-                    return;
-                }
-                state.user.guestStartedAt = started;
-                startGuestCountdown();
-            }
+        // Si invité : vérifier côté serveur si l'essai est encore valide
+        if (state.user.isGuest && !state.user.guestPaid) {
+            var fp = state.user.deviceFp || getDeviceFingerprint();
+            fetch('/api/trial/check?fp=' + encodeURIComponent(fp))
+                .then(function(r) { return r.json(); })
+                .then(function(data) {
+                    if (data.reason === 'paid') return; // accès payé, ok
+                    if (!data.allowed) {
+                        handleGuestExpired();
+                        return;
+                    }
+                    // Recalculer startedAt à partir du remaining
+                    if (data.remainingMs > 0) {
+                        state.user.guestStartedAt = Date.now() - (GUEST_DURATION_MS - data.remainingMs);
+                        startGuestCountdown();
+                    }
+                })
+                .catch(function() {
+                    // Hors ligne : fallback local
+                    var started = state.user.guestStartedAt || CT.Utils.loadData('ct_guest_started_at', null);
+                    if (started) {
+                        var elapsed = Date.now() - started;
+                        if (elapsed >= GUEST_DURATION_MS) {
+                            handleGuestExpired();
+                            return;
+                        }
+                        startGuestCountdown();
+                    }
+                });
         }
 
         // Mettre \u00e0 jour l'interface avec les infos utilisateur
@@ -459,40 +534,113 @@ CT.App = (function () {
     }
 
     function handleGuestAccess() {
-        var now = new Date();
-        var examDate = new Date(now.getTime() + 90 * 24 * 60 * 60 * 1000);
-        var examDateStr = examDate.getFullYear() + '-' +
-            ('0' + (examDate.getMonth() + 1)).slice(-2) + '-' +
-            ('0' + examDate.getDate()).slice(-2);
+        var fp = getDeviceFingerprint();
 
-        state.user = {
-            prenom: 'Candidat',
-            email: '',
-            region: '',
-            examDate: examDateStr,
-            isGuest: true,
-            guestStartedAt: now.getTime()
-        };
+        // Demander au serveur si cet appareil a droit à l'essai
+        fetch('/api/trial/register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ fingerprint: fp })
+        })
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            if (!data.allowed) {
+                // Essai expiré ou appareil bloqué
+                CT.Toast.show('Votre essai gratuit de 15 minutes est termine. Veuillez acheter un acces pour continuer.', 'error');
+                if (CT.Modal && typeof CT.Modal.alert === 'function') {
+                    CT.Modal.alert(
+                        'Essai termine',
+                        'Votre periode d\'essai gratuit de 15 minutes sur cet appareil est terminee. ' +
+                        'Pour continuer a utiliser la plateforme, veuillez contacter l\'administrateur pour acheter un acces.'
+                    );
+                }
+                return;
+            }
 
-        CT.Utils.saveData('ct_profile', state.user);
-        CT.Utils.saveData('ct_guest_started_at', now.getTime());
-        hideAuthModal();
-        initApp();
+            // Accès payé — pas de countdown
+            if (data.reason === 'paid') {
+                var now = new Date();
+                var examDate = new Date(now.getTime() + 90 * 24 * 60 * 60 * 1000);
+                var examDateStr = examDate.getFullYear() + '-' +
+                    ('0' + (examDate.getMonth() + 1)).slice(-2) + '-' +
+                    ('0' + examDate.getDate()).slice(-2);
+                state.user = {
+                    prenom: 'Candidat',
+                    email: '',
+                    region: '',
+                    examDate: examDateStr,
+                    isGuest: true,
+                    guestPaid: true,
+                    deviceFp: fp
+                };
+                CT.Utils.saveData('ct_profile', state.user);
+                hideAuthModal();
+                initApp();
+                CT.Toast.show('Acces valide. Bienvenue !', 'success');
+                return;
+            }
 
-        // Avertir clairement l'utilisateur
-        CT.Toast.show('Mode d\u00e9couverte activ\u00e9 : vous avez 15 minutes pour tester la plateforme.', 'warning');
-        if (CT.Modal && typeof CT.Modal.alert === 'function') {
-            CT.Modal.alert(
-                'Mode d\u00e9couverte',
-                'Vous avez 15 minutes pour explorer la plateforme sans compte. Pass\u00e9 ce d\u00e9lai, vous serez invit\u00e9 \u00e0 cr\u00e9er un compte pour continuer.'
-            );
-        }
+            // Essai en cours
+            var now2 = new Date();
+            var startedAt = now2.getTime() - (GUEST_DURATION_MS - data.remainingMs);
+            var examDate2 = new Date(now2.getTime() + 90 * 24 * 60 * 60 * 1000);
+            var examDateStr2 = examDate2.getFullYear() + '-' +
+                ('0' + (examDate2.getMonth() + 1)).slice(-2) + '-' +
+                ('0' + examDate2.getDate()).slice(-2);
 
-        startGuestCountdown();
+            state.user = {
+                prenom: 'Candidat',
+                email: '',
+                region: '',
+                examDate: examDateStr2,
+                isGuest: true,
+                guestStartedAt: startedAt,
+                deviceFp: fp
+            };
+
+            CT.Utils.saveData('ct_profile', state.user);
+            CT.Utils.saveData('ct_guest_started_at', startedAt);
+            hideAuthModal();
+            initApp();
+
+            var minsLeft = Math.ceil(data.remainingMs / 60000);
+            CT.Toast.show('Mode decouverte : ' + minsLeft + ' minutes restantes.', 'warning');
+            if (data.isNew && CT.Modal && typeof CT.Modal.alert === 'function') {
+                CT.Modal.alert(
+                    'Mode decouverte',
+                    'Vous avez 15 minutes pour explorer la plateforme. Passe ce delai, vous devrez acheter un acces pour continuer. Le compteur ne se reinitialise pas, meme en vidant le cache.'
+                );
+            }
+
+            startGuestCountdown();
+        })
+        .catch(function() {
+            // Hors ligne — fallback local
+            var now = new Date();
+            var examDate = new Date(now.getTime() + 90 * 24 * 60 * 60 * 1000);
+            var examDateStr = examDate.getFullYear() + '-' +
+                ('0' + (examDate.getMonth() + 1)).slice(-2) + '-' +
+                ('0' + examDate.getDate()).slice(-2);
+            state.user = {
+                prenom: 'Candidat',
+                email: '',
+                region: '',
+                examDate: examDateStr,
+                isGuest: true,
+                guestStartedAt: now.getTime(),
+                deviceFp: fp
+            };
+            CT.Utils.saveData('ct_profile', state.user);
+            CT.Utils.saveData('ct_guest_started_at', now.getTime());
+            hideAuthModal();
+            initApp();
+            CT.Toast.show('Mode decouverte active (hors-ligne) : 15 minutes.', 'warning');
+            startGuestCountdown();
+        });
     }
 
     function startGuestCountdown() {
-        if (!state.user || !state.user.isGuest) return;
+        if (!state.user || !state.user.isGuest || state.user.guestPaid) return;
 
         var startedAt = state.user.guestStartedAt || CT.Utils.loadData('ct_guest_started_at', Date.now());
         var banner = document.getElementById('guest-banner');
@@ -536,7 +684,7 @@ CT.App = (function () {
         CT.Utils.removeData('ct_guest_started_at');
         state.user = null;
         if (!manual) {
-            CT.Toast.show('Le mode d\u00e9couverte est termin\u00e9. Cr\u00e9ez un compte pour continuer.', 'warning');
+            CT.Toast.show('Votre essai gratuit de 15 minutes est termine. Achetez un acces pour continuer.', 'warning');
         }
         showAuthModal();
         // Forcer l'onglet inscription

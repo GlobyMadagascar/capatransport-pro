@@ -1089,6 +1089,8 @@ function getAllFiles(dirPath) {
 // ============================================================================
 
 const USERS_JSON = path.join(__dirname, 'data', 'users.json');
+const TRIALS_JSON = path.join(__dirname, 'data', 'trials.json');
+const TRIAL_DURATION_MS = 15 * 60 * 1000; // 15 minutes
 
 // Ensure data directory exists
 const DATA_DIR = path.join(__dirname, 'data');
@@ -1110,6 +1112,120 @@ function readUsers() {
 function saveUsers(users) {
   fs.writeFileSync(USERS_JSON, JSON.stringify(users, null, 2), 'utf-8');
 }
+
+// --- Trial (device fingerprint tracking) ---
+function readTrials() {
+  try {
+    if (!fs.existsSync(TRIALS_JSON)) return [];
+    return JSON.parse(fs.readFileSync(TRIALS_JSON, 'utf-8'));
+  } catch (err) {
+    console.error('[TRIAL] Erreur lecture trials.json :', err.message);
+    return [];
+  }
+}
+
+function saveTrials(trials) {
+  fs.writeFileSync(TRIALS_JSON, JSON.stringify(trials, null, 2), 'utf-8');
+}
+
+// ============================================================================
+// API : Trial / Essai gratuit (15 min par appareil, server-side enforcement)
+// ============================================================================
+
+// POST /api/trial/register — Enregistre un appareil et retourne le temps restant
+app.post('/api/trial/register', (req, res) => {
+  const { fingerprint, ip_hint } = req.body;
+  if (!fingerprint || typeof fingerprint !== 'string' || fingerprint.length < 8) {
+    return res.status(400).json({ error: 'Fingerprint invalide.' });
+  }
+
+  const trials = readTrials();
+  let trial = trials.find(t => t.fingerprint === fingerprint);
+  const now = Date.now();
+  const clientIP = req.headers['x-forwarded-for'] || req.socket.remoteAddress || '';
+
+  if (!trial) {
+    // Nouvel appareil — démarrer l'essai
+    trial = {
+      fingerprint,
+      firstSeen: new Date(now).toISOString(),
+      expiresAt: new Date(now + TRIAL_DURATION_MS).toISOString(),
+      ip: clientIP,
+      userAgent: req.headers['user-agent'] || '',
+      accessGranted: false,
+      blocked: false,
+      linkedUserId: null,
+      note: ''
+    };
+    trials.push(trial);
+    saveTrials(trials);
+    return res.json({
+      allowed: true,
+      trialActive: true,
+      remainingMs: TRIAL_DURATION_MS,
+      expiresAt: trial.expiresAt,
+      isNew: true
+    });
+  }
+
+  // Appareil connu
+  if (trial.blocked) {
+    return res.json({ allowed: false, trialActive: false, remainingMs: 0, reason: 'blocked' });
+  }
+
+  if (trial.accessGranted) {
+    return res.json({ allowed: true, trialActive: false, remainingMs: -1, reason: 'paid' });
+  }
+
+  const expiresAt = new Date(trial.expiresAt).getTime();
+  const remaining = expiresAt - now;
+
+  if (remaining <= 0) {
+    return res.json({ allowed: false, trialActive: false, remainingMs: 0, reason: 'expired' });
+  }
+
+  // Mettre à jour IP si elle a changé
+  if (trial.ip !== clientIP) {
+    trial.ip = clientIP;
+    saveTrials(trials);
+  }
+
+  return res.json({
+    allowed: true,
+    trialActive: true,
+    remainingMs: remaining,
+    expiresAt: trial.expiresAt,
+    isNew: false
+  });
+});
+
+// GET /api/trial/check — Vérification légère (query param)
+app.get('/api/trial/check', (req, res) => {
+  const fp = req.query.fp;
+  if (!fp) return res.status(400).json({ error: 'fp requis.' });
+
+  const trials = readTrials();
+  const trial = trials.find(t => t.fingerprint === fp);
+
+  if (!trial) {
+    return res.json({ known: false, allowed: true }); // Pas encore enregistré
+  }
+
+  if (trial.blocked) {
+    return res.json({ known: true, allowed: false, reason: 'blocked' });
+  }
+  if (trial.accessGranted) {
+    return res.json({ known: true, allowed: true, reason: 'paid' });
+  }
+
+  const remaining = new Date(trial.expiresAt).getTime() - Date.now();
+  return res.json({
+    known: true,
+    allowed: remaining > 0,
+    remainingMs: Math.max(0, remaining),
+    reason: remaining > 0 ? 'trial' : 'expired'
+  });
+});
 
 // Simple admin auth middleware (checks x-admin-token header)
 function adminAuth(req, res, next) {
@@ -1368,6 +1484,66 @@ app.get('/api/admin/content', adminAuth, (_req, res) => {
       annalesDetail: annalesFiles
     }
   });
+});
+
+// --- Admin: Trial management ---
+app.get('/api/admin/trials', adminAuth, (_req, res) => {
+  const trials = readTrials();
+  res.json({ success: true, trials, total: trials.length });
+});
+
+app.post('/api/admin/trials/:fp/grant', adminAuth, (req, res) => {
+  const trials = readTrials();
+  const trial = trials.find(t => t.fingerprint === req.params.fp);
+  if (!trial) return res.status(404).json({ error: 'Appareil non trouve.' });
+  trial.accessGranted = true;
+  trial.blocked = false;
+  trial.grantedAt = new Date().toISOString();
+  trial.note = req.body.note || trial.note || '';
+  if (req.body.linkedUserId) trial.linkedUserId = req.body.linkedUserId;
+  saveTrials(trials);
+  res.json({ success: true, message: 'Acces accorde pour cet appareil.' });
+});
+
+app.post('/api/admin/trials/:fp/block', adminAuth, (req, res) => {
+  const trials = readTrials();
+  const trial = trials.find(t => t.fingerprint === req.params.fp);
+  if (!trial) return res.status(404).json({ error: 'Appareil non trouve.' });
+  trial.blocked = true;
+  trial.accessGranted = false;
+  saveTrials(trials);
+  res.json({ success: true, message: 'Appareil bloque.' });
+});
+
+app.post('/api/admin/trials/:fp/reset', adminAuth, (req, res) => {
+  const trials = readTrials();
+  const trial = trials.find(t => t.fingerprint === req.params.fp);
+  if (!trial) return res.status(404).json({ error: 'Appareil non trouve.' });
+  const now = Date.now();
+  trial.expiresAt = new Date(now + TRIAL_DURATION_MS).toISOString();
+  trial.blocked = false;
+  trial.accessGranted = false;
+  saveTrials(trials);
+  res.json({ success: true, message: 'Essai reinitialise (15 min).' });
+});
+
+app.post('/api/admin/trials/:fp/revoke', adminAuth, (req, res) => {
+  const trials = readTrials();
+  const trial = trials.find(t => t.fingerprint === req.params.fp);
+  if (!trial) return res.status(404).json({ error: 'Appareil non trouve.' });
+  trial.accessGranted = false;
+  trial.expiresAt = new Date(0).toISOString(); // force expired
+  saveTrials(trials);
+  res.json({ success: true, message: 'Acces revoque.' });
+});
+
+app.delete('/api/admin/trials/:fp', adminAuth, (req, res) => {
+  let trials = readTrials();
+  const idx = trials.findIndex(t => t.fingerprint === req.params.fp);
+  if (idx === -1) return res.status(404).json({ error: 'Appareil non trouve.' });
+  trials.splice(idx, 1);
+  saveTrials(trials);
+  res.json({ success: true, message: 'Appareil supprime.' });
 });
 
 // ============================================================================
