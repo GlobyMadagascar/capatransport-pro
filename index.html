@@ -99,7 +99,7 @@
           </div>
           <div class="steps__number" aria-hidden="true">1</div>
           <h3 class="steps__title">Inscrivez-vous</h3>
-          <p class="steps__description">Paiement unique de 430 €, accès illimité à toute la plateforme</p>
+          <p class="steps__description">À partir de 436 €, accès illimité à toute la plateforme</p>
         </div>
 
         <div class="steps__item" data-animate="fade-up">
@@ -243,18 +243,18 @@
   <section class="section section--pricing" id="pricing" aria-labelledby="pricing-title">
     <div class="section__container">
       <h2 class="section__title" id="pricing-title">Tarifs</h2>
-      <p class="section__subtitle">Un accès simple et transparent</p>
+      <p class="section__subtitle">Choisissez la formule qui vous correspond</p>
 
       <div class="pricing-grid">
-        <article class="pricing-card pricing-card--pro" data-animate="fade-up">
+        <!-- ---- FORMULE AUTONOME ---- -->
+        <article class="pricing-card" data-animate="fade-up">
           <div class="pricing-card__header">
-            <span class="pricing-card__badge">Accès complet</span>
-            <h3 class="pricing-card__title">Formation Complète</h3>
+            <span class="pricing-card__badge">Autonome</span>
+            <h3 class="pricing-card__title">Je révise tout seul comme un grand</h3>
             <p class="pricing-card__price">
-              <span class="pricing-card__amount">430&nbsp;€</span>
-              <span class="pricing-card__period">paiement unique</span>
+              <span class="pricing-card__amount">436&nbsp;€</span>
             </p>
-            <p class="pricing-card__note">Un seul paiement, accès illimité à vie</p>
+            <p class="pricing-card__note">Payable en 2&nbsp;fois — soit 218&nbsp;€ / mois</p>
           </div>
 
           <ul class="pricing-card__features" aria-label="Fonctionnalités incluses">
@@ -284,9 +284,82 @@
             </li>
           </ul>
 
-          <a href="app.html" class="btn btn--primary btn--lg pricing-card__cta">
-            <i class="fas fa-lock" aria-hidden="true"></i>
-            S'inscrire maintenant
+          <div class="pricing-card__payment">
+            <p class="pricing-card__payment-label"><i class="fas fa-shield-alt" aria-hidden="true"></i> Paiement sécurisé</p>
+            <div class="pricing-card__payment-icons">
+              <i class="fab fa-cc-stripe" aria-hidden="true" title="Stripe"></i>
+              <i class="fab fa-cc-paypal" aria-hidden="true" title="PayPal"></i>
+              <i class="fab fa-cc-visa" aria-hidden="true" title="Visa"></i>
+              <i class="fab fa-cc-mastercard" aria-hidden="true" title="Mastercard"></i>
+            </div>
+          </div>
+
+          <a href="#" class="btn btn--outline btn--lg pricing-card__cta" data-plan="autonome">
+            <i class="fas fa-rocket" aria-hidden="true"></i>
+            Choisir cette formule
+          </a>
+        </article>
+
+        <!-- ---- FORMULE ACCOMPAGNÉE ---- -->
+        <article class="pricing-card pricing-card--premium" data-animate="fade-up">
+          <div class="pricing-card__popular"><i class="fas fa-star" aria-hidden="true"></i> Recommandé</div>
+          <div class="pricing-card__header">
+            <span class="pricing-card__badge pricing-card__badge--premium">Accompagné</span>
+            <h3 class="pricing-card__title">J'ai besoin d'un prof pour m'expliquer</h3>
+            <p class="pricing-card__price">
+              <span class="pricing-card__amount">790&nbsp;€</span>
+            </p>
+            <p class="pricing-card__note">Tout de la formule Autonome + accompagnement expert</p>
+          </div>
+
+          <ul class="pricing-card__features" aria-label="Fonctionnalités incluses">
+            <li class="pricing-card__feature">
+              <i class="fas fa-check" aria-hidden="true"></i>
+              20+ années d'annales officielles
+            </li>
+            <li class="pricing-card__feature">
+              <i class="fas fa-check" aria-hidden="true"></i>
+              Les 4 blocs de compétences
+            </li>
+            <li class="pricing-card__feature">
+              <i class="fas fa-check" aria-hidden="true"></i>
+              Corrections détaillées par MAX
+            </li>
+            <li class="pricing-card__feature">
+              <i class="fas fa-check" aria-hidden="true"></i>
+              Examens blancs illimités
+            </li>
+            <li class="pricing-card__feature">
+              <i class="fas fa-check" aria-hidden="true"></i>
+              Suivi de progression personnalisé
+            </li>
+            <li class="pricing-card__feature">
+              <i class="fas fa-check" aria-hidden="true"></i>
+              Accès à vie — pas d'abonnement
+            </li>
+            <li class="pricing-card__feature pricing-card__feature--highlight">
+              <i class="fas fa-phone-alt" aria-hidden="true"></i>
+              2 calls / semaine avec un expert
+            </li>
+            <li class="pricing-card__feature pricing-card__feature--highlight">
+              <i class="fas fa-chalkboard-teacher" aria-hidden="true"></i>
+              Explication des notions non comprises
+            </li>
+          </ul>
+
+          <div class="pricing-card__payment">
+            <p class="pricing-card__payment-label"><i class="fas fa-shield-alt" aria-hidden="true"></i> Paiement sécurisé</p>
+            <div class="pricing-card__payment-icons">
+              <i class="fab fa-cc-stripe" aria-hidden="true" title="Stripe"></i>
+              <i class="fab fa-cc-paypal" aria-hidden="true" title="PayPal"></i>
+              <i class="fab fa-cc-visa" aria-hidden="true" title="Visa"></i>
+              <i class="fab fa-cc-mastercard" aria-hidden="true" title="Mastercard"></i>
+            </div>
+          </div>
+
+          <a href="#" class="btn btn--primary btn--lg pricing-card__cta" data-plan="accompagne">
+            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+            Choisir cette formule
           </a>
         </article>
       </div>

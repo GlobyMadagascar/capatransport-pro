@@ -703,16 +703,111 @@
   border: 2px solid var(--ct-border);
   border-radius: var(--ct-radius-xl);
   padding: 0;
-  max-width: 400px;
+  max-width: 420px;
   width: 100%;
   overflow: hidden;
   transition: all var(--ct-transition);
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .pricing-card:hover {
   border-color: var(--ct-primary);
   box-shadow: 0 8px 40px rgba(255, 107, 0, 0.15);
   transform: translateY(-4px);
+}
+
+/* --- Premium card (Accompagné) --- */
+.pricing-card--premium {
+  border-color: var(--ct-primary);
+  box-shadow: 0 4px 30px rgba(255, 107, 0, 0.12);
+}
+
+.pricing-card--premium:hover {
+  box-shadow: 0 12px 50px rgba(255, 107, 0, 0.25);
+}
+
+.pricing-card__popular {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ct-gradient);
+  color: #fff;
+  font-family: var(--ct-font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.35rem 1.2rem;
+  border-radius: 0 0 0.75rem 0.75rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.pricing-card__badge--premium {
+  background: linear-gradient(135deg, #ff6b00, #ff9500) !important;
+}
+
+/* --- Feature highlight (expert calls) --- */
+.pricing-card__feature--highlight {
+  color: var(--ct-primary) !important;
+  font-weight: 600;
+}
+
+.pricing-card__feature--highlight i {
+  color: var(--ct-primary) !important;
+}
+
+/* --- Payment trust section --- */
+.pricing-card__payment {
+  padding: 0.75rem 2rem;
+  text-align: center;
+  border-top: 1px solid var(--ct-border-light);
+}
+
+.pricing-card__payment-label {
+  font-size: 0.75rem;
+  color: var(--ct-text3);
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.pricing-card__payment-label i {
+  color: var(--ct-success);
+}
+
+.pricing-card__payment-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 1.6rem;
+  color: var(--ct-text3);
+  opacity: 0.7;
+}
+
+.pricing-card__payment-icons i:hover {
+  opacity: 1;
+  color: var(--ct-text);
+}
+
+/* --- Outline button variant --- */
+.btn--outline {
+  background: transparent;
+  border: 2px solid var(--ct-primary);
+  color: var(--ct-primary);
+}
+
+.btn--outline:hover {
+  background: var(--ct-primary);
+  color: #fff;
 }
 
 .pricing-card__header {
@@ -797,8 +892,9 @@
 }
 
 .pricing-card__cta {
-  margin: 0 2rem 2rem;
+  margin: auto 2rem 2rem;
   display: flex;
+  justify-content: center;
 }
 
 /* ============================================================
