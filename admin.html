@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CapaTransport Pro - Administration</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* ============================================================
+   ADMIN PANEL — CapaTransport Pro
+   Dark Industrial Theme with Glassmorphism
+   ============================================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg-dark: #0d0d1a;
+  --bg-card: #16213e;
+  --bg-sidebar: #0f1629;
+  --bg-glass: rgba(22, 33, 62, 0.6);
+  --primary: #e67e22;
+  --primary-hover: #f39c12;
+  --success: #27ae60;
+  --danger: #e74c3c;
+  --warning: #f1c40f;
+  --info: #3498db;
+  --text: #ecf0f1;
+  --text-muted: #8e99a9;
+  --border: rgba(255,255,255,0.08);
+  --radius: 12px;
+  --shadow: 0 8px 32px rgba(0,0,0,0.3);
+  --transition: 0.3s ease;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ============ LOGIN PAGE ============ */
+.login-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: var(--bg-dark);
+  display: flex; align-items: center; justify-content: center;
+}
+.login-overlay.hidden { display: none; }
+
+.login-box {
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 3rem;
+  width: 100%; max-width: 420px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+.login-box h1 { font-size: 1.6rem; margin-bottom: 0.5rem; }
+.login-box h1 i { color: var(--primary); margin-right: 0.5rem; }
+.login-box p { color: var(--text-muted); margin-bottom: 2rem; font-size: 0.9rem; }
+
+.login-box .field { margin-bottom: 1.2rem; text-align: left; }
+.login-box label { display: block; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.4rem; }
+.login-box input {
+  width: 100%; padding: 0.75rem 1rem;
+  background: rgba(255,255,255,0.05); border: 1px solid var(--border);
+  border-radius: 8px; color: var(--text); font-size: 0.95rem;
+  transition: border var(--transition);
+}
+.login-box input:focus { outline: none; border-color: var(--primary); }
+
+.login-box .btn-login {
+  width: 100%; padding: 0.85rem; border: none; border-radius: 8px;
+  background: var(--primary); color: #fff; font-size: 1rem; font-weight: 600;
+  cursor: pointer; transition: background var(--transition);
+  margin-top: 0.5rem;
+}
+.login-box .btn-login:hover { background: var(--primary-hover); }
+
+.login-error {
+  color: var(--danger); font-size: 0.85rem; margin-top: 1rem;
+  display: none;
+}
+
+/* ============ LAYOUT ============ */
+.app-layout { display: flex; min-height: 100vh; }
+.app-layout.hidden { display: none; }
+
+/* Sidebar */
+.sidebar {
+  width: 260px; background: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  display: flex; flex-direction: column;
+  position: fixed; top: 0; left: 0; bottom: 0; z-index: 100;
+  transition: transform var(--transition);
+}
+.sidebar-header {
+  padding: 1.5rem; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.sidebar-header i { color: var(--primary); font-size: 1.5rem; }
+.sidebar-header h2 { font-size: 1.1rem; font-weight: 700; }
+.sidebar-header span { font-size: 0.75rem; color: var(--text-muted); display: block; }
+
+.sidebar-nav { flex: 1; padding: 1rem 0; overflow-y: auto; }
+.sidebar-nav a {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.75rem 1.5rem; color: var(--text-muted);
+  text-decoration: none; font-size: 0.9rem;
+  transition: all var(--transition); border-left: 3px solid transparent;
+}
+.sidebar-nav a:hover { color: var(--text); background: rgba(255,255,255,0.03); }
+.sidebar-nav a.active {
+  color: var(--primary); background: rgba(230,126,34,0.08);
+  border-left-color: var(--primary);
+}
+.sidebar-nav a i { width: 20px; text-align: center; }
+
+.sidebar-footer {
+  padding: 1rem 1.5rem; border-top: 1px solid var(--border);
+}
+.btn-logout {
+  display: flex; align-items: center; gap: 0.5rem;
+  width: 100%; padding: 0.65rem 1rem; border: 1px solid var(--border);
+  border-radius: 8px; background: transparent; color: var(--text-muted);
+  cursor: pointer; font-size: 0.85rem; transition: all var(--transition);
+}
+.btn-logout:hover { background: rgba(231,76,60,0.15); color: var(--danger); border-color: var(--danger); }
+
+/* Main content */
+.main-content {
+  flex: 1; margin-left: 260px; padding: 2rem;
+  min-height: 100vh;
+}
+.main-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.main-header h1 { font-size: 1.5rem; font-weight: 700; }
+.main-header h1 i { color: var(--primary); margin-right: 0.5rem; }
+
+.hamburger {
+  display: none; background: none; border: none; color: var(--text);
+  font-size: 1.4rem; cursor: pointer;
+}
+
+/* ============ CARDS ============ */
+.glass-card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.glass-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+
+/* Stats grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem; margin-bottom: 2rem;
+}
+.stat-card { text-align: center; }
+.stat-card .stat-icon {
+  width: 50px; height: 50px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 0.75rem; font-size: 1.3rem;
+}
+.stat-card .stat-icon.blue { background: rgba(52,152,219,0.15); color: var(--info); }
+.stat-card .stat-icon.green { background: rgba(39,174,96,0.15); color: var(--success); }
+.stat-card .stat-icon.orange { background: rgba(230,126,34,0.15); color: var(--primary); }
+.stat-card .stat-icon.red { background: rgba(231,76,60,0.15); color: var(--danger); }
+
+.stat-card .stat-value { font-size: 1.8rem; font-weight: 800; }
+.stat-card .stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem; }
+
+/* ============ SECTIONS ============ */
+.section { display: none; }
+.section.active { display: block; }
+
+.section-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.5rem; }
+.section-row.full { grid-template-columns: 1fr; }
+
+.card-title {
+  font-size: 1rem; font-weight: 600; margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.card-title i { color: var(--primary); }
+
+/* ============ TABLE ============ */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+thead th {
+  text-align: left; padding: 0.75rem; color: var(--text-muted);
+  border-bottom: 1px solid var(--border); font-weight: 600;
+  white-space: nowrap;
+}
+tbody td {
+  padding: 0.75rem; border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+tbody tr { transition: background var(--transition); }
+tbody tr:hover { background: rgba(255,255,255,0.02); }
+
+/* Badges */
+.badge {
+  display: inline-block; padding: 0.25rem 0.65rem; border-radius: 20px;
+  font-size: 0.75rem; font-weight: 600; white-space: nowrap;
+}
+.badge-success { background: rgba(39,174,96,0.15); color: var(--success); }
+.badge-warning { background: rgba(241,196,15,0.15); color: var(--warning); }
+.badge-danger { background: rgba(231,76,60,0.15); color: var(--danger); }
+
+/* Action buttons */
+.btn-action {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; border: none; border-radius: 6px;
+  cursor: pointer; font-size: 0.8rem; transition: all var(--transition);
+  margin-right: 3px;
+}
+.btn-action.green { background: rgba(39,174,96,0.15); color: var(--success); }
+.btn-action.green:hover { background: rgba(39,174,96,0.3); }
+.btn-action.orange { background: rgba(230,126,34,0.15); color: var(--primary); }
+.btn-action.orange:hover { background: rgba(230,126,34,0.3); }
+.btn-action.red { background: rgba(231,76,60,0.15); color: var(--danger); }
+.btn-action.red:hover { background: rgba(231,76,60,0.3); }
+.btn-action.blue { background: rgba(52,152,219,0.15); color: var(--info); }
+.btn-action.blue:hover { background: rgba(52,152,219,0.3); }
+
+/* Search bar */
+.search-bar {
+  display: flex; gap: 0.75rem; margin-bottom: 1.25rem; flex-wrap: wrap;
+}
+.search-bar input, .search-bar select {
+  padding: 0.6rem 1rem; background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border); border-radius: 8px;
+  color: var(--text); font-size: 0.85rem;
+  transition: border var(--transition);
+}
+.search-bar input { flex: 1; min-width: 200px; }
+.search-bar input:focus, .search-bar select:focus { outline: none; border-color: var(--primary); }
+.search-bar select option { background: var(--bg-card); }
+
+/* ============ CHARTS (CSS-based) ============ */
+.chart-container { margin-top: 0.5rem; }
+.bar-chart { display: flex; flex-direction: column; gap: 0.6rem; }
+.bar-row { display: flex; align-items: center; gap: 0.75rem; }
+.bar-label { width: 80px; font-size: 0.8rem; color: var(--text-muted); text-align: right; flex-shrink: 0; }
+.bar-track { flex: 1; height: 28px; background: rgba(255,255,255,0.04); border-radius: 6px; overflow: hidden; position: relative; }
+.bar-fill {
+  height: 100%; border-radius: 6px; transition: width 0.8s ease;
+  display: flex; align-items: center; padding-left: 8px;
+  font-size: 0.75rem; font-weight: 600; color: #fff;
+  min-width: 30px;
+}
+.bar-fill.orange { background: linear-gradient(90deg, var(--primary), var(--primary-hover)); }
+.bar-fill.blue { background: linear-gradient(90deg, #2980b9, #3498db); }
+.bar-fill.green { background: linear-gradient(90deg, #1e8449, #27ae60); }
+.bar-fill.red { background: linear-gradient(90deg, #c0392b, #e74c3c); }
+
+/* Activity feed */
+.activity-feed { max-height: 300px; overflow-y: auto; }
+.activity-item {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.6rem 0; border-bottom: 1px solid var(--border);
+}
+.activity-item:last-child { border: none; }
+.activity-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.activity-dot.green { background: var(--success); }
+.activity-dot.orange { background: var(--primary); }
+.activity-dot.red { background: var(--danger); }
+.activity-text { font-size: 0.85rem; flex: 1; }
+.activity-time { font-size: 0.75rem; color: var(--text-muted); white-space: nowrap; }
+
+/* ============ MODAL ============ */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0,0,0,0.6); backdrop-filter: blur(4px);
+  display: none; align-items: center; justify-content: center;
+}
+.modal-overlay.show { display: flex; }
+.modal {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 2rem;
+  width: 90%; max-width: 600px; max-height: 80vh; overflow-y: auto;
+  box-shadow: var(--shadow);
+}
+.modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.modal-header h2 { font-size: 1.2rem; }
+.modal-close {
+  background: none; border: none; color: var(--text-muted);
+  font-size: 1.3rem; cursor: pointer;
+}
+.modal-close:hover { color: var(--text); }
+
+.detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.detail-item label { display: block; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem; }
+.detail-item span { font-size: 0.95rem; }
+
+/* ============ TOAST ============ */
+.toast-container {
+  position: fixed; top: 1.5rem; right: 1.5rem; z-index: 2000;
+  display: flex; flex-direction: column; gap: 0.5rem;
+}
+.toast {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 8px; padding: 0.75rem 1.25rem;
+  font-size: 0.85rem; box-shadow: var(--shadow);
+  display: flex; align-items: center; gap: 0.5rem;
+  animation: slideIn 0.3s ease;
+  border-left: 3px solid var(--success);
+}
+.toast.error { border-left-color: var(--danger); }
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+  .sidebar { transform: translateX(-100%); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { margin-left: 0; }
+  .hamburger { display: block; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .section-row { grid-template-columns: 1fr; }
+  .detail-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: 1fr; }
+  .main-content { padding: 1rem; }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+</style>
+</head>
+<body>
+
+<!-- ============ LOGIN ============ -->
+<div class="login-overlay" id="loginOverlay">
+  <div class="login-box">
+    <h1><i class="fas fa-truck"></i> Administration</h1>
+    <p>CapaTransport Pro — Panneau d'administration</p>
+    <form id="loginForm">
+      <div class="field">
+        <label>Identifiant</label>
+        <input type="text" id="loginUser" placeholder="admin" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label>Mot de passe</label>
+        <input type="password" id="loginPass" placeholder="Mot de passe" autocomplete="current-password" required>
+      </div>
+      <button type="submit" class="btn-login"><i class="fas fa-sign-in-alt"></i> Connexion</button>
+    </form>
+    <div class="login-error" id="loginError">Identifiants incorrects.</div>
+  </div>
+</div>
+
+<!-- ============ APP ============ -->
+<div class="app-layout hidden" id="appLayout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <i class="fas fa-truck"></i>
+      <div>
+        <h2>CapaTransport</h2>
+        <span>Administration</span>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#" data-section="dashboard" class="active"><i class="fas fa-th-large"></i> Tableau de bord</a>
+      <a href="#" data-section="users"><i class="fas fa-users"></i> Utilisateurs</a>
+      <a href="#" data-section="payments"><i class="fas fa-credit-card"></i> Paiements</a>
+      <a href="#" data-section="trials"><i class="fas fa-laptop"></i> Appareils / Essais</a>
+      <a href="#" data-section="analytics"><i class="fas fa-chart-bar"></i> Analytique</a>
+      <a href="#" data-section="content"><i class="fas fa-folder-open"></i> Contenu</a>
+    </nav>
+    <div class="sidebar-footer">
+      <button class="btn-logout" id="btnLogout"><i class="fas fa-sign-out-alt"></i> Deconnexion</button>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main-content">
+    <div class="main-header">
+      <h1 id="pageTitle"><i class="fas fa-th-large"></i> Tableau de bord</h1>
+      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+
+    <!-- ============ DASHBOARD ============ -->
+    <div class="section active" id="sec-dashboard">
+      <div class="stats-grid" id="statsGrid">
+        <div class="glass-card stat-card">
+          <div class="stat-icon blue"><i class="fas fa-users"></i></div>
+          <div class="stat-value" id="statUsers">--</div>
+          <div class="stat-label">Utilisateurs total</div>
+        </div>
+        <div class="glass-card stat-card">
+          <div class="stat-icon green"><i class="fas fa-check-circle"></i></div>
+          <div class="stat-value" id="statActive">--</div>
+          <div class="stat-label">Abonnements actifs</div>
+        </div>
+        <div class="glass-card stat-card">
+          <div class="stat-icon orange"><i class="fas fa-euro-sign"></i></div>
+          <div class="stat-value" id="statRevenue">--</div>
+          <div class="stat-label">Chiffre d'affaires</div>
+        </div>
+        <div class="glass-card stat-card">
+          <div class="stat-icon red"><i class="fas fa-hourglass-half"></i></div>
+          <div class="stat-value" id="statPending">--</div>
+          <div class="stat-label">Paiements en attente</div>
+        </div>
+      </div>
+
+      <div class="section-row">
+        <div class="glass-card">
+          <div class="card-title"><i class="fas fa-chart-line"></i> Inscriptions par mois</div>
+          <div class="chart-container">
+            <div class="bar-chart" id="chartRegistrations"></div>
+          </div>
+        </div>
+        <div class="glass-card">
+          <div class="card-title"><i class="fas fa-clock"></i> Activite recente</div>
+          <div class="activity-feed" id="activityFeed"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ USERS ============ -->
+    <div class="section" id="sec-users">
+      <div class="glass-card">
+        <div class="search-bar">
+          <input type="text" id="userSearch" placeholder="Rechercher par nom ou email...">
+          <select id="userFilter">
+            <option value="">Tous les statuts</option>
+            <option value="validated">Valide</option>
+            <option value="pending">En attente</option>
+            <option value="expired">Expire</option>
+          </select>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>Telephone</th>
+                <th>Inscription</th>
+                <th>Paiement</th>
+                <th>Derniere connexion</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="usersTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ PAYMENTS ============ -->
+    <div class="section" id="sec-payments">
+      <div class="glass-card">
+        <div class="card-title"><i class="fas fa-credit-card"></i> Historique des paiements</div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Utilisateur</th>
+                <th>Email</th>
+                <th>Montant</th>
+                <th>Date</th>
+                <th>Statut</th>
+                <th>Methode</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="paymentsTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ ANALYTICS ============ -->
+    <div class="section" id="sec-analytics">
+      <div class="stats-grid" id="analyticsStats"></div>
+
+      <div class="section-row">
+        <div class="glass-card">
+          <div class="card-title"><i class="fas fa-graduation-cap"></i> Scores moyens par bloc</div>
+          <div class="chart-container">
+            <div class="bar-chart" id="chartScores"></div>
+          </div>
+        </div>
+        <div class="glass-card">
+          <div class="card-title"><i class="fas fa-fire"></i> Popularite des blocs</div>
+          <div class="chart-container">
+            <div class="bar-chart" id="chartPopularity"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-row full">
+        <div class="glass-card">
+          <div class="card-title"><i class="fas fa-trophy"></i> Utilisateurs les plus actifs</div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Nom</th>
+                  <th>Sessions</th>
+                  <th>Temps passe</th>
+                </tr>
+              </thead>
+              <tbody id="activeUsersBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ TRIALS / APPAREILS ============ -->
+    <div class="section" id="sec-trials">
+      <div class="stats-grid" id="trialsStats"></div>
+      <div class="section-row full">
+        <div class="glass-card">
+          <div class="card-title"><i class="fas fa-laptop"></i> Appareils enregistres</div>
+          <div style="display:flex;gap:0.75rem;margin-bottom:1rem;flex-wrap:wrap">
+            <select id="trialFilter" style="background:rgba(255,255,255,0.05);border:1px solid var(--border);color:var(--text);padding:0.5rem 1rem;border-radius:8px;font-size:0.85rem">
+              <option value="">Tous</option>
+              <option value="active">Essai en cours</option>
+              <option value="expired">Essai expire</option>
+              <option value="granted">Acces accorde</option>
+              <option value="blocked">Bloque</option>
+            </select>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Fingerprint</th>
+                  <th>IP</th>
+                  <th>Premier acces</th>
+                  <th>Expire a</th>
+                  <th>Statut</th>
+                  <th>Note</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="trialsTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ CONTENT ============ -->
+    <div class="section" id="sec-content">
+      <div class="stats-grid" id="contentStats"></div>
+      <div class="section-row">
+        <div class="glass-card">
+          <div class="card-title"><i class="fas fa-database"></i> Documents par categorie</div>
+          <div class="chart-container">
+            <div class="bar-chart" id="chartContent"></div>
+          </div>
+        </div>
+        <div class="glass-card">
+          <div class="card-title"><i class="fas fa-file-alt"></i> Fichiers annales disponibles</div>
+          <div id="annalesList"></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- ============ MODAL ============ -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-header">
+      <h2 id="modalTitle">Detail utilisateur</h2>
+      <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<!-- Toast container -->
+<div class="toast-container" id="toastContainer"></div>
+
+<script>
+/* ============================================================
+   ADMIN PANEL — JavaScript
+   ============================================================ */
+(function() {
+  'use strict';
+
+  const API = '';
+  let TOKEN = localStorage.getItem('admin_token') || '';
+
+  // ============ AUTH ============
+  function headers() {
+    return { 'Content-Type': 'application/json', 'x-admin-token': TOKEN };
+  }
+
+  async function apiGet(url) {
+    const r = await fetch(API + url, { headers: headers() });
+    if (r.status === 401) { logout(); throw new Error('Non autorise'); }
+    return r.json();
+  }
+
+  async function apiPost(url, body) {
+    const r = await fetch(API + url, { method: 'POST', headers: headers(), body: JSON.stringify(body || {}) });
+    if (r.status === 401) { logout(); throw new Error('Non autorise'); }
+    return r.json();
+  }
+
+  async function apiDelete(url) {
+    const r = await fetch(API + url, { method: 'DELETE', headers: headers() });
+    if (r.status === 401) { logout(); throw new Error('Non autorise'); }
+    return r.json();
+  }
+
+  // ============ LOGIN / LOGOUT ============
+  const loginOverlay = document.getElementById('loginOverlay');
+  const appLayout = document.getElementById('appLayout');
+  const loginForm = document.getElementById('loginForm');
+  const loginError = document.getElementById('loginError');
+
+  function checkAuth() {
+    if (TOKEN) {
+      loginOverlay.classList.add('hidden');
+      appLayout.classList.remove('hidden');
+      loadDashboard();
+    }
+  }
+
+  loginForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    loginError.style.display = 'none';
+    const user = document.getElementById('loginUser').value;
+    const pass = document.getElementById('loginPass').value;
+    try {
+      const data = await fetch(API + '/api/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username: user, password: pass })
+      }).then(r => r.json());
+      if (data.success) {
+        TOKEN = data.token;
+        localStorage.setItem('admin_token', TOKEN);
+        loginOverlay.classList.add('hidden');
+        appLayout.classList.remove('hidden');
+        loadDashboard();
+      } else {
+        loginError.textContent = data.error || 'Identifiants incorrects.';
+        loginError.style.display = 'block';
+      }
+    } catch {
+      loginError.textContent = 'Erreur de connexion au serveur.';
+      loginError.style.display = 'block';
+    }
+  });
+
+  function logout() {
+    TOKEN = '';
+    localStorage.removeItem('admin_token');
+    loginOverlay.classList.remove('hidden');
+    appLayout.classList.add('hidden');
+  }
+
+  document.getElementById('btnLogout').addEventListener('click', logout);
+
+  // ============ NAVIGATION ============
+  const navLinks = document.querySelectorAll('.sidebar-nav a');
+  const sections = document.querySelectorAll('.section');
+  const pageTitle = document.getElementById('pageTitle');
+  const titles = {
+    dashboard: '<i class="fas fa-th-large"></i> Tableau de bord',
+    users: '<i class="fas fa-users"></i> Utilisateurs',
+    payments: '<i class="fas fa-credit-card"></i> Paiements',
+    trials: '<i class="fas fa-laptop"></i> Appareils / Essais',
+    analytics: '<i class="fas fa-chart-bar"></i> Analytique',
+    content: '<i class="fas fa-folder-open"></i> Contenu'
+  };
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const sec = link.dataset.section;
+      navLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+      sections.forEach(s => s.classList.remove('active'));
+      document.getElementById('sec-' + sec).classList.add('active');
+      pageTitle.innerHTML = titles[sec] || '';
+      sidebar.classList.remove('open');
+
+      if (sec === 'dashboard') loadDashboard();
+      else if (sec === 'users') loadUsers();
+      else if (sec === 'payments') loadPayments();
+      else if (sec === 'trials') loadTrials();
+      else if (sec === 'analytics') loadAnalytics();
+      else if (sec === 'content') loadContent();
+    });
+  });
+
+  // Hamburger
+  const sidebar = document.getElementById('sidebar');
+  document.getElementById('hamburger').addEventListener('click', () => sidebar.classList.toggle('open'));
+
+  // ============ TOAST ============
+  function toast(msg, isError) {
+    const container = document.getElementById('toastContainer');
+    const t = document.createElement('div');
+    t.className = 'toast' + (isError ? ' error' : '');
+    t.innerHTML = '<i class="fas fa-' + (isError ? 'exclamation-circle' : 'check-circle') + '"></i> ' + msg;
+    container.appendChild(t);
+    setTimeout(() => t.remove(), 4000);
+  }
+
+  // ============ MODAL ============
+  const modalOverlay = document.getElementById('modalOverlay');
+  document.getElementById('modalClose').addEventListener('click', () => modalOverlay.classList.remove('show'));
+  modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) modalOverlay.classList.remove('show'); });
+
+  function showModal(title, html) {
+    document.getElementById('modalTitle').textContent = title;
+    document.getElementById('modalBody').innerHTML = html;
+    modalOverlay.classList.add('show');
+  }
+
+  // ============ HELPERS ============
+  function fmtDate(d) {
+    if (!d) return '--';
+    const dt = new Date(d);
+    return dt.toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+  }
+  function fmtDateTime(d) {
+    if (!d) return '--';
+    const dt = new Date(d);
+    return dt.toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit', year: 'numeric' }) + ' ' +
+           dt.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+  }
+  function fmtMoney(n) { return new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(n); }
+  function statusBadge(s) {
+    if (s === 'validated') return '<span class="badge badge-success">Valide</span>';
+    if (s === 'pending') return '<span class="badge badge-warning">En attente</span>';
+    return '<span class="badge badge-danger">Expire</span>';
+  }
+  function timeAgo(d) {
+    if (!d) return '--';
+    const diff = Date.now() - new Date(d).getTime();
+    const mins = Math.floor(diff / 60000);
+    if (mins < 60) return 'il y a ' + mins + ' min';
+    const hrs = Math.floor(mins / 60);
+    if (hrs < 24) return 'il y a ' + hrs + 'h';
+    const days = Math.floor(hrs / 24);
+    return 'il y a ' + days + 'j';
+  }
+
+  // ============ DASHBOARD ============
+  async function loadDashboard() {
+    try {
+      const data = await apiGet('/api/admin/stats');
+      const s = data.stats;
+      document.getElementById('statUsers').textContent = s.totalUsers;
+      document.getElementById('statActive').textContent = s.validatedPayments;
+      document.getElementById('statRevenue').textContent = fmtMoney(s.revenue);
+      document.getElementById('statPending').textContent = s.pendingPayments;
+
+      // Registration chart
+      const chartEl = document.getElementById('chartRegistrations');
+      const months = Object.entries(s.registrationsByMonth).sort((a, b) => a[0].localeCompare(b[0]));
+      const maxReg = Math.max(...months.map(m => m[1]), 1);
+      chartEl.innerHTML = months.map(([month, count]) => {
+        const pct = Math.round((count / maxReg) * 100);
+        const label = new Date(month + '-01').toLocaleDateString('fr-FR', { month: 'short', year: '2-digit' });
+        return `<div class="bar-row">
+          <div class="bar-label">${label}</div>
+          <div class="bar-track"><div class="bar-fill orange" style="width:${pct}%">${count}</div></div>
+        </div>`;
+      }).join('');
+
+      // Activity feed
+      const feedEl = document.getElementById('activityFeed');
+      feedEl.innerHTML = s.recentActivity.map(a => {
+        const dotClass = a.paymentStatus === 'validated' ? 'green' : a.paymentStatus === 'pending' ? 'orange' : 'red';
+        return `<div class="activity-item">
+          <div class="activity-dot ${dotClass}"></div>
+          <div class="activity-text">${a.name}</div>
+          <div class="activity-time">${timeAgo(a.lastLogin)}</div>
+        </div>`;
+      }).join('');
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  // ============ USERS ============
+  let allUsersCache = [];
+  async function loadUsers() {
+    try {
+      const search = document.getElementById('userSearch').value;
+      const status = document.getElementById('userFilter').value;
+      let url = '/api/admin/users?limit=100';
+      if (search) url += '&search=' + encodeURIComponent(search);
+      if (status) url += '&status=' + encodeURIComponent(status);
+      const data = await apiGet(url);
+      allUsersCache = data.users;
+      renderUsersTable(data.users);
+    } catch (e) { console.error(e); }
+  }
+
+  function renderUsersTable(users) {
+    const tbody = document.getElementById('usersTableBody');
+    tbody.innerHTML = users.map(u => `<tr>
+      <td style="color:var(--text-muted);font-size:0.75rem">${u.id}</td>
+      <td><strong>${u.firstName} ${u.lastName}</strong></td>
+      <td>${u.email}</td>
+      <td>${u.phone || '--'}</td>
+      <td>${fmtDate(u.registrationDate)}</td>
+      <td>${statusBadge(u.paymentStatus)}</td>
+      <td>${fmtDateTime(u.lastLogin)}</td>
+      <td>
+        <button class="btn-action blue" title="Detail" onclick="adminApp.viewUser('${u.id}')"><i class="fas fa-eye"></i></button>
+        ${u.active
+          ? `<button class="btn-action orange" title="Desactiver" onclick="adminApp.toggleUser('${u.id}',false)"><i class="fas fa-ban"></i></button>`
+          : `<button class="btn-action green" title="Activer" onclick="adminApp.toggleUser('${u.id}',true)"><i class="fas fa-check"></i></button>`
+        }
+        ${u.paymentStatus !== 'validated'
+          ? `<button class="btn-action green" title="Valider paiement" onclick="adminApp.validatePayment('${u.id}')"><i class="fas fa-euro-sign"></i></button>`
+          : ''
+        }
+        <button class="btn-action red" title="Supprimer" onclick="adminApp.deleteUser('${u.id}','${u.firstName} ${u.lastName}')"><i class="fas fa-trash"></i></button>
+      </td>
+    </tr>`).join('');
+  }
+
+  document.getElementById('userSearch').addEventListener('input', debounce(loadUsers, 400));
+  document.getElementById('userFilter').addEventListener('change', loadUsers);
+
+  function debounce(fn, ms) {
+    let t;
+    return function() { clearTimeout(t); t = setTimeout(fn, ms); };
+  }
+
+  async function viewUser(id) {
+    try {
+      const data = await apiGet('/api/admin/users/' + id);
+      const u = data.user;
+      const scores = u.examScores || {};
+      const successRate = u.qcmAttempts > 0 ? Math.round((u.qcmCorrect / u.qcmAttempts) * 100) : 0;
+      showModal(u.firstName + ' ' + u.lastName, `
+        <div class="detail-grid">
+          <div class="detail-item"><label>Email</label><span>${u.email}</span></div>
+          <div class="detail-item"><label>Telephone</label><span>${u.phone || '--'}</span></div>
+          <div class="detail-item"><label>Inscription</label><span>${fmtDate(u.registrationDate)}</span></div>
+          <div class="detail-item"><label>Derniere connexion</label><span>${fmtDateTime(u.lastLogin)}</span></div>
+          <div class="detail-item"><label>Statut compte</label><span>${u.active ? '<span class="badge badge-success">Actif</span>' : '<span class="badge badge-danger">Inactif</span>'}</span></div>
+          <div class="detail-item"><label>Paiement</label><span>${statusBadge(u.paymentStatus)}</span></div>
+          <div class="detail-item"><label>Date paiement</label><span>${fmtDate(u.paymentDate)}</span></div>
+          <div class="detail-item"><label>Methode</label><span>${u.paymentMethod || '--'}</span></div>
+        </div>
+        <hr style="border:none;border-top:1px solid var(--border);margin:1.5rem 0">
+        <div class="card-title"><i class="fas fa-chart-bar"></i> Statistiques d'activite</div>
+        <div class="detail-grid">
+          <div class="detail-item"><label>Sessions</label><span>${u.sessions || 0}</span></div>
+          <div class="detail-item"><label>Temps passe</label><span>${u.timeSpentMinutes ? Math.round(u.timeSpentMinutes / 60) + 'h ' + (u.timeSpentMinutes % 60) + 'min' : '--'}</span></div>
+          <div class="detail-item"><label>Pages visitees</label><span>${u.pagesVisited || 0}</span></div>
+          <div class="detail-item"><label>QCM tentes</label><span>${u.qcmAttempts || 0}</span></div>
+          <div class="detail-item"><label>QCM corrects</label><span>${u.qcmCorrect || 0}</span></div>
+          <div class="detail-item"><label>Taux de reussite</label><span>${successRate}%</span></div>
+        </div>
+        <hr style="border:none;border-top:1px solid var(--border);margin:1.5rem 0">
+        <div class="card-title"><i class="fas fa-graduation-cap"></i> Scores par bloc</div>
+        <div class="bar-chart" style="margin-top:0.5rem">
+          <div class="bar-row"><div class="bar-label">Bloc 1</div><div class="bar-track"><div class="bar-fill blue" style="width:${scores.bloc1 || 0}%">${scores.bloc1 !== null && scores.bloc1 !== undefined ? scores.bloc1 + '%' : '--'}</div></div></div>
+          <div class="bar-row"><div class="bar-label">Bloc 2</div><div class="bar-track"><div class="bar-fill green" style="width:${scores.bloc2 || 0}%">${scores.bloc2 !== null && scores.bloc2 !== undefined ? scores.bloc2 + '%' : '--'}</div></div></div>
+          <div class="bar-row"><div class="bar-label">Bloc 3</div><div class="bar-track"><div class="bar-fill orange" style="width:${scores.bloc3 || 0}%">${scores.bloc3 !== null && scores.bloc3 !== undefined ? scores.bloc3 + '%' : '--'}</div></div></div>
+          <div class="bar-row"><div class="bar-label">Bloc 4</div><div class="bar-track"><div class="bar-fill red" style="width:${scores.bloc4 || 0}%">${scores.bloc4 !== null && scores.bloc4 !== undefined ? scores.bloc4 + '%' : '--'}</div></div></div>
+        </div>
+      `);
+    } catch (e) { toast('Erreur chargement utilisateur', true); }
+  }
+
+  async function toggleUser(id, activate) {
+    try {
+      const action = activate ? 'activate' : 'deactivate';
+      const data = await apiPost(`/api/admin/users/${id}/${action}`);
+      toast(data.message);
+      loadUsers();
+    } catch (e) { toast('Erreur', true); }
+  }
+
+  async function validatePayment(id) {
+    if (!confirm('Valider le paiement de 430 EUR pour cet utilisateur ?')) return;
+    try {
+      const data = await apiPost(`/api/admin/users/${id}/validate-payment`);
+      toast(data.message);
+      loadUsers();
+    } catch (e) { toast('Erreur', true); }
+  }
+
+  async function deleteUser(id, name) {
+    if (!confirm(`Supprimer definitivement ${name} ?`)) return;
+    try {
+      const data = await apiDelete(`/api/admin/users/${id}`);
+      toast(data.message);
+      loadUsers();
+    } catch (e) { toast('Erreur', true); }
+  }
+
+  // ============ PAYMENTS ============
+  async function loadPayments() {
+    try {
+      const data = await apiGet('/api/admin/payments');
+      const tbody = document.getElementById('paymentsTableBody');
+      tbody.innerHTML = data.payments.map(p => `<tr>
+        <td><strong>${p.userName}</strong></td>
+        <td>${p.email}</td>
+        <td>${p.status === 'validated' ? fmtMoney(430) : '--'}</td>
+        <td>${fmtDate(p.date)}</td>
+        <td>${statusBadge(p.status)}</td>
+        <td>${p.method || '--'}</td>
+        <td>
+          ${p.status === 'pending' ? `
+            <button class="btn-action green" title="Valider" onclick="adminApp.validatePayment('${p.userId}')"><i class="fas fa-check"></i></button>
+            <button class="btn-action red" title="Rejeter" onclick="adminApp.rejectPayment('${p.userId}')"><i class="fas fa-times"></i></button>
+          ` : ''}
+        </td>
+      </tr>`).join('');
+    } catch (e) { console.error(e); }
+  }
+
+  async function rejectPayment(id) {
+    if (!confirm('Rejeter le paiement pour cet utilisateur ?')) return;
+    try {
+      const data = await apiPost(`/api/admin/users/${id}/reject-payment`);
+      toast(data.message);
+      loadPayments();
+    } catch (e) { toast('Erreur', true); }
+  }
+
+  // ============ ANALYTICS ============
+  const blocNames = { bloc1: 'Entreprise & Droit', bloc2: 'RETM', bloc3: 'Exploitation', bloc4: 'Gestion financiere' };
+
+  async function loadAnalytics() {
+    try {
+      const data = await apiGet('/api/admin/analytics');
+      const a = data.analytics;
+
+      // Stats cards
+      document.getElementById('analyticsStats').innerHTML = `
+        <div class="glass-card stat-card">
+          <div class="stat-icon blue"><i class="fas fa-mouse-pointer"></i></div>
+          <div class="stat-value">${a.totalSessions}</div>
+          <div class="stat-label">Sessions totales</div>
+        </div>
+        <div class="glass-card stat-card">
+          <div class="stat-icon green"><i class="fas fa-clock"></i></div>
+          <div class="stat-value">${Math.round(a.totalTimeMinutes / 60)}h</div>
+          <div class="stat-label">Temps total d'etude</div>
+        </div>
+        <div class="glass-card stat-card">
+          <div class="stat-icon orange"><i class="fas fa-question-circle"></i></div>
+          <div class="stat-value">${a.totalQcmAttempts}</div>
+          <div class="stat-label">QCM tentes</div>
+        </div>
+        <div class="glass-card stat-card">
+          <div class="stat-icon ${a.qcmSuccessRate >= 70 ? 'green' : 'red'}"><i class="fas fa-percentage"></i></div>
+          <div class="stat-value">${a.qcmSuccessRate}%</div>
+          <div class="stat-label">Taux reussite QCM</div>
+        </div>
+      `;
+
+      // Scores chart
+      const colors = ['blue', 'green', 'orange', 'red'];
+      document.getElementById('chartScores').innerHTML = Object.entries(a.avgScoresPerBloc).map(([bloc, score], i) => `
+        <div class="bar-row">
+          <div class="bar-label">${blocNames[bloc] || bloc}</div>
+          <div class="bar-track"><div class="bar-fill ${colors[i]}" style="width:${score}%">${score}%</div></div>
+        </div>
+      `).join('');
+
+      // Popularity chart
+      const maxPop = Math.max(...Object.values(a.blocPopularity), 1);
+      document.getElementById('chartPopularity').innerHTML = Object.entries(a.blocPopularity).map(([bloc, count], i) => `
+        <div class="bar-row">
+          <div class="bar-label">${blocNames[bloc] || bloc}</div>
+          <div class="bar-track"><div class="bar-fill ${colors[i]}" style="width:${Math.round(count / maxPop * 100)}%">${count} utilisateurs</div></div>
+        </div>
+      `).join('');
+
+      // Active users
+      document.getElementById('activeUsersBody').innerHTML = a.mostActiveUsers.map((u, i) => `<tr>
+        <td style="color:var(--primary);font-weight:700">${i + 1}</td>
+        <td>${u.name}</td>
+        <td>${u.sessions}</td>
+        <td>${u.timeSpent ? Math.round(u.timeSpent / 60) + 'h ' + (u.timeSpent % 60) + 'min' : '--'}</td>
+      </tr>`).join('');
+    } catch (e) { console.error(e); }
+  }
+
+  // ============ CONTENT ============
+  async function loadContent() {
+    try {
+      const data = await apiGet('/api/admin/content');
+      const c = data.content;
+
+      const catNames = {
+        annales: 'Annales',
+        bloc2_retm: 'Bloc 2 RETM',
+        normes_techniques: 'Normes techniques',
+        reglementations: 'Reglementations',
+        ventes_internationales: 'Ventes internationales',
+        general: 'General'
+      };
+
+      document.getElementById('contentStats').innerHTML = `
+        <div class="glass-card stat-card">
+          <div class="stat-icon blue"><i class="fas fa-file-pdf"></i></div>
+          <div class="stat-value">${c.totalDocuments}</div>
+          <div class="stat-label">Documents indexes</div>
+        </div>
+        <div class="glass-card stat-card">
+          <div class="stat-icon green"><i class="fas fa-folder"></i></div>
+          <div class="stat-value">${Object.keys(c.byCategory).length}</div>
+          <div class="stat-label">Categories</div>
+        </div>
+        <div class="glass-card stat-card">
+          <div class="stat-icon orange"><i class="fas fa-scroll"></i></div>
+          <div class="stat-value">${c.annalesFiles}</div>
+          <div class="stat-label">Fichiers annales</div>
+        </div>
+      `;
+
+      const maxDocs = Math.max(...Object.values(c.byCategory).map(v => v.count), 1);
+      const colors = ['blue', 'green', 'orange', 'red', 'blue', 'green'];
+      document.getElementById('chartContent').innerHTML = Object.entries(c.byCategory).map(([cat, info], i) => `
+        <div class="bar-row">
+          <div class="bar-label">${catNames[cat] || cat}</div>
+          <div class="bar-track"><div class="bar-fill ${colors[i % colors.length]}" style="width:${Math.round(info.count / maxDocs * 100)}%">${info.count} docs (${(info.totalSize / 1024 / 1024).toFixed(1)} Mo)</div></div>
+        </div>
+      `).join('') || '<p style="color:var(--text-muted);font-size:0.85rem">Aucun document indexe.</p>';
+
+      document.getElementById('annalesList').innerHTML = c.annalesDetail.length > 0
+        ? '<ul style="list-style:none;padding:0">' + c.annalesDetail.map(f => `<li style="padding:0.4rem 0;border-bottom:1px solid var(--border);font-size:0.85rem"><i class="fas fa-file-alt" style="color:var(--primary);margin-right:0.5rem"></i>${f}</li>`).join('') + '</ul>'
+        : '<p style="color:var(--text-muted);font-size:0.85rem">Aucun fichier annales trouve.</p>';
+    } catch (e) { console.error(e); }
+  }
+
+  // ============ TRIALS ============
+  async function loadTrials() {
+    try {
+      const data = await apiGet('/api/admin/trials');
+      const trials = data.trials || [];
+      const now = Date.now();
+      const filter = document.getElementById('trialFilter').value;
+
+      let filtered = trials;
+      if (filter === 'active') filtered = trials.filter(t => !t.blocked && !t.accessGranted && new Date(t.expiresAt).getTime() > now);
+      else if (filter === 'expired') filtered = trials.filter(t => !t.blocked && !t.accessGranted && new Date(t.expiresAt).getTime() <= now);
+      else if (filter === 'granted') filtered = trials.filter(t => t.accessGranted);
+      else if (filter === 'blocked') filtered = trials.filter(t => t.blocked);
+
+      const activeCount = trials.filter(t => !t.blocked && !t.accessGranted && new Date(t.expiresAt).getTime() > now).length;
+      const expiredCount = trials.filter(t => !t.blocked && !t.accessGranted && new Date(t.expiresAt).getTime() <= now).length;
+      const grantedCount = trials.filter(t => t.accessGranted).length;
+      const blockedCount = trials.filter(t => t.blocked).length;
+
+      document.getElementById('trialsStats').innerHTML = `
+        <div class="glass-card stat-card"><div class="stat-icon blue"><i class="fas fa-laptop"></i></div><div class="stat-value">${trials.length}</div><div class="stat-label">Total appareils</div></div>
+        <div class="glass-card stat-card"><div class="stat-icon green"><i class="fas fa-play-circle"></i></div><div class="stat-value">${activeCount}</div><div class="stat-label">Essais en cours</div></div>
+        <div class="glass-card stat-card"><div class="stat-icon red"><i class="fas fa-clock"></i></div><div class="stat-value">${expiredCount}</div><div class="stat-label">Essais expires</div></div>
+        <div class="glass-card stat-card"><div class="stat-icon orange"><i class="fas fa-check-double"></i></div><div class="stat-value">${grantedCount}</div><div class="stat-label">Acces accordes</div></div>
+      `;
+
+      const tbody = document.getElementById('trialsTableBody');
+      tbody.innerHTML = filtered.map(t => {
+        const expMs = new Date(t.expiresAt).getTime();
+        let statusHtml;
+        if (t.blocked) statusHtml = '<span class="badge badge-danger">Bloque</span>';
+        else if (t.accessGranted) statusHtml = '<span class="badge badge-success">Acces accorde</span>';
+        else if (expMs > now) {
+          const mins = Math.ceil((expMs - now) / 60000);
+          statusHtml = '<span class="badge badge-warning">Essai ' + mins + ' min</span>';
+        } else {
+          statusHtml = '<span class="badge badge-danger">Expire</span>';
+        }
+
+        const fp = t.fingerprint;
+        const fpShort = fp.length > 20 ? fp.substring(0, 20) + '...' : fp;
+        return `<tr>
+          <td style="font-family:monospace;font-size:0.75rem" title="${fp}">${fpShort}</td>
+          <td>${t.ip || '--'}</td>
+          <td>${fmtDateTime(t.firstSeen)}</td>
+          <td>${fmtDateTime(t.expiresAt)}</td>
+          <td>${statusHtml}</td>
+          <td style="max-width:120px;overflow:hidden;text-overflow:ellipsis">${t.note || '--'}</td>
+          <td style="white-space:nowrap">
+            ${!t.accessGranted ? `<button class="btn-action green" title="Accorder l'acces" onclick="adminApp.grantTrial('${fp}')"><i class="fas fa-check"></i></button>` : `<button class="btn-action orange" title="Revoquer l'acces" onclick="adminApp.revokeTrial('${fp}')"><i class="fas fa-undo"></i></button>`}
+            ${!t.blocked ? `<button class="btn-action red" title="Bloquer" onclick="adminApp.blockTrial('${fp}')"><i class="fas fa-ban"></i></button>` : `<button class="btn-action green" title="Debloquer" onclick="adminApp.resetTrial('${fp}')"><i class="fas fa-sync"></i></button>`}
+            <button class="btn-action blue" title="Reset 15min" onclick="adminApp.resetTrial('${fp}')"><i class="fas fa-redo"></i></button>
+            <button class="btn-action red" title="Supprimer" onclick="adminApp.deleteTrial('${fp}')"><i class="fas fa-trash"></i></button>
+          </td>
+        </tr>`;
+      }).join('') || '<tr><td colspan="7" style="text-align:center;color:var(--text-muted)">Aucun appareil enregistre.</td></tr>';
+    } catch (e) { console.error(e); }
+  }
+
+  document.getElementById('trialFilter').addEventListener('change', loadTrials);
+
+  async function grantTrial(fp) {
+    const note = prompt('Note (optionnel, ex: paiement recu) :') || '';
+    try {
+      const data = await apiPost('/api/admin/trials/' + encodeURIComponent(fp) + '/grant', { note });
+      toast(data.message);
+      loadTrials();
+    } catch (e) { toast('Erreur', true); }
+  }
+
+  async function blockTrial(fp) {
+    if (!confirm('Bloquer cet appareil ?')) return;
+    try {
+      const data = await apiPost('/api/admin/trials/' + encodeURIComponent(fp) + '/block');
+      toast(data.message);
+      loadTrials();
+    } catch (e) { toast('Erreur', true); }
+  }
+
+  async function resetTrial(fp) {
+    try {
+      const data = await apiPost('/api/admin/trials/' + encodeURIComponent(fp) + '/reset');
+      toast(data.message);
+      loadTrials();
+    } catch (e) { toast('Erreur', true); }
+  }
+
+  async function revokeTrial(fp) {
+    if (!confirm('Revoquer l\'acces de cet appareil ?')) return;
+    try {
+      const data = await apiPost('/api/admin/trials/' + encodeURIComponent(fp) + '/revoke');
+      toast(data.message);
+      loadTrials();
+    } catch (e) { toast('Erreur', true); }
+  }
+
+  async function deleteTrial(fp) {
+    if (!confirm('Supprimer definitivement cet appareil de la liste ?')) return;
+    try {
+      const data = await apiDelete('/api/admin/trials/' + encodeURIComponent(fp));
+      toast(data.message);
+      loadTrials();
+    } catch (e) { toast('Erreur', true); }
+  }
+
+  // ============ EXPOSE TO GLOBAL (for onclick) ============
+  window.adminApp = {
+    viewUser, toggleUser, validatePayment, deleteUser, rejectPayment,
+    grantTrial, blockTrial, resetTrial, revokeTrial, deleteTrial
+  };
+
+  // ============ INIT ============
+  checkAuth();
+
+})();
+</script>
+</body>
+</html>
