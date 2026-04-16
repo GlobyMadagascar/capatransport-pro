@@ -85,6 +85,27 @@ function sanitize(text) {
   out = out.replace(/Page\s+\d+\s*\/\s*\d+/gi, '');
   // Retirer marques CAP3T5_... (r\u00e9f\u00e9rences internes)
   out = out.replace(/CAP3T5_[\w\-_\.]+/g, '');
+
+  // ── Retirer noms d'entreprises privées (risque juridique) ──
+  out = out.replace(/Groupe\s*Promotrans\s*[–\-—]\s*Direction\s*de\s*la\s*P[ée]dagogie/gi, '');
+  out = out.replace(/Groupe\s*Promotrans/gi, '');
+  out = out.replace(/PROMOTRANS/gi, '');
+  out = out.replace(/Promotrans/gi, '');
+  out = out.replace(/Direction\s*de\s*la\s*P[ée]dagogie/gi, '');
+  out = out.replace(/TOUTE\s*REPRODUCTION\s*INTERDITE\s*SANS\s*AUTORISATION\s*[ÉE]CRITE\s*PR[ÉE]ALABLE\s*DU\s*GROUPE\s*\w*/gi, '');
+  // Retirer lignes "ATTESTATION DE CAPACITÉ MARCHANDISE..." (headers répétitifs)
+  out = out.replace(/^ATTESTATION DE CAPACITÉ MARCHANDISE.*$/gim, '');
+  out = out.replace(/^Attestation de capacité marchandises.*$/gim, '');
+  out = out.replace(/^MATIERE$/gim, '');
+  // Retirer descriptions d'images auto-générées
+  out = out.replace(/^Une image contenant.*$/gim, '');
+  out = out.replace(/^Description générée automatiquement.*$/gim, '');
+  out = out.replace(/^Smartphone avec un remplissage.*$/gim, '');
+  out = out.replace(/^Flashez-moi.*$/gim, '');
+  out = out.replace(/^cliquez ici.*$/gim, '');
+  // Retirer numéros de page isolés
+  out = out.replace(/^\d{1,3}$/gm, '');
+
   // Compacter lignes vides
   out = out.replace(/\n{3,}/g, '\n\n');
   return out.trim();
@@ -156,11 +177,35 @@ function extractSections(text) {
     .filter(s => s.content || s.heading);
 }
 
+/**
+ * Custom page renderer that preserves spaces between text items.
+ * pdf-parse's default renderer loses spaces on many PDFs.
+ */
+function customPageRender(pageData) {
+  return pageData.getTextContent({
+    normalizeWhitespace: false,
+    disableCombineTextItems: false
+  }).then(function(textContent) {
+    let lastY = null;
+    let text = '';
+    for (const item of textContent.items) {
+      if (lastY !== null && Math.abs(item.transform[5] - lastY) > 5) {
+        text += '\n';
+      } else if (lastY !== null && text.length > 0 && !text.endsWith(' ') && !text.endsWith('\n')) {
+        text += ' ';
+      }
+      text += item.str;
+      lastY = item.transform[5];
+    }
+    return text;
+  });
+}
+
 async function processPdf(filePath, bloc, label) {
   const filename = path.basename(filePath);
   try {
     const buffer = fs.readFileSync(filePath);
-    const data = await pdfParse(buffer);
+    const data = await pdfParse(buffer, { pagerender: customPageRender });
     const raw = data.text || '';
     const clean = sanitize(raw);
     const sections = extractSections(clean);
